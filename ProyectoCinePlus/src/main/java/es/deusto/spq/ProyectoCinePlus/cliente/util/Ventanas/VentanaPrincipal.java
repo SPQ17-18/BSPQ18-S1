@@ -60,7 +60,7 @@ public class VentanaPrincipal extends JFrame {
 	 */
 	public VentanaPrincipal(int anchura, int altura) {
 		
-		//Antes de llamar a los m�todos debemos asignar la anchura y altura al JFrame:
+		//Antes de llamar a los metodos debemos asignar la anchura y altura al JFrame:
 		this.anchura = anchura;
 		this.altura = altura;
 		setBd(new BaseDeDatos());
