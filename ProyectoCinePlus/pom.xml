@@ -42,7 +42,7 @@
 	    </path>
 
 	<target name="help">
-		<echo>Usage: ant [build | export | server]</echo>
+		<echo>Usage: ant [build | clean | prepare |enhace  | create | delete ]</echo>
 	</target>
 	
 	<target name="build" description="Builds the project">

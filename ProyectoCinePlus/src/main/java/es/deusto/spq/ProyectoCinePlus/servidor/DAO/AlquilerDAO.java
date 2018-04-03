@@ -12,7 +12,7 @@ import javax.jdo.Query;
 import javax.jdo.Transaction;
 
 public class AlquilerDAO {
-	private PersistenceManagerFactory pmf;
+	private PersistenceManagerFactory pmf; // hace falta? por que se crea uno nuevo por cada metodo
 	private int id_alquiler;
 	private Date fecha_alquiler;
 	private Date fecha_devolucion;
