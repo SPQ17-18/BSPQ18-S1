@@ -26,5 +26,6 @@
 	<classpathentry kind="lib" path="src/main/java/lib/sqlite-jdbc-3.21.0.jar"/>
 	<classpathentry kind="lib" path="src/main/java/lib/substance-lite-feel.jar"/>
 	<classpathentry kind="lib" path="src/main/java/lib/substance.jar"/>
+	<classpathentry kind="lib" path="src/main/java/lib/javax.jdo-3.2.0-m5.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

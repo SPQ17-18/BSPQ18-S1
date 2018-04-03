@@ -5,6 +5,128 @@
   <groupId>es.deusto.spq</groupId>
   <artifactId>ProyectoCinePlus</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <build>
+  	<pluginManagement>
+   	 <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.8</version>
+        <executions>
+          <execution>
+            <id>compile</id>
+            <phase>compile</phase>
+            <configuration>
+              <target>
+				<property environment="env"/>
+<!--Esto hay que cambiarlo y adaptarlo a nuestro server-->
+<property name="source.dir" location="src"/>
+<property name="build.dir" location="bin"/>
+<property name="dist.dir" location="dist"/>
+<property name="lib.dir" location="lib"/>
+	<property name="resources.dir" location="resources"/>
+	<property name="server.port" value="1099"/> 
+	<property name="server.IP" value="127.0.0.1"/>
+	<property name="server.easybooking" value="easybooking"/>
+	<property name="server.flight" value="flight"/>
+	<property name="export.file" value="easyBooking.jar"/>
+	<property name="policy.file" location="main/resources/security/java.policy"/>	
+	
+	<path id="classpath">
+	        <fileset dir="${lib.dir}">
+	            <include name="**/*.jar"/>
+	        </fileset>
+	        <pathelement location="${build.dir}"/>
+		    <pathelement location="${resources.dir}"/>
+	    </path>
+
+	<target name="help">
+		<echo>Usage: ant [build | export | server]</echo>
+	</target>
+	
+	<target name="build" description="Builds the project">
+		<delete dir="${build.dir}"/>
+		<mkdir dir="${build.dir}"/>
+		<javac srcdir="${source.dir}" destdir="${build.dir}" classpathref="classpath" deprecation="true" fork="true" includeAntRuntime="no"/>
+    </target>
+	
+	 <!-- TARGET : clean -->
+	    <target name="clean">
+	        <delete includeEmptyDirs="true" quiet="true">
+	            <fileset dir="${build.dir}" includes="**/*.*"/>
+	        </delete>
+			<delete dir="${build.dir}"/>
+	    </target>
+
+	    <!-- TARGET : prepare -->
+	    <target name="prepare">
+	        <mkdir dir="${build.dir}"/>
+	    </target>
+
+		
+	    <!-- TARGET : enhance -->
+	    <target name="enhance" depends="build">
+	    	<taskdef name="enhancer" classpathref="classpath" classname="org.datanucleus.enhancer.EnhancerTask" />
+	    	
+	   		<enhancer classpathref="classpath" failonerror="true">
+	            <sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+	            <fileset dir="${build.dir}">
+	                <include name="**/*.class"/>
+	            </fileset>
+	   		</enhancer>
+	    </target>
+
+	    <!-- TARGET : SchemaTool "create" -->
+	    <target name="createschema" depends="enhance">
+	        <taskdef name="schematool" classpathref="classpath" classname="org.datanucleus.store.schema.SchemaToolTask"/>
+
+	    	<schematool mode="create" classpathref="classpath" failonerror="true" props="datanucleus.properties">
+	            <sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+	            <fileset dir="${build.dir}">
+	                <include name="**/*.class"/>
+	            </fileset>
+	        </schematool>
+	    </target>
+
+	    <!-- TARGET : SchemaTool "delete" -->
+	    <target name="deleteschema">
+	        <taskdef name="schematool" classpathref="classpath" classname="org.datanucleus.store.schema.SchemaToolTask"/>
+
+	    	 	<schematool mode="delete" classpathref="classpath" failonerror="true" props="datanucleus.properties">            
+	    	      <sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+	    	 		<fileset dir="${build.dir}">
+	                <include name="**/*.class"/>
+	            </fileset>
+	        </schematool>
+	    </target>
+		
+		 <!-- SchemaTool "dbinfo" -->
+		    <target name="schemainfo">
+		    	<taskdef name="schematool" classpathref="classpath" classname="org.datanucleus.store.schema.SchemaToolTask"/>
+		    	
+		        <schematool mode="dbinfo" classpathref="classpath" failonerror="true" props="datanucleus.properties">
+		        	 <sysproperty key="log4j.configuration" value="file:${resources.dir}/log4j.properties"/>
+		        	<fileset dir="${bin.dir}">
+		                <include name="**/*.class"/>
+		            </fileset>
+	       
+		        </schematool>
+		    </target>
+	
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+   </pluginManagement>
+  </build>
+  
+  
   <packaging>jar</packaging>
 
   <name>ProyectoCinePlus</name>
