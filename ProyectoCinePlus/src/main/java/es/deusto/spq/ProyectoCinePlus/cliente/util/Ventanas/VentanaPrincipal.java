@@ -116,14 +116,14 @@ public class VentanaPrincipal extends JFrame {
 		});
 	}
 	
-	//M�todo para cargar el panel de iniciar sesi�n en el scrollPane del JFrame VentanaPrincipal:
+	//Metodo para cargar el panel de iniciar sesion en el scrollPane del JFrame VentanaPrincipal:
 	public void cargarPanelIniciarSesion()
 	{
 		//Cargamos el panel en el scrollPane: contenedorDePaneles
 		contenedorDePaneles.setViewportView(panelIniciarSesion);
 	}
 	
-	//M�todo para cargar el panel del usuario:
+	//Metodo para cargar el panel del usuario:
 	public void cargarPanelUsuario(Cliente cliente)
 	{
 		//Inicializamos el panel:
@@ -132,7 +132,7 @@ public class VentanaPrincipal extends JFrame {
 		contenedorDePaneles.setViewportView(panelUsuario);
 	}
 	
-	//M�todo para cargar el panel del administrador:
+	//Metodo para cargar el panel del administrador:
 	public void cargarPanelAdministrador()
 	{
 		//Inicializamos el panel:
@@ -141,7 +141,7 @@ public class VentanaPrincipal extends JFrame {
 		contenedorDePaneles.setViewportView(panelAdministrador);
 	}
 	
-	//M�todo para cargar el panel registro:
+	//Metodo para cargar el panel registro:
 	public void cargarPanelRegistro()
 	{
 		//Cargamos el panel en el scrollPane: contenedorDePaneles

@@ -138,7 +138,7 @@ public class BaseDeDatos {
 	}
 
 	/**
-	 * Este metodo sirve para registrar los usuarios en la base de datos y as�
+	 * Este metodo sirve para registrar los usuarios en la base de datos y asi
 	 * acceder a la plataforma de VIDEOTHEK.
 	 * 
 	 * @param nombre:

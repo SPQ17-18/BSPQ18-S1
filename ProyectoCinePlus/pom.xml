@@ -20,6 +20,7 @@
             <configuration>
               <target>
 				<property environment="env"/>
+				
 <!--Esto hay que cambiarlo y adaptarlo a nuestro server-->
 <property name="source.dir" location="src"/>
 <property name="build.dir" location="bin"/>
