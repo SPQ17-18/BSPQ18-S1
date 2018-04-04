@@ -130,5 +130,5 @@ public class IniciarSesion {
 		JLabel lblIniciaSesion = new JLabel("Inicia sesion");
 		panel_5.add(lblIniciaSesion);
 	}
-
+ 
 }

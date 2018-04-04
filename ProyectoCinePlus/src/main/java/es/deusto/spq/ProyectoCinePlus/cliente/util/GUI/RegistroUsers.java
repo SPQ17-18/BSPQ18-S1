@@ -84,5 +84,5 @@ public class RegistroUsers extends JFrame {
 		contentPane.add(panel_1, BorderLayout.EAST);
 		panel_1.setLayout(new BorderLayout(0, 0));
 	}
-
+ 
 }
