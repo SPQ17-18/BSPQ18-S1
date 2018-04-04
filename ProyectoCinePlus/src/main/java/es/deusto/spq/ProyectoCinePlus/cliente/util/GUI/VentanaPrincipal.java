@@ -102,7 +102,7 @@ public class VentanaPrincipal extends JFrame {
 		btnRegistarse = new JButton("Registarse");
 		btnRegistarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				RegistroUsers registrouser = new RegistroUsers();
+				VentanaRegistro registrouser = new VentanaRegistro();
 				registrouser.setVisible(true);
 				frame.setVisible(false);
 			}

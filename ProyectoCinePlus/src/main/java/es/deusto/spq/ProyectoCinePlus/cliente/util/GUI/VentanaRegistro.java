@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 
-public class RegistroUsers extends JFrame {
+public class VentanaRegistro extends JFrame {
 
 	private JPanel contentPane;
 	private JPanel panel;
@@ -35,7 +35,7 @@ public class RegistroUsers extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					RegistroUsers frame = new RegistroUsers();
+					VentanaRegistro frame = new VentanaRegistro();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -47,7 +47,7 @@ public class RegistroUsers extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public RegistroUsers() {
+	public VentanaRegistro() {
 		setTitle("Registrar usuarios");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
