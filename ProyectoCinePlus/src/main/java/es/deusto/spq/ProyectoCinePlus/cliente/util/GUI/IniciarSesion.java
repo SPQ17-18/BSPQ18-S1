@@ -13,12 +13,34 @@ import javax.swing.JLabel;
 import java.awt.GridLayout;
 import javax.swing.JTextField;
 
-public class IniciarSesion {
+public class IniciarSesion extends JFrame {
 
+	private IniciarSesion frame;
 	private JFrame frmIniciarSesion;
 	private JTextField textFieldUsuario;
 	private JTextField textFieldContrasenia;
-
+	
+	private JPanel panel_1;
+	private JPanel panel_3;
+	private JPanel panel_2;
+	private JPanel panel_6;
+	private JPanel panel;
+	private JPanel panel_7;
+	private JPanel panel_8;
+	private JPanel panel_4;
+	private JPanel panel_11;
+	private JPanel panel_12;
+	private JPanel panel_5;
+	private JPanel panel_9;
+	private JPanel panel_10;
+	private JPanel panel_13;
+	
+	private JButton btnIniciarSesion;
+	private JButton btnAtras;
+	private JLabel lblcontrasenia;
+	private JLabel lblusuario;
+	private JLabel lblIniciaSesion;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -26,8 +48,8 @@ public class IniciarSesion {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					IniciarSesion window = new IniciarSesion();
-					window.frmIniciarSesion.setVisible(true);
+					IniciarSesion frame = new IniciarSesion();
+					frame.frmIniciarSesion.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -52,68 +74,68 @@ public class IniciarSesion {
 		frmIniciarSesion.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmIniciarSesion.getContentPane().setLayout(new BorderLayout(0, 0));
 		
-		JPanel panel_1 = new JPanel();
+		panel_1 = new JPanel();
 		frmIniciarSesion.getContentPane().add(panel_1, BorderLayout.NORTH);
 		
-		JPanel panel_3 = new JPanel();
+		panel_3 = new JPanel();
 		frmIniciarSesion.getContentPane().add(panel_3, BorderLayout.SOUTH);
 		
-		JPanel panel_2 = new JPanel();
+		panel_2 = new JPanel();
 		frmIniciarSesion.getContentPane().add(panel_2, BorderLayout.CENTER);
 		panel_2.setLayout(new BorderLayout(0, 0));
 		
-		JPanel panel_6 = new JPanel();
+		panel_6 = new JPanel();
 		panel_2.add(panel_6, BorderLayout.SOUTH);
 		
-		JPanel panel = new JPanel();
+		panel = new JPanel();
 		panel_6.add(panel);
 		
-		JButton btnIniciarSesion = new JButton("Iniciar Sesion");
+		btnIniciarSesion = new JButton("Iniciar Sesion");
 		btnIniciarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
 		panel.add(btnIniciarSesion);
 		
-		JButton btnAtras = new JButton("Atras");
+		btnAtras = new JButton("Atras");
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
 		panel.add(btnAtras);
 		
-		JPanel panel_7 = new JPanel();
+		panel_7 = new JPanel();
 		panel_2.add(panel_7, BorderLayout.WEST);
 		
-		JPanel panel_8 = new JPanel();
+		panel_8 = new JPanel();
 		panel_2.add(panel_8, BorderLayout.EAST);
 		
-		JPanel panel_4 = new JPanel();
+		panel_4 = new JPanel();
 		panel_2.add(panel_4, BorderLayout.CENTER);
 		panel_4.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
-		JPanel panel_11 = new JPanel();
+		panel_11 = new JPanel();
 		panel_4.add(panel_11);
 		panel_11.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
-		JPanel panel_9 = new JPanel();
+		panel_9 = new JPanel();
 		panel_11.add(panel_9);
 		panel_9.setLayout(new GridLayout(4, 1, 5, 5));
 		
-		JPanel panel_12 = new JPanel();
+		panel_12 = new JPanel();
 		panel_9.add(panel_12);
 		
-		JLabel lblusuario = new JLabel("Usuario:");
+		lblusuario = new JLabel("Usuario:");
 		panel_9.add(lblusuario);
 		
-		JLabel lblcontrasenia = new JLabel("Contraseña:");
+		lblcontrasenia = new JLabel("Contraseña:");
 		panel_9.add(lblcontrasenia);
 		
-		JPanel panel_10 = new JPanel();
+		panel_10 = new JPanel();
 		panel_11.add(panel_10);
 		panel_10.setLayout(new GridLayout(4, 1, 5, 5));
 		
-		JPanel panel_13 = new JPanel();
+		panel_13 = new JPanel();
 		panel_10.add(panel_13);
 		
 		textFieldUsuario = new JTextField();
@@ -124,10 +146,10 @@ public class IniciarSesion {
 		panel_10.add(textFieldContrasenia);
 		textFieldContrasenia.setColumns(10);
 		
-		JPanel panel_5 = new JPanel();
+		panel_5 = new JPanel();
 		panel_2.add(panel_5, BorderLayout.NORTH);
 		
-		JLabel lblIniciaSesion = new JLabel("Inicia sesion");
+		lblIniciaSesion = new JLabel("Inicia sesion");
 		panel_5.add(lblIniciaSesion);
 	}
  
