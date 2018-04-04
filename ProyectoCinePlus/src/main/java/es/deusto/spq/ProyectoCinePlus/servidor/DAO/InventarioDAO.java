@@ -2,7 +2,7 @@ package es.deusto.spq.ProyectoCinePlus.servidor.DAO;
 
 
 
-//Tiene la funcion de DAO + JDO
+
 public class InventarioDAO {
 
 	private int id_inventario;

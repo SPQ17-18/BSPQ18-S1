@@ -1,7 +1,7 @@
 package es.deusto.spq.ProyectoCinePlus.servidor.DAO;
 
 
-//Tiene la funcion de DAO + JDO
+
 public class PeliculaDAO {
 	private int id_pelicula;
 	private String nombre;
