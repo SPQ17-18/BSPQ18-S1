@@ -81,7 +81,7 @@ public class ClienteDAO {
 		List<ClienteDAO> Clientes = new ArrayList<ClienteDAO>();
 		
 		try {
-			System.out.println("   * Retrieving an Extent for Products.");
+			System.out.println("   * Sacando un Extent para Clientes.");
 			
 			tx.begin();			
 			Extent<ClienteDAO> extent = pm.getExtent(ClienteDAO.class, true);
