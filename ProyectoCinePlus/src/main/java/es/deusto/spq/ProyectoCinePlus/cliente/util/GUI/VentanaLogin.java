@@ -95,6 +95,8 @@ public class VentanaLogin extends JFrame {
 		btnAtras = new JButton("Atras");
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				VentanaPrincipal.frame.setVisible(true);
+				dispose();
 			}
 		});
 		panel.add(btnAtras);

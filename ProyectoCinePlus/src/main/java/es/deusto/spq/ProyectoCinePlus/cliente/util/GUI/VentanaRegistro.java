@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VentanaRegistro extends JFrame {
 
@@ -94,6 +96,12 @@ public class VentanaRegistro extends JFrame {
 		panel_9.add(btnRegistrarse);
 		
 		btnAtras = new JButton("Atras");
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaPrincipal.frame.setVisible(true);
+				dispose();
+			}
+		});
 		panel_9.add(btnAtras);
 		
 		panel_1 = new JPanel();

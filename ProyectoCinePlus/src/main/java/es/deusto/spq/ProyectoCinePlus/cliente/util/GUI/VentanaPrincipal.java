@@ -14,7 +14,7 @@ import javax.swing.border.EmptyBorder;
 
 public class VentanaPrincipal extends JFrame {
 
-	private static VentanaPrincipal frame;
+	protected static VentanaPrincipal frame;
 	private JPanel contentPane;
 	private JPanel panel_6;
 	private JPanel panel_7;
