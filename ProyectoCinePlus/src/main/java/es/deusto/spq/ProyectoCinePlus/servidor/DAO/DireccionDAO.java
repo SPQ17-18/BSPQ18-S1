@@ -1,5 +1,7 @@
 package es.deusto.spq.ProyectoCinePlus.servidor.DAO;
 
+
+//Tiene la funcion de DAO + JDO
 public class DireccionDAO {
 
 	private int id_direccion;
