@@ -11,6 +11,8 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class VentanaPrincipal extends JFrame {
 
@@ -31,6 +33,7 @@ public class VentanaPrincipal extends JFrame {
 	private JButton btnRegistarse;
 	private JButton btnCopyright;
 	private JButton btnSalir;
+	private JLabel label;
 
 	/**
 	 * Launch the application.
@@ -72,6 +75,10 @@ public class VentanaPrincipal extends JFrame {
 		
 		panel_2 = new JPanel();
 		panel.add(panel_2, BorderLayout.NORTH);
+		
+		label = new JLabel("");
+		label.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logo150.png")));
+		panel_2.add(label);
 		
 		panel_1 = new JPanel();
 		panel.add(panel_1, BorderLayout.CENTER);
