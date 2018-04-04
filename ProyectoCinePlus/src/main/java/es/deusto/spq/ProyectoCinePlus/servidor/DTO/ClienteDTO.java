@@ -1,20 +1,34 @@
 package es.deusto.spq.ProyectoCinePlus.servidor.DTO;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class ClienteDTO {
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.PrimaryKey;
+
+
+@PersistenceCapable
+public class ClienteDTO implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@PrimaryKey
 	private int id_cliente;
 	private String nombre;
+	private String password;
 	private String apellidos;
 	private Date fecha_nacimiento;
 	private String calle;
 	private String ciudad;
 	private String pais;
 	
-	public ClienteDTO(int id_cliente, String nombre, String apellidos, Date fecha_nacimiento, String calle, String ciudad,
+	public ClienteDTO(int id_cliente, String nombre,String password, String apellidos, Date fecha_nacimiento, String calle, String ciudad,
 			String pais) {
 		this.id_cliente = id_cliente;
 		this.nombre = nombre;
+		this.password = password;
 		this.apellidos = apellidos;
 		this.fecha_nacimiento = fecha_nacimiento;
 		this.calle = calle;
@@ -36,6 +50,14 @@ public class ClienteDTO {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+	
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getPassword() {
+		return password;
 	}
 
 	public String getApellidos() {
