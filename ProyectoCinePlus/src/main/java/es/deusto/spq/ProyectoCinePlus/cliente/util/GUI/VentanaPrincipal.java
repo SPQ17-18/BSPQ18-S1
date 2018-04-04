@@ -2,20 +2,19 @@ package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JButton;
-import java.awt.GridLayout;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-public class VentanaInicio extends JFrame {
+public class VentanaPrincipal extends JFrame {
 
-	
-	private static VentanaInicio frame;
+	private static VentanaPrincipal frame;
 	private JPanel contentPane;
 	private JPanel panel_6;
 	private JPanel panel_7;
@@ -32,7 +31,7 @@ public class VentanaInicio extends JFrame {
 	private JButton btnRegistarse;
 	private JButton btnCopyright;
 	private JButton btnSalir;
-	
+
 	/**
 	 * Launch the application.
 	 */
@@ -40,7 +39,7 @@ public class VentanaInicio extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					frame = new VentanaInicio();
+					frame = new VentanaPrincipal();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -52,11 +51,7 @@ public class VentanaInicio extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaInicio() {
-		initialize();	
-	}
-	
-	public void initialize(){
+	public VentanaPrincipal() {
 		setTitle("CinePlus");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -97,7 +92,7 @@ public class VentanaInicio extends JFrame {
 		btnIniciarSesion = new JButton("Iniciar Sesion");
 		btnIniciarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				IniciarSesion iniciarsesion = new IniciarSesion();
+				VentanaLogin iniciarsesion = new VentanaLogin();
 				iniciarsesion.setVisible(true);
 				frame.setVisible(false);
 			}
@@ -105,6 +100,14 @@ public class VentanaInicio extends JFrame {
 		panel_8.add(btnIniciarSesion);
 		
 		btnRegistarse = new JButton("Registarse");
+		btnRegistarse.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				RegistroUsers registrouser = new RegistroUsers();
+				registrouser.setVisible(true);
+				frame.setVisible(false);
+			}
+		});
+		
 		panel_8.add(btnRegistarse);
 		
 		btnCopyright = new JButton("Copyright");

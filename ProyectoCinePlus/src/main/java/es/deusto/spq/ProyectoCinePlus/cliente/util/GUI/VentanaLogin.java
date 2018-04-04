@@ -1,22 +1,22 @@
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
 import java.awt.BorderLayout;
+import java.awt.EventQueue;
 import java.awt.FlowLayout;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JLabel;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 
-public class IniciarSesion extends JFrame {
+public class VentanaLogin extends JFrame {
 
-	private IniciarSesion frame;
-	private JFrame frmIniciarSesion;
+	private JPanel contentPane;
 	private JTextField textFieldUsuario;
 	private JTextField textFieldContrasenia;
 	
@@ -40,7 +40,7 @@ public class IniciarSesion extends JFrame {
 	private JLabel lblcontrasenia;
 	private JLabel lblusuario;
 	private JLabel lblIniciaSesion;
-	
+
 	/**
 	 * Launch the application.
 	 */
@@ -48,8 +48,8 @@ public class IniciarSesion extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					IniciarSesion frame = new IniciarSesion();
-					frame.frmIniciarSesion.setVisible(true);
+					VentanaLogin frame = new VentanaLogin();
+					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -58,30 +58,25 @@ public class IniciarSesion extends JFrame {
 	}
 
 	/**
-	 * Create the application.
+	 * Create the frame.
 	 */
-	public IniciarSesion() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frmIniciarSesion = new JFrame();
-		frmIniciarSesion.setTitle("Iniciar sesion");
-		frmIniciarSesion.setBounds(100, 100, 450, 300);
-		frmIniciarSesion.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmIniciarSesion.getContentPane().setLayout(new BorderLayout(0, 0));
+	public VentanaLogin() {		
+		setTitle("Iniciar sesion");
+		setBounds(100, 100, 450, 300);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		panel_1 = new JPanel();
-		frmIniciarSesion.getContentPane().add(panel_1, BorderLayout.NORTH);
+		getContentPane().add(panel_1, BorderLayout.NORTH);
 		
 		panel_3 = new JPanel();
-		frmIniciarSesion.getContentPane().add(panel_3, BorderLayout.SOUTH);
+		getContentPane().add(panel_3, BorderLayout.SOUTH);
 		
 		panel_2 = new JPanel();
-		frmIniciarSesion.getContentPane().add(panel_2, BorderLayout.CENTER);
+		getContentPane().add(panel_2, BorderLayout.CENTER);
 		panel_2.setLayout(new BorderLayout(0, 0));
 		
 		panel_6 = new JPanel();
@@ -152,5 +147,5 @@ public class IniciarSesion extends JFrame {
 		lblIniciaSesion = new JLabel("Inicia sesion");
 		panel_5.add(lblIniciaSesion);
 	}
- 
+
 }
