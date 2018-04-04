@@ -3,6 +3,8 @@ package es.deusto.spq.ProyectoCinePlus.servidor.DAO;
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManagerFactory;
 
+
+//Tiene la funcion de DAO + JDO
 public class CategoriaDAO {
 
 	private PersistenceManagerFactory pmf; // Es necesario? No sigo por si acaso LOL
