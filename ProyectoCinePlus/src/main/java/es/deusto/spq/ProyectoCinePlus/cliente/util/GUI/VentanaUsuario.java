@@ -28,8 +28,50 @@ public class VentanaUsuario extends JFrame {
 	private int alturaPanel = 720;
 	private JTextField textFieldNombrePeli;
 	
-
-
+	private JLabel lblLogo;
+	private JLabel label_3;
+	private JLabel lblSaldo;
+	private JLabel label;
+	private JLabel label_2;
+	private JLabel lblNombre;
+	private JLabel lblAnio;
+	private JLabel lblGnero; 
+	
+	private JPanel panel;
+	private JPanel panel_10;
+	private JPanel panel_11;
+	private JPanel panel_1;
+	private JPanel panel_14;
+	private JPanel panel_15;
+	private JPanel panel_2;
+	private JPanel panel_3;
+	private JPanel panel_4;
+	private JPanel panel_6;
+	private JPanel panel_7;
+	private JPanel panel_16;
+	private JPanel panel_17;
+	private JPanel panel_18;
+	private JPanel panel_19;
+	private JPanel panel_9;
+	private JPanel panel_5; 
+	private JPanel panel_12; 
+	private JPanel panel_24;
+	private JPanel panel_22;
+	private JPanel panel_21;
+	private JPanel panel_23;
+	private JPanel panel_20;
+	private JPanel panel_13; 
+	private JPanel panel_8; 
+	private JPanel panel_25; 
+	
+	private JSeparator separator_2;
+	private JSeparator separator_3;
+	
+	private JComboBox comboBox;
+	private JComboBox comboBoxAnio; 
+	
+	
+	
 	/**
 	 * Launch the application.
 	 */
@@ -59,21 +101,21 @@ public class VentanaUsuario extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
-		JPanel panel = new JPanel();
+		panel = new JPanel();
 		contentPane.add(panel, BorderLayout.NORTH);
 		panel.setLayout(new GridLayout(1, 3, 0, 0));
 		
-		JPanel panel_10 = new JPanel();
+		panel_10 = new JPanel();
 		panel.add(panel_10);
 		
-		JLabel lblLogo = new JLabel("");
+		lblLogo = new JLabel("");
 		lblLogo.setIcon(new ImageIcon(VentanaUsuario.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logo300.png")));
 		panel.add(lblLogo);
 		
-		JPanel panel_11 = new JPanel();
+		panel_11 = new JPanel();
 		panel.add(panel_11);
 		
-		JPanel panel_1 = new JPanel();
+		panel_1 = new JPanel();
 		contentPane.add(panel_1, BorderLayout.SOUTH);
 		panel_1.setLayout(new GridLayout(1, 4, 0, 0));
 		
@@ -167,7 +209,7 @@ public class VentanaUsuario extends JFrame {
 		JPanel panel_21 = new JPanel();
 		panel_12.add(panel_21);
 		
-		JComboBox comboBoxAnio = new JComboBox();
+		comboBoxAnio = new JComboBox();
 		panel_21.add(comboBoxAnio);
 		
 		JPanel panel_23 = new JPanel();
@@ -179,7 +221,7 @@ public class VentanaUsuario extends JFrame {
 		JPanel panel_20 = new JPanel();
 		panel_12.add(panel_20);
 		
-		JComboBox comboBox = new JComboBox();
+		comboBox = new JComboBox();
 		panel_20.add(comboBox);
 		
 		JPanel panel_13 = new JPanel();
