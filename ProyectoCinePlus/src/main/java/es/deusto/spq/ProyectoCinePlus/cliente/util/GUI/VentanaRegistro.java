@@ -68,7 +68,6 @@ public class VentanaRegistro extends JFrame {
 	private JLabel label;
 	private JPasswordField passwordField;
 	
-	
 	/**
 	 * Launch the application.
 	 */
