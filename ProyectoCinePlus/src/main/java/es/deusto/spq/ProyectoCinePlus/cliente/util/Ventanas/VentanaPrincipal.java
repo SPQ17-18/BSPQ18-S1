@@ -15,6 +15,8 @@ import javax.swing.border.LineBorder;
 import org.jvnet.substance.skin.SubstanceRavenLookAndFeel;//FIXME
 
 import es.deusto.spq.ProyectoCinePlus.servidor.BaseDeDatos;
+import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
+import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Datos.Cliente;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Paneles.PanelAdministrador;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Paneles.PanelIniciarSesion;
@@ -36,16 +38,21 @@ public class VentanaPrincipal extends JFrame {
 	private PanelAdministrador panelAdministrador;
 	private PanelRegistro panelRegistro = new PanelRegistro();
 	private BaseDeDatos bd;
-
+	private RMIServiceLocator rmi;
+	private CinePlusController cpc;
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					
+					RMIServiceLocator rmi=new RMIServiceLocator();
+					rmi.setService(args);
+					CinePlusController cpc=new CinePlusController(rmi);
 					UIManager.setLookAndFeel((LookAndFeel) new SubstanceRavenLookAndFeel());
-					VentanaPrincipal frame = new VentanaPrincipal(500,300);
+					VentanaPrincipal frame = new VentanaPrincipal(500,300,rmi,cpc);
 					frame.setVisible(true);
 					frame.cargarPanelIniciarSesion();
 				} catch (Exception e) {
@@ -58,11 +65,13 @@ public class VentanaPrincipal extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaPrincipal(int anchura, int altura) {
+	public VentanaPrincipal(int anchura, int altura, RMIServiceLocator rmi,CinePlusController cpc) {
 		
 		//Antes de llamar a los metodos debemos asignar la anchura y altura al JFrame:
 		this.anchura = anchura;
 		this.altura = altura;
+		this.setRmi(rmi);
+		this.setCpc(cpc);
 		setBd(new BaseDeDatos());
 		
 		inicializar();
@@ -154,5 +163,21 @@ public class VentanaPrincipal extends JFrame {
 
 	public void setBd(BaseDeDatos bd) {
 		this.bd = bd;
+	}
+
+	public RMIServiceLocator getRmi() {
+		return rmi;
+	}
+
+	public void setRmi(RMIServiceLocator rmi) {
+		this.rmi = rmi;
+	}
+
+	public CinePlusController getCpc() {
+		return cpc;
+	}
+
+	public void setCpc(CinePlusController cpc) {
+		this.cpc = cpc;
 	}
 }
