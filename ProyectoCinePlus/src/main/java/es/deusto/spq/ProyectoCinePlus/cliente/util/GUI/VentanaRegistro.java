@@ -234,56 +234,8 @@ public class VentanaRegistro extends JFrame {
 		btnRegistrarse = new JButton("Registrarse");
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				comprobarcampos();
 				
-				String error ="";
-				
-				if(textFieldNombre.getText().equals("")) {
-					error = "Nombre";
-				}
-				if(textFieldApellidos.getText().equals("")) {
-					if(!error.isEmpty()){
-						error += " - Apellidos";
-					}else{
-						error+="Apellidos";
-					}
-				}
-				if(textFieldFecha.getText().equals("")) {
-					if(!error.isEmpty()){
-						error+=" - Fecha";
-					}else{
-						error+="Fecha";
-					}
-				}
-				if(textFieldPais.getText().equals("")) {
-					if(!error.isEmpty()){
-						error+=" - Pais";
-					}else{
-						error+="Pais";
-					}
-				}
-				if(textFieldPoblacion.getText().equals("")) {
-					if(!error.isEmpty()){
-						error+=" - Población";
-					}else{
-						error+="Población";
-					}
-				}
-				if(textFieldCalle.getText().equals("")) {
-					if(!error.isEmpty()){
-						error+=" - Calle";
-					}else{
-						error+="Calle";
-					}
-				}
-				if(textFieldFecha.getText().equals("")) {
-					if(!error.isEmpty()){
-						error+=" - Contraseña";
-					}else{
-						error+="Contraseña";
-					}
-				}
-				JOptionPane.showMessageDialog(null, "Error! Faltan los siguientes datos:\n" 
-								+ error, "ERROR!", JOptionPane.ERROR_MESSAGE);
 			}
 		});
 		panel_9.add(btnRegistrarse);
@@ -302,4 +254,66 @@ public class VentanaRegistro extends JFrame {
 		panel_1.setLayout(new BorderLayout(0, 0));
 	}
  
+	private void comprobarcampos() {
+		String error ="";
+		
+		if(textFieldNombre.getText().equals("")) {
+			error = "Nombre";
+		}
+		if(textFieldApellidos.getText().equals("")) {
+			if(!error.isEmpty()){
+				error += " - Apellidos";
+			}else{
+				error+="Apellidos";
+			}
+		}
+		if(textFieldFecha.getText().equals("")) {
+			if(!error.isEmpty()){
+				error+=" - Fecha";
+			}else{
+				error+="Fecha";
+			}
+		}
+		if(textFieldPais.getText().equals("")) {
+			if(!error.isEmpty()){
+				error+=" - Pais";
+			}else{
+				error+="Pais";
+			}
+		}
+		if(textFieldPoblacion.getText().equals("")) {
+			if(!error.isEmpty()){
+				error+=" - Población";
+			}else{
+				error+="Población";
+			}
+		}
+		if(textFieldCalle.getText().equals("")) {
+			if(!error.isEmpty()){
+				error+=" - Calle";
+			}else{
+				error+="Calle";
+			}
+		}
+		if(textFieldFecha.getText().equals("")) {
+			if(!error.isEmpty()){
+				error+=" - Contraseña";
+			}else{
+				error+="Contraseña";
+			}
+		}
+		JOptionPane.showMessageDialog(null, "Error! Faltan los siguientes datos:\n" 
+						+ error, "ERROR!", JOptionPane.ERROR_MESSAGE);
+		limpiarCampos();
+	}
+	
+	private void limpiarCampos() {
+		textFieldNombre.setText("");
+		textFieldApellidos.setText("");
+		textFieldFecha.setText("");
+		textFieldPais.setText("");
+		textFieldPoblacion.setText("");
+		textFieldCalle.setText("");
+		textFieldFecha.setText("");
+	}
 }
