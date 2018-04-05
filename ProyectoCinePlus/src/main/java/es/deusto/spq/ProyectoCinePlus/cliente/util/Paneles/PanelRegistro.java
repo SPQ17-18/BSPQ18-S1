@@ -19,6 +19,8 @@ import javax.swing.border.TitledBorder;
 
 import com.toedter.calendar.JDateChooser;
 
+//import com.toedter.calendar.JDateChooser;
+
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Datos.Cliente;
 import es.deusto.spq.ProyectoCinePlus.servidor.BaseDeDatos;
 
@@ -104,8 +106,8 @@ public class PanelRegistro extends JPanel {
 				TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 120, 215)));
 		textFieldCalle.setBackground(Color.DARK_GRAY);
 		textFieldCalle.setBounds(12, 160, 234, 50);
-		dateChooser.setBorder(new LineBorder(SystemColor.textHighlight));
-		dateChooser.setBounds(258, 66, 233, 35);
+//		dateChooser.setBorder(new LineBorder(SystemColor.textHighlight));
+//		dateChooser.setBounds(258, 66, 233, 35);
 		comboBox.setModel(new DefaultComboBoxModel<String>(new String[] { "Espa\u00F1a", "Francia", "Alemania",
 				"Holanda", "B\u00E9lgica", "Portugal", "Italia" }));
 		comboBox.setBorder(new LineBorder(SystemColor.textHighlight));
@@ -138,7 +140,7 @@ public class PanelRegistro extends JPanel {
 		add(btnVolver);
 		add(textFieldCorreo);
 		add(textFieldCalle);
-		add(dateChooser);
+//		add(dateChooser);
 		add(comboBox);
 		add(textFieldNombre);
 		add(textFieldApellidos);
@@ -171,7 +173,7 @@ public class PanelRegistro extends JPanel {
 
 		if (nombreUser.equals("") && contra.equals("")) {
 			JOptionPane.showMessageDialog(null, "NO HAS INTRODUCIDO NINGUN NOMBRE DE USUARIO NI NINGUNA CONTRASENYA.",
-					"ERROR!", JOptionPane.ERROR_MESSAGE);
+					"�ERROR!", JOptionPane.ERROR_MESSAGE);
 		} else if (nombreUser.equals("")) {
 			JOptionPane.showMessageDialog(null, "NO HAS INTRODUCIDO NINGUN NOMBRE DE USUARIO", "ERROR!",
 					JOptionPane.ERROR_MESSAGE);
@@ -192,7 +194,7 @@ public class PanelRegistro extends JPanel {
 					"ERROR!", JOptionPane.ERROR_MESSAGE);
 		} else if (dateChooser.getDate() == null) {
 			JOptionPane.showMessageDialog(null, "NO HAS INTRODUCIDO NINGUNA FECHA DE NACIMIENTO", "ERROR!",
-					JOptionPane.ERROR_MESSAGE);
+				JOptionPane.ERROR_MESSAGE); 	
 		} else if (textFieldCalle.getText().equals("")) {
 			JOptionPane.showMessageDialog(null, "NO HAS INTRODUCIDO NINGUNA CALLE", "ERROR!",
 					JOptionPane.ERROR_MESSAGE);

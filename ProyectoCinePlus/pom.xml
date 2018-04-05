@@ -21,6 +21,7 @@
   </properties>
 
  <dependencies>
+ 
       <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-core</artifactId>
@@ -31,6 +32,7 @@
             <artifactId>datanucleus-api-jdo</artifactId>
             <version>[5.0.7, 5.9)</version>
         </dependency>
+         
        <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-rdbms</artifactId>
