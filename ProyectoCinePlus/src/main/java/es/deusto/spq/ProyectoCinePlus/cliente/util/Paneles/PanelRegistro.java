@@ -171,7 +171,7 @@ public class PanelRegistro extends JPanel {
 
 		if (nombreUser.equals("") && contra.equals("")) {
 			JOptionPane.showMessageDialog(null, "NO HAS INTRODUCIDO NINGUN NOMBRE DE USUARIO NI NINGUNA CONTRASENYA.",
-					"�ERROR!", JOptionPane.ERROR_MESSAGE);
+					"ERROR!", JOptionPane.ERROR_MESSAGE);
 		} else if (nombreUser.equals("")) {
 			JOptionPane.showMessageDialog(null, "NO HAS INTRODUCIDO NINGUN NOMBRE DE USUARIO", "ERROR!",
 					JOptionPane.ERROR_MESSAGE);

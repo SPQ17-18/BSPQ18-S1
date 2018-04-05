@@ -16,8 +16,10 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import java.awt.FlowLayout;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JComboBox;
 import javax.swing.JPasswordField;
+import javax.swing.DefaultComboBoxModel;
 
 public class VentanaRegistro extends JFrame {
 
@@ -38,11 +40,11 @@ public class VentanaRegistro extends JFrame {
 	private JButton btnRegistrarse;
 	private JButton btnAtras;
 	private final JLabel lblNombre = new JLabel("Nombre:");
-	private JTextField textField;
+	private JTextField textFieldNombre;
 	private JPanel panel_12;
 	private JPanel panel_13;
 	private JLabel lblApellidos;
-	private JTextField textField_1;
+	private JTextField textFieldApellidos;
 	private JPanel panel_14;
 	private JPanel panel_15;
 	private JLabel lblFechaNacimiento;
@@ -51,20 +53,20 @@ public class VentanaRegistro extends JFrame {
 	private JPanel panel_17;
 	private JLabel lblPoblacin;
 	private JLabel lblPas;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
+	private JTextField textFieldPais;
+	private JTextField textFieldPoblacion;
+	private JTextField textFieldCalle;
 	private JPanel panel_18;
 	private JPanel panel_19;
 	private JPanel panel_20;
 	private JPanel panel_21;
 	private JPanel panel_22;
 	private JPanel panel_23;
-	private JTextField textField_5;
+	private JTextField textFieldFecha;
 	private JPanel panel_24;
 	private JPanel panel_25;
 	private JLabel label;
-	private JTextField textField_6;
+	private JPasswordField passwordField;
 	
 	
 	/**
@@ -135,9 +137,9 @@ public class VentanaRegistro extends JFrame {
 		panel_18.add(lblNombre);
 		lblNombre.setHorizontalAlignment(SwingConstants.LEFT);
 		
-		textField = new JTextField();
-		panel_18.add(textField);
-		textField.setColumns(10);
+		textFieldNombre = new JTextField();
+		panel_18.add(textFieldNombre);
+		textFieldNombre.setColumns(10);
 		
 		panel_13 = new JPanel();
 		panel_8.add(panel_13);
@@ -149,9 +151,9 @@ public class VentanaRegistro extends JFrame {
 		lblApellidos = new JLabel("Apellidos:");
 		panel_19.add(lblApellidos);
 		
-		textField_1 = new JTextField();
-		panel_19.add(textField_1);
-		textField_1.setColumns(10);
+		textFieldApellidos = new JTextField();
+		panel_19.add(textFieldApellidos);
+		textFieldApellidos.setColumns(10);
 		
 		panel_24 = new JPanel();
 		panel_8.add(panel_24);
@@ -163,9 +165,9 @@ public class VentanaRegistro extends JFrame {
 		label = new JLabel("Contraseña:");
 		panel_25.add(label);
 		
-		textField_6 = new JTextField();
-		textField_6.setColumns(10);
-		panel_25.add(textField_6);
+		passwordField = new JPasswordField();
+		passwordField.setColumns(10);
+		panel_25.add(passwordField);
 		
 		panel_15 = new JPanel();
 		panel_8.add(panel_15);
@@ -177,9 +179,9 @@ public class VentanaRegistro extends JFrame {
 		lblFechaNacimiento = new JLabel("Fecha nacimiento:");
 		panel_20.add(lblFechaNacimiento);
 		
-		textField_5 = new JTextField();
-		panel_20.add(textField_5);
-		textField_5.setColumns(10);
+		textFieldFecha = new JTextField();
+		panel_20.add(textFieldFecha);
+		textFieldFecha.setColumns(10);
 		
 		panel_17 = new JPanel();
 		panel_8.add(panel_17);
@@ -191,9 +193,9 @@ public class VentanaRegistro extends JFrame {
 		lblPoblacin = new JLabel("Población:");
 		panel_21.add(lblPoblacin);
 		
-		textField_3 = new JTextField();
-		panel_21.add(textField_3);
-		textField_3.setColumns(10);
+		textFieldPoblacion = new JTextField();
+		panel_21.add(textFieldPoblacion);
+		textFieldPoblacion.setColumns(10);
 		
 		panel_14 = new JPanel();
 		panel_8.add(panel_14);
@@ -205,9 +207,9 @@ public class VentanaRegistro extends JFrame {
 		lblCalle = new JLabel("Calle:");
 		panel_22.add(lblCalle);
 		
-		textField_4 = new JTextField();
-		panel_22.add(textField_4);
-		textField_4.setColumns(10);
+		textFieldCalle = new JTextField();
+		panel_22.add(textFieldCalle);
+		textFieldCalle.setColumns(10);
 		
 		panel_16 = new JPanel();
 		panel_8.add(panel_16);
@@ -219,9 +221,9 @@ public class VentanaRegistro extends JFrame {
 		lblPas = new JLabel("País:");
 		panel_23.add(lblPas);
 		
-		textField_2 = new JTextField();
-		panel_23.add(textField_2);
-		textField_2.setColumns(10);
+		textFieldPais = new JTextField();
+		panel_23.add(textFieldPais);
+		textFieldPais.setColumns(10);
 		
 		panel_11 = new JPanel();
 		panel_4.add(panel_11, BorderLayout.SOUTH);
@@ -230,6 +232,12 @@ public class VentanaRegistro extends JFrame {
 		panel_11.add(panel_9);
 		
 		btnRegistrarse = new JButton("Registrarse");
+		btnRegistrarse.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				comprobarcampos();
+				
+			}
+		});
 		panel_9.add(btnRegistrarse);
 		
 		btnAtras = new JButton("Atras");
@@ -246,4 +254,66 @@ public class VentanaRegistro extends JFrame {
 		panel_1.setLayout(new BorderLayout(0, 0));
 	}
  
+	private void comprobarcampos() {
+		String error ="";
+		
+		if(textFieldNombre.getText().equals("")) {
+			error = "Nombre";
+		}
+		if(textFieldApellidos.getText().equals("")) {
+			if(!error.isEmpty()){
+				error += " - Apellidos";
+			}else{
+				error+="Apellidos";
+			}
+		}
+		if(textFieldFecha.getText().equals("")) {
+			if(!error.isEmpty()){
+				error+=" - Fecha";
+			}else{
+				error+="Fecha";
+			}
+		}
+		if(textFieldPais.getText().equals("")) {
+			if(!error.isEmpty()){
+				error+=" - Pais";
+			}else{
+				error+="Pais";
+			}
+		}
+		if(textFieldPoblacion.getText().equals("")) {
+			if(!error.isEmpty()){
+				error+=" - Población";
+			}else{
+				error+="Población";
+			}
+		}
+		if(textFieldCalle.getText().equals("")) {
+			if(!error.isEmpty()){
+				error+=" - Calle";
+			}else{
+				error+="Calle";
+			}
+		}
+		if(textFieldFecha.getText().equals("")) {
+			if(!error.isEmpty()){
+				error+=" - Contraseña";
+			}else{
+				error+="Contraseña";
+			}
+		}
+		JOptionPane.showMessageDialog(null, "Error! Faltan los siguientes datos:\n" 
+						+ error, "ERROR!", JOptionPane.ERROR_MESSAGE);
+		limpiarCampos();
+	}
+	
+	private void limpiarCampos() {
+		textFieldNombre.setText("");
+		textFieldApellidos.setText("");
+		textFieldFecha.setText("");
+		textFieldPais.setText("");
+		textFieldPoblacion.setText("");
+		textFieldCalle.setText("");
+		textFieldFecha.setText("");
+	}
 }

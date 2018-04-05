@@ -152,4 +152,8 @@ public class VentanaLogin extends JFrame {
 		panel_5.add(lblIniciaSesion);
 	}
 
+	private void limpiarCampos() {
+		textFieldUsuario.setText("");
+		textFieldContrasenia.setText("");
+	}
 }
