@@ -44,7 +44,7 @@ public class VentanaUsuario extends JFrame {
 				}
 			}
 		});
-	}
+	} 
 
 	/**
 	 * Create the frame.
