@@ -194,7 +194,7 @@ public class PanelRegistro extends JPanel {
 			JOptionPane.showMessageDialog(null, "NO HAS INTRODUCIDO NINGUNA FECHA DE NACIMIENTO", "ERROR!",
 					JOptionPane.ERROR_MESSAGE);
 		} else if (textFieldCalle.getText().equals("")) {
-			JOptionPane.showMessageDialog(null, "NO HAS INTRODUCIDO NINGUNA CALLE", "ERROR!",
+			JOptionPane.showMessageDialog(null, "NO HAS INTROD  UCIDO NINGUNA CALLE", "ERROR!",
 					JOptionPane.ERROR_MESSAGE);
 		} else if (textFieldApellidos.getText().equals("")) {
 			JOptionPane.showMessageDialog(null, "NO HAS INTRODUCIDO NINGUN APELLIDO", "ERROR!",
@@ -203,7 +203,7 @@ public class PanelRegistro extends JPanel {
 			JOptionPane.showMessageDialog(null, "NO HAS INTRODUCIDO NINGUNA CIUDAD", "ERROR!",
 					JOptionPane.ERROR_MESSAGE);
 		} else if (textFieldNombre.getText().equals("")) {
-			JOptionPane.showMessageDialog(null, "NO HAS INTRODUCIDO NINGUN NOMBRE", "�ERROR!",
+			JOptionPane.showMessageDialog(null, "NO HAS INTRODUCIDO NINGUN NOMBRE", "ERROR!",
 					JOptionPane.ERROR_MESSAGE);
 		} else {
 			BaseDeDatos bd = new BaseDeDatos();
