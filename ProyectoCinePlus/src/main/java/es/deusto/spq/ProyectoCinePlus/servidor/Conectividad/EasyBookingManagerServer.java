@@ -24,13 +24,14 @@ public class EasyBookingManagerServer {
 		try {
 			EasyBookingServer ebser = new EasyBookingServer();
 			
-			IEasyBooking easybookingser = new EasyBookingFacade(ebser);			
-			Naming.rebind(nameEasyBooking, easybookingser);
+			//IEasyBooking easybookingser = new EasyBookingFacade(ebser);			
+			//Naming.rebind(nameEasyBooking, easybookingser);
 			System.out.println("* EasyBooking Service '" + nameEasyBooking + "' active and waiting...");
 		} catch (Exception e) {
 			System.err.println("$ EasyBookingManagerServer exception: " + e.getMessage());
 			e.printStackTrace();
 		}
+		
 	}
 
 }
