@@ -1,14 +1,14 @@
 package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad;
 
-import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.IEasyBooking;
+import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus;
 
 
 public class RMIServiceLocator {
-	private IEasyBooking IEB;
+	private ICinePlus ICP;
 
 
-	public IEasyBooking getEasyBookingtService() {
-		return IEB;
+	public ICinePlus getCinePlusService() {
+		return ICP;
 	}
 	
 	public RMIServiceLocator(){ 
@@ -18,10 +18,10 @@ public class RMIServiceLocator {
 	public void setService(String[] args) {
 		try {
 			String name = "//" + args[0] + ":" + args[1] + "/" + args[3];
-			IEB = (IEasyBooking) java.rmi.Naming.lookup(name);
+			ICP = (ICinePlus) java.rmi.Naming.lookup(name);
 
 		} catch (Exception e) {
-			System.err.println("- Exception running EasyBooking: " + e.getMessage());
+			System.err.println("- Exception running CinePlus: " + e.getMessage());
 			e.printStackTrace();
 		}
 	}

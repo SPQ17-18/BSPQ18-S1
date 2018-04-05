@@ -2,13 +2,13 @@ package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad;
 
 import java.rmi.Naming;
 
-import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.EasyBookingFacade;
+import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusFacade;
 
 
 
 
 
-public class EasyBookingManagerServer {
+public class CinePlusManagerServer {
 	
 	public static void main(String[] args) {
 		if (args.length != 4) {
@@ -22,7 +22,7 @@ public class EasyBookingManagerServer {
 		String nameEasyBooking = "//" + args[0] + ":" + args[1] + "/" + args[3];
 
 		try {
-			EasyBookingServer ebser = new EasyBookingServer();
+			CinePlusServer ebser = new CinePlusServer();
 			
 			//IEasyBooking easybookingser = new EasyBookingFacade(ebser);			
 			//Naming.rebind(nameEasyBooking, easybookingser);
