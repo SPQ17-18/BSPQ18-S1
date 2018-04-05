@@ -3,6 +3,7 @@ package es.deusto.spq.ProyectoCinePlus.servidor.DTO;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.PrimaryKey;
 
 
