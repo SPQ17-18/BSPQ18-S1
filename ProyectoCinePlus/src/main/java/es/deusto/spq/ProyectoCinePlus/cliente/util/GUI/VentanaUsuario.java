@@ -11,7 +11,7 @@ import java.awt.Toolkit;
 public class VentanaUsuario extends JFrame {
 
 	private JPanel contentPane;
-
+ 
 	/**
 	 * Launch the application.
 	 */
@@ -42,4 +42,5 @@ public class VentanaUsuario extends JFrame {
 		setContentPane(contentPane);
 	}
 
+	
 }

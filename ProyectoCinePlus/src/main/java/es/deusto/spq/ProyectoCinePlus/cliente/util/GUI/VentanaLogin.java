@@ -20,7 +20,7 @@ public class VentanaLogin extends JFrame {
 	private JPanel contentPane;
 	private JTextField textFieldUsuario;
 	private JTextField textFieldContrasenia;
-	
+
 	private JPanel panel_1;
 	private JPanel panel_3;
 	private JPanel panel_2;

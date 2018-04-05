@@ -18,6 +18,7 @@ import java.awt.Toolkit;
 public class VentanaPrincipal extends JFrame {
 
 	protected static VentanaPrincipal frame;
+	
 	private JPanel contentPane;
 	private JPanel panel_6;
 	private JPanel panel_7;
@@ -28,7 +29,6 @@ public class VentanaPrincipal extends JFrame {
 	private JPanel panel_5;
 	private JPanel panel_3;
 	private JPanel panel_8;
-	
 	
 	private JButton btnIniciarSesion;
 	private JButton btnRegistarse;
