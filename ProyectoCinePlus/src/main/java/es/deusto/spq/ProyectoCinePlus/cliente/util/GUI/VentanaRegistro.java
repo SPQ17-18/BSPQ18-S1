@@ -234,9 +234,56 @@ public class VentanaRegistro extends JFrame {
 		btnRegistrarse = new JButton("Registrarse");
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//if() {
-					JOptionPane.showMessageDialog(null, "Error! Faltan datos!","ERROR!", JOptionPane.ERROR_MESSAGE);
-				//}
+				
+				String error ="";
+				
+				if(textFieldNombre.getText().equals("")) {
+					error = "Nombre";
+				}
+				if(textFieldApellidos.getText().equals("")) {
+					if(!error.isEmpty()){
+						error += " - Apellidos";
+					}else{
+						error+="Apellidos";
+					}
+				}
+				if(textFieldFecha.getText().equals("")) {
+					if(!error.isEmpty()){
+						error+=" - Fecha";
+					}else{
+						error+="Fecha";
+					}
+				}
+				if(textFieldPais.getText().equals("")) {
+					if(!error.isEmpty()){
+						error+=" - Pais";
+					}else{
+						error+="Pais";
+					}
+				}
+				if(textFieldPoblacion.getText().equals("")) {
+					if(!error.isEmpty()){
+						error+=" - Población";
+					}else{
+						error+="Población";
+					}
+				}
+				if(textFieldCalle.getText().equals("")) {
+					if(!error.isEmpty()){
+						error+=" - Calle";
+					}else{
+						error+="Calle";
+					}
+				}
+				if(textFieldFecha.getText().equals("")) {
+					if(!error.isEmpty()){
+						error+=" - Contraseña";
+					}else{
+						error+="Contraseña";
+					}
+				}
+				JOptionPane.showMessageDialog(null, "Error! Faltan los siguientes datos:\n" 
+								+ error, "ERROR!", JOptionPane.ERROR_MESSAGE);
 			}
 		});
 		panel_9.add(btnRegistrarse);
