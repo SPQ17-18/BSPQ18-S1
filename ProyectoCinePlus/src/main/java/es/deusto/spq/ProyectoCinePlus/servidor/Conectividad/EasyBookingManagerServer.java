@@ -31,6 +31,7 @@ public class EasyBookingManagerServer {
 			System.err.println("$ EasyBookingManagerServer exception: " + e.getMessage());
 			e.printStackTrace();
 		}
+		
 	}
 
 }
