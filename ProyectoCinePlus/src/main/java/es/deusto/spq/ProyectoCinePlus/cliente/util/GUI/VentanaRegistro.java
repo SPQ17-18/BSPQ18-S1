@@ -10,6 +10,14 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
+import java.awt.GridLayout;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import java.awt.FlowLayout;
+import javax.swing.JList;
+import javax.swing.JComboBox;
+import javax.swing.JPasswordField;
 
 public class VentanaRegistro extends JFrame {
 
@@ -29,6 +37,34 @@ public class VentanaRegistro extends JFrame {
 	
 	private JButton btnRegistrarse;
 	private JButton btnAtras;
+	private final JLabel lblNombre = new JLabel("Nombre:");
+	private JTextField textField;
+	private JPanel panel_12;
+	private JPanel panel_13;
+	private JLabel lblApellidos;
+	private JTextField textField_1;
+	private JPanel panel_14;
+	private JPanel panel_15;
+	private JLabel lblFechaNacimiento;
+	private JLabel lblCalle;
+	private JPanel panel_16;
+	private JPanel panel_17;
+	private JLabel lblPoblacin;
+	private JLabel lblPas;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JPanel panel_18;
+	private JPanel panel_19;
+	private JPanel panel_20;
+	private JPanel panel_21;
+	private JPanel panel_22;
+	private JPanel panel_23;
+	private JTextField textField_5;
+	private JPanel panel_24;
+	private JPanel panel_25;
+	private JLabel label;
+	private JTextField textField_6;
 	
 	
 	/**
@@ -87,6 +123,105 @@ public class VentanaRegistro extends JFrame {
 		
 		panel_8 = new JPanel();
 		panel_4.add(panel_8);
+		panel_8.setLayout(new GridLayout(7, 2, 0, 0));
+		
+		panel_12 = new JPanel();
+		panel_8.add(panel_12);
+		panel_12.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		panel_18 = new JPanel();
+		panel_12.add(panel_18);
+		panel_18.setLayout(new GridLayout(1, 2, 0, 0));
+		panel_18.add(lblNombre);
+		lblNombre.setHorizontalAlignment(SwingConstants.LEFT);
+		
+		textField = new JTextField();
+		panel_18.add(textField);
+		textField.setColumns(10);
+		
+		panel_13 = new JPanel();
+		panel_8.add(panel_13);
+		
+		panel_19 = new JPanel();
+		panel_13.add(panel_19);
+		panel_19.setLayout(new GridLayout(1, 0, 0, 0));
+		
+		lblApellidos = new JLabel("Apellidos:");
+		panel_19.add(lblApellidos);
+		
+		textField_1 = new JTextField();
+		panel_19.add(textField_1);
+		textField_1.setColumns(10);
+		
+		panel_24 = new JPanel();
+		panel_8.add(panel_24);
+		
+		panel_25 = new JPanel();
+		panel_24.add(panel_25);
+		panel_25.setLayout(new GridLayout(1, 0, 0, 0));
+		
+		label = new JLabel("Contraseña:");
+		panel_25.add(label);
+		
+		textField_6 = new JTextField();
+		textField_6.setColumns(10);
+		panel_25.add(textField_6);
+		
+		panel_15 = new JPanel();
+		panel_8.add(panel_15);
+		
+		panel_20 = new JPanel();
+		panel_15.add(panel_20);
+		panel_20.setLayout(new GridLayout(0, 2, 0, 0));
+		
+		lblFechaNacimiento = new JLabel("Fecha nacimiento:");
+		panel_20.add(lblFechaNacimiento);
+		
+		textField_5 = new JTextField();
+		panel_20.add(textField_5);
+		textField_5.setColumns(10);
+		
+		panel_17 = new JPanel();
+		panel_8.add(panel_17);
+		
+		panel_21 = new JPanel();
+		panel_17.add(panel_21);
+		panel_21.setLayout(new GridLayout(1, 0, 0, 0));
+		
+		lblPoblacin = new JLabel("Población:");
+		panel_21.add(lblPoblacin);
+		
+		textField_3 = new JTextField();
+		panel_21.add(textField_3);
+		textField_3.setColumns(10);
+		
+		panel_14 = new JPanel();
+		panel_8.add(panel_14);
+		
+		panel_22 = new JPanel();
+		panel_14.add(panel_22);
+		panel_22.setLayout(new GridLayout(1, 0, 0, 0));
+		
+		lblCalle = new JLabel("Calle:");
+		panel_22.add(lblCalle);
+		
+		textField_4 = new JTextField();
+		panel_22.add(textField_4);
+		textField_4.setColumns(10);
+		
+		panel_16 = new JPanel();
+		panel_8.add(panel_16);
+		
+		panel_23 = new JPanel();
+		panel_16.add(panel_23);
+		panel_23.setLayout(new GridLayout(0, 2, 0, 0));
+		
+		lblPas = new JLabel("País:");
+		panel_23.add(lblPas);
+		
+		textField_2 = new JTextField();
+		panel_23.add(textField_2);
+		textField_2.setColumns(10);
 		
 		panel_11 = new JPanel();
 		panel_4.add(panel_11, BorderLayout.SOUTH);
