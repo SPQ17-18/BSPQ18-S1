@@ -257,45 +257,45 @@ public class VentanaRegistro extends JFrame {
 	private void comprobarcampos() {
 		String error ="";
 		
-		if(textFieldNombre.getText().equals("")) {
+		if(textFieldNombre.getText().trim().equals("")) {
 			error = "Nombre";
 		}
-		if(textFieldApellidos.getText().equals("")) {
+		if(textFieldApellidos.getText().trim().equals("")) {
 			if(!error.isEmpty()){
 				error += " - Apellidos";
 			}else{
 				error+="Apellidos";
 			}
 		}
-		if(textFieldFecha.getText().equals("")) {
+		if(textFieldFecha.getText().trim().equals("")) {
 			if(!error.isEmpty()){
 				error+=" - Fecha";
 			}else{
 				error+="Fecha";
 			}
 		}
-		if(textFieldPais.getText().equals("")) {
+		if(textFieldPais.getText().trim().equals("")) {
 			if(!error.isEmpty()){
 				error+=" - Pais";
 			}else{
 				error+="Pais";
 			}
 		}
-		if(textFieldPoblacion.getText().equals("")) {
+		if(textFieldPoblacion.getText().trim().equals("")) {
 			if(!error.isEmpty()){
 				error+=" - Población";
 			}else{
 				error+="Población";
 			}
 		}
-		if(textFieldCalle.getText().equals("")) {
+		if(textFieldCalle.getText().trim().equals("")) {
 			if(!error.isEmpty()){
 				error+=" - Calle";
 			}else{
 				error+="Calle";
 			}
 		}
-		if(textFieldFecha.getText().equals("")) {
+		if(textFieldFecha.getText().trim().equals("")) {
 			if(!error.isEmpty()){
 				error+=" - Contraseña";
 			}else{
