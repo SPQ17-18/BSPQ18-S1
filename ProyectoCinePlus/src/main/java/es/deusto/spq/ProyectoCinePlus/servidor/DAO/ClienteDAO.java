@@ -10,7 +10,6 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
-import javax.jdo.annotations.PersistenceCapable;
 
 
 //Esto es lo que utilizaremos para realizar un login correcto // ACCESO A BD
@@ -45,6 +44,7 @@ public class ClienteDAO implements IClienteDAO {
 	public ClienteDAO(){
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
 	}
+	
 	
 	public void storeCliente(ClienteDAO cliente) {
 		this.storeObject(cliente);
