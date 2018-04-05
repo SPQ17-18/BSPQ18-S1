@@ -234,8 +234,11 @@ public class VentanaRegistro extends JFrame {
 		btnRegistrarse = new JButton("Registrarse");
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				comprobarcampos();
-				
+				if (comprobarcampos()) {
+					VentanaUsuario ventanaUsuario = new VentanaUsuario();
+					ventanaUsuario.setVisible(true);
+					dispose();
+				}
 			}
 		});
 		panel_9.add(btnRegistrarse);
@@ -254,9 +257,9 @@ public class VentanaRegistro extends JFrame {
 		panel_1.setLayout(new BorderLayout(0, 0));
 	}
  
-	private void comprobarcampos() {
+	private boolean comprobarcampos() {
 		String error ="";
-		
+		boolean comprobar = true;
 		if(textFieldNombre.getText().trim().equals("")) {
 			error = "Nombre";
 		}
@@ -302,9 +305,14 @@ public class VentanaRegistro extends JFrame {
 				error+="Contraseña";
 			}
 		}
-		JOptionPane.showMessageDialog(null, "Error! Faltan los siguientes datos:\n" 
-						+ error, "ERROR!", JOptionPane.ERROR_MESSAGE);
-		limpiarCampos();
+		if(!error.isEmpty()) {
+			JOptionPane.showMessageDialog(null, "Error! Faltan los siguientes datos:\n" 
+					+ error, "ERROR!", JOptionPane.ERROR_MESSAGE);
+			limpiarCampos();
+			comprobar= false;
+		}
+		
+		return comprobar;
 	}
 	
 	private void limpiarCampos() {
