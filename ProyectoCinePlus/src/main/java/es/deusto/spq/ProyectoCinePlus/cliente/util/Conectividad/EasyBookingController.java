@@ -5,6 +5,8 @@ import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocato
 
 public class EasyBookingController {
 	private RMIServiceLocator rmi;
+	
+	
 
 	public EasyBookingController(RMIServiceLocator rmi) {
 		this.rmi = rmi;
