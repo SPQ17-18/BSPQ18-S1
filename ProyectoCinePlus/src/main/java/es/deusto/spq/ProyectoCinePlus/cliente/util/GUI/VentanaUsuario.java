@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
+
 import java.awt.Toolkit;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
@@ -22,6 +25,8 @@ import javax.swing.JComboBox;
 
 public class VentanaUsuario extends JFrame {
 
+	private CinePlusController controller;
+	
 	private JPanel contentPane;
  
 	private int anchuraPanel = 1080;
@@ -75,23 +80,24 @@ public class VentanaUsuario extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaUsuario frame = new VentanaUsuario();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	} 
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					VentanaUsuario frame = new VentanaUsuario();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	} 
 
 	/**
 	 * Create the frame.
 	 */
-	public VentanaUsuario() {
+	public VentanaUsuario(CinePlusController controller) {
+		this.controller =controller;
 		setTitle("Panel de usuario");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaUsuario.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

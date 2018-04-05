@@ -5,20 +5,26 @@ import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.rmi.RemoteException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
+
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;
 
 public class VentanaPrincipal extends JFrame {
 
-	protected static VentanaPrincipal frame;
+	private CinePlusController controlador;
+	public static VentanaPrincipal frame;
 	
+
 	private JPanel contentPane;
 	private JPanel panel_6;
 	private JPanel panel_7;
@@ -36,26 +42,14 @@ public class VentanaPrincipal extends JFrame {
 	private JButton btnSalir;
 	private JLabel label;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					frame = new VentanaPrincipal();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+
 
 	/**
 	 * Create the frame.
 	 */
-	public VentanaPrincipal() {
+	public VentanaPrincipal(CinePlusController controller) {
+		this.controlador = controller;
+		
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
 		setTitle("CinePlus");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -101,9 +95,10 @@ public class VentanaPrincipal extends JFrame {
 		btnIniciarSesion = new JButton("Iniciar Sesion");
 		btnIniciarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaLogin iniciarsesion = new VentanaLogin();
+				VentanaPrincipal.this.setVisible(false);
+				VentanaLogin iniciarsesion = new VentanaLogin(frame.controlador);
 				iniciarsesion.setVisible(true);
-				frame.setVisible(false);
+				
 			}
 		});
 		panel_8.add(btnIniciarSesion);
@@ -111,9 +106,10 @@ public class VentanaPrincipal extends JFrame {
 		btnRegistarse = new JButton("Registarse");
 		btnRegistarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaRegistro registrouser = new VentanaRegistro();
-				registrouser.setVisible(true);
 				frame.setVisible(false);
+				VentanaRegistro registrouser = new VentanaRegistro(frame.controlador);
+				registrouser.setVisible(true);
+				
 			}
 		});
 		

@@ -13,10 +13,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+
+import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
+
 import java.awt.Toolkit;
 
 public class VentanaLogin extends JFrame {
-
+	
+	private CinePlusController controller;
 	private JPanel contentPane;
 	private JTextField textFieldUsuario;
 	private JTextField textFieldContrasenia;
@@ -45,23 +49,26 @@ public class VentanaLogin extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaLogin frame = new VentanaLogin();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					VentanaLogin frame = new VentanaLogin();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
 	 */
-	public VentanaLogin() {
+	public VentanaLogin(CinePlusController controller) {
+		//Inicializamos el controlador
+		this.controller = controller;
+		
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));		
 		setTitle("Iniciar sesion");
 		setBounds(100, 100, 450, 300);

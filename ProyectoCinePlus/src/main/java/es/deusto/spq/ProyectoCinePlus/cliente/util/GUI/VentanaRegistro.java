@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -23,6 +26,8 @@ import javax.swing.DefaultComboBoxModel;
 
 public class VentanaRegistro extends JFrame {
 
+	private CinePlusController controller;
+	
 	private JPanel contentPane;
 	private JPanel panel;
 	private JPanel panel_2;
@@ -71,23 +76,25 @@ public class VentanaRegistro extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaRegistro frame = new VentanaRegistro();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					VentanaRegistro frame = new VentanaRegistro();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
 	 */
-	public VentanaRegistro() {
+	public VentanaRegistro(CinePlusController controller) {
+		this.controller = controller;
+		
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistro.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
 		setTitle("Registrar usuarios");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -234,7 +241,7 @@ public class VentanaRegistro extends JFrame {
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (comprobarcampos()) {
-					VentanaUsuario ventanaUsuario = new VentanaUsuario();
+					VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller);
 					ventanaUsuario.setVisible(true);
 					dispose();
 				}
