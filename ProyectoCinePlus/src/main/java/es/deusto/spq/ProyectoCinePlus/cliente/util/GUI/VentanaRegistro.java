@@ -45,7 +45,7 @@ public class VentanaRegistro extends JFrame {
 	
 	private JButton btnRegistrarse;
 	private JButton btnAtras;
-	private final JLabel lblNombre = new JLabel("Nombre:");
+	private final JLabel lblNombre ;
 	private JTextField textFieldNombre;
 	private JPanel panel_12;
 	private JPanel panel_13;
@@ -99,7 +99,7 @@ public class VentanaRegistro extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistro.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
 		setTitle(resourceBundle.getString("title_register_users_msg"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 351);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -141,6 +141,7 @@ public class VentanaRegistro extends JFrame {
 		panel_18 = new JPanel();
 		panel_12.add(panel_18);
 		panel_18.setLayout(new GridLayout(1, 2, 0, 0));
+		lblNombre = new JLabel(resourceBundle.getString("name_msg"));
 		panel_18.add(lblNombre);
 		lblNombre.setHorizontalAlignment(SwingConstants.LEFT);
 		

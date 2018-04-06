@@ -20,6 +20,8 @@ import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusControll
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class VentanaPrincipal extends JFrame {
 
@@ -44,8 +46,17 @@ public class VentanaPrincipal extends JFrame {
 	private JButton btnSalir;
 	private JLabel label;
 
-	String copy;
-	ResourceBundle resourceBundle;
+	private String copy;
+	protected ResourceBundle resourceBundle;
+	private JPanel panel_9;
+	private JPanel panel_10;
+	private JPanel panel_11;
+	private JPanel panel_12;
+	private JLabel lblEs;
+	private JLabel lblEn;
+	private JLabel lblEu;
+	
+	private String lang=null;
 
 	/**
 	 * Create the frame.
@@ -60,7 +71,7 @@ public class VentanaPrincipal extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
 		setTitle("CinePlus");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 348);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -85,6 +96,50 @@ public class VentanaPrincipal extends JFrame {
 		
 		panel_1 = new JPanel();
 		panel.add(panel_1, BorderLayout.CENTER);
+		panel_1.setLayout(new BorderLayout(0, 0));
+		
+		panel_9 = new JPanel();
+		panel_1.add(panel_9, BorderLayout.EAST);
+		panel_9.setLayout(new GridLayout(3, 0, 0, 0));
+		
+		panel_10 = new JPanel();
+		panel_9.add(panel_10);
+		
+		lblEs = new JLabel("");
+		lblEs.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				lang = "es";
+			}
+		});
+		lblEs.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/es25.png")));
+		panel_10.add(lblEs);
+		
+		panel_12 = new JPanel();
+		panel_9.add(panel_12);
+		
+		lblEu = new JLabel("");
+		lblEu.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				lang = "eu";
+			}
+		});
+		lblEu.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/eu25.png")));
+		panel_12.add(lblEu);
+		
+		panel_11 = new JPanel();
+		panel_9.add(panel_11);
+		
+		lblEn = new JLabel("");
+		lblEn.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				lang = "en";
+			}
+		});
+		lblEn.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/en25.png")));
+		panel_11.add(lblEn);
 		
 		panel_4 = new JPanel();
 		panel.add(panel_4, BorderLayout.WEST);
@@ -98,7 +153,6 @@ public class VentanaPrincipal extends JFrame {
 		panel_8 = new JPanel();
 		panel_3.add(panel_8);
 		panel_8.setLayout(new GridLayout(2, 2, 0, 0));
-		
 		
 		btnIniciarSesion = new JButton(resourceBundle.getString("login_msg"));
 		btnIniciarSesion.addActionListener(new ActionListener() {
