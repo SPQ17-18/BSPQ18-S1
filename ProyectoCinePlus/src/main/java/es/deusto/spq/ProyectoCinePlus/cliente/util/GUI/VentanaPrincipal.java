@@ -56,7 +56,7 @@ public class VentanaPrincipal extends JFrame {
 	private JLabel lblEn;
 	private JLabel lblEu;
 	
-	private String lang=null;
+	private String lang="en";
 
 	/**
 	 * Create the frame.
@@ -64,7 +64,7 @@ public class VentanaPrincipal extends JFrame {
 	public VentanaPrincipal(CinePlusController controller) {
 		
 		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
-		resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag("en"));
+		resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag(lang));
 		
 		this.controlador = controller;
 		
@@ -123,6 +123,10 @@ public class VentanaPrincipal extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				lang = "eu";
+				//resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag(lang));
+				frame.repaint();
+				//frame.dispose();
+				//frame.setVisible(true);
 			}
 		});
 		lblEu.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/eu25.png")));
