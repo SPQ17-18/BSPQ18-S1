@@ -17,8 +17,8 @@ public class RMIServiceLocator {
 
 	public void setService(String[] args) {
 		try {
-//			String name = "//" + args[0] + ":" + args[1] + "/" + args[3];
-//			ICP = (ICinePlus) java.rmi.Naming.lookup(name);
+			String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
+			ICP = (ICinePlus) java.rmi.Naming.lookup(name);
 
 		} catch (Exception e) {
 			System.err.println("- Exception running CinePlus: " + e.getMessage());

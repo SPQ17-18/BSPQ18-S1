@@ -162,7 +162,7 @@
 						<version>1.6.0</version>  
 						<configuration>  
 									<!-- Metemos aqui la ubicacion del server -->
-									<mainClass>es.deusto.spq.ProyectoCinePlus.servidor.Servidor</mainClass>
+									<mainClass>es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusManagerServer</mainClass>
 									<systemProperties>
 										
 										<systemProperty>
@@ -201,8 +201,7 @@
 						<artifactId>exec-maven-plugin</artifactId>  
 						<version>1.2.1</version>  
 						<configuration>  
-						<!-- Falta de indicar donde esta el cliente pero de momento se queda asi -->
-									<mainClass>es.deusto.client.Client</mainClass>
+									<mainClass>es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal</mainClass>
 									<systemProperties>
 										<systemProperty>
 											<key>java.security.manager</key>

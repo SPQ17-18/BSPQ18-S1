@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.rmi.RemoteException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -16,15 +15,21 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
+import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator;
 
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.rmi.RemoteException;
 
 public class VentanaPrincipal extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private CinePlusController controlador;
 	public static VentanaPrincipal frame;
 	
@@ -61,7 +66,7 @@ public class VentanaPrincipal extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaPrincipal(CinePlusController controller) {
+	public VentanaPrincipal(RMIServiceLocator rmi,CinePlusController controller) {
 		
 		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
 		//resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag(lang));
@@ -199,4 +204,25 @@ public class VentanaPrincipal extends JFrame {
 		panel_8.add(btnSalir);
 	}
 
+	public static void main(final String[] args) throws RemoteException {   
+	/**
+	 * Launch the application.
+	 */
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					RMIServiceLocator rmi=new RMIServiceLocator();
+					rmi.setService(args);
+					CinePlusController cpc=new CinePlusController(rmi);
+					VentanaPrincipal.frame = new VentanaPrincipal(rmi,cpc);
+					VentanaPrincipal.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	
+}
+	
+	
 }
