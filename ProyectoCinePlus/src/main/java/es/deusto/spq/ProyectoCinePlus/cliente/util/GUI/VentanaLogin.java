@@ -69,7 +69,7 @@ public class VentanaLogin extends JFrame {
 	public VentanaLogin(CinePlusController controller, ResourceBundle resourceBundle) {
 		//Inicializamos el controlador
 		this.controller = controller;
-		
+		 
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));		
 		setTitle(resourceBundle.getString("title_login_msg"));
 		setBounds(100, 100, 450, 300);

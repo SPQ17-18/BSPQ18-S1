@@ -32,7 +32,7 @@ public class VentanaUsuario extends JFrame {
 	private int anchuraPanel = 1080;
 	private int alturaPanel = 720;
 	private JTextField textFieldNombrePeli;
-	
+	 
 	private JLabel lblLogo;
 	private JLabel label_3;
 	private JLabel lblSaldo;

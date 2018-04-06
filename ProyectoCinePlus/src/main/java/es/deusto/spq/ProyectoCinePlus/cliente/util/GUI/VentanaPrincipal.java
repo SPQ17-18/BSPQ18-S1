@@ -174,7 +174,7 @@ public class VentanaPrincipal extends JFrame {
 				
 			}
 		});
-		
+		 
 		panel_8.add(btnRegistarse);
 		copy = resourceBundle.getString("copyright_msg");
 		btnCopyright = new JButton("Copyright");
