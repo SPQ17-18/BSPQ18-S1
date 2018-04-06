@@ -5,7 +5,7 @@ import java.util.List;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.ClienteDAO;
 
-public class CinePlusServer {
+public class CinePlusServer implements ICinePlus{
 	//Maantener esto para unir sesion de usuario/servidor para los metodos o(?)
 	private ClienteDAO dao;
 	
