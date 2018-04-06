@@ -64,7 +64,7 @@ public class VentanaPrincipal extends JFrame {
 	public VentanaPrincipal(CinePlusController controller) {
 		
 		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
-		resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag(lang));
+		//resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag(lang));
 		
 		this.controlador = controller;
 		
@@ -124,7 +124,7 @@ public class VentanaPrincipal extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				lang = "eu";
 				//resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag(lang));
-				frame.repaint();
+				//frame.repaint();
 				//frame.dispose();
 				//frame.setVisible(true);
 			}
