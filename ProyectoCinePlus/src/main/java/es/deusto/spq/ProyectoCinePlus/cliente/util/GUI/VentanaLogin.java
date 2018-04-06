@@ -6,6 +6,7 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -65,12 +66,12 @@ public class VentanaLogin extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaLogin(CinePlusController controller) {
+	public VentanaLogin(CinePlusController controller, ResourceBundle resourceBundle) {
 		//Inicializamos el controlador
 		this.controller = controller;
 		
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));		
-		setTitle("Iniciar sesion");
+		setTitle(resourceBundle.getString("title_login_msg"));
 		setBounds(100, 100, 450, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		contentPane = new JPanel();
@@ -94,14 +95,14 @@ public class VentanaLogin extends JFrame {
 		panel = new JPanel();
 		panel_6.add(panel);
 		
-		btnIniciarSesion = new JButton("Iniciar Sesion");
+		btnIniciarSesion = new JButton(resourceBundle.getString("login_msg"));
 		btnIniciarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
 		panel.add(btnIniciarSesion);
 		
-		btnAtras = new JButton("Atras");
+		btnAtras = new JButton(resourceBundle.getString("back_msg"));
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaPrincipal.frame.setVisible(true);
@@ -131,10 +132,10 @@ public class VentanaLogin extends JFrame {
 		panel_12 = new JPanel();
 		panel_9.add(panel_12);
 		
-		lblusuario = new JLabel("Usuario:");
+		lblusuario = new JLabel(resourceBundle.getString("user_msg"));
 		panel_9.add(lblusuario);
 		
-		lblcontrasenia = new JLabel("Contraseña:");
+		lblcontrasenia = new JLabel(resourceBundle.getString("pass_msg"));
 		panel_9.add(lblcontrasenia);
 		
 		panel_10 = new JPanel();
@@ -155,7 +156,7 @@ public class VentanaLogin extends JFrame {
 		panel_5 = new JPanel();
 		panel_2.add(panel_5, BorderLayout.NORTH);
 		
-		lblIniciaSesion = new JLabel("Inicia sesion");
+		lblIniciaSesion = new JLabel(resourceBundle.getString("login_msg"));
 		panel_5.add(lblIniciaSesion);
 	}
 

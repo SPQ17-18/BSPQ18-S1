@@ -11,6 +11,7 @@ import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusControll
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
 import java.awt.GridLayout;
@@ -57,7 +58,7 @@ public class VentanaRegistro extends JFrame {
 	private JPanel panel_16;
 	private JPanel panel_17;
 	private JLabel lblPoblacin;
-	private JLabel lblPas;
+	private JLabel lblPais;
 	private JTextField textFieldPais;
 	private JTextField textFieldPoblacion;
 	private JTextField textFieldCalle;
@@ -92,11 +93,11 @@ public class VentanaRegistro extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaRegistro(CinePlusController controller) {
+	public VentanaRegistro(CinePlusController controller,ResourceBundle resourceBundle) {
 		this.controller = controller;
-		
+		final ResourceBundle resourceBundleNew = resourceBundle;
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistro.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
-		setTitle("Registrar usuarios");
+		setTitle(resourceBundle.getString("title_register_users_msg"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -154,7 +155,7 @@ public class VentanaRegistro extends JFrame {
 		panel_13.add(panel_19);
 		panel_19.setLayout(new GridLayout(1, 0, 0, 0));
 		
-		lblApellidos = new JLabel("Apellidos:");
+		lblApellidos = new JLabel(resourceBundle.getString("surnames_msg"));
 		panel_19.add(lblApellidos);
 		
 		textFieldApellidos = new JTextField();
@@ -168,7 +169,7 @@ public class VentanaRegistro extends JFrame {
 		panel_24.add(panel_25);
 		panel_25.setLayout(new GridLayout(1, 0, 0, 0));
 		
-		label = new JLabel("Contraseña:");
+		label = new JLabel(resourceBundle.getString("pass_msg"));
 		panel_25.add(label);
 		
 		passwordField = new JPasswordField();
@@ -182,7 +183,7 @@ public class VentanaRegistro extends JFrame {
 		panel_15.add(panel_20);
 		panel_20.setLayout(new GridLayout(0, 2, 0, 0));
 		
-		lblFechaNacimiento = new JLabel("Fecha nacimiento:");
+		lblFechaNacimiento = new JLabel(resourceBundle.getString("birthdate_msg"));
 		panel_20.add(lblFechaNacimiento);
 		
 		textFieldFecha = new JTextField();
@@ -196,7 +197,7 @@ public class VentanaRegistro extends JFrame {
 		panel_17.add(panel_21);
 		panel_21.setLayout(new GridLayout(1, 0, 0, 0));
 		
-		lblPoblacin = new JLabel("Población:");
+		lblPoblacin = new JLabel(resourceBundle.getString("town_msg"));
 		panel_21.add(lblPoblacin);
 		
 		textFieldPoblacion = new JTextField();
@@ -210,7 +211,7 @@ public class VentanaRegistro extends JFrame {
 		panel_14.add(panel_22);
 		panel_22.setLayout(new GridLayout(1, 0, 0, 0));
 		
-		lblCalle = new JLabel("Calle:");
+		lblCalle = new JLabel(resourceBundle.getString("street_msg"));
 		panel_22.add(lblCalle);
 		
 		textFieldCalle = new JTextField();
@@ -224,8 +225,8 @@ public class VentanaRegistro extends JFrame {
 		panel_16.add(panel_23);
 		panel_23.setLayout(new GridLayout(0, 2, 0, 0));
 		
-		lblPas = new JLabel("País:");
-		panel_23.add(lblPas);
+		lblPais = new JLabel(resourceBundle.getString("country_msg"));
+		panel_23.add(lblPais);
 		
 		textFieldPais = new JTextField();
 		panel_23.add(textFieldPais);
@@ -237,10 +238,10 @@ public class VentanaRegistro extends JFrame {
 		panel_9 = new JPanel();
 		panel_11.add(panel_9);
 		
-		btnRegistrarse = new JButton("Registrarse");
+		btnRegistrarse = new JButton(resourceBundle.getString("register_msg"));
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (comprobarcampos()) {
+				if (comprobarcampos(resourceBundleNew)) {
 					VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller);
 					ventanaUsuario.setVisible(true);
 					dispose();
@@ -249,7 +250,7 @@ public class VentanaRegistro extends JFrame {
 		});
 		panel_9.add(btnRegistrarse);
 		
-		btnAtras = new JButton("Atras");
+		btnAtras = new JButton(resourceBundle.getString("back_msg"));
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaPrincipal.frame.setVisible(true);
@@ -263,57 +264,56 @@ public class VentanaRegistro extends JFrame {
 		panel_1.setLayout(new BorderLayout(0, 0));
 	}
  
-	private boolean comprobarcampos() {
+	private boolean comprobarcampos(ResourceBundle resourceBundle) {
 		String error ="";
 		boolean comprobar = true;
 		if(textFieldNombre.getText().trim().equals("")) {
-			error = "Nombre";
+			error = resourceBundle.getString("name2_msg");
 		}
 		if(textFieldApellidos.getText().trim().equals("")) {
 			if(!error.isEmpty()){
-				error += " - Apellidos";
+				error += " - " + resourceBundle.getString("surnames2_msg");
 			}else{
-				error+="Apellidos";
+				error+=resourceBundle.getString("surnames2_msg");
 			}
 		}
 		if(textFieldFecha.getText().trim().equals("")) {
 			if(!error.isEmpty()){
-				error+=" - Fecha";
+				error+=" - "+resourceBundle.getString("birthdate2_msg");
 			}else{
-				error+="Fecha";
+				error+=resourceBundle.getString("birthdate2_msg");
 			}
 		}
 		if(textFieldPais.getText().trim().equals("")) {
 			if(!error.isEmpty()){
-				error+=" - Pais";
+				error+=" - "+resourceBundle.getString("birthdate2_msg");
 			}else{
-				error+="Pais";
+				error+=resourceBundle.getString("birthdate2_msg");
 			}
 		}
 		if(textFieldPoblacion.getText().trim().equals("")) {
 			if(!error.isEmpty()){
-				error+=" - Población";
+				error+=" - "+resourceBundle.getString("town2_msg");
 			}else{
-				error+="Población";
+				error+=resourceBundle.getString("town2_msg");
 			}
 		}
 		if(textFieldCalle.getText().trim().equals("")) {
 			if(!error.isEmpty()){
-				error+=" - Calle";
+				error+=" - "+resourceBundle.getString("street2_msg");
 			}else{
-				error+="Calle";
+				error+=resourceBundle.getString("street2_msg");
 			}
 		}
 		if(textFieldFecha.getText().trim().equals("")) {
 			if(!error.isEmpty()){
-				error+=" - Contraseña";
+				error+=" - "+resourceBundle.getString("pass2_msg");
 			}else{
-				error+="Contraseña";
+				error+=resourceBundle.getString("pass2_msg");
 			}
 		}
 		if(!error.isEmpty()) {
-			JOptionPane.showMessageDialog(null, "Error! Faltan los siguientes datos:\n" 
-					+ error, "ERROR!", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_data_msg") + error, "ERROR!", JOptionPane.ERROR_MESSAGE);
 			limpiarCampos();
 			comprobar= false;
 		}

@@ -6,6 +6,8 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.rmi.RemoteException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -42,12 +44,17 @@ public class VentanaPrincipal extends JFrame {
 	private JButton btnSalir;
 	private JLabel label;
 
-
+	String copy;
+	ResourceBundle resourceBundle;
 
 	/**
 	 * Create the frame.
 	 */
 	public VentanaPrincipal(CinePlusController controller) {
+		
+		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
+		resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag("en"));
+		
 		this.controlador = controller;
 		
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
@@ -92,48 +99,40 @@ public class VentanaPrincipal extends JFrame {
 		panel_3.add(panel_8);
 		panel_8.setLayout(new GridLayout(2, 2, 0, 0));
 		
-		btnIniciarSesion = new JButton("Iniciar Sesion");
+		
+		btnIniciarSesion = new JButton(resourceBundle.getString("login_msg"));
 		btnIniciarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				VentanaPrincipal.this.setVisible(false);
-				VentanaLogin iniciarsesion = new VentanaLogin(frame.controlador);
+				VentanaLogin iniciarsesion = new VentanaLogin(frame.controlador,resourceBundle);
 				iniciarsesion.setVisible(true);
 				
 			}
 		});
 		panel_8.add(btnIniciarSesion);
 		
-		btnRegistarse = new JButton("Registarse");
+		btnRegistarse = new JButton(resourceBundle.getString("register_msg"));
 		btnRegistarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.setVisible(false);
-				VentanaRegistro registrouser = new VentanaRegistro(frame.controlador);
+				VentanaRegistro registrouser = new VentanaRegistro(frame.controlador,resourceBundle);
 				registrouser.setVisible(true);
 				
 			}
 		});
 		
 		panel_8.add(btnRegistarse);
-		
+		copy = resourceBundle.getString("copyright_msg");
 		btnCopyright = new JButton("Copyright");
 		btnCopyright.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				JOptionPane.showMessageDialog(null,
-						"Bienvenido a CinePlus!\n"
-								+ "CinePlus es una aplicación de peliculas donde podrás"
-								+ "marcar las peliculas que has visto, así como alquilar "
-								+ "las peliculas que quieres ver.\n"
-								+ "Está desarrollado por: \n"
-								+ "Javier Fernandez\n"
-								+ "Mikel Fernandez\n"
-								+ "Aritz Rasines\n"
-								+ "Xabi Sarrionandia\n",
-						"CopyRight CinePlus:", JOptionPane.DEFAULT_OPTION);
+				
+				JOptionPane.showMessageDialog(null,copy,"CopyRight CinePlus:", JOptionPane.DEFAULT_OPTION);
 			}
 		});
 		panel_8.add(btnCopyright);
 		
-		btnSalir = new JButton("Salir");
+		btnSalir = new JButton(resourceBundle.getString("get_out_msg"));
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
