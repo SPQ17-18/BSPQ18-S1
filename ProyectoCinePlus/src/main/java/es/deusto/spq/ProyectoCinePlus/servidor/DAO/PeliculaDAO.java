@@ -9,7 +9,6 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
-import javax.jdo.annotations.Join;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
