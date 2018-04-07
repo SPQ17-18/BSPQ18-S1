@@ -18,7 +18,6 @@ public class Usuario {
 	private String password;
 	private String pais;
 	private boolean admin;
-
 	@Join
 	private List<Pelicula> peliculasList = new ArrayList<Pelicula>();
 	

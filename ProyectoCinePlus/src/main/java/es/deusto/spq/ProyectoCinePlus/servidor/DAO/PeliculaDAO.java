@@ -128,8 +128,7 @@ public class PeliculaDAO {
 			System.out.println ("   * Querying a Product: " + name);
 			
 	    	tx.begin();
-	    	///////////////////////////////////////////////////  Esta query creo ke esta mal
-	    	Query<?> query = pm.newQuery("SELECT FROM " + PeliculaDAO.class.getName() + " WHERE email = '" + name + "'");
+	    	Query<?> query = pm.newQuery("SELECT FROM " + PeliculaDAO.class.getName() + " WHERE nombre = '" + name + "'");
 	    	query.setUnique(true);
 	    	Pelicula = (PeliculaDAO)query.execute();	    
  	    	tx.commit();

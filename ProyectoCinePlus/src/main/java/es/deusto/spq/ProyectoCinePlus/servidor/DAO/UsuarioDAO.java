@@ -129,7 +129,6 @@ public class UsuarioDAO {
 			System.out.println ("   * Querying a Product: " + username);
 			
 	    	tx.begin();
-	    	////////////////////////////////////////// NO se si falla --> EL username no es un id
 	    	Query<?> query = pm.newQuery("SELECT FROM " + UsuarioDAO.class.getName() + " WHERE usuario = '" + username + "'");
 	    	query.setUnique(true);
 	    	usuario = (UsuarioDAO)query.execute();	    
