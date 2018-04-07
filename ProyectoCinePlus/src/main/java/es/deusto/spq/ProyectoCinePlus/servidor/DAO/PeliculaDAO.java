@@ -9,6 +9,9 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
+import javax.jdo.annotations.Join;
+
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 public class PeliculaDAO {
 	private int id_pelicula;
@@ -17,19 +20,18 @@ public class PeliculaDAO {
 	private String descripcion;
 	private int anyo;
 	private String categoria;
-	private int disponibles;
 	private float precio;
+	private List<Usuario> usuariosList = new ArrayList<Usuario>();
 	private PersistenceManagerFactory pmf;
 	
 	public PeliculaDAO(int id_pelicula, String nombre, int duracion, String descripcion, int anyo, String categoria,
-		int disponibles, float precio) {
+		 float precio) {
 		this.id_pelicula = id_pelicula;
 		this.nombre = nombre;
 		this.duracion = duracion;
 		this.descripcion = descripcion;
 		this.anyo = anyo;
 		this.categoria = categoria;
-		this.disponibles = disponibles;
 		this.precio = precio;
 	}
 
@@ -61,8 +63,6 @@ public class PeliculaDAO {
 	    }
 	}
 	
-	
-
 	
 	public List<PeliculaDAO> getPeliculas() {
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -148,6 +148,7 @@ public class PeliculaDAO {
 			System.out.println ("   * Querying a Product: " + name);
 			
 	    	tx.begin();
+	    	///////////////////////////////////////////////////  Esta query creo ke esta mal
 	    	Query<?> query = pm.newQuery("SELECT FROM " + PeliculaDAO.class.getName() + " WHERE email == '" + name + "'");
 	    	query.setUnique(true);
 	    	Pelicula = (PeliculaDAO)query.execute();	    
@@ -242,12 +243,5 @@ public class PeliculaDAO {
 		this.categoria = categoria;
 	}
 
-	public int getDisponibles() {
-		return disponibles;
-	}
-
-	public void setDisponibles(int disponibles) {
-		this.disponibles = disponibles;
-	}
 
 }
