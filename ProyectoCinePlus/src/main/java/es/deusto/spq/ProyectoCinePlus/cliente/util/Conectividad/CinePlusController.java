@@ -1,24 +1,16 @@
 package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad;
 
-import java.awt.EventQueue;
-import java.rmi.RemoteException;
-
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator;
-import es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal;
 
 
 public class CinePlusController {
 	private RMIServiceLocator rsl;
-	private VentanaPrincipal cineplus;
+
 	
 
-	public CinePlusController(String [] args) throws RemoteException{
-		rsl = new RMIServiceLocator();
-		rsl.setService(args);
-		
-		
+	public CinePlusController(RMIServiceLocator rmi) {
+		this.rsl = rmi;
 	}
-	
 
 	public void RegistrarUsuario(String nombre, String contrasenya, String correo) {
 		try {
@@ -40,23 +32,23 @@ public class CinePlusController {
 	}
 	
 	
-	  public static void main(String[] args) throws RemoteException {   
-	    	
-	    	final CinePlusController controlador = new CinePlusController(args);
-	    	
-			/**
-			 * Launch the application.
-			 */
-				EventQueue.invokeLater(new Runnable() {
-					public void run() {
-						try {
-							VentanaPrincipal.frame = new VentanaPrincipal(controlador);
-							VentanaPrincipal.frame.setVisible(true);
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-					}
-				});
-			
-	    }
+//	  public static void main(String[] args) throws RemoteException {   
+//	    	
+//	    	final CinePlusController controlador = new CinePlusController(args);
+//	    	
+//			/**
+//			 * Launch the application.
+//			 */
+//				EventQueue.invokeLater(new Runnable() {
+//					public void run() {
+//						try {
+//							VentanaPrincipal.frame = new VentanaPrincipal(controlador);
+//							VentanaPrincipal.frame.setVisible(true);
+//						} catch (Exception e) {
+//							e.printStackTrace();
+//						}
+//					}
+//				});
+//			
+//	    }
 }
