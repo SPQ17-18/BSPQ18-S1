@@ -10,29 +10,10 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
-import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
-
 public class PeliculaDAO {
-	private int id_pelicula;
-	private String nombre;
-	private int duracion;
-	private String descripcion;
-	private int anyo;
-	private String categoria;
-	private float precio;
-	private List<Usuario> usuariosList = new ArrayList<Usuario>();
+
 	private PersistenceManagerFactory pmf;
-	
-	public PeliculaDAO(int id_pelicula, String nombre, int duracion, String descripcion, int anyo, String categoria,
-		 float precio) {
-		this.id_pelicula = id_pelicula;
-		this.nombre = nombre;
-		this.duracion = duracion;
-		this.descripcion = descripcion;
-		this.anyo = anyo;
-		this.categoria = categoria;
-		this.precio = precio;
-	}
+
 
 	public PeliculaDAO(){
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
@@ -148,7 +129,7 @@ public class PeliculaDAO {
 			
 	    	tx.begin();
 	    	///////////////////////////////////////////////////  Esta query creo ke esta mal
-	    	Query<?> query = pm.newQuery("SELECT FROM " + PeliculaDAO.class.getName() + " WHERE email == '" + name + "'");
+	    	Query<?> query = pm.newQuery("SELECT FROM " + PeliculaDAO.class.getName() + " WHERE email = '" + name + "'");
 	    	query.setUnique(true);
 	    	Pelicula = (PeliculaDAO)query.execute();	    
  	    	tx.commit();
@@ -184,62 +165,6 @@ public class PeliculaDAO {
 				
 	   		pm.close();
 	     }
-	}
-	
-	public float getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(float precio) {
-		this.precio = precio;
-	}
-
-	public int getId_pelicula() {
-		return id_pelicula;
-	}
-
-	public void setId_pelicula(int id_pelicula) {
-		this.id_pelicula = id_pelicula;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public int getDuracion() {
-		return duracion;
-	}
-
-	public void setDuracion(int duracion) {
-		this.duracion = duracion;
-	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
-
-	public int getAnyo() {
-		return anyo;
-	}
-
-	public void setAnyo(int anyo) {
-		this.anyo = anyo;
-	}
-
-	public String getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
 	}
 
 

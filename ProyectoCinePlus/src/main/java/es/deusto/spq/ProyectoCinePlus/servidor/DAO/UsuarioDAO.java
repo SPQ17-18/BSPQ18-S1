@@ -10,38 +10,11 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
-import es.deusto.spq.ProyectoCinePlus.servidor.DTO.PeliculaDTO;
-
 
 
 public class UsuarioDAO {
 	private PersistenceManagerFactory pmf; 
-	private String usuario;
-	private String email;
-	private String nombre;
-	private String apellido;
-	private String password;
-	private String pais;
-	private boolean admin;
-	private List<PeliculaDTO> peliculasList = new ArrayList<PeliculaDTO>();
-	
-	
-	public UsuarioDAO(PersistenceManagerFactory pmf, String usuario, String email, String nombre, String apellido,
-			String password, String pais, boolean admin, List<PeliculaDTO> peliculasList) {
-		super();
-		this.pmf = pmf;
-		this.usuario = usuario;
-		this.email = email;
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.password = password;
-		this.pais = pais;
-		this.admin = admin;
-		this.peliculasList = peliculasList;
-	}
-	
-	/***/
-	
+
 	
 	public UsuarioDAO(){
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
@@ -157,7 +130,7 @@ public class UsuarioDAO {
 			
 	    	tx.begin();
 	    	////////////////////////////////////////// NO se si falla --> EL username no es un id
-	    	Query<?> query = pm.newQuery("SELECT FROM " + UsuarioDAO.class.getName() + " WHERE id_cliente == '" + username + "'");
+	    	Query<?> query = pm.newQuery("SELECT FROM " + UsuarioDAO.class.getName() + " WHERE usuario = '" + username + "'");
 	    	query.setUnique(true);
 	    	usuario = (UsuarioDAO)query.execute();	    
  	    	tx.commit();
@@ -195,59 +168,6 @@ public class UsuarioDAO {
 	     }
 	}
 	
-	
-	/***/
-	
-	
-	
-	public String getUsuario() {
-		return usuario;
-	}
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getNombre() {
-		return nombre;
-	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-	public String getApellido() {
-		return apellido;
-	}
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public String getPais() {
-		return pais;
-	}
-	public void setPais(String pais) {
-		this.pais = pais;
-	}
-	public List<PeliculaDTO> getPeliculasList() {
-		return peliculasList;
-	}
-	public void setPeliculasList(List<PeliculaDTO> peliculasList) {
-		this.peliculasList = peliculasList;
-	}
-	public boolean isAdmin() {
-		return admin;
-	}
-	public void setAdmin(boolean admin) {
-		this.admin = admin;
-	}
-	
+
 	
 }
