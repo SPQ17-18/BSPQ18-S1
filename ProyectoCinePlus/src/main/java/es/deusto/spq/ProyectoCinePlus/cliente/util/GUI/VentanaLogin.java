@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
@@ -18,13 +19,13 @@ import javax.swing.border.EmptyBorder;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 
 import java.awt.Toolkit;
+import javax.swing.JPasswordField;
 
 public class VentanaLogin extends JFrame {
 	
 	private CinePlusController controller;
 	private JPanel contentPane;
 	private JTextField textFieldUsuario;
-	private JTextField textFieldContrasenia;
 
 	private JPanel panel_1;
 	private JPanel panel_3;
@@ -46,6 +47,7 @@ public class VentanaLogin extends JFrame {
 	private JLabel lblcontrasenia;
 	private JLabel lblusuario;
 	private JLabel lblIniciaSesion;
+	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -99,6 +101,11 @@ public class VentanaLogin extends JFrame {
 		btnIniciarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//Comprobacion campos vacios
+				if(textFieldUsuario.getText().trim().equals("") || passwordField.getPassword().length < 6 ) {
+					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_login_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
+					limpiarCampos();
+				}
+				
 			}
 		});
 		panel.add(btnIniciarSesion);
@@ -150,9 +157,8 @@ public class VentanaLogin extends JFrame {
 		panel_10.add(textFieldUsuario);
 		textFieldUsuario.setColumns(10);
 		
-		textFieldContrasenia = new JTextField();
-		panel_10.add(textFieldContrasenia);
-		textFieldContrasenia.setColumns(10);
+		passwordField = new JPasswordField();
+		panel_10.add(passwordField);
 		
 		panel_5 = new JPanel();
 		panel_2.add(panel_5, BorderLayout.NORTH);
@@ -163,6 +169,6 @@ public class VentanaLogin extends JFrame {
 
 	private void limpiarCampos() {
 		textFieldUsuario.setText("");
-		textFieldContrasenia.setText("");
+		passwordField.setText("");
 	}
 }
