@@ -1,11 +1,11 @@
 /* DELETE 'nucleus' database*/
-DROP SCHEMA IF EXISTS cineplusDB;
+DROP SCHEMA IF EXISTS cinePlusDB;
 /* DELETE USER 'spq' AT LOCAL SERVER*/
 DROP USER IF EXISTS 'spq'@'%';
 
 /* CREATE 'nucleus' DATABASE */
-CREATE SCHEMA cineplusDB;
+CREATE SCHEMA cinePlusDB;
 /* CREATE THE USER 'spq' AT LOCAL SERVER WITH PASSWORD 'spq' */
 CREATE USER IF NOT EXISTS 'spq'@'%' IDENTIFIED BY 'spq';
 
-GRANT ALL ON cineplusDB.* TO 'spq'@'%';
+GRANT ALL ON cinePlusDB.* TO 'spq'@'%';
