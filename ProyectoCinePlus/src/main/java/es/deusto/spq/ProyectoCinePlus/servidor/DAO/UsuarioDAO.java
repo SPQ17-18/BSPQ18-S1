@@ -10,30 +10,41 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 
-public class UsuarioDAO {
+
+public class UsuarioDAO implements IUsuarioDAO{
 	private PersistenceManagerFactory pmf; 
-
+	private String username;
+	private String usermail;
 	
 	public UsuarioDAO(){
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
 	}
 	
 	
-	public void storeUsuario(UsuarioDAO cliente) {
-		this.storeObject(cliente);
+	public boolean storeUsuario(Usuario usuario) {
+		boolean resul = false;
+		if (!this.checkUser(usuario)) {
+			resul = this.storeObject(usuario);
+		} else {
+			System.out.println("The user mail " + usuario.getEmail() + " already exists");
+		}
+		return resul;
 	}
 	
-	private void storeObject(UsuarioDAO cliente) {
+	public boolean storeObject(Usuario usuario) {
+		boolean resul =false;
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();
 	   
 	    try {
 	       tx.begin();
-	       System.out.println("   * Storing an object: " + cliente);
-	       pm.makePersistent(cliente);
+	       System.out.println("   * Storing an object: " + usuario);
+	       pm.makePersistent(usuario);
 	       tx.commit();
+	       resul =true;
 	    } catch (Exception ex) {
 	    	System.out.println("   $ Error storing an object: " + ex.getMessage());
 	    } finally {
@@ -42,10 +53,11 @@ public class UsuarioDAO {
 	    	}		
     		pm.close();
 	    }
+	    return resul;
 	}
 	
 	
-	public List<UsuarioDAO> getUsuarios() {
+	public List<Usuario> getUsuarios() {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		/* By default only 1 level is retrieved from the db
 		 * so if we wish to fetch more than one level, we must indicate it
@@ -53,15 +65,15 @@ public class UsuarioDAO {
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		
 		Transaction tx = pm.currentTransaction();
-		List<UsuarioDAO> Usuarios = new ArrayList<UsuarioDAO>();
+		List<Usuario> Usuarios = new ArrayList<Usuario>();
 		
 		try {
 			System.out.println("   * Sacando un Extent para Usuarios.");
 			
 			tx.begin();			
-			Extent<UsuarioDAO> extent = pm.getExtent(UsuarioDAO.class, true);
+			Extent<Usuario> extent = pm.getExtent(Usuario.class, true);
 			
-			for (UsuarioDAO Usuario : extent) {
+			for (Usuario Usuario : extent) {
 				Usuarios.add(Usuario);
 			}
 
@@ -86,21 +98,21 @@ public class UsuarioDAO {
 	 * @param condicion de la WHERE
 	 * @return lista de alquileres que cumpla la condicion
 	 */
-	public List<UsuarioDAO> getUsuarios(String condition) {
+	public List<Usuario> getUsuarios(String condition) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		
 	    Transaction tx = pm.currentTransaction();
-	    List<UsuarioDAO> Usuarios = new ArrayList<UsuarioDAO>();
+	    List<Usuario> Usuarios = new ArrayList<Usuario>();
 	        
 	    try {
 	    	System.out.println("   * Ejecutando Query para Usuarios bajo la condicion: " + condition);
 	    	
 	    	tx.begin();	    	
-			Extent<UsuarioDAO> extent = pm.getExtent(UsuarioDAO.class, true);
-			Query<UsuarioDAO> query = pm.newQuery(extent, condition);
+			Extent<Usuario> extent = pm.getExtent(Usuario.class, true);
+			Query<Usuario> query = pm.newQuery(extent, condition);
 
-			for (UsuarioDAO usuario : (List<UsuarioDAO>)query.execute()) {
+			for (Usuario usuario : (List<Usuario>)query.execute()) {
 				Usuarios.add(usuario);
 			}
 			
@@ -118,20 +130,20 @@ public class UsuarioDAO {
 	    return Usuarios;
 	}
 	
-	public UsuarioDAO getUsuario(String username){
+	public Usuario getUsuario(String username){
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		
 		Transaction tx = pm.currentTransaction();
-		UsuarioDAO usuario = null;
+		Usuario usuario = null;
 	    
 		try {
 			System.out.println ("   * Querying a Product: " + username);
 			
 	    	tx.begin();
-	    	Query<?> query = pm.newQuery("SELECT FROM " + UsuarioDAO.class.getName() + " WHERE usuario = '" + username + "'");
+	    	Query<?> query = pm.newQuery("SELECT FROM " + Usuario.class.getName() + " WHERE usuario = '" + username + "'");
 	    	query.setUnique(true);
-	    	usuario = (UsuarioDAO)query.execute();	    
+	    	usuario = (Usuario)query.execute();	    
  	    	tx.commit();
    	    
 	     } catch (Exception ex) {
@@ -148,7 +160,7 @@ public class UsuarioDAO {
 	}	
 	
 	
-	public void updateUsuario(UsuarioDAO usuario) {
+	public void updateUsuario(Usuario usuario) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();
 	    
@@ -165,6 +177,66 @@ public class UsuarioDAO {
 				
 	   		pm.close();
 	     }
+	}
+
+
+	@Override
+	public boolean loginUser(String email, String password) {
+		// TODO Auto-generated method stub
+		boolean resul = false;
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+
+		try {
+			tx.begin();
+			Extent<Usuario> ex = pm.getExtent(Usuario.class, true);
+			for (Usuario u : ex) {
+				if (u.getEmail().equals(email) && u.getPassword().equals(password)) {
+					resul = true;
+					this.username = u.getNombre();
+					this.usermail = u.getEmail();
+				}
+			}
+			tx.commit();
+		} catch (Exception ex) {
+			System.out.println("   $ Error login for user: " + ex.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+		return resul;
+	}
+
+
+	@Override
+	public boolean checkUser(Usuario usuario) {
+		// TODO Auto-generated method stub
+		boolean resul = false;
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+
+		try {
+			tx.begin();
+			System.out.println("   * Checking if " + usuario + " exists in the database");
+			Extent<Usuario> ex = pm.getExtent(Usuario.class, true);
+			for (Usuario u : ex) {
+				if (u.getEmail().equals(usuario.getEmail())) {
+					resul = true;
+				}
+			}
+			tx.commit();
+		} catch (Exception ex) {
+			System.out.println("   $ Error during the checking of user: " + ex.getMessage());
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+
+			pm.close();
+		}
+		return resul;
 	}
 	
 

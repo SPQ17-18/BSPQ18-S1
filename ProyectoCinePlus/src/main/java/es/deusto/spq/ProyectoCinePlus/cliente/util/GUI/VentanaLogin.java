@@ -98,6 +98,7 @@ public class VentanaLogin extends JFrame {
 		btnIniciarSesion = new JButton(resourceBundle.getString("login_msg"));
 		btnIniciarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				//Comprobacion campos vacios
 			}
 		});
 		panel.add(btnIniciarSesion);
@@ -132,7 +133,7 @@ public class VentanaLogin extends JFrame {
 		panel_12 = new JPanel();
 		panel_9.add(panel_12);
 		
-		lblusuario = new JLabel(resourceBundle.getString("user_msg"));
+		lblusuario = new JLabel(resourceBundle.getString("email_msg"));
 		panel_9.add(lblusuario);
 		
 		lblcontrasenia = new JLabel(resourceBundle.getString("pass_msg"));

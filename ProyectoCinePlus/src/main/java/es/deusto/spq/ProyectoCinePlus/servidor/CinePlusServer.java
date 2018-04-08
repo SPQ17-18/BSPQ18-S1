@@ -7,6 +7,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 public class CinePlusServer extends UnicastRemoteObject implements ICinePlusServer {
 
@@ -33,7 +34,7 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlusServ
 		String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
 
 		try {
-			IMFServer objServer = new MFServer();
+			ICinePlusServer objServer = new CinePlusServer();
 			Naming.rebind(name, objServer);
 			System.out.println("Server '" + name + "' active and waiting...");
 			InputStreamReader inputStreamReader = new InputStreamReader(System.in);
@@ -53,5 +54,21 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlusServ
 	public CinePlusServer() throws RemoteException {
 		super();
 		usuarioDAO = new UsuarioDAO();
+	}
+
+
+	@Override
+	public boolean registerUser(String usuario, String email, String nombre, String apellido, String password,
+			String pais, boolean admin) throws RemoteException {
+		// TODO Auto-generated method stub
+		Usuario user = new Usuario (usuario, email, nombre, apellido, password, pais, admin);
+		return usuarioDAO.storeUsuario(user);
+	}
+
+
+	@Override
+	public boolean loginUser(String usuario, String password) throws RemoteException {
+		// TODO Auto-generated method stub
+		return usuarioDAO.loginUser(usuario, password);
 	}
 }

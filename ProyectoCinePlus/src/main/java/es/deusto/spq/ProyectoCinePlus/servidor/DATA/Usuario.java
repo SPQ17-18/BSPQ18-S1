@@ -20,7 +20,33 @@ public class Usuario {
 	private boolean admin;
 	@Join
 	private List<Pelicula> peliculasList = new ArrayList<Pelicula>();
+
 	
+	public Usuario(String usuario, String email, String nombre, String apellido, String password, String pais,
+			boolean admin, List<Pelicula> peliculasList) {
+		super();
+		this.usuario = usuario;
+		this.email = email;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.password = password;
+		this.pais = pais;
+		this.admin = admin;
+		this.peliculasList = peliculasList;
+	}
+	
+	public Usuario(String usuario, String email, String nombre, String apellido, String password, String pais,
+			boolean admin) {
+		super();
+		this.usuario = usuario;
+		this.email = email;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.password = password;
+		this.pais = pais;
+		this.admin = admin;
+	}
+
 	public String getUsuario() {
 		return usuario;
 	}

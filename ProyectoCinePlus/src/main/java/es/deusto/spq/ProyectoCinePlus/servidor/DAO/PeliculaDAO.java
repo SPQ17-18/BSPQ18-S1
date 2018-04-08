@@ -10,7 +10,9 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
-public class PeliculaDAO {
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
+
+public class PeliculaDAO implements IPeliculaDAO{
 
 	private PersistenceManagerFactory pmf;
 
@@ -19,11 +21,11 @@ public class PeliculaDAO {
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
 	}
 	
-	public void storePelicula(PeliculaDAO Pelicula) {
+	public void storePelicula(Pelicula Pelicula) {
 		this.storeObject(Pelicula);
 	}
 	
-	private void storeObject(PeliculaDAO Pelicula) {
+	public void storeObject(Pelicula Pelicula) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();
 	   
@@ -44,7 +46,7 @@ public class PeliculaDAO {
 	}
 	
 	
-	public List<PeliculaDAO> getPeliculas() {
+	public List<Pelicula> getPeliculas() {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		/* By default only 1 level is retrieved from the db
 		 * so if we wish to fetch more than one level, we must indicate it
@@ -52,15 +54,15 @@ public class PeliculaDAO {
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		
 		Transaction tx = pm.currentTransaction();
-		List<PeliculaDAO> Peliculas = new ArrayList<PeliculaDAO>();
+		List<Pelicula> Peliculas = new ArrayList<Pelicula>();
 		
 		try {
 			System.out.println("   * Retrieving an Extent for Products.");
 			
 			tx.begin();			
-			Extent<PeliculaDAO> extent = pm.getExtent(PeliculaDAO.class, true);
+			Extent<Pelicula> extent = pm.getExtent(Pelicula.class, true);
 			
-			for (PeliculaDAO Pelicula : extent) {
+			for (Pelicula Pelicula : extent) {
 				Peliculas.add(Pelicula);
 			}
 
@@ -85,21 +87,21 @@ public class PeliculaDAO {
 	 * @param condicion de la WHERE
 	 * @return lista de Peliculas que cumpla la condicion
 	 */
-	public List<PeliculaDAO> getPeliculas(String condition) {
+	public List<Pelicula> getPeliculas(String condition) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		
 	    Transaction tx = pm.currentTransaction();
-	    List<PeliculaDAO> Peliculas = new ArrayList<PeliculaDAO>();
+	    List<Pelicula> Peliculas = new ArrayList<Pelicula>();
 	        
 	    try {
 	    	System.out.println("   * Executing a Query for Products given a condition: " + condition);
 	    	
 	    	tx.begin();	    	
-			Extent<PeliculaDAO> extent = pm.getExtent(PeliculaDAO.class, true);
-			Query<PeliculaDAO> query = pm.newQuery(extent, condition);
+			Extent<Pelicula> extent = pm.getExtent(Pelicula.class, true);
+			Query<Pelicula> query = pm.newQuery(extent, condition);
 
-			for (PeliculaDAO Pelicula : (List<PeliculaDAO>)query.execute()) {
+			for (Pelicula Pelicula : (List<Pelicula>)query.execute()) {
 				Peliculas.add(Pelicula);
 			}
 			
@@ -117,20 +119,20 @@ public class PeliculaDAO {
 	    return Peliculas;
 	}
 	
-	public PeliculaDAO getPelicula(String name){
+	public Pelicula getPelicula(String name){
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		
 		Transaction tx = pm.currentTransaction();
-		PeliculaDAO Pelicula = null;
+		Pelicula Pelicula = null;
 	    
 		try {
 			System.out.println ("   * Querying a Product: " + name);
 			
 	    	tx.begin();
-	    	Query<?> query = pm.newQuery("SELECT FROM " + PeliculaDAO.class.getName() + " WHERE nombre = '" + name + "'");
+	    	Query<?> query = pm.newQuery("SELECT FROM " + Pelicula.class.getName() + " WHERE nombre = '" + name + "'");
 	    	query.setUnique(true);
-	    	Pelicula = (PeliculaDAO)query.execute();	    
+	    	Pelicula = (Pelicula)query.execute();	    
  	    	tx.commit();
    	    
 	     } catch (Exception ex) {
@@ -147,7 +149,7 @@ public class PeliculaDAO {
 	}	
 	
 	
-	public void updatePelicula(PeliculaDAO Pelicula) {
+	public void updatePelicula(Pelicula Pelicula) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();
 	    
