@@ -180,7 +180,6 @@ public class UsuarioDAO implements IUsuarioDAO{
 	}
 
 
-	@Override
 	public boolean loginUser(String email, String password) {
 		// TODO Auto-generated method stub
 		boolean resul = false;
@@ -210,7 +209,6 @@ public class UsuarioDAO implements IUsuarioDAO{
 	}
 
 
-	@Override
 	public boolean checkUser(Usuario usuario) {
 		// TODO Auto-generated method stub
 		boolean resul = false;
@@ -237,6 +235,12 @@ public class UsuarioDAO implements IUsuarioDAO{
 			pm.close();
 		}
 		return resul;
+	}
+
+
+	public List<UsuarioDAO> getClientes() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 

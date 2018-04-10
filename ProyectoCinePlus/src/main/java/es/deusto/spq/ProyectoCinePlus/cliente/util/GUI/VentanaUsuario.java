@@ -22,6 +22,8 @@ import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JTextField;
 import javax.swing.JList;
 import javax.swing.JComboBox;
+import javax.swing.JScrollPane;
+import java.awt.Panel;
 
 public class VentanaUsuario extends JFrame {
 
@@ -232,6 +234,12 @@ public class VentanaUsuario extends JFrame {
 		
 		JPanel panel_13 = new JPanel();
 		panel_5.add(panel_13, BorderLayout.SOUTH);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		panel_5.add(scrollPane, BorderLayout.CENTER);
+		
+		Panel panel_26 = new Panel();
+		scrollPane.setViewportView(panel_26);
 		
 		JPanel panel_8 = new JPanel();
 		panel_4.add(panel_8, BorderLayout.WEST);

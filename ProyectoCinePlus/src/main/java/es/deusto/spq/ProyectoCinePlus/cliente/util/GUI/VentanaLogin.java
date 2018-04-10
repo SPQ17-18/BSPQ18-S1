@@ -68,7 +68,7 @@ public class VentanaLogin extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaLogin(CinePlusController controller, ResourceBundle resourceBundle) {
+	public VentanaLogin(CinePlusController controller, final ResourceBundle resourceBundle) {
 		//Inicializamos el controlador
 		this.controller = controller;
 		 

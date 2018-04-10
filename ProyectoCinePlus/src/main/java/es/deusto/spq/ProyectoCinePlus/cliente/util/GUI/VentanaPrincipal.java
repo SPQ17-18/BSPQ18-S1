@@ -69,7 +69,7 @@ public class VentanaPrincipal extends JFrame {
 	public VentanaPrincipal(RMIServiceLocator rmi,CinePlusController controller) {
 		
 		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
-		//resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag(lang));
+		//resourceBundle = ResourceBundle.getBundle("SystemMessages ",	Locale.forLanguageTag(lang));
 		
 		this.controlador = controller;
 		
