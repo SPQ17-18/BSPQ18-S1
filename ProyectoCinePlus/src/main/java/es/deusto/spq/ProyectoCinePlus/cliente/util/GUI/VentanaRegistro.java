@@ -260,6 +260,7 @@ public class VentanaRegistro extends JFrame {
 		});
 		panel_9.add(btnAtras);
 		
+		
 		panel_1 = new JPanel();
 		contentPane.add(panel_1, BorderLayout.EAST);
 		panel_1.setLayout(new BorderLayout(0, 0));
