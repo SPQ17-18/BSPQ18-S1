@@ -1,5 +1,6 @@
 package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad;
 
+import es.deusto.spq.ProyectoCinePlus.servidor.ICinePlusServer;
 import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus;
 
 

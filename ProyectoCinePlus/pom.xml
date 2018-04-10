@@ -15,51 +15,49 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   	<server.IP>127.0.0.1</server.IP>
 	<server.port>1099</server.port>
-	<server.Name>CinePlusServer</server.Name>
+	<server.Name>ServerCinePlus</server.Name>
  <policy.file>${basedir}/src/main/resources/security/java.policy</policy.file>
 		<config.files.dir>${basedir}/src/main/resources</config.files.dir>
   </properties>
 
  <dependencies>
- 
       <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-core</artifactId>
-            <version>[5.0.7, 5.9)</version>
+            <version>[5.1.6, 5.9)</version>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-api-jdo</artifactId>
-            <version>[5.0.7, 5.9)</version>
+            <version>[5.1.4, 5.9)</version>
         </dependency>
-         
        <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-rdbms</artifactId>
-            <version>[5.0.7, 5.9)</version>
+            <version>[5.1.6, 5.9)</version>
         </dependency>
-       
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>[1.2.17, )</version>
-        </dependency>
+      
        <dependency>
             <groupId>org.datanucleus</groupId>
             <artifactId>javax.jdo</artifactId>
-            <version>[3.2.0-m5, )</version>
+            <version>[3.2.0-m8, )</version>
         </dependency>
 		 <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.41</version>
+            <version>5.1.45</version>
         </dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency>		
+		<dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>[1.2.17, )</version>
+       </dependency>
     </dependencies>
  
   <build>
@@ -96,32 +94,6 @@
         </plugins>
      </build>
      
-     <reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.9</version>
-			</plugin>
-			<plugin>			
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>2.17</version>
-			</plugin>
-		
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>2.19.1</version>
-			</plugin>
-			<plugin>
-				<groupId>com.googlecode.maven-overview-plugin</groupId>
-				<artifactId>maven-overview-plugin</artifactId>
-				<version>1.6</version>
-			</plugin>
-
-		</plugins>
-	</reporting>
 		
 	<profiles> 
 		<!-- run as 'mvn exec:java -Pserver' -->
@@ -142,7 +114,7 @@
 				<plugins>  
 					<plugin>
 						<artifactId>maven-clean-plugin</artifactId>
-						<version>2.4.1</version>
+						<version>3.0.0</version>
 						<configuration>
 							<filesets>
 								<fileset>
@@ -159,9 +131,9 @@
 					<plugin>  
 						<groupId>org.codehaus.mojo</groupId>  
 						<artifactId>exec-maven-plugin</artifactId>  
-						<version>1.6.0</version>  
+						<version>1.2.1</version>  
 						<configuration>  
-									<!-- Metemos aqui la ubicacion del server -->
+									<!--  Ubicacion del server -->
 									<mainClass>es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusManagerServer</mainClass>
 									<systemProperties>
 										
@@ -201,6 +173,7 @@
 						<artifactId>exec-maven-plugin</artifactId>  
 						<version>1.2.1</version>  
 						<configuration>  
+						<!-- Queda hacer una clase de ejecucion del cliente -->
 									<mainClass>es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal</mainClass>
 									<systemProperties>
 										<systemProperty>
