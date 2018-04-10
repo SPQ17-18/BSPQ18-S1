@@ -74,6 +74,8 @@ public class VentanaRegistro extends JFrame {
 	private JPanel panel_26;
 	private JTextField textFieldPais;
 	
+	protected ResourceBundle resourceBundle;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -95,7 +97,7 @@ public class VentanaRegistro extends JFrame {
 	 */
 	public VentanaRegistro(CinePlusController controller,ResourceBundle resourceBundle) {
 		this.controller = controller;
-		
+		this.resourceBundle=resourceBundle;
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistro.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
 		setTitle(resourceBundle.getString("title_register_users_msg"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -242,7 +244,7 @@ public class VentanaRegistro extends JFrame {
 		btnRegistrarse = new JButton(resourceBundle.getString("register_msg"));
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (comprobarcampos(resourceBundle)) {
+				if (comprobarcampos()) {
 					VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle);
 					ventanaUsuario.setVisible(true);
 					dispose();
@@ -266,7 +268,7 @@ public class VentanaRegistro extends JFrame {
 		panel_1.setLayout(new BorderLayout(0, 0));
 	}
  
-	private boolean comprobarcampos(ResourceBundle resourceBundle) {
+	public boolean comprobarcampos() {
 		String error ="";
 		boolean comprobar = true;
 		if(textFielduser.getText().trim().equals("")) {
@@ -308,10 +310,31 @@ public class VentanaRegistro extends JFrame {
 		}
 		else if( !passwordField.getPassword().equals(passwordField_1.getPassword())) {
 			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_pass_match_msg") + error, "ERROR!", JOptionPane.ERROR_MESSAGE);
+		} else {
+			validarEmail();
 		}
 		
 		limpiarCampos();
-		comprobar= false;
+		if(!error.isEmpty()) {
+			comprobar= false;
+		}
+		return comprobar;
+	}
+	
+	public boolean validarEmail() {
+		boolean comprobar = true;
+		if(!(textFieldemail.getText().contains("@") && (textFieldemail.getText().contains(".com") || textFieldemail.getText().contains(".es")))) {
+			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_email_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
+			comprobar= false;
+		}
+		return comprobar;
+	}
+	public boolean validarPass() {
+		boolean comprobar = true;
+		if(passwordField.getPassword().length < 6. ) {
+			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_email_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
+			comprobar= false;
+		}
 		return comprobar;
 	}
 	

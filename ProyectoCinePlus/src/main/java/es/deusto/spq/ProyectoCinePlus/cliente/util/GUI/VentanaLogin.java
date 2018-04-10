@@ -48,7 +48,8 @@ public class VentanaLogin extends JFrame {
 	private JLabel lblusuario;
 	private JLabel lblIniciaSesion;
 	private JPasswordField passwordField;
-
+	protected ResourceBundle resourceBundle;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -71,7 +72,7 @@ public class VentanaLogin extends JFrame {
 	public VentanaLogin(CinePlusController controller, final ResourceBundle resourceBundle) {
 		//Inicializamos el controlador
 		this.controller = controller;
-		 
+		this.resourceBundle=resourceBundle;
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));		
 		setTitle(resourceBundle.getString("title_login_msg"));
 		setBounds(100, 100, 450, 300);

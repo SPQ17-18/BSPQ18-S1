@@ -83,7 +83,7 @@ public class VentanaUsuario extends JFrame {
 	private JSeparator separator;
 	private JLabel lblnumpelis;
 	
-	
+	protected ResourceBundle resourceBundle;
 	
 	/**
 	 * Launch the application.
@@ -106,6 +106,7 @@ public class VentanaUsuario extends JFrame {
 	 */
 	public VentanaUsuario(CinePlusController controller, ResourceBundle resourceBundle) {
 		this.controller =controller;
+		this.resourceBundle=resourceBundle;
 		setTitle(resourceBundle.getString("user_panel_msg"));
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaUsuario.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
