@@ -7,8 +7,6 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 
-import es.deusto.spq.ProyectoCinePlus.servidor.CinePlusServer;
-import es.deusto.spq.ProyectoCinePlus.servidor.ICinePlusServer;
 
 public class CinePlusManagerServer  {
 	
@@ -59,7 +57,7 @@ public class CinePlusManagerServer  {
 
 
 				try {
-					ICinePlusServer objServer = new CinePlusServer();
+					ICinePlus objServer = new CinePlusServer();
 					Naming.rebind(name, objServer);
 					System.out.println("Server '" + name + "' active and waiting...");
 					InputStreamReader inputStreamReader = new InputStreamReader(System.in);
