@@ -95,7 +95,7 @@ public class VentanaRegistro extends JFrame {
 	 */
 	public VentanaRegistro(CinePlusController controller,ResourceBundle resourceBundle) {
 		this.controller = controller;
-		final ResourceBundle resourceBundleNew = resourceBundle;
+		
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistro.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
 		setTitle(resourceBundle.getString("title_register_users_msg"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -242,8 +242,8 @@ public class VentanaRegistro extends JFrame {
 		btnRegistrarse = new JButton(resourceBundle.getString("register_msg"));
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (comprobarcampos(resourceBundleNew)) {
-					VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller);
+				if (comprobarcampos(resourceBundle)) {
+					VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle);
 					ventanaUsuario.setVisible(true);
 					dispose();
 				}

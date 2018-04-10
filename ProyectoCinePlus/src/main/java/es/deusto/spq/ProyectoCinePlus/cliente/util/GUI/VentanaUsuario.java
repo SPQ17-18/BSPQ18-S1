@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 
 import java.awt.Toolkit;
+import java.util.ResourceBundle;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -70,12 +71,17 @@ public class VentanaUsuario extends JFrame {
 	private JPanel panel_13; 
 	private JPanel panel_8; 
 	private JPanel panel_25; 
+	private JPanel panel_26;
 	
 	private JSeparator separator_2;
 	private JSeparator separator_3;
 	
 	private JComboBox comboBox;
 	private JComboBox comboBoxAnio; 
+	private JScrollPane scrollPane;
+	private JLabel lblpeliculas;
+	private JSeparator separator;
+	private JLabel lblnumpelis;
 	
 	
 	
@@ -98,9 +104,9 @@ public class VentanaUsuario extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaUsuario(CinePlusController controller) {
+	public VentanaUsuario(CinePlusController controller, ResourceBundle resourceBundle) {
 		this.controller =controller;
-		setTitle("Panel de usuario");
+		setTitle(resourceBundle.getString("user_panel_msg"));
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaUsuario.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, anchuraPanel, alturaPanel);
@@ -127,121 +133,132 @@ public class VentanaUsuario extends JFrame {
 		contentPane.add(panel_1, BorderLayout.SOUTH);
 		panel_1.setLayout(new GridLayout(1, 4, 0, 0));
 		
-		JPanel panel_14 = new JPanel();
+		panel_14 = new JPanel();
 		panel_1.add(panel_14);
 		
-		JPanel panel_15 = new JPanel();
+		panel_15 = new JPanel();
 		panel_1.add(panel_15);
 		
-		JPanel panel_2 = new JPanel();
+		panel_2 = new JPanel();
 		contentPane.add(panel_2, BorderLayout.WEST);
 		
-		JPanel panel_3 = new JPanel();
+		panel_3 = new JPanel();
 		contentPane.add(panel_3, BorderLayout.EAST);
 		
-		JPanel panel_4 = new JPanel();
+		panel_4 = new JPanel();
 		contentPane.add(panel_4, BorderLayout.CENTER);
 		panel_4.setLayout(new BorderLayout(0, 0));
 		
-		JPanel panel_6 = new JPanel();
+		panel_6 = new JPanel();
 		panel_4.add(panel_6, BorderLayout.NORTH);
 		
-		JPanel panel_7 = new JPanel();
+		panel_7 = new JPanel();
 		panel_4.add(panel_7, BorderLayout.SOUTH);
 		panel_7.setLayout(new GridLayout(0, 4, 0, 0));
 		
-		JPanel panel_16 = new JPanel();
+		panel_16 = new JPanel();
 		panel_7.add(panel_16);
 		panel_16.setLayout(new GridLayout(3, 1, 0, 0));
 		
-		JLabel label = new JLabel("Bienvenido");
+		label = new JLabel(resourceBundle.getString("welcome_msg"));
 		panel_16.add(label);
 		
-		JSeparator separator_2 = new JSeparator();
+		separator_2 = new JSeparator();
 		panel_16.add(separator_2);
 		
-		JLabel label_2 = new JLabel("NomUser");
+		label_2 = new JLabel("NomUser");
 		label_2.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_16.add(label_2);
 		
-		JPanel panel_17 = new JPanel();
+		panel_17 = new JPanel();
 		panel_7.add(panel_17);
+		panel_17.setLayout(new GridLayout(3, 1, 0, 0));
 		
-		JPanel panel_18 = new JPanel();
+		lblpeliculas = new JLabel(resourceBundle.getString("number_films_msg"));
+		panel_17.add(lblpeliculas);
+		
+		separator = new JSeparator();
+		panel_17.add(separator);
+		
+		lblnumpelis = new JLabel("8 peliculas");
+		lblnumpelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
+		panel_17.add(lblnumpelis);
+		
+		panel_18 = new JPanel();
 		panel_7.add(panel_18);
 		
-		JPanel panel_19 = new JPanel();
+		panel_19 = new JPanel();
 		panel_7.add(panel_19);
 		panel_19.setLayout(new GridLayout(3, 1, 0, 0));
 		
-		JLabel label_3 = new JLabel("Saldo");
+		label_3 = new JLabel(resourceBundle.getString("balance_msg"));
 		panel_19.add(label_3);
 		
-		JSeparator separator_3 = new JSeparator();
+		separator_3 = new JSeparator();
 		panel_19.add(separator_3);
 		
-		JLabel lblSaldo = new JLabel("saldo");
+		lblSaldo = new JLabel("Saldo");
 		lblSaldo.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_19.add(lblSaldo);
 		
-		JPanel panel_9 = new JPanel();
+		panel_9 = new JPanel();
 		panel_4.add(panel_9, BorderLayout.EAST);
 		
-		JPanel panel_5 = new JPanel();
+		panel_5 = new JPanel();
 		panel_4.add(panel_5, BorderLayout.CENTER);
 		panel_5.setLayout(new BorderLayout(0, 0));
 		
-		JPanel panel_12 = new JPanel();
+		panel_12 = new JPanel();
 		panel_5.add(panel_12, BorderLayout.NORTH);
 		panel_12.setLayout(new GridLayout(0, 6, 0, 0));
 		
-		JPanel panel_24 = new JPanel();
+		panel_24 = new JPanel();
 		panel_12.add(panel_24);
 		
-		JLabel lblNombre = new JLabel("Nombre:");
+		lblNombre = new JLabel(resourceBundle.getString("title_msg"));
 		panel_24.add(lblNombre);
 		
-		JPanel panel_25 = new JPanel();
+		panel_25 = new JPanel();
 		panel_12.add(panel_25);
 		
 		textFieldNombrePeli = new JTextField();
 		panel_25.add(textFieldNombrePeli);
 		textFieldNombrePeli.setColumns(10);
 		
-		JPanel panel_22 = new JPanel();
+		panel_22 = new JPanel();
 		panel_12.add(panel_22);
 		
-		JLabel lblAnio = new JLabel("Año:");
+		lblAnio = new JLabel(resourceBundle.getString("year_msg"));
 		panel_22.add(lblAnio);
 		
-		JPanel panel_21 = new JPanel();
+		panel_21 = new JPanel();
 		panel_12.add(panel_21);
 		
 		comboBoxAnio = new JComboBox();
 		panel_21.add(comboBoxAnio);
 		
-		JPanel panel_23 = new JPanel();
+		panel_23 = new JPanel();
 		panel_12.add(panel_23);
 		
-		JLabel lblGnero = new JLabel("Género:");
+		lblGnero = new JLabel(resourceBundle.getString("kind_msg"));
 		panel_23.add(lblGnero);
 		
-		JPanel panel_20 = new JPanel();
+		panel_20 = new JPanel();
 		panel_12.add(panel_20);
 		
 		comboBox = new JComboBox();
 		panel_20.add(comboBox);
 		
-		JPanel panel_13 = new JPanel();
+		panel_13 = new JPanel();
 		panel_5.add(panel_13, BorderLayout.SOUTH);
 		
-		JScrollPane scrollPane = new JScrollPane();
+		scrollPane = new JScrollPane();
 		panel_5.add(scrollPane, BorderLayout.CENTER);
 		
-		Panel panel_26 = new Panel();
+		panel_26 = new JPanel();
 		scrollPane.setViewportView(panel_26);
 		
-		JPanel panel_8 = new JPanel();
+		panel_8 = new JPanel();
 		panel_4.add(panel_8, BorderLayout.WEST);
 	}
 
