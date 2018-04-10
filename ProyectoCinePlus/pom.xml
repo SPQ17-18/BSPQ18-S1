@@ -64,7 +64,28 @@
             <artifactId>log4j</artifactId>
             <version>[1.2.17, )</version>
          </dependency>
-         
+     <!--############## dependencias de cliente ##############-->
+     	 <dependency>
+        <groupId>org.apache.xmlbeans</groupId>
+        	<artifactId>xmlbeans</artifactId>
+        	<version>2.6.0</version>
+   		</dependency>
+    	<dependency>
+        	<groupId>org.apache.axis2</groupId>
+        	<artifactId>axis2-codegen</artifactId>
+        	<version>1.5.5</version>
+    	</dependency>
+   		<dependency>
+        	<groupId>org.apache.axis2</groupId>
+        	<artifactId>axis2-transport-http</artifactId>
+        	<version>1.7.7</version>
+    	</dependency>
+   		<dependency>
+        	<groupId>org.apache.axis2</groupId>
+        	<artifactId>axis2-transport-local</artifactId>
+        	<version>1.7.7</version>
+    	</dependency>
+     	   
     </dependencies>
  
   <build>
@@ -181,7 +202,7 @@
 						<version>1.2.1</version>  
 						<configuration>  
 						<!-- Queda hacer una clase de ejecucion del cliente -->
-									<mainClass>es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal</mainClass>
+									<mainClass>es.deusto.spq.ProyectoCinePlus.cliente.Cliente</mainClass>
 									<systemProperties>
 										<systemProperty>
 											<key>java.security.manager</key>
@@ -198,7 +219,24 @@
 										<argument>${server.Name}</argument>  
 									</arguments>  
 						</configuration>  
-					</plugin>  
+					</plugin>
+					<!--Anyadido para que funcione el invokelater  -->
+					 <plugin>
+           				 <groupId>org.apache.axis2</groupId>
+           				 <artifactId>axis2-java2wsdl-maven-plugin</artifactId>
+           				 <executions>
+ 							 <execution>
+  							 <phase>process-classes</phase>
+   							  <goals>
+     							 <goal>java2wsdl</goal>
+    						  </goals>
+ 						 	 </execution>
+						</executions>
+            				<configuration>
+                			<className>es.deusto.spq.ProyectoCinePlus.cliente.Cliente</className>
+            				</configuration>
+       				</plugin>
+       				  
 				</plugins>  
 			</build>  
 		</profile>  
