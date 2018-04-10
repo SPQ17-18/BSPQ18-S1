@@ -204,25 +204,25 @@ public class VentanaPrincipal extends JFrame {
 		panel_8.add(btnSalir);
 	}
 
-	public static void main(final String[] args) throws RemoteException {   
-	/**
-	 * Launch the application.
-	 */
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					RMIServiceLocator rmi=new RMIServiceLocator();
-					rmi.setService(args);
-					CinePlusController cpc=new CinePlusController(rmi);
-					VentanaPrincipal.frame = new VentanaPrincipal(rmi,cpc);
-					VentanaPrincipal.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	
-}
+//	public static void main(final String[] args) throws RemoteException {   
+//	/**
+//	 * Launch the application.
+//	 */
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					RMIServiceLocator rmi=new RMIServiceLocator();
+//					rmi.setService(args);
+//					CinePlusController cpc=new CinePlusController(rmi);
+//					VentanaPrincipal.frame = new VentanaPrincipal(rmi,cpc);
+//					VentanaPrincipal.frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	
+//}
 	
 	
 }
