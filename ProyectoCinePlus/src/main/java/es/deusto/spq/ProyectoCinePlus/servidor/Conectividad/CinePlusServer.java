@@ -21,20 +21,20 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	public synchronized int UsuarioRegistrado(String nombre, String contrasenya){
 		
 		//MIRA LAS FUNCIONES DE LA CLASE BASES DE DATOS PARA PONERLAS AHI, YA QUE EL FUNCIONAMIENTO ESTA EN ESA CLASE
-		//SINO METE EL MISMO CODIGO EN ESTA CLASE Y ASI PODEMOS PRESCINDIR DE LA CLASE BASEDEDATOS
-		
+		//SINO METE EL MISMO CODIGO EN ESTA CLASE Y ASI PODEMOS PRESCINDIR DE LA CLASE BASEDEDATOS	
 		
     	List<UsuarioDAO> users = dao.getClientes();
     	for(int i=0; i<users.size(); i++){
     		//if(users.get(i).getEmail().equals(email)){//Hay que cambiar el getEmail por el metodo de comprobacion que haya
     			System.out.println("Usuario existente y logueado");
-    			return 0;
+    			return 1;
     		//}
     	}
-		return 0;
+		return 1;
+		
 	}
 public synchronized void registrarUsuario(String nombre,String contrasenya,String correo){
-
+		
 	}
 
 

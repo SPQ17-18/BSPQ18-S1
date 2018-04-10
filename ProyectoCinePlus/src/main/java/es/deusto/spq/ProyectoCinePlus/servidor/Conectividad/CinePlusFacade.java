@@ -25,6 +25,8 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	}
 
 	public int UsuarioRegistrado(String nombre, String contrasenya) throws RemoteException {
+		
 		return cpser.UsuarioRegistrado(nombre, contrasenya);
+		
 	}
 }

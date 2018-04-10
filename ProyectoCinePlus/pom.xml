@@ -70,6 +70,13 @@
         	<artifactId>xmlbeans</artifactId>
         	<version>2.6.0</version>
    		</dependency>
+   		
+   		 <dependency>
+       		<groupId>org.apache.axis2</groupId>
+      	  	<artifactId>axis2</artifactId>
+      	  	<version>1.5.4</version>
+   		 </dependency>
+    
     	<dependency>
         	<groupId>org.apache.axis2</groupId>
         	<artifactId>axis2-codegen</artifactId>
@@ -159,7 +166,8 @@
 					<plugin>  
 						<groupId>org.codehaus.mojo</groupId>  
 						<artifactId>exec-maven-plugin</artifactId>  
-						<version>1.2.1</version>  
+						<version>1.2.1</version> 
+						 
 						<configuration>  
 									<!--  Ubicacion del server -->
 									<mainClass>es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusManagerServer</mainClass>
@@ -221,22 +229,21 @@
 						</configuration>  
 					</plugin>
 					<!--Anyadido para que funcione el invokelater  -->
-					 <plugin>
-           				 <groupId>org.apache.axis2</groupId>
-           				 <artifactId>axis2-java2wsdl-maven-plugin</artifactId>
-           				 <executions>
- 							 <execution>
-  							 <phase>process-classes</phase>
-   							  <goals>
-     							 <goal>java2wsdl</goal>
-    						  </goals>
- 						 	 </execution>
-						</executions>
-            				<configuration>
-                			<className>es.deusto.spq.ProyectoCinePlus.cliente.Cliente</className>
-            				</configuration>
-       				</plugin>
-       				  
+					<plugin>
+				        <groupId>org.apache.axis2</groupId>
+				        <artifactId>axis2-java2wsdl-maven-plugin</artifactId>
+				        <configuration>
+				         <className>es.deusto.spq.ProyectoCinePlus.cliente.Cliente</className>
+				        </configuration>
+				        <executions>
+				          <execution>
+				            <goals>
+				              <goal>java2wsdl</goal>
+				            </goals>
+				          </execution>
+				         </executions>
+				      </plugin>
+					        				  
 				</plugins>  
 			</build>  
 		</profile>  

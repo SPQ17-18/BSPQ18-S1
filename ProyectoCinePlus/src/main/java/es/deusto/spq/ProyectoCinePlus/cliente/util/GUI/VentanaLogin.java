@@ -73,7 +73,7 @@ public class VentanaLogin extends JFrame {
 		//Inicializamos el controlador
 		this.controller = controller;
 		this.resourceBundle=resourceBundle;
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));		
+	//	setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));		
 		setTitle(resourceBundle.getString("title_login_msg"));
 		setBounds(100, 100, 450, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -105,6 +105,9 @@ public class VentanaLogin extends JFrame {
 				if(textFieldUsuario.getText().trim().equals("") || passwordField.getPassword().length < 6 ) {
 					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_login_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
 					limpiarCampos();
+					
+					//Codigo del controller
+					System.out.println("Usuario logeado" + controller.LoginUsuario("", ""));
 				}
 				
 			}

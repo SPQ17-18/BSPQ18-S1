@@ -73,7 +73,7 @@ public class VentanaPrincipal extends JFrame {
 		
 		this.controlador = controller;
 		
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
+	//	setIconImage(new ImageIcon( VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")).getImage());
 		setTitle("CinePlus");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 348);
@@ -96,7 +96,7 @@ public class VentanaPrincipal extends JFrame {
 		panel.add(panel_2, BorderLayout.NORTH);
 		
 		label = new JLabel("");
-		label.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logo300.png")));
+		//label.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logo300.png")));
 		panel_2.add(label);
 		
 		panel_1 = new JPanel();
@@ -117,7 +117,7 @@ public class VentanaPrincipal extends JFrame {
 				lang = "es";
 			}
 		});
-		lblEs.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/es25.png")));
+	//	lblEs.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/es25.png")));
 		panel_10.add(lblEs);
 		
 		panel_12 = new JPanel();
@@ -134,7 +134,7 @@ public class VentanaPrincipal extends JFrame {
 				//frame.setVisible(true);
 			}
 		});
-		lblEu.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/eu25.png")));
+	//	lblEu.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/eu25.png")));
 		panel_12.add(lblEu);
 		
 		panel_11 = new JPanel();
@@ -147,7 +147,7 @@ public class VentanaPrincipal extends JFrame {
 				lang = "en";
 			}
 		});
-		lblEn.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/en25.png")));
+	//	lblEn.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/en25.png")));
 		panel_11.add(lblEn);
 		
 		panel_4 = new JPanel();

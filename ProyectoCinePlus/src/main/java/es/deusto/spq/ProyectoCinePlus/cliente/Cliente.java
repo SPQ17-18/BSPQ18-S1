@@ -14,6 +14,9 @@ public class Cliente {
 			System.exit(0);
 		}
 
+		System.setProperty("java.security.policy", "target\\classes\\security\\java.policy");
+
+		
 		if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new SecurityManager());
 		}
