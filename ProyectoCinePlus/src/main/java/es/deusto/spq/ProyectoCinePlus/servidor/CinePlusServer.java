@@ -57,7 +57,6 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlusServ
 	}
 
 
-	@Override
 	public boolean registerUser(String usuario, String email, String nombre, String apellido, String password,
 			String pais, boolean admin) throws RemoteException {
 		// TODO Auto-generated method stub
@@ -66,7 +65,6 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlusServ
 	}
 
 
-	@Override
 	public boolean loginUser(String usuario, String password) throws RemoteException {
 		// TODO Auto-generated method stub
 		return usuarioDAO.loginUser(usuario, password);
