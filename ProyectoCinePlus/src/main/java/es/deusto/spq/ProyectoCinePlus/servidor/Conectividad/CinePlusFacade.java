@@ -20,13 +20,12 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 		this.cpser=cpser;
 	}
 
-	public void registrarUsuario(String nombre, String contrasenya, String correo) throws RemoteException {
-		cpser.registrarUsuario(nombre, contrasenya, correo);
+	public boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password, String pais, boolean admin)  throws RemoteException {
+		return cpser.registrarUsuario(usuario, email, nombre, apellido, password, pais, admin);
 	}
 
-	public int UsuarioRegistrado(String nombre, String contrasenya) throws RemoteException {
-		
-		return cpser.UsuarioRegistrado(nombre, contrasenya);
+	public boolean usuarioRegistrado(String usuario, String password) throws RemoteException {
+		return cpser.usuarioRegistrado(usuario, password);
 		
 	}
 }

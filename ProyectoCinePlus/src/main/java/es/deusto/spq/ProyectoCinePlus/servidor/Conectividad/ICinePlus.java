@@ -4,6 +4,6 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface ICinePlus extends Remote {
-	public void registrarUsuario(String nombre, String contrasenya, String correo) throws RemoteException;
-	public int UsuarioRegistrado(String nombre, String contrasenya) throws RemoteException;//Busca el usuario
+	public boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password, String pais, boolean admin) throws RemoteException;
+	public boolean usuarioRegistrado(String usuario, String password) throws RemoteException;//Busca el usuario
 }

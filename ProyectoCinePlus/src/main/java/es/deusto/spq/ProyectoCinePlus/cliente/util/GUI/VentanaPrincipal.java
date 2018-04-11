@@ -76,7 +76,7 @@ public class VentanaPrincipal extends JFrame {
 	public VentanaPrincipal(RMIServiceLocator rmi,CinePlusController controller) {
 		
 		pathn=System.getProperty("user.dir");
-		pathn=pathn+("/src/main/java/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/");
+		pathn+=("/src/main/java/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/");
 		
 		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
 		//resourceBundle = ResourceBundle.getBundle("SystemMessages ",	Locale.forLanguageTag(lang));
