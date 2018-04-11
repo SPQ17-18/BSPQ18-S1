@@ -317,7 +317,7 @@ public class VentanaRegistro extends JFrame {
 			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_data_msg") + error, "ERROR!", JOptionPane.ERROR_MESSAGE);
 		} else {
 			comprobar=validarPass();
-			if(!comprobar) {
+			if(comprobar) {
 				comprobar=validarEmail();
 			}
 			
