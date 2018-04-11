@@ -11,6 +11,9 @@ import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusControll
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ResourceBundle;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
@@ -23,6 +26,7 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JComboBox;
 import javax.swing.JPasswordField;
+import javax.imageio.ImageIO;
 import javax.swing.DefaultComboBoxModel;
 
 public class VentanaRegistro extends JFrame {
@@ -98,7 +102,14 @@ public class VentanaRegistro extends JFrame {
 	public VentanaRegistro(CinePlusController controller,ResourceBundle resourceBundle) {
 		this.controller = controller;
 		this.resourceBundle=resourceBundle;
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistro.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
+		
+		BufferedImage img = null;
+		try {
+		    img = ImageIO.read(new File(VentanaPrincipal.pathn+"logocuadrado50.png"));
+		} catch (IOException e) {
+		}
+		setIconImage(img);
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistro.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
 		setTitle(resourceBundle.getString("title_register_users_msg"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 350);

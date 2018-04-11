@@ -10,9 +10,13 @@ import javax.swing.border.EmptyBorder;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 
 import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ResourceBundle;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JSeparator;
 import java.awt.Font;
@@ -108,7 +112,14 @@ public class VentanaUsuario extends JFrame {
 		this.controller =controller;
 		this.resourceBundle=resourceBundle;
 		setTitle(resourceBundle.getString("user_panel_msg"));
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaUsuario.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
+		
+		BufferedImage img = null;
+		try {
+		    img = ImageIO.read(new File(VentanaPrincipal.pathn+"logocuadrado50.png"));
+		} catch (IOException e) {
+		}
+		setIconImage(img);
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaUsuario.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, anchuraPanel, alturaPanel);
 		contentPane = new JPanel();
@@ -124,7 +135,15 @@ public class VentanaUsuario extends JFrame {
 		panel.add(panel_10);
 		
 		lblLogo = new JLabel("");
-		lblLogo.setIcon(new ImageIcon(VentanaUsuario.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logo300.png")));
+		
+		BufferedImage img2 = null;
+		try {
+		    img2 = ImageIO.read(new File(VentanaPrincipal.pathn+"logo300.png"));
+		} catch (IOException e) {
+		}
+		ImageIcon a1=new ImageIcon(img2);
+		
+		//lblLogo.setIcon(new ImageIcon(VentanaUsuario.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logo300.png")));
 		panel.add(lblLogo);
 		
 		panel_11 = new JPanel();

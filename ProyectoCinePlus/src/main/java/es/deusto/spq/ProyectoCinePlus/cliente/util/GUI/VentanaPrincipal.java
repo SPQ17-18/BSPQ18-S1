@@ -67,6 +67,7 @@ public class VentanaPrincipal extends JFrame {
 	private JLabel lblEu;
 	
 	private String lang="en";
+	protected static String pathn;
 
 	/**
 	 * Create the frame.

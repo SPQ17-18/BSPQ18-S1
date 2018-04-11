@@ -6,8 +6,12 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ResourceBundle;
 
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -72,8 +76,16 @@ public class VentanaLogin extends JFrame {
 	public VentanaLogin(CinePlusController controller, final ResourceBundle resourceBundle) {
 		//Inicializamos el controlador
 		this.controller = controller;
-		this.resourceBundle=resourceBundle;
-	//	setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));		
+		this.resourceBundle=resourceBundle;		
+		
+		BufferedImage img = null;
+		try {
+		    img = ImageIO.read(new File(VentanaPrincipal.pathn+"logocuadrado50.png"));
+		} catch (IOException e) {
+		}
+		setIconImage(img);
+//		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
+		
 		setTitle(resourceBundle.getString("title_login_msg"));
 		setBounds(100, 100, 450, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
