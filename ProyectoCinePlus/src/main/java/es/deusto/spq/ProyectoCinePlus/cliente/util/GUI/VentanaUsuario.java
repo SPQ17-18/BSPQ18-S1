@@ -29,6 +29,7 @@ import javax.swing.JList;
 import javax.swing.JComboBox;
 import javax.swing.JScrollPane;
 import java.awt.Panel;
+import javax.swing.JButton;
 
 public class VentanaUsuario extends JFrame {
 
@@ -88,6 +89,10 @@ public class VentanaUsuario extends JFrame {
 	private JLabel lblnumpelis;
 	
 	protected ResourceBundle resourceBundle;
+	private JButton btnCerrarSesion;
+	private JPanel panel_27;
+	private JPanel panel_28;
+	private JPanel panel_29;
 	
 	/**
 	 * Launch the application.
@@ -204,9 +209,6 @@ public class VentanaUsuario extends JFrame {
 		lblnumpelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_17.add(lblnumpelis);
 		
-		panel_18 = new JPanel();
-		panel_7.add(panel_18);
-		
 		
 		panel_19 = new JPanel();
 		panel_7.add(panel_19);
@@ -221,6 +223,22 @@ public class VentanaUsuario extends JFrame {
 		lblSaldo = new JLabel("Saldo");
 		lblSaldo.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_19.add(lblSaldo);
+		
+		panel_18 = new JPanel();
+		panel_7.add(panel_18);
+		panel_18.setLayout(new GridLayout(3, 1, 0, 0));
+		
+		panel_28 = new JPanel();
+		panel_18.add(panel_28);
+		
+		panel_27 = new JPanel();
+		panel_18.add(panel_27);
+		
+		btnCerrarSesion = new JButton(resourceBundle.getString("logout_msg"));
+		panel_27.add(btnCerrarSesion);
+		
+		panel_29 = new JPanel();
+		panel_18.add(panel_29);
 		
 		panel_9 = new JPanel();
 		panel_4.add(panel_9, BorderLayout.EAST);
