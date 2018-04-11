@@ -22,20 +22,9 @@ public class Cliente {
 		}
 
 		try {
-//			String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
-//			ICinePlus objServer = (ICinePlus) java.rmi.Naming.lookup(name);
-			// Register to be allowed to send messages
-//			objServer.registerUser("dipina", "dipina");
-//			objServer.registerUser("dipina", "cortazar");
-//			User u = objServer.getUserMessages("dipina");
-//			for (Message m: u.getMessages()) {
-//				
-//				System.out.println(m);
-//				
-//			}
 			
-			//EventQueue.invokeLater(new Runnable() {
-		//		public void run() {
+			EventQueue.invokeLater(new Runnable() {
+				public void run() {
 					try {
 						RMIServiceLocator rmi=new RMIServiceLocator();
 						rmi.setService(args);
@@ -45,8 +34,8 @@ public class Cliente {
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
-		//		}
-//			});
+				}
+			});
 		
 		} catch (Exception e) {
 			System.err.println("RMI Example exception: " + e.getMessage());
