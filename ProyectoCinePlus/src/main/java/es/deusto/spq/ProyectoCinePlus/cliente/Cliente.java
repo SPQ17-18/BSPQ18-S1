@@ -34,8 +34,8 @@ public class Cliente {
 //				
 //			}
 			
-			EventQueue.invokeLater(new Runnable() {
-				public void run() {
+			//EventQueue.invokeLater(new Runnable() {
+		//		public void run() {
 					try {
 						RMIServiceLocator rmi=new RMIServiceLocator();
 						rmi.setService(args);
@@ -45,8 +45,8 @@ public class Cliente {
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
-				}
-			});
+		//		}
+//			});
 		
 		} catch (Exception e) {
 			System.err.println("RMI Example exception: " + e.getMessage());

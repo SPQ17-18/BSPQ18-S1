@@ -51,10 +51,6 @@ public class CinePlusManagerServer  {
 				System.out.println("This is a test to check how mvn test executes this test without external interaction; JVM properties by program");
 				System.setProperty("java.security.policy", "target\\classes\\security\\java.policy");
 
-//				if (System.getSecurityManager() == null) {
-//					System.setSecurityManager(new SecurityManager());
-//				}
-
 
 				try {
 					ICinePlus objServer = new CinePlusServer();

@@ -18,11 +18,15 @@ import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusControll
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator;
 
 import javax.swing.JLabel;
+import javax.imageio.ImageIO;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.rmi.RemoteException;
 
 public class VentanaPrincipal extends JFrame {
@@ -67,23 +71,25 @@ public class VentanaPrincipal extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+
 	public VentanaPrincipal(RMIServiceLocator rmi,CinePlusController controller) {
+		
+		String pathn=System.getProperty("user.dir");
+		pathn=pathn+("/src/main/java/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/");
 		
 		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
 		//resourceBundle = ResourceBundle.getBundle("SystemMessages ",	Locale.forLanguageTag(lang));
 		
 		this.controlador = controller;
 		
-		//setIconImage(new ImageIcon( VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")).getImage());
-		//java.net.URL imageUrl = VentanaPrincipal.class.getResource("es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png");
+		BufferedImage img = null;
+		try {
+		    img = ImageIO.read(new File(pathn+"logocuadrado50.png"));
+		} catch (IOException e) {
+		}
 		
 		
-//		if(imageUrl != null){
-//		   setIconImage(new ImageIcon(imageUrl).getImage());
-//		}else {
-//			System.out.println("salu3 caminante");
-//		}
-		
+		setIconImage(img);
 		setTitle("CinePlus");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 348);
@@ -105,8 +111,17 @@ public class VentanaPrincipal extends JFrame {
 		panel_2 = new JPanel();
 		panel.add(panel_2, BorderLayout.NORTH);
 		
+		
+		BufferedImage img2 = null;
+		try {
+		    img2 = ImageIO.read(new File(pathn+"logo300.png"));
+		} catch (IOException e) {
+		}
+		ImageIcon a=new ImageIcon(img2);
+		
+		
 		label = new JLabel("");
-		//label.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logo300.png")));
+		label.setIcon(a);
 		panel_2.add(label);
 		
 		panel_1 = new JPanel();
@@ -127,7 +142,16 @@ public class VentanaPrincipal extends JFrame {
 				lang = "es";
 			}
 		});
-	//	lblEs.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/es25.png")));
+		
+		
+		BufferedImage img3 = null;
+		try {
+		    img3 = ImageIO.read(new File(pathn+"es25.png"));
+		} catch (IOException e) {
+		}
+		ImageIcon b=new ImageIcon(img3);
+		
+		lblEs.setIcon(b);
 		panel_10.add(lblEs);
 		
 		panel_12 = new JPanel();
@@ -144,7 +168,17 @@ public class VentanaPrincipal extends JFrame {
 				//frame.setVisible(true);
 			}
 		});
-	//	lblEu.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/eu25.png")));
+		
+		
+		BufferedImage img4 = null;
+		try {
+		    img4 = ImageIO.read(new File(pathn+"eu25.png"));
+		} catch (IOException e) {
+		}
+		ImageIcon c=new ImageIcon(img4);
+		
+		
+		lblEu.setIcon(c);
 		panel_12.add(lblEu);
 		
 		panel_11 = new JPanel();
@@ -157,7 +191,16 @@ public class VentanaPrincipal extends JFrame {
 				lang = "en";
 			}
 		});
-	//	lblEn.setIcon(new ImageIcon(VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/en25.png")));
+		
+		BufferedImage img5 = null;
+		try {
+		    img5 = ImageIO.read(new File(pathn+"en25.png"));
+		} catch (IOException e) {
+		}
+		ImageIcon d=new ImageIcon(img5);
+		
+		
+		lblEn.setIcon(d);
 		panel_11.add(lblEn);
 		
 		panel_4 = new JPanel();
@@ -213,26 +256,5 @@ public class VentanaPrincipal extends JFrame {
 		});
 		panel_8.add(btnSalir);
 	}
-
-//	public static void main(final String[] args) throws RemoteException {   
-//	/**
-//	 * Launch the application.
-//	 */
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					RMIServiceLocator rmi=new RMIServiceLocator();
-//					rmi.setService(args);
-//					CinePlusController cpc=new CinePlusController(rmi);
-//					VentanaPrincipal.frame = new VentanaPrincipal(rmi,cpc);
-//					VentanaPrincipal.frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	
-//}
-	
 	
 }
