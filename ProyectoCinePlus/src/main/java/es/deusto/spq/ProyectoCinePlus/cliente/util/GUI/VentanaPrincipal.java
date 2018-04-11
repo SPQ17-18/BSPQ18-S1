@@ -22,6 +22,7 @@ import javax.swing.ImageIcon;
 import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
 import java.rmi.RemoteException;
 
 public class VentanaPrincipal extends JFrame {
@@ -73,7 +74,20 @@ public class VentanaPrincipal extends JFrame {
 		
 		this.controlador = controller;
 		
-	//	setIconImage(new ImageIcon( VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")).getImage());
+		//setIconImage(new ImageIcon( VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")).getImage());
+		//java.net.URL imageUrl = VentanaPrincipal.class.getResource("es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png");
+		
+		File folder = new File("es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/");
+		File[] listOfFiles = folder.listFiles();
+		System.out.println(listOfFiles);
+//		System.out.println(listOfFiles.toString());
+		
+//		if(imageUrl != null){
+//		   setIconImage(new ImageIcon(imageUrl).getImage());
+//		}else {
+//			System.out.println("salu3 caminante");
+//		}
+		
 		setTitle("CinePlus");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 348);

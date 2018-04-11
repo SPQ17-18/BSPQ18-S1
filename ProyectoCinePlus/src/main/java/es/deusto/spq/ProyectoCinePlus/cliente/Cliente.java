@@ -22,8 +22,8 @@ public class Cliente {
 		}
 
 		try {
-			String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
-			ICinePlus objServer = (ICinePlus) java.rmi.Naming.lookup(name);
+//			String name = "//" + args[0] + ":" + args[1] + "/" + args[2];
+//			ICinePlus objServer = (ICinePlus) java.rmi.Naming.lookup(name);
 			// Register to be allowed to send messages
 //			objServer.registerUser("dipina", "dipina");
 //			objServer.registerUser("dipina", "cortazar");

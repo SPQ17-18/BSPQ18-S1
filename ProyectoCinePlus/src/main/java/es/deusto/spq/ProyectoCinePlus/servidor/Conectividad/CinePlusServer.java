@@ -20,6 +20,7 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 
 	public synchronized int UsuarioRegistrado(String nombre, String contrasenya){
 		
+		System.out.println("aqui andamos");
 		//MIRA LAS FUNCIONES DE LA CLASE BASES DE DATOS PARA PONERLAS AHI, YA QUE EL FUNCIONAMIENTO ESTA EN ESA CLASE
 		//SINO METE EL MISMO CODIGO EN ESTA CLASE Y ASI PODEMOS PRESCINDIR DE LA CLASE BASEDEDATOS	
 		
