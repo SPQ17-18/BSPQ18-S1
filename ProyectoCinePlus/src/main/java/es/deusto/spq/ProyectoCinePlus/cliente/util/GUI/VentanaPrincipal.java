@@ -77,10 +77,6 @@ public class VentanaPrincipal extends JFrame {
 		//setIconImage(new ImageIcon( VentanaPrincipal.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")).getImage());
 		//java.net.URL imageUrl = VentanaPrincipal.class.getResource("es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png");
 		
-		File folder = new File("es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/");
-		File[] listOfFiles = folder.listFiles();
-		System.out.println(listOfFiles);
-//		System.out.println(listOfFiles.toString());
 		
 //		if(imageUrl != null){
 //		   setIconImage(new ImageIcon(imageUrl).getImage());
