@@ -30,6 +30,8 @@ import javax.swing.JComboBox;
 import javax.swing.JScrollPane;
 import java.awt.Panel;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class VentanaUsuario extends JFrame {
 
@@ -235,6 +237,12 @@ public class VentanaUsuario extends JFrame {
 		panel_18.add(panel_27);
 		
 		btnCerrarSesion = new JButton(resourceBundle.getString("logout_msg"));
+		btnCerrarSesion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				VentanaPrincipal.frame.setVisible(true);
+				dispose();
+			}
+		});
 		panel_27.add(btnCerrarSesion);
 		
 		panel_29 = new JPanel();
