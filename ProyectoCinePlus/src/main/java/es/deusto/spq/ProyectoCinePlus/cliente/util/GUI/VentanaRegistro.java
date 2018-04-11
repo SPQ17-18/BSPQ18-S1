@@ -315,15 +315,18 @@ public class VentanaRegistro extends JFrame {
 		}
 		if(!error.isEmpty()) {
 			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_data_msg") + error, "ERROR!", JOptionPane.ERROR_MESSAGE);
-		}
-		else if(passwordField.getPassword().length < 6 ) {
-			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_pass_msg") + error, "ERROR!", JOptionPane.ERROR_MESSAGE);
-		}
-		else if( !passwordField.getPassword().equals(passwordField_1.getPassword())) {
-			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_pass_match_msg") + error, "ERROR!", JOptionPane.ERROR_MESSAGE);
 		} else {
-			validarEmail();
-		}
+			comprobar=validarPass();
+			if(!comprobar) {
+				comprobar=validarEmail();
+			}
+			
+		} 
+		//ME FALLA ESTE METDODO
+		/*System.out.println(passwordField.getPassword().equals(passwordField_1.getPassword()));
+		if(passwordField.getPassword().equals(passwordField_1.getPassword())) {
+			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_pass_match_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
+		}*/
 		
 		limpiarCampos();
 		if(!error.isEmpty()) {
@@ -333,20 +336,20 @@ public class VentanaRegistro extends JFrame {
 	}
 	
 	public boolean validarEmail() {
-		boolean comprobar = true;
+		boolean resul=true;
 		if(!(textFieldemail.getText().contains("@") && (textFieldemail.getText().contains(".com") || textFieldemail.getText().contains(".es")))) {
 			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_email_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
-			comprobar= false;
+			resul=false;
 		}
-		return comprobar;
+		return resul;
 	}
 	public boolean validarPass() {
-		boolean comprobar = true;
-		if(passwordField.getPassword().length < 6. ) {
-			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_email_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
-			comprobar= false;
+		boolean resul=true;
+		if(passwordField.getPassword().length < 6 ) {
+			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_pass_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
+			resul=false;
 		}
-		return comprobar;
+		return resul;
 	}
 	
 	private void limpiarCampos() {
