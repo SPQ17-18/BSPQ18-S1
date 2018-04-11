@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.rmi.RemoteException;
 import java.util.ResourceBundle;
 
 import javax.imageio.ImageIO;
@@ -119,7 +120,12 @@ public class VentanaLogin extends JFrame {
 					limpiarCampos();
 					
 					//Codigo del controller
-					System.out.println("Usuario logeado" + controller.LoginUsuario("", ""));
+					try {
+						System.out.println("Usuario logeado" + controller.LoginUsuario("", ""));
+					} catch (RemoteException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
 				
 			}

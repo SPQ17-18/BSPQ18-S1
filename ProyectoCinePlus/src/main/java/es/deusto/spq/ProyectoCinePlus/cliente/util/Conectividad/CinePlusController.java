@@ -1,54 +1,42 @@
 package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad;
 
+import java.rmi.RemoteException;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator;
 
-
 public class CinePlusController {
-	private RMIServiceLocator rsl;
-
 	
+	private RMIServiceLocator rsl;
 
 	public CinePlusController(RMIServiceLocator rmi) {
 		this.rsl = rmi;
 	}
 
-	public void RegistrarUsuario(String nombre, String contrasenya, String correo) {
-		try {
-			rsl.getCinePlusService().registrarUsuario(nombre, contrasenya, correo);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
+	public boolean RegistrarUsuario(String usuario, String email, String nombre, String apellido, String password,
+			String pais, boolean admin) throws RemoteException {
+		return rsl.getCinePlusService().registrarUsuario(usuario, email, nombre, apellido, password, pais, admin);
 	}
 
-
-	public int LoginUsuario(String nombre, String contrasenya) {
-		int login=0;
-		try {
-			login=rsl.getCinePlusService().UsuarioRegistrado(nombre, contrasenya);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
-		return login;
+	public boolean LoginUsuario(String usuario, String password) throws RemoteException {
+		return rsl.getCinePlusService().usuarioRegistrado(usuario, password);
 	}
-	
-	
-//	  public static void main(String[] args) throws RemoteException {   
-//	    	
-//	    	final CinePlusController controlador = new CinePlusController(args);
-//	    	
-//			/**
-//			 * Launch the application.
-//			 */
-//				EventQueue.invokeLater(new Runnable() {
-//					public void run() {
-//						try {
-//							VentanaPrincipal.frame = new VentanaPrincipal(controlador);
-//							VentanaPrincipal.frame.setVisible(true);
-//						} catch (Exception e) {
-//							e.printStackTrace();
-//						}
-//					}
-//				});
-//			
-//	    }
+
+	// public static void main(String[] args) throws RemoteException {
+	//
+	// final CinePlusController controlador = new CinePlusController(args);
+	//
+	// /**
+	// * Launch the application.
+	// */
+	// EventQueue.invokeLater(new Runnable() {
+	// public void run() {
+	// try {
+	// VentanaPrincipal.frame = new VentanaPrincipal(controlador);
+	// VentanaPrincipal.frame.setVisible(true);
+	// } catch (Exception e) {
+	// e.printStackTrace();
+	// }
+	// }
+	// });
+	//
+	// }
 }
