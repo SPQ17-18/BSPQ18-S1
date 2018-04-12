@@ -2,12 +2,8 @@ package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.List;
-
-import es.deusto.spq.ProyectoCinePlus.servidor.DAO.IUsuarioDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
-import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
 
 public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	//Maantener esto para unir sesion de usuario/servidor para los metodos o(?)
@@ -18,10 +14,7 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 		super();
 		usuarioDAO=new UsuarioDAO();
         usuarioDAO.storeUsuario(new Usuario("mikel", "spq@gmail.com", "mikel", "fernandez", "spq", "españa", false));
-//        for(Usuario us: usuarioDAO.getUsuarios()) {
-//        	System.out.println("Estamos haciendo algo util");
-//        	System.out.println(us.toString());
-//        }
+
 	}
 	
 	public synchronized boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password,

@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal;
-import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus;
 
 public class Cliente {
 	public static void main(String[] args) {

@@ -20,23 +20,5 @@ public class CinePlusController {
 		return rsl.getCinePlusService().usuarioRegistrado(usuario, password);
 	}
 
-	// public static void main(String[] args) throws RemoteException {
-	//
-	// final CinePlusController controlador = new CinePlusController(args);
-	//
-	// /**
-	// * Launch the application.
-	// */
-	// EventQueue.invokeLater(new Runnable() {
-	// public void run() {
-	// try {
-	// VentanaPrincipal.frame = new VentanaPrincipal(controlador);
-	// VentanaPrincipal.frame.setVisible(true);
-	// } catch (Exception e) {
-	// e.printStackTrace();
-	// }
-	// }
-	// });
-	//
-	// }
+	
 }

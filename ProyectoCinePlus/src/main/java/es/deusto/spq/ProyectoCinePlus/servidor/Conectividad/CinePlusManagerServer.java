@@ -7,10 +7,6 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 
-import es.deusto.spq.ProyectoCinePlus.servidor.DAO.IUsuarioDAO;
-import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
-import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
-
 
 public class CinePlusManagerServer  {
 	
@@ -51,6 +47,7 @@ public class CinePlusManagerServer  {
 		
 		class RMIServerRunnable implements Runnable {
 
+		
 			public void run() {
 				System.out.println("This is a test to check how mvn test executes this test without external interaction; JVM properties by program");
 				System.setProperty("java.security.policy", "target\\classes\\security\\java.policy");
