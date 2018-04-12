@@ -1,7 +1,6 @@
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -23,11 +22,14 @@ import javax.swing.border.EmptyBorder;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 
-import java.awt.Toolkit;
 import javax.swing.JPasswordField;
 
 public class VentanaLogin extends JFrame {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private CinePlusController controller;
 	private JPanel contentPane;
 	private JTextField textFieldUsuario;
@@ -55,28 +57,13 @@ public class VentanaLogin extends JFrame {
 	private JPasswordField passwordField;
 	protected ResourceBundle resourceBundle;
 	
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					VentanaLogin frame = new VentanaLogin();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
 
 	/**
 	 * Create the frame.
 	 */
 	public VentanaLogin(CinePlusController controller, final ResourceBundle resourceBundle) {
 		//Inicializamos el controlador
-		this.controller = controller;
+		this.setController(controller);
 		this.resourceBundle=resourceBundle;		
 		
 		BufferedImage img = null;
@@ -115,19 +102,33 @@ public class VentanaLogin extends JFrame {
 		btnIniciarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//Comprobacion campos vacios
-				if(textFieldUsuario.getText().trim().equals("") || passwordField.getPassword().length < 6 ) {
+					if(textFieldUsuario.getText().trim().equals("") || passwordField.getPassword().length > 30) {	
 					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_login_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
 					limpiarCampos();
-					
+					}
 					//Codigo del controller
+					else {
 					try {
-						System.out.println("Usuario logeado" + controller.LoginUsuario("", ""));
+						String pass=new String(passwordField.getPassword());
+						System.out.println("PASSWORD= "+pass);
+						boolean login=controller.LoginUsuario(textFieldUsuario.getText(), pass);
+						if(login){
+							System.out.println("Usuario logueado:  "+textFieldUsuario.getText());
+							VentanaLogin.this.setVisible(false);
+							VentanaUsuario windowusuario = new VentanaUsuario(controller,resourceBundle);
+							windowusuario.setVisible(true);
+						}
+						else {
+							JOptionPane.showMessageDialog(null, resourceBundle.getString("error_login_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
+							limpiarCampos();
+						}
+						
 					} catch (RemoteException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-				}
 				
+					}
 			}
 		});
 		panel.add(btnIniciarSesion);
@@ -192,5 +193,13 @@ public class VentanaLogin extends JFrame {
 	private void limpiarCampos() {
 		textFieldUsuario.setText("");
 		passwordField.setText("");
+	}
+
+	public CinePlusController getController() {
+		return controller;
+	}
+
+	public void setController(CinePlusController controller) {
+		this.controller = controller;
 	}
 }

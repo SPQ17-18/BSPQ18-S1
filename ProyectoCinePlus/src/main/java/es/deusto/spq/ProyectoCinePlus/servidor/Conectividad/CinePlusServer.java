@@ -4,7 +4,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 
-
+import es.deusto.spq.ProyectoCinePlus.servidor.DAO.IUsuarioDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
@@ -17,6 +17,11 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	public CinePlusServer () throws RemoteException {
 		super();
 		usuarioDAO=new UsuarioDAO();
+        usuarioDAO.storeUsuario(new Usuario("mikel", "spq@gmail.com", "mikel", "fernandez", "spq", "españa", false));
+//        for(Usuario us: usuarioDAO.getUsuarios()) {
+//        	System.out.println("Estamos haciendo algo util");
+//        	System.out.println(us.toString());
+//        }
 	}
 	
 	public synchronized boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password,
@@ -29,7 +34,7 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 
 	public synchronized boolean usuarioRegistrado (String usuario, String password) throws RemoteException {
 		//1.- Ese metodo comprueba que existe el usuaio y que la contraseña es igual
-    	return usuarioDAO.loginUser(usuario, password);
+        return usuarioDAO.loginUser(usuario, password);
 	}
 	
 
