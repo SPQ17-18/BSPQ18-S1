@@ -1,7 +1,6 @@
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,15 +18,12 @@ import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocato
 
 import javax.swing.JLabel;
 import javax.imageio.ImageIO;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.rmi.RemoteException;
 
 public class VentanaPrincipal extends JFrame {
 
@@ -66,6 +62,7 @@ public class VentanaPrincipal extends JFrame {
 	private JLabel lblEn;
 	private JLabel lblEu;
 	
+
 	private String lang="en";
 	protected static String pathn;
 

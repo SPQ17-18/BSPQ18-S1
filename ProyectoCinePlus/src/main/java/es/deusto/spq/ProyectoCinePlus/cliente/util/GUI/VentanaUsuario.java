@@ -1,15 +1,12 @@
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 
-import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -20,20 +17,20 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JSeparator;
 import java.awt.Font;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JTextField;
-import javax.swing.JList;
 import javax.swing.JComboBox;
 import javax.swing.JScrollPane;
-import java.awt.Panel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class VentanaUsuario extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 
 	private CinePlusController controller;
 	
@@ -83,8 +80,8 @@ public class VentanaUsuario extends JFrame {
 	private JSeparator separator_2;
 	private JSeparator separator_3;
 	
-	private JComboBox comboBox;
-	private JComboBox comboBoxAnio; 
+	private JComboBox<?> comboBox;
+	private JComboBox<?> comboBoxAnio; 
 	private JScrollPane scrollPane;
 	private JLabel lblpeliculas;
 	private JSeparator separator;
@@ -99,22 +96,12 @@ public class VentanaUsuario extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					VentanaUsuario frame = new VentanaUsuario();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	} 
+
 
 	/**
 	 * Create the frame.
 	 */
+
 	public VentanaUsuario(CinePlusController controller, ResourceBundle resourceBundle) {
 		this.controller =controller;
 		this.resourceBundle=resourceBundle;
@@ -281,7 +268,7 @@ public class VentanaUsuario extends JFrame {
 		panel_21 = new JPanel();
 		panel_12.add(panel_21);
 		
-		comboBoxAnio = new JComboBox();
+		comboBoxAnio = new JComboBox<Object>();
 		panel_21.add(comboBoxAnio);
 		
 		panel_23 = new JPanel();
@@ -293,7 +280,7 @@ public class VentanaUsuario extends JFrame {
 		panel_20 = new JPanel();
 		panel_12.add(panel_20);
 		
-		comboBox = new JComboBox();
+		comboBox = new JComboBox<Object>();
 		panel_20.add(comboBox);
 		
 		panel_13 = new JPanel();

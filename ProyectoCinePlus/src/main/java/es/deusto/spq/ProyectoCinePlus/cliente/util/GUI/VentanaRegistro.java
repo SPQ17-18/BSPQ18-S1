@@ -1,8 +1,6 @@
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -16,20 +14,21 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ResourceBundle;
 import java.awt.event.ActionEvent;
-import java.awt.Toolkit;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import java.awt.FlowLayout;
-import javax.swing.JList;
 import javax.swing.JOptionPane;
-import javax.swing.JComboBox;
 import javax.swing.JPasswordField;
 import javax.imageio.ImageIO;
-import javax.swing.DefaultComboBoxModel;
 
 public class VentanaRegistro extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private CinePlusController controller;
 	
