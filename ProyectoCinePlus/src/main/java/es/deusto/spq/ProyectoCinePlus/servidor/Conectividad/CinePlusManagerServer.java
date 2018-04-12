@@ -7,6 +7,10 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 
+import es.deusto.spq.ProyectoCinePlus.servidor.DAO.IUsuarioDAO;
+import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
+
 
 public class CinePlusManagerServer  {
 	
@@ -58,7 +62,9 @@ public class CinePlusManagerServer  {
 					System.out.println("Server '" + name + "' active and waiting...");
 					InputStreamReader inputStreamReader = new InputStreamReader(System.in);
 					BufferedReader stdin = new BufferedReader(inputStreamReader);
-					String line = stdin.readLine();
+			       String line = stdin.readLine();
+			       IUsuarioDAO usuario= new UsuarioDAO();
+			       usuario.storeUsuario(new Usuario("mikel", "spq@gmail.com", "mikel", "fernandez", "spq", "españa", false));
 				} catch (RemoteException re) {
 					System.err.println(" # Collector RemoteException: " + re.getMessage());
 					re.printStackTrace();
