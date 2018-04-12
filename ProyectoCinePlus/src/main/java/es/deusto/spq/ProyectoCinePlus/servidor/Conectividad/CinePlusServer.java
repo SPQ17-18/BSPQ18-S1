@@ -34,10 +34,7 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 
 	public synchronized boolean usuarioRegistrado (String usuario, String password) throws RemoteException {
 		//1.- Ese metodo comprueba que existe el usuaio y que la contraseña es igual
-    	
-    	 
-
-	        return usuarioDAO.loginUser(usuario, password);
+        return usuarioDAO.loginUser(usuario, password);
 	}
 	
 
