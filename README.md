@@ -2,6 +2,8 @@
 Repository for Team BSPQ18-S1
 
 
+![logo150.png](https://s26.postimg.cc/eiqjhu0pl/logo150.png)
+
        🎬 ######################### PROYECTO CINEPLUS ######################### 🎬
         
        DESCRIPCIÓN:
