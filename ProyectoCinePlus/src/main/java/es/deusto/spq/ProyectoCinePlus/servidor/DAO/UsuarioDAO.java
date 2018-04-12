@@ -31,6 +31,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 		} else {
 			System.out.println("The user mail " + usuario.getEmail() + " already exists");
 		}
+		System.out.println("usuario almacenado: "+usuario.toString());
 		return resul;
 	}
 	
