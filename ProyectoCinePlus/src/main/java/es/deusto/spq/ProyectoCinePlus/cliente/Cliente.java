@@ -1,7 +1,6 @@
 package es.deusto.spq.ProyectoCinePlus.cliente;
 
-import java.awt.EventQueue;
-
+//import java.awt.EventQueue;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal;
@@ -13,17 +12,17 @@ public class Cliente {
 			System.exit(0);
 		}
 
-		System.setProperty("java.security.policy", "target\\classes\\security\\java.policy");
+//		System.setProperty("java.security.policy", "target\\classes\\security\\java.policy");
 
 		
 		if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new SecurityManager());
 		}
 
-		try {
-			
-			EventQueue.invokeLater(new Runnable() {
-				public void run() {
+//		try {
+//			
+//			EventQueue.invokeLater(new Runnable() {
+//				public void run() {
 					try {
 						RMIServiceLocator rmi=new RMIServiceLocator();
 						rmi.setService(args);
@@ -34,11 +33,11 @@ public class Cliente {
 						e.printStackTrace();
 					}
 				}
-			});
-		
-		} catch (Exception e) {
-			System.err.println("RMI Example exception: " + e.getMessage());
-			e.printStackTrace();
-		}
-	}
+//			});
+//		
+//		} catch (Exception e) {
+//			System.err.println("RMI Example exception: " + e.getMessage());
+//			e.printStackTrace();
+//		}
+//	}
 }

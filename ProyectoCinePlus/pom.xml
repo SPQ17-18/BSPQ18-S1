@@ -65,7 +65,7 @@
             <version>[1.2.17, )</version>
          </dependency>
      <!--############## dependencias de cliente ##############-->
-     	 <dependency>
+     <!--	 <dependency>
         <groupId>org.apache.xmlbeans</groupId>
         	<artifactId>xmlbeans</artifactId>
         	<version>2.6.0</version>
@@ -91,7 +91,7 @@
         	<groupId>org.apache.axis2</groupId>
         	<artifactId>axis2-transport-local</artifactId>
         	<version>1.7.7</version>
-    	</dependency>
+    	</dependency> -->
      	   
     </dependencies>
  
@@ -229,7 +229,7 @@
 						</configuration>  
 					</plugin>
 					<!--Anyadido para que funcione el invokelater  -->
-					<plugin>
+					<!-- <plugin>
 				        <groupId>org.apache.axis2</groupId>
 				        <artifactId>axis2-java2wsdl-maven-plugin</artifactId>
 				        <version>1.7.7</version>
@@ -243,7 +243,7 @@
 				            </goals>
 				          </execution>
 				         </executions>
-				      </plugin>
+				      </plugin>-->
 					        				  
 				</plugins>  
 			</build>  

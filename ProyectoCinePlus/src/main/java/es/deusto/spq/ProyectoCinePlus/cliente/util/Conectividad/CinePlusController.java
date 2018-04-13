@@ -13,8 +13,6 @@ public class CinePlusController {
 
 	public boolean RegistrarUsuario(String usuario, String email, String nombre, String apellido, String password,
 			String pais, boolean admin) throws RemoteException {
-		System.out.println("Estamos en controller");
-		System.out.println(usuario+ email+ nombre+ apellido+ password+ pais+ admin);
 		return rsl.getCinePlusService().registrarUsuario(usuario, email, nombre, apellido, password, pais, admin);
 	}
 

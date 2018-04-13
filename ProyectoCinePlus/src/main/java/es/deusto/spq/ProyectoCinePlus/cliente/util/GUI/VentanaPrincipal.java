@@ -24,6 +24,7 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.awt.Toolkit;
 
 public class VentanaPrincipal extends JFrame {
 
@@ -72,8 +73,9 @@ public class VentanaPrincipal extends JFrame {
 
 	public VentanaPrincipal(RMIServiceLocator rmi,CinePlusController controller) {
 		
-		pathn=System.getProperty("user.dir");
-		pathn+=("/src/main/java/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/");
+		//pathn=System.getProperty("user.dir");
+		//pathn+=("/src/main/java/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/");
+		pathn=(System.getProperty("user.dir")+ "\\main\\resources\\images\\");
 		
 		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
 		//resourceBundle = ResourceBundle.getBundle("SystemMessages ",	Locale.forLanguageTag(lang));
