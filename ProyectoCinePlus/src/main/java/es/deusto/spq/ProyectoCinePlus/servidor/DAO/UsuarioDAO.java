@@ -26,7 +26,9 @@ public class UsuarioDAO implements IUsuarioDAO{
 	
 	public boolean storeUsuario(Usuario usuario) {
 		boolean resul = false;
+		System.out.println("Storeuser 1");
 		if (!this.checkUser(usuario)) {
+			System.out.println("Ha entrado!!!!!!!!!!!!---> aqui ");
 			resul = this.storeObject(usuario);
 		} else {
 			System.out.println("The user mail " + usuario.getEmail() + " already exists");
@@ -39,7 +41,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 		boolean resul =false;
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();
-	   
+	   System.out.println(usuario.toString());
 	    try {
 	       tx.begin();
 	       System.out.println("   * Storing an object: " + usuario);
