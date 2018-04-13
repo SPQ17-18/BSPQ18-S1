@@ -12,7 +12,7 @@ Repository for Team BSPQ18-S1
        Se trata de un pequeño videoclub online desarrollado en java y que puede ser portado y utilizado 
        en cualquier ordenador que ejecute java. 
        
-  El modelo de desarrollo será **AGILE**
+       El modelo de desarrollo será AGILE
        
        CinePlus se basa en el modelo de negocio que tienen grandes compañias como Netflix o Amazon Prime Video.
        Cualquier coincidencia con estas será mera casualidad.
