@@ -19,8 +19,11 @@ Repository for Team BSPQ18-S1
        
 ###### ✅ SPRINT 1:
         
-                       - Nos encontramos dentro del primer Sprint-
-       - Tendremos que implementar un Login, una interfaz de usuario y gestion de la BD.
+                      
+       - Tareas a realizar:
+              ⭕ Sistema de registro de usuario.
+              ⭕ Sistema de login
+              ⭕ Ventana de perfil personal.
         
 ###### ⬜ SPRINT 2:
        
