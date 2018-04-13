@@ -9,8 +9,8 @@ Repository for Team BSPQ18-S1
 ## 🔰 DESCRIPCIÓN:
        
        CinePlus es el nombre de nuestro proyecto de la asignatura de Software Process and Quality. 
-       Se trata de un pequeño videoclub online desarrollado en java y que puede ser portado y utilizado 
-       en cualquier ordenador que ejecute java. 
+       Se trata de un pequeño videoclub online desarrollado en java utilizando la herramienta Maven que puede ser 
+       portado y utilizado en cualquier ordenador que ejecute java. 
        
        El modelo de desarrollo será AGILE
        
