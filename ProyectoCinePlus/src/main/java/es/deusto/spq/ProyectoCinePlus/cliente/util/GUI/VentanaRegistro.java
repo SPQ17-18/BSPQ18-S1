@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.rmi.RemoteException;
 import java.util.ResourceBundle;
 import java.awt.event.ActionEvent;
 import java.awt.GridLayout;
@@ -79,22 +80,6 @@ public class VentanaRegistro extends JFrame {
 	
 	protected ResourceBundle resourceBundle;
 	
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					VentanaRegistro frame = new VentanaRegistro();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
-
 	/**
 	 * Create the frame.
 	 */
@@ -254,12 +239,42 @@ public class VentanaRegistro extends JFrame {
 		btnRegistrarse = new JButton(resourceBundle.getString("register_msg"));
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (comprobarcampos()) {
+				System.out.println(textFielduser.getText()+
+						textFieldemail.getText()+
+						textFieldnombre.getText()+
+						textFieldApellido.getText()+
+						new String(passwordField.getPassword())+
+						textFieldPais.getText());
+				
+				try {
+					controller.RegistrarUsuario(textFielduser.getText(),
+							textFieldemail.getText(),
+							textFieldnombre.getText(),
+							textFieldApellido.getText(),
+							new String(passwordField.getPassword()),
+							textFieldPais.getText(),
+							false);
+				} catch (RemoteException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				}
+//				if (comprobarcampos()) {
+//					
+//					}
+				
 					VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle);
 					ventanaUsuario.setVisible(true);
 					dispose();
+					
+					textFielduser.setText("");
+					textFieldemail.setText("");
+					passwordField.setText("");
+					passwordField_1.setText("");
+					textFieldnombre.setText("");
+					textFieldApellido.setText("");
+					textFieldPais.setText("");
 				}
-			}
+			
 		});
 		panel_9.add(btnRegistrarse);
 		

@@ -19,9 +19,10 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	
 	public synchronized boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password,
 	String pais, boolean admin) throws RemoteException {
-		Usuario user = new Usuario (usuario, email, nombre, apellido, password, pais, admin);
+		//Usuario user = new Usuario ();
+		System.out.println("Entramos aqui "+usuario+ email+ nombre+ apellido+ password+ pais+ admin);
 		// 1.- Ese metodo comprueba que no esta el usuario y lo registra
-		return usuarioDAO.storeUsuario(user);
+		return usuarioDAO.storeUsuario(new Usuario(usuario, email, nombre, apellido, password, pais, false));
 	}
 
 
