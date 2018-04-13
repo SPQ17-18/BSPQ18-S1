@@ -2,6 +2,7 @@ package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad;
 
 import java.rmi.RemoteException;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator;
+import es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal;
 
 public class CinePlusController {
 	
@@ -13,8 +14,6 @@ public class CinePlusController {
 
 	public boolean RegistrarUsuario(String usuario, String email, String nombre, String apellido, String password,
 			String pais, boolean admin) throws RemoteException {
-		System.out.println("Estamos en controller");
-		System.out.println(usuario+ email+ nombre+ apellido+ password+ pais+ admin);
 		return rsl.getCinePlusService().registrarUsuario(usuario, email, nombre, apellido, password, pais, admin);
 	}
 
@@ -22,5 +21,26 @@ public class CinePlusController {
 		return rsl.getCinePlusService().usuarioRegistrado(usuario, password);
 	}
 
-	
+	public static void main(String[] args) {
+			if (args.length != 3) {
+				System.out.println("Use: java [policy] [codebase] Client.Client [host] [port] [server]");
+				System.exit(0);
+			}
+			
+			if (System.getSecurityManager() == null) {
+				System.setSecurityManager(new SecurityManager());
+			}
+
+
+						try {
+							RMIServiceLocator rmi=new RMIServiceLocator();
+							rmi.setService(args);
+							CinePlusController cpc=new CinePlusController(rmi);
+							VentanaPrincipal.frame = new VentanaPrincipal(rmi,cpc);
+							VentanaPrincipal.frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					
+	}
 }

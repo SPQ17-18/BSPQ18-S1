@@ -3,6 +3,7 @@ package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -66,13 +67,13 @@ public class VentanaLogin extends JFrame {
 		this.setController(controller);
 		this.resourceBundle=resourceBundle;		
 		
-		BufferedImage img = null;
-		try {
-		    img = ImageIO.read(new File(VentanaPrincipal.pathn+"logocuadrado50.png"));
-		} catch (IOException e) {
-		}
-		setIconImage(img);
-//		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
+//		BufferedImage img = null;
+//		try {
+//		    img = ImageIO.read(new File(VentanaPrincipal.pathn+"logocuadrado50.png"));
+//		} catch (IOException e) {
+//		}
+//		setIconImage(img);
+		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource(VentanaPrincipal.pathn+"logocuadrado50.png")));
 		
 		setTitle(resourceBundle.getString("title_login_msg"));
 		setBounds(100, 100, 450, 300);
