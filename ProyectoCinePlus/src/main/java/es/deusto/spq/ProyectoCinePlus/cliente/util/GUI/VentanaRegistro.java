@@ -336,11 +336,10 @@ public class VentanaRegistro extends JFrame {
 			}
 			
 		} 
-		//ME FALLA ESTE METDODO
-		/*System.out.println(passwordField.getPassword().equals(passwordField_1.getPassword()));
-		if(passwordField.getPassword().equals(passwordField_1.getPassword())) {
+		
+		if(new String(passwordField.getPassword()).equals(new String(passwordField_1.getPassword()))) {
 			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_pass_match_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
-		}*/
+		}
 		
 		limpiarCampos();
 		if(!error.isEmpty()) {
