@@ -3,7 +3,6 @@ package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -20,6 +19,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 
@@ -57,6 +57,7 @@ public class VentanaLogin extends JFrame {
 	private JLabel lblIniciaSesion;
 	private JPasswordField passwordField;
 	protected ResourceBundle resourceBundle;
+	
 	
 
 	/**
@@ -97,6 +98,7 @@ public class VentanaLogin extends JFrame {
 		panel_6 = new JPanel();
 		panel_2.add(panel_6, BorderLayout.SOUTH);
 		
+
 		panel = new JPanel();
 		panel_6.add(panel);
 		
