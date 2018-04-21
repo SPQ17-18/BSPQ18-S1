@@ -25,9 +25,7 @@ import javax.imageio.ImageIO;
 
 public class VentanaRegistro extends JFrame {
 
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 	private CinePlusController controller;

@@ -217,7 +217,7 @@ public class VentanaUsuario extends JFrame {
 		panel_18 = new JPanel();
 		panel_7.add(panel_18);
 		panel_18.setLayout(new GridLayout(3, 1, 0, 0));
-		
+		 
 		panel_28 = new JPanel();
 		panel_18.add(panel_28);
 		

@@ -164,6 +164,7 @@ public class VentanaPrincipal extends JFrame {
 				//frame.repaint();
 				//frame.dispose();
 				//frame.setVisible(true);
+				
 			}
 		});
 		

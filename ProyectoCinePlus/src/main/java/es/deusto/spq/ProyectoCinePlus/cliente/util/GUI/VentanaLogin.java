@@ -68,6 +68,7 @@ public class VentanaLogin extends JFrame {
 		this.setController(controller);
 		this.resourceBundle=resourceBundle;		
 		
+	
 		BufferedImage img = null;
 		try {
 		    img = ImageIO.read(new File(VentanaPrincipal.pathn+"logocuadrado50.png"));
