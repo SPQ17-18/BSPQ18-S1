@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import org.apache.log4j.Logger;
+
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 
 import java.awt.image.BufferedImage;
@@ -26,9 +28,7 @@ import java.awt.event.ActionEvent;
 
 public class VentanaUsuario extends JFrame {
 
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 
 
@@ -94,16 +94,13 @@ public class VentanaUsuario extends JFrame {
 	private JPanel panel_29;
 	private JButton btnAnadirSaldo;
 	
-	/**
-	 * Launch the application.
-	 */
-
-
+	static Logger logger = Logger.getLogger(VentanaUsuario.class.getName());
 	/**
 	 * Create the frame.
 	 */
 
 	public VentanaUsuario(CinePlusController controller, ResourceBundle resourceBundle) {
+		logger.info("VentanaUsuario");
 		this.controller =controller;
 		this.resourceBundle=resourceBundle;
 		setTitle(resourceBundle.getString("user_panel_msg"));
@@ -227,6 +224,7 @@ public class VentanaUsuario extends JFrame {
 		btnAnadirSaldo = new JButton(resourceBundle.getString("title_balance_msg"));
 		btnAnadirSaldo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				logger.info("Boton añadir saldo");
 				VentanaSaldo ventanaSaldo = new VentanaSaldo(controller,resourceBundle);
 				ventanaSaldo.setVisible(true);
 			}
@@ -239,6 +237,7 @@ public class VentanaUsuario extends JFrame {
 		btnCerrarSesion = new JButton(resourceBundle.getString("logout_msg"));
 		btnCerrarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				logger.info("Boton cerrar sesion");
 				VentanaPrincipal.frame.setVisible(true);
 				dispose();
 			}

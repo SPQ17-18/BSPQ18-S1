@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import org.apache.log4j.Logger;
+
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 
 import javax.swing.JButton;
@@ -76,27 +78,14 @@ public class VentanaRegistro extends JFrame {
 	private JTextField textFieldPais;
 	
 	protected ResourceBundle resourceBundle;
+	static Logger logger = Logger.getLogger(VentanaRegistro.class.getName());
 	
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					VentanaRegistro frame = new VentanaRegistro();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
-
+	
 	/**
 	 * Create the frame.
 	 */
 	public VentanaRegistro(CinePlusController controller,ResourceBundle resourceBundle) {
+		logger.info("VentanaRegistro");
 		this.controller = controller;
 		this.resourceBundle=resourceBundle;
 		
@@ -253,6 +242,7 @@ public class VentanaRegistro extends JFrame {
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (comprobarcampos()) {
+					logger.info("Boton registar");
 					VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle);
 					ventanaUsuario.setVisible(true);
 					dispose();
@@ -264,6 +254,7 @@ public class VentanaRegistro extends JFrame {
 		btnAtras = new JButton(resourceBundle.getString("back_msg"));
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				logger.info("Boton atras (Ventana Registro)");
 				VentanaPrincipal.frame.setVisible(true);
 				dispose();
 			}
@@ -277,6 +268,7 @@ public class VentanaRegistro extends JFrame {
 	}
  
 	public boolean comprobarcampos() {
+		logger.info("Función comprobar campos");
 		String error ="";
 		boolean comprobar = true;
 		if(textFielduser.getText().trim().equals("")) {
@@ -333,6 +325,7 @@ public class VentanaRegistro extends JFrame {
 	}
 	
 	public boolean validarEmail() {
+		logger.info("Funcion validarEmail");
 		boolean resul=true;
 		if(!(textFieldemail.getText().contains("@") && (textFieldemail.getText().contains(".com") || textFieldemail.getText().contains(".es")))) {
 			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_email_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
@@ -341,6 +334,7 @@ public class VentanaRegistro extends JFrame {
 		return resul;
 	}
 	public boolean validarPass() {
+		logger.info("Funcion validarPass");
 		boolean resul=true;
 		if(passwordField.getPassword().length < 6 ) {
 			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_pass_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);

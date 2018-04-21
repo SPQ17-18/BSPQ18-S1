@@ -22,6 +22,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import org.apache.log4j.Logger;
+
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 import javax.swing.JList;
 import javax.swing.JSlider;
@@ -68,10 +70,13 @@ public class VentanaSaldo extends JFrame {
 	private JLabel lblCvc;
 	private JTextField textField_2;
 
+	static Logger logger = Logger.getLogger(VentanaSaldo.class.getName());
+	
 	/**
 	 * Create the frame.
 	 */
 	public VentanaSaldo(CinePlusController controller, final ResourceBundle resourceBundle) {
+		logger.info("VentanaSaldo");
 		// Inicializamos el controlador
 		this.setController(controller);
 		this.resourceBundle = resourceBundle;

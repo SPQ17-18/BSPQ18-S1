@@ -6,8 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Locale;
 import java.util.ResourceBundle;
-import java.util.logging.Logger;
-
+import org.apache.log4j.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -80,8 +79,6 @@ public class VentanaPrincipal extends JFrame {
 		
 		
 		logger.debug(pathn);
-		//https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html
-		
 		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
 		//resourceBundle = ResourceBundle.getBundle("SystemMessages ",	Locale.forLanguageTag(lang));
 		
@@ -145,6 +142,7 @@ public class VentanaPrincipal extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				lang = "es";
+				logger.info("Idioma: es");
 			}
 		});
 		
@@ -167,6 +165,7 @@ public class VentanaPrincipal extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				lang = "eu";
+				logger.info("Idioma: eu");
 				//resourceBundle = ResourceBundle.getBundle("SystemMessages",	Locale.forLanguageTag(lang));
 				//frame.repaint();
 				//frame.dispose();
@@ -195,6 +194,7 @@ public class VentanaPrincipal extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				lang = "en";
+				logger.info("Idioma: en");
 			}
 		});
 		
@@ -225,10 +225,10 @@ public class VentanaPrincipal extends JFrame {
 		btnIniciarSesion = new JButton(resourceBundle.getString("login_msg"));
 		btnIniciarSesion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				logger.info("Boton Login");
 				VentanaPrincipal.this.setVisible(false);
 				VentanaLogin iniciarsesion = new VentanaLogin(frame.controlador,resourceBundle);
 				iniciarsesion.setVisible(true);
-				
 			}
 		});
 		panel_8.add(btnIniciarSesion);
@@ -236,10 +236,10 @@ public class VentanaPrincipal extends JFrame {
 		btnRegistarse = new JButton(resourceBundle.getString("register_msg"));
 		btnRegistarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				logger.info("Boton Registrar");
 				frame.setVisible(false);
 				VentanaRegistro registrouser = new VentanaRegistro(frame.controlador,resourceBundle);
-				registrouser.setVisible(true);
-				
+				registrouser.setVisible(true);	
 			}
 		});
 		 
@@ -248,7 +248,7 @@ public class VentanaPrincipal extends JFrame {
 		btnCopyright = new JButton("Copyright");
 		btnCopyright.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+				logger.info("Boton Copyright");
 				JOptionPane.showMessageDialog(null,copy,"CopyRight CinePlus:", JOptionPane.DEFAULT_OPTION);
 			}
 		});
@@ -258,6 +258,7 @@ public class VentanaPrincipal extends JFrame {
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
+				logger.info("Saliendo");
 			}
 		});
 		panel_8.add(btnSalir);
