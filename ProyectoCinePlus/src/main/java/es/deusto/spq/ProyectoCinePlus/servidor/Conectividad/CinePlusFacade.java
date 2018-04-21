@@ -2,8 +2,10 @@ package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.List;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusServer;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 
 
 
@@ -26,6 +28,8 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 
 	public boolean usuarioRegistrado(String usuario, String password) throws RemoteException {
 		return cpser.usuarioRegistrado(usuario, password);
-		
+	}
+	public List<Pelicula> Busqueda(String nombre, String anyo,String genero) throws RemoteException {
+		return cpser.Busqueda(nombre, anyo,genero);
 	}
 }

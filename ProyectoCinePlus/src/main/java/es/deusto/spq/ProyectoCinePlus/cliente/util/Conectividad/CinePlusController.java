@@ -1,8 +1,11 @@
 package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad;
 
 import java.rmi.RemoteException;
+import java.util.List;
+
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 
 public class CinePlusController {
 	
@@ -20,7 +23,12 @@ public class CinePlusController {
 	public boolean LoginUsuario(String usuario, String password) throws RemoteException {
 		return rsl.getCinePlusService().usuarioRegistrado(usuario, password);
 	}
-
+	
+	public List<Pelicula> Busqueda(String nombre, String anyo,String genero) throws RemoteException {
+		return rsl.getCinePlusService().Busqueda(nombre, anyo,genero);
+		
+	}
+	
 	public static void main(String[] args) {
 			if (args.length != 3) {
 				System.out.println("Use: java [policy] [codebase] Client.Client [host] [port] [server]");

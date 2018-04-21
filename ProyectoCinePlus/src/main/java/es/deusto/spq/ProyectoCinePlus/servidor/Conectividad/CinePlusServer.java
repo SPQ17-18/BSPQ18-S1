@@ -2,19 +2,29 @@ package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+import java.util.List;
+
+import es.deusto.spq.ProyectoCinePlus.servidor.DAO.PeliculaDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	//Maantener esto para unir sesion de usuario/servidor para los metodos o(?)
 	private UsuarioDAO usuarioDAO;
+	private PeliculaDAO peliculaDAO;
 	private static final long serialVersionUID = 1L;
 	
 	public CinePlusServer () throws RemoteException {
 		super();
 		usuarioDAO=new UsuarioDAO();
         usuarioDAO.storeUsuario(new Usuario("mikel", "spq@gmail.com", "mikel", "fernandez", "spq", "españa", false));
-
+        List<Usuario> a=new ArrayList<>();
+        a.add(new Usuario("mikel", "spq@gmail.com", "mikel", "fernandez", "spq", "españa", false));
+        peliculaDAO= new PeliculaDAO();
+        peliculaDAO.storePelicula(new Pelicula(1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 14, a));
+        //TODO una busqueda test
 	}
 	
 	public synchronized boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password,
@@ -28,6 +38,20 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	public synchronized boolean usuarioRegistrado (String usuario, String password) throws RemoteException {
 		//1.- Ese metodo comprueba que existe el usuaio y que la contraseña es igual
         return usuarioDAO.loginUser(usuario, password);
+	}
+
+	public synchronized List<Pelicula> Busqueda(String nombre, String anyo, String genero) {
+		//Devuelve una lista de peliculas
+		//FIXME no se si esta comprobacion habria que hacerla al principio y enviar un determinado string y posteriormente comprobarlo con equals
+		//Por ejemplo hacer que el string=="vacio" al enviar y que luego lo compruebe
+		//Lo de abajo seria el concepto si envia null
+		System.out.println("NOMBRE="+nombre+" anyo="+anyo+" genero="+genero);
+//		if(anyo==null && genero==null) {return peliculaDAO.getPeliculas(nombre,"a","a");}
+//		else if(anyo==null) {return peliculaDAO.getPeliculas(nombre,"a",genero);}
+//		else if(genero==null) {return peliculaDAO.getPeliculas(nombre,anyo,"a");}
+//		else {
+//		return peliculaDAO.getPeliculas(nombre,anyo,genero);}
+		return peliculaDAO.getPeliculas();
 	}
 	
 

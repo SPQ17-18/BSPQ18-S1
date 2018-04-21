@@ -8,10 +8,14 @@ import javax.swing.border.EmptyBorder;
 import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.rmi.RemoteException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
@@ -76,6 +80,7 @@ public class VentanaUsuario extends JFrame {
 	private JPanel panel_8; 
 	private JPanel panel_25; 
 	private JPanel panel_26;
+	private JPanel panel_30;
 	
 	private JSeparator separator_2;
 	private JSeparator separator_3;
@@ -93,7 +98,8 @@ public class VentanaUsuario extends JFrame {
 	private JPanel panel_28;
 	private JPanel panel_29;
 	private JButton btnAnadirSaldo;
-	
+	private JButton btnBuscar;
+	private List<Pelicula> prueba=new ArrayList<>();
 	static Logger logger = Logger.getLogger(VentanaUsuario.class.getName());
 	/**
 	 * Create the frame.
@@ -266,7 +272,29 @@ public class VentanaUsuario extends JFrame {
 		
 		textFieldNombrePeli = new JTextField();
 		panel_25.add(textFieldNombrePeli);
-		textFieldNombrePeli.setColumns(10);
+		textFieldNombrePeli.setColumns(15);//FIXME 10
+		//////////////////
+		panel_30= new JPanel();
+		
+
+		
+		btnBuscar = new JButton(resourceBundle.getString("logout_msg"));//FIXME cambiar esto por: buscar
+		btnBuscar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				logger.info("Boton busqueda");
+				//TODO añadir la busqueda y linkearlo con la lista de pelis que se muestra
+
+				try {
+					prueba=VentanaUsuario.this.controller.Busqueda(textFieldNombrePeli.getText(), comboBoxAnio.getSelectedItem().toString(), comboBox.getSelectedItem().toString());
+				} catch (RemoteException e) {
+					logger.info("Busqueda sin resultados");
+					e.printStackTrace();
+				}
+				logger.info("Busqueda completada");
+			}
+		});
+		panel_30.add(btnBuscar);
+		panel_12.add(panel_30);
 		
 		panel_22 = new JPanel();
 		panel_12.add(panel_22);

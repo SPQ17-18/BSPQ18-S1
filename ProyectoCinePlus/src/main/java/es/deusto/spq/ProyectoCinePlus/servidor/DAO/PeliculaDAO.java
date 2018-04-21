@@ -9,7 +9,6 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
-
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 
 public class PeliculaDAO implements IPeliculaDAO{
@@ -87,7 +86,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	 * @param condicion de la WHERE
 	 * @return lista de Peliculas que cumpla la condicion
 	 */
-	public List<Pelicula> getPeliculas(String condition) {
+	public List<Pelicula> getPeliculassss(String condition) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		
@@ -96,11 +95,9 @@ public class PeliculaDAO implements IPeliculaDAO{
 	        
 	    try {
 	    	System.out.println("   * Executing a Query for Products given a condition: " + condition);
-	    	
 	    	tx.begin();	    	
 			Extent<Pelicula> extent = pm.getExtent(Pelicula.class, true);
 			Query<Pelicula> query = pm.newQuery(extent, condition);
-
 			for (Pelicula Pelicula : (List<Pelicula>)query.execute()) {
 				Peliculas.add(Pelicula);
 			}
@@ -118,7 +115,46 @@ public class PeliculaDAO implements IPeliculaDAO{
     
 	    return Peliculas;
 	}
-	
+
+	@SuppressWarnings("unchecked")
+	public List<Pelicula> getPeliculas(String nombre,String anyo,String genero){
+		PersistenceManager pm = pmf.getPersistenceManager();
+		pm.getFetchPlan().setMaxFetchDepth(3);
+		
+		Transaction tx = pm.currentTransaction();
+		List<Pelicula> Peliculas = new ArrayList<Pelicula>();
+	    
+		try {
+			System.out.println ("   * Querying a Product: " + nombre+anyo+genero);
+			
+	    	tx.begin();
+	    	Extent<Pelicula> extent = pm.getExtent(Pelicula.class, true);
+	    	Query<Pelicula> query=null;
+	    	if(anyo.equals("a")) {query = pm.newQuery(extent,"SELECT FROM " + Pelicula.class.getName() + " WHERE nombre LIKE '%" + nombre + "' AND categoria='"+genero+"'");}
+	    	else if(genero.equals("a")) {query = pm.newQuery(extent,"SELECT FROM " + Pelicula.class.getName() + " WHERE nombre LIKE '%" + nombre + "%' AND categoria='"+genero+"'");}
+	    	else if(anyo.equals("a") && genero.equals("a")) {query = pm.newQuery(extent,"SELECT FROM " + Pelicula.class.getName() + " WHERE nombre LIKE '%" + nombre +"%'");}
+	    	else {    	
+	    	query = pm.newQuery(extent,"SELECT FROM " + Pelicula.class.getName() + " WHERE nombre LIKE '%" + nombre + "%' AND anyo ='" + anyo + "' AND categoria='"+genero+"'");
+	    	}
+	    	//query.setUnique(true);	    
+			for (Pelicula Pelicula : (List<Pelicula>)query.execute()) {
+				Peliculas.add(Pelicula);
+			}
+			
+	        tx.commit();
+   	    
+	     } catch (Exception ex) {
+		   	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
+	     } finally {
+		   	if (tx != null && tx.isActive()) {
+		   		tx.rollback();
+		 }
+				
+	   		pm.close();
+	     }
+
+	    return Peliculas;
+	}	
 	public Pelicula getPelicula(String name){
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
@@ -166,6 +202,12 @@ public class PeliculaDAO implements IPeliculaDAO{
 				
 	   		pm.close();
 	     }
+	}
+
+	@Override
+	public List<Pelicula> getPeliculas(String condition) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 
