@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -65,6 +66,8 @@ public class VentanaPrincipal extends JFrame {
 
 	private String lang="en";
 	protected static String pathn;
+	
+	static Logger logger = Logger.getLogger(VentanaPrincipal.class.getName());
 
 	/**
 	 * Create the frame.
@@ -72,9 +75,13 @@ public class VentanaPrincipal extends JFrame {
 
 	public VentanaPrincipal(RMIServiceLocator rmi,CinePlusController controller) {
 		
+		logger.info("VentanaPrincipal");
 		pathn=(System.getProperty("user.dir")+ "\\src\\main\\resources\\images\\");
 		
-//		System.out.println( pathn);
+		
+		logger.debug(pathn);
+		//https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html
+		
 		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
 		//resourceBundle = ResourceBundle.getBundle("SystemMessages ",	Locale.forLanguageTag(lang));
 		
