@@ -18,6 +18,7 @@ public class Usuario {
 	private String password;
 	private String pais;
 	private boolean admin;
+	private float saldo;
 	@Join
 	private List<Pelicula> peliculasList = new ArrayList<Pelicula>();
 
@@ -95,6 +96,14 @@ public class Usuario {
 	}
 	public void setAdmin(boolean admin) {
 		this.admin = admin;
+	}
+
+	public float getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(float saldo) {
+		this.saldo = saldo;
 	}
 	
 }

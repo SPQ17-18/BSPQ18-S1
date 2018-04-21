@@ -92,6 +92,7 @@ public class VentanaUsuario extends JFrame {
 	private JPanel panel_27;
 	private JPanel panel_28;
 	private JPanel panel_29;
+	private JButton btnAnadirSaldo;
 	
 	/**
 	 * Launch the application.
@@ -220,6 +221,18 @@ public class VentanaUsuario extends JFrame {
 		panel_28 = new JPanel();
 		panel_18.add(panel_28);
 		
+		panel_29 = new JPanel();
+		panel_18.add(panel_29);
+		
+		btnAnadirSaldo = new JButton(resourceBundle.getString("title_balance_msg"));
+		btnAnadirSaldo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaSaldo ventanaSaldo = new VentanaSaldo(controller,resourceBundle);
+				ventanaSaldo.setVisible(true);
+			}
+		});
+		panel_29.add(btnAnadirSaldo);
+		
 		panel_27 = new JPanel();
 		panel_18.add(panel_27);
 		
@@ -231,9 +244,6 @@ public class VentanaUsuario extends JFrame {
 			}
 		});
 		panel_27.add(btnCerrarSesion);
-		
-		panel_29 = new JPanel();
-		panel_18.add(panel_29);
 		
 		panel_9 = new JPanel();
 		panel_4.add(panel_9, BorderLayout.EAST);
