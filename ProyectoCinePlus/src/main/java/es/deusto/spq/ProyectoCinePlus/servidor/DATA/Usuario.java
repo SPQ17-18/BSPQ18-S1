@@ -33,6 +33,7 @@ public class Usuario {
 		this.password = password;
 		this.pais = pais;
 		this.admin = admin;
+		this.saldo = 0;
 		this.peliculasList = peliculasList;
 	}
 	
@@ -46,6 +47,7 @@ public class Usuario {
 		this.password = password;
 		this.pais = pais;
 		this.admin = admin;
+		this.saldo = 0;
 	}
 
 	public String getUsuario() {

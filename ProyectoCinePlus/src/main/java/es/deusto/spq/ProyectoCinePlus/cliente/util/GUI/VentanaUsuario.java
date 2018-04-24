@@ -189,8 +189,9 @@ public class VentanaUsuario extends JFrame {
 		
 		separator_2 = new JSeparator();
 		panel_16.add(separator_2);
-		
-		label_2 = new JLabel("NomUser");
+
+		//label_2 = new JLabel("nomb user");
+		label_2 = new JLabel(user.getUsuario());
 		label_2.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_16.add(label_2);
 		
@@ -204,7 +205,8 @@ public class VentanaUsuario extends JFrame {
 		separator = new JSeparator();
 		panel_17.add(separator);
 		
-		lblnumpelis = new JLabel("8 peliculas");
+		//lblnumpelis = new JLabel("8 peliculas");
+		lblnumpelis = new JLabel(String.valueOf(user.getPeliculasList().size()));
 		lblnumpelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_17.add(lblnumpelis);
 		
@@ -219,7 +221,8 @@ public class VentanaUsuario extends JFrame {
 		separator_3 = new JSeparator();
 		panel_19.add(separator_3);
 		
-		lblSaldo = new JLabel("Saldo");
+		//lblSaldo = new JLabel("8€");
+		lblSaldo = new JLabel(String.valueOf(user.getSaldo()));
 		lblSaldo.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_19.add(lblSaldo);
 		
