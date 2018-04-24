@@ -243,8 +243,11 @@ public class VentanaRegistro extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if (comprobarcampos()) {
 					logger.info("Boton registar");
-					VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle);
-					ventanaUsuario.setVisible(true);
+					//Ya no inicia sesion al registrarse!!!
+					//VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle);
+					//ventanaUsuario.setVisible(true);
+					//dispose();
+					VentanaPrincipal.frame.setVisible(true);
 					dispose();
 				}
 			}

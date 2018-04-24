@@ -6,6 +6,7 @@ import java.util.List;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusServer;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 
 
@@ -31,5 +32,11 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	}
 	public List<Pelicula> Busqueda(String nombre, String anyo,String genero) throws RemoteException {
 		return cpser.Busqueda(nombre, anyo,genero);
+	}
+
+	@Override
+	public Usuario devuelveUsuario(String usuario) throws RemoteException {
+		// TODO Auto-generated method stub
+		return cpser.devuelveUsuario(usuario);
 	}
 }

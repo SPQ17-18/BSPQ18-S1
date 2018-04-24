@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -99,16 +100,21 @@ public class VentanaUsuario extends JFrame {
 	private JPanel panel_29;
 	private JButton btnAnadirSaldo;
 	private JButton btnBuscar;
+	
+	private Usuario user;
+	
 	private List<Pelicula> prueba=new ArrayList<>();
 	static Logger logger = Logger.getLogger(VentanaUsuario.class.getName());
 	/**
 	 * Create the frame.
 	 */
 
-	public VentanaUsuario(CinePlusController controller, ResourceBundle resourceBundle) {
+	public VentanaUsuario(CinePlusController controller, ResourceBundle resourceBundle, Usuario userLogeado) {
 		logger.info("VentanaUsuario");
 		this.controller =controller;
 		this.resourceBundle=resourceBundle;
+		this.user=userLogeado;
+		
 		setTitle(resourceBundle.getString("user_panel_msg"));
 		
 		BufferedImage img = null;

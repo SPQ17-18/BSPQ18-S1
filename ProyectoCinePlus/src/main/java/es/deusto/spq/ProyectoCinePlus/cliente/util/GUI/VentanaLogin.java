@@ -23,6 +23,7 @@ import javax.swing.border.EmptyBorder;
 import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 import javax.swing.JPasswordField;
 
@@ -121,10 +122,14 @@ public class VentanaLogin extends JFrame {
 						String pass = new String(passwordField.getPassword());
 						System.out.println("PASSWORD= " + pass);
 						boolean login = controller.LoginUsuario(textFieldUsuario.getText(), pass);
+						
 						if (login) {
-							System.out.println("Usuario logueado:  " + textFieldUsuario.getText());
+							logger.info("Usuario logueado:  " + textFieldUsuario.getText());
+							logger.info("Obteniendo datos del usuario del login" + textFieldUsuario.getText());
+							Usuario userLogeado = controller.DevolverUsuario(textFieldUsuario.getText());
+							
 							VentanaLogin.this.setVisible(false);
-							VentanaUsuario windowusuario = new VentanaUsuario(controller, resourceBundle);
+							VentanaUsuario windowusuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
 							windowusuario.setVisible(true);
 						} else {
 							JOptionPane.showMessageDialog(null, resourceBundle.getString("error_login_msg"), "ERROR!",
