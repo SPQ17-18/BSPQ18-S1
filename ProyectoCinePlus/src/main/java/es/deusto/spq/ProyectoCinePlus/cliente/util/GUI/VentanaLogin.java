@@ -120,14 +120,21 @@ public class VentanaLogin extends JFrame {
 				else {
 					try {
 						String pass = new String(passwordField.getPassword());
-						System.out.println("PASSWORD= " + pass);
+						String email= textFieldUsuario.getText();
+						logger.debug("PASSWORD=" + pass);
+						logger.info("EMAIL=" + email);
 						boolean login = controller.LoginUsuario(textFieldUsuario.getText(), pass);
 						
 						if (login) {
 							logger.info("Usuario logueado:  " + textFieldUsuario.getText());
 							logger.info("Obteniendo datos del usuario del login" + textFieldUsuario.getText());
-							//a partir del email
-							Usuario userLogeado = controller.DevolverUsuario(textFieldUsuario.getText());
+							
+							/******/
+							
+							//Obtener usuario a partir del email
+							Usuario userLogeado = controller.DevolverUsuario(email);
+							
+							/******/
 							
 							VentanaLogin.this.setVisible(false);
 							VentanaUsuario windowusuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
