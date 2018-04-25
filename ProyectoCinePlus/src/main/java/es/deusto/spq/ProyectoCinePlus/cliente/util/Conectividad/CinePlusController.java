@@ -34,6 +34,10 @@ public class CinePlusController {
 		return rsl.getCinePlusService().devuelveUsuario(email);
 	}
 	
+	public void actualizarUsuario(Usuario user)throws RemoteException {
+		rsl.getCinePlusService().actualizarUsuario(user);
+	}
+	
 	public static void main(String[] args) {
 			if (args.length != 3) {
 				System.out.println("Use: java [policy] [codebase] Client.Client [host] [port] [server]");

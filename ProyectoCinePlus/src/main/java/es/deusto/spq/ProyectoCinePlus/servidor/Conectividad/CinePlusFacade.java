@@ -39,4 +39,10 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 		// TODO Auto-generated method stub
 		return cpser.devuelveUsuario(usuario);
 	}
+
+	@Override
+	public void actualizarUsuario(Usuario user) throws RemoteException {
+		// TODO Auto-generated method stub
+		cpser.actualizarUsuario(user);
+	}
 }
