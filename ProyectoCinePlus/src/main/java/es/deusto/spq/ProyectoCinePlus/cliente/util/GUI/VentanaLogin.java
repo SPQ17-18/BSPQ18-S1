@@ -133,7 +133,7 @@ public class VentanaLogin extends JFrame {
 							
 							//Obtener usuario a partir del email
 							Usuario userLogeado = controller.DevolverUsuario(email);
-							
+							System.out.println(userLogeado);
 							/******/
 							
 							VentanaLogin.this.setVisible(false);
