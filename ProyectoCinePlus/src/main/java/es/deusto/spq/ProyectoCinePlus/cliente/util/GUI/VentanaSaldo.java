@@ -117,7 +117,7 @@ public class VentanaSaldo extends JFrame {
 		btnRecargarSaldo = new JButton(resourceBundle.getString("confirm_msg"));
 		btnRecargarSaldo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+				//aki krear nueo usuario y pasarselo al dao
 			}
 		});
 		panel.add(btnRecargarSaldo);
