@@ -49,7 +49,7 @@ public class VentanaSaldo extends JFrame {
 	private JPanel panel_10;
 	private JPanel panel_13;
 
-	private JButton btnIniciarSesion;
+	private JButton btnRecargarSaldo;
 	private JButton btnAtras;
 	private JLabel lblIniciaSesion;
 	protected ResourceBundle resourceBundle;
@@ -114,8 +114,13 @@ public class VentanaSaldo extends JFrame {
 		panel = new JPanel();
 		panel_6.add(panel);
 
-		btnIniciarSesion = new JButton(resourceBundle.getString("confirm_msg"));
-		panel.add(btnIniciarSesion);
+		btnRecargarSaldo = new JButton(resourceBundle.getString("confirm_msg"));
+		btnRecargarSaldo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
+		panel.add(btnRecargarSaldo);
 
 		btnAtras = new JButton(resourceBundle.getString("back_msg"));
 		panel.add(btnAtras);
