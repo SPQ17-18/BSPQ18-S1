@@ -126,6 +126,7 @@ public class VentanaLogin extends JFrame {
 						if (login) {
 							logger.info("Usuario logueado:  " + textFieldUsuario.getText());
 							logger.info("Obteniendo datos del usuario del login" + textFieldUsuario.getText());
+							//a partir del email
 							Usuario userLogeado = controller.DevolverUsuario(textFieldUsuario.getText());
 							
 							VentanaLogin.this.setVisible(false);
