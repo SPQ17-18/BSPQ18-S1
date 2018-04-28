@@ -7,8 +7,13 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 
+import org.apache.log4j.Logger;
+
+import es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaRegistro;
+
 
 public class CinePlusManagerServer  {
+	static Logger logger = Logger.getLogger(CinePlusManagerServer.class.getName());
 	
 	public static void main(String[] args) {
 		if (args.length != 3) {
@@ -29,9 +34,9 @@ public class CinePlusManagerServer  {
 			public void run() {
 				try {
 					java.rmi.registry.LocateRegistry.createRegistry(33060);
-					System.out.println("RMI registry ready.");
+					logger.info("RMI registry ready.");
 				} catch (Exception e) {
-					System.out.println("Exception starting RMI registry:");
+					logger.info("Exception starting RMI registry:");
 					e.printStackTrace();
 				}	
 			}
@@ -49,25 +54,25 @@ public class CinePlusManagerServer  {
 
 		
 			public void run() {
-				System.out.println("This is a test to check how mvn test executes this test without external interaction; JVM properties by program");
+				logger.info("This is a test to check how mvn test executes this test without external interaction; JVM properties by program");
 				System.setProperty("java.security.policy", "target\\classes\\security\\java.policy");
 
 
 				try {
 					ICinePlus objServer = new CinePlusServer();
 					Naming.rebind(name, objServer);
-					System.out.println("Server '" + name + "' active and waiting...");
+					logger.info("Server '" + name + "' active and waiting...");
 					InputStreamReader inputStreamReader = new InputStreamReader(System.in);
 					BufferedReader stdin = new BufferedReader(inputStreamReader);
 			        String line = stdin.readLine();
 			       
 			       
 				} catch (RemoteException re) {
-					System.err.println(" # Collector RemoteException: " + re.getMessage());
+					logger.debug(" # Collector RemoteException: " + re.getMessage());
 					re.printStackTrace();
 					System.exit(-1);
 				} catch (MalformedURLException murle) {
-					System.err.println(" # Collector MalformedURLException: " + murle.getMessage());
+					logger.debug(" # Collector MalformedURLException: " + murle.getMessage());
 					murle.printStackTrace();
 					System.exit(-1);
 				} catch (IOException e) {

@@ -5,6 +5,8 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.PeliculaDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
@@ -14,12 +16,14 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	//Maantener esto para unir sesion de usuario/servidor para los metodos o(?)
 	private UsuarioDAO usuarioDAO;
 	private PeliculaDAO peliculaDAO;
+	static Logger logger = Logger.getLogger(CinePlusServer.class.getName());
 	private static final long serialVersionUID = 1L;
 	
 	public CinePlusServer () throws RemoteException {
 		super();
 		usuarioDAO=new UsuarioDAO();
         usuarioDAO.storeUsuario(new Usuario("mikel", "spq@gmail.com", "mikel", "fernandez", "spq", "españa", false));
+        usuarioDAO.storeUsuario(new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false));
         List<Usuario> a=new ArrayList<>();
         a.add(new Usuario("mikel", "spq@gmail.com", "mikel", "fernandez", "spq", "españa", false));
         peliculaDAO= new PeliculaDAO();
@@ -45,7 +49,7 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 		//FIXME no se si esta comprobacion habria que hacerla al principio y enviar un determinado string y posteriormente comprobarlo con equals
 		//Por ejemplo hacer que el string=="vacio" al enviar y que luego lo compruebe
 		//Lo de abajo seria el concepto si envia null
-		System.out.println("NOMBRE="+nombre+" anyo="+anyo+" genero="+genero);
+		logger.info("NOMBRE="+nombre+" anyo="+anyo+" genero="+genero);
 //		if(anyo==null && genero==null) {return peliculaDAO.getPeliculas(nombre,"a","a");}
 //		else if(anyo==null) {return peliculaDAO.getPeliculas(nombre,"a",genero);}
 //		else if(genero==null) {return peliculaDAO.getPeliculas(nombre,anyo,"a");}

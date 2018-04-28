@@ -131,7 +131,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 	    return Usuarios;
 	}
 	
-	public Usuario getUsuario(String username){
+	public Usuario getUsuario(String email){
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		
@@ -141,10 +141,20 @@ public class UsuarioDAO implements IUsuarioDAO{
 		try {
 			System.out.println ("   * Querying a Product: " + username);
 			
+			//tx.begin();
+	    	//Query<?> query = pm.newQuery("SELECT FROM " + Usuario.class.getName() + " WHERE email = '" + email + "'");
+	    	//query.setUnique(true);
+	    	//usuario = (Usuario)query.execute();
+	
 	    	tx.begin();
-	    	Query<?> query = pm.newQuery("SELECT FROM " + Usuario.class.getName() + " WHERE usuario = '" + username + "'");
-	    	query.setUnique(true);
-	    	usuario = (Usuario)query.execute();	    
+			Extent<Usuario> ex = pm.getExtent(Usuario.class, true);
+			for (Usuario u : ex) {
+				if (u.getEmail().equals(email)) {
+					usuario= new Usuario(u.getUsuario(),u.getEmail(),u.getNombre(),u.getApellido(),u.getPassword(),u.getPais(),false,u.getPeliculasList());
+					usuario.setSaldo(u.getSaldo());
+				}
+			}
+			
  	    	tx.commit();
    	    
 	     } catch (Exception ex) {
