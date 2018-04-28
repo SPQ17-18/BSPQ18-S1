@@ -8,12 +8,14 @@ import javax.swing.border.EmptyBorder;
 import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.rmi.RemoteException;
 import java.util.ResourceBundle;
 import java.awt.event.ActionEvent;
 import java.awt.GridLayout;
@@ -244,9 +246,25 @@ public class VentanaRegistro extends JFrame {
 				if (comprobarcampos()) {
 					logger.info("Boton registar");
 					//Ya no inicia sesion al registrarse!!!
-					//VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle);
+					//VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle,null);
 					//ventanaUsuario.setVisible(true);
 					//dispose();
+					String pass = new String(passwordField.getPassword());
+					String user = textFielduser.getText().trim();
+					String email = textFieldemail.getText().trim();
+					String nombre = textFieldnombre.getText().trim();
+					String apellido = textFieldApellido.getText().trim();
+					String pais =  textFieldPais.getText();
+					Usuario reg = new Usuario (user, email, nombre, apellido, pass, pais, false);
+					
+					reg.toString();
+					try {
+						boolean login = controller.RegistrarUsuario(user, email, nombre, apellido, pass, pais, false);
+						System.out.println("registro ok");
+					} catch (RemoteException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 					VentanaPrincipal.frame.setVisible(true);
 					dispose();
 				}

@@ -125,7 +125,10 @@ public class VentanaLogin extends JFrame {
 						logger.info("EMAIL=" + email);
 						boolean login = controller.LoginUsuario(textFieldUsuario.getText(), pass);
 						
+						System.out.println("userLogeado");
 						if (login) {
+							System.out.println("TRUE");
+							
 							logger.info("Usuario logueado:  " + textFieldUsuario.getText());
 							logger.info("Obteniendo datos del usuario del login" + textFieldUsuario.getText());
 							

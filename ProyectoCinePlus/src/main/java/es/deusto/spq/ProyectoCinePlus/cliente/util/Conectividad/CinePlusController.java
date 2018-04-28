@@ -31,6 +31,7 @@ public class CinePlusController {
 	}
 	
 	public Usuario DevolverUsuario(String email)throws RemoteException {
+		System.out.println("Controler");
 		return rsl.getCinePlusService().devuelveUsuario(email);
 	}
 	

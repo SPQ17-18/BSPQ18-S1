@@ -132,28 +132,31 @@ public class UsuarioDAO implements IUsuarioDAO{
 	}
 	
 	public Usuario getUsuario(String email){
+		System.out.println("DAO- GetUsuario");
+		Usuario usuario = null;
+		
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
-		
 		Transaction tx = pm.currentTransaction();
-		Usuario usuario = null;
+		
 	    
 		try {
 			System.out.println ("   * Querying a Product: " + email);
 			
 	    	tx.begin();
-	    	Query<?> query = pm.newQuery("SELECT FROM " + Usuario.class.getName() + " WHERE email = '" + email + "'");
-	    	query.setUnique(true);
-	    	usuario = (Usuario)query.execute();	    
+	    	//Query<?> query = pm.newQuery("SELECT FROM " + Usuario.class.getName() + " WHERE email = '" + email + "'");
+	    	//query.setUnique(true);
+	    	//usuario = (Usuario)query.execute();
+	    	usuario = pm.getObjectById(Usuario.class, email);
  	    	tx.commit();
+ 	    	
    	    
 	     } catch (Exception ex) {
 		   	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
 	     } finally {
 		   	if (tx != null && tx.isActive()) {
 		   		tx.rollback();
-		 }
-				
+		 }		
 	   		pm.close();
 	     }
 
