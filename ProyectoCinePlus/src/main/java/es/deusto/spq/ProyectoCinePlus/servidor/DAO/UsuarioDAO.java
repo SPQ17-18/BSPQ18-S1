@@ -10,7 +10,6 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
-import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 
@@ -132,41 +131,29 @@ public class UsuarioDAO implements IUsuarioDAO{
 	    return Usuarios;
 	}
 	
-	public Usuario getUsuario(String email){
-		System.out.println("DAO- GetUsuario");
-		Usuario usuario = null;
-		
+	public Usuario getUsuario(String username){
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
-		Transaction tx = pm.currentTransaction();
 		
+		Transaction tx = pm.currentTransaction();
+		Usuario usuario = null;
 	    
 		try {
-			System.out.println ("   * Querying a Product: " + email);
+			System.out.println ("   * Querying a Product: " + username);
 			
-	    	//tx.begin();
-	    	//Query<?> query = pm.newQuery("SELECT FROM " + Usuario.class.getName() + " WHERE email = '" + email + "'");
-	    	//query.setUnique(true);
-	    	//usuario = (Usuario)query.execute();
-	
 	    	tx.begin();
-			Extent<Usuario> ex = pm.getExtent(Usuario.class, true);
-			for (Usuario u : ex) {
-				if (u.getEmail().equals(email)) {
-					usuario= new Usuario(u.getUsuario(),u.getEmail(),u.getNombre(),u.getApellido(),u.getPassword(),u.getPais(),false,u.getPeliculasList());
-					usuario.setSaldo(u.getSaldo());
-				}
-			}
-	    	
+	    	Query<?> query = pm.newQuery("SELECT FROM " + Usuario.class.getName() + " WHERE usuario = '" + username + "'");
+	    	query.setUnique(true);
+	    	usuario = (Usuario)query.execute();	    
  	    	tx.commit();
- 	    	
    	    
 	     } catch (Exception ex) {
 		   	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
 	     } finally {
 		   	if (tx != null && tx.isActive()) {
 		   		tx.rollback();
-		 }		
+		 }
+				
 	   		pm.close();
 	     }
 

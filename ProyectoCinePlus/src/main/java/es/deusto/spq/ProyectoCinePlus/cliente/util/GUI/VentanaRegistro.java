@@ -8,7 +8,6 @@ import javax.swing.border.EmptyBorder;
 import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
-import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -244,47 +243,31 @@ public class VentanaRegistro extends JFrame {
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if (comprobarcampos()) {
-					logger.info("Boton registar");
-					//Ya no inicia sesion al registrarse!!!
-					//VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle,null);
-					//ventanaUsuario.setVisible(true);
-					//dispose();
-					String pass = new String(passwordField.getPassword());
-					String user = textFielduser.getText().trim();
-					String email = textFieldemail.getText().trim();
-					String nombre = textFieldnombre.getText().trim();
-					String apellido = textFieldApellido.getText().trim();
-					String pais =  textFieldPais.getText();
-					//Usuario reg = new Usuario (user, email, nombre, apellido, pass, pais, false);
-					
-					logger.info(pass);
-					logger.info(user);
-					logger.info(email);
-					logger.info(nombre);
-					logger.info(apellido);
-					logger.info(pais);
-					
-					
-					logger.info(textFielduser.getText());
-					logger.info(passwordField.getText());
-					logger.info(textFieldemail.getText());
-					logger.info(textFieldnombre.getText());
-					logger.info(textFieldApellido.getText());
-					logger.info(textFieldPais.getText());
-					
-					
-					/*try {
-						boolean login = controller.RegistrarUsuario(user, email, nombre, apellido, pass, pais, false);
-						System.out.println("registro ok");
-					} catch (RemoteException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}*/
-					
-					VentanaPrincipal.frame.setVisible(true);
-					dispose();
+				logger.info("Boton registar");
+				logger.info(textFielduser.getText()+
+						textFieldemail.getText()+
+						textFieldnombre.getText()+
+						textFieldApellido.getText()+
+						new String(passwordField.getPassword())+
+						textFieldPais.getText());
+				
+				try {
+					controller.RegistrarUsuario(textFielduser.getText(),
+							textFieldemail.getText(),
+							textFieldnombre.getText(),
+							textFieldApellido.getText(),
+							new String(passwordField.getPassword()),
+							textFieldPais.getText(),
+							false);
+				} catch (RemoteException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
 				}
+
+				
+				VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle);
+				ventanaUsuario.setVisible(true);
+				dispose();
 			}
 		});
 		panel_9.add(btnRegistrarse);

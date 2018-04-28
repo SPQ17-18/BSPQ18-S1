@@ -33,18 +33,6 @@ public class Pelicula {
 		this.precio = precio;
 		this.usuariosList = usuariosList;
 	}
-	
-	public Pelicula(int id_pelicula, String nombre, int duracion, String descripcion, int anyo, String categoria,
-			 float precio) {
-		super();
-		this.id_pelicula = id_pelicula;
-		this.nombre = nombre;
-		this.duracion = duracion;
-		this.descripcion = descripcion;
-		this.anyo = anyo;
-		this.categoria = categoria;
-		this.precio = precio;
-	}
 
 	public int getId_pelicula() {
 		return id_pelicula;

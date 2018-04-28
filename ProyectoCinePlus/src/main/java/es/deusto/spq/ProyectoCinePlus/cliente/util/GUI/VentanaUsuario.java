@@ -9,7 +9,6 @@ import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
-import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -100,21 +99,16 @@ public class VentanaUsuario extends JFrame {
 	private JPanel panel_29;
 	private JButton btnAnadirSaldo;
 	private JButton btnBuscar;
-	
-	private Usuario user;
-	
 	private List<Pelicula> prueba=new ArrayList<>();
 	static Logger logger = Logger.getLogger(VentanaUsuario.class.getName());
 	/**
 	 * Create the frame.
 	 */
 
-	public VentanaUsuario(CinePlusController controller, ResourceBundle resourceBundle, Usuario userLogeado) {
+	public VentanaUsuario(CinePlusController controller, ResourceBundle resourceBundle) {
 		logger.info("VentanaUsuario");
 		this.controller =controller;
 		this.resourceBundle=resourceBundle;
-		this.user=userLogeado;
-		
 		setTitle(resourceBundle.getString("user_panel_msg"));
 		
 		BufferedImage img = null;
@@ -189,9 +183,8 @@ public class VentanaUsuario extends JFrame {
 		
 		separator_2 = new JSeparator();
 		panel_16.add(separator_2);
-
-		//label_2 = new JLabel("nomb user");
-		label_2 = new JLabel(user.getUsuario());
+		
+		label_2 = new JLabel("NomUser");
 		label_2.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_16.add(label_2);
 		
@@ -205,8 +198,7 @@ public class VentanaUsuario extends JFrame {
 		separator = new JSeparator();
 		panel_17.add(separator);
 		
-		//lblnumpelis = new JLabel("8 peliculas");
-		lblnumpelis = new JLabel(String.valueOf(user.getPeliculasList().size()));
+		lblnumpelis = new JLabel("8 peliculas");
 		lblnumpelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_17.add(lblnumpelis);
 		
@@ -221,8 +213,7 @@ public class VentanaUsuario extends JFrame {
 		separator_3 = new JSeparator();
 		panel_19.add(separator_3);
 		
-		//lblSaldo = new JLabel("8€");
-		lblSaldo = new JLabel(String.valueOf(user.getSaldo()));
+		lblSaldo = new JLabel("Saldo");
 		lblSaldo.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_19.add(lblSaldo);
 		
@@ -240,7 +231,7 @@ public class VentanaUsuario extends JFrame {
 		btnAnadirSaldo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				logger.info("Boton añadir saldo");
-				VentanaSaldo ventanaSaldo = new VentanaSaldo(controller,resourceBundle,user);
+				VentanaSaldo ventanaSaldo = new VentanaSaldo(controller,resourceBundle);
 				ventanaSaldo.setVisible(true);
 			}
 		});
