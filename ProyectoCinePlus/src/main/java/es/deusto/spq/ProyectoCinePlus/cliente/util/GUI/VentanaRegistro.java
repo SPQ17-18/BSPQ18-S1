@@ -243,6 +243,7 @@ public class VentanaRegistro extends JFrame {
 		btnRegistrarse = new JButton(resourceBundle.getString("register_msg"));
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 				if (comprobarcampos()) {
 					logger.info("Boton registar");
 					//Ya no inicia sesion al registrarse!!!

@@ -240,7 +240,7 @@ public class VentanaUsuario extends JFrame {
 		btnAnadirSaldo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				logger.info("Boton añadir saldo");
-				VentanaSaldo ventanaSaldo = new VentanaSaldo(controller,resourceBundle);
+				VentanaSaldo ventanaSaldo = new VentanaSaldo(controller,resourceBundle,user);
 				ventanaSaldo.setVisible(true);
 			}
 		});

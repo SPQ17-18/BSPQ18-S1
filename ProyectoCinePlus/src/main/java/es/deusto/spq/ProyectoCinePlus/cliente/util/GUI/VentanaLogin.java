@@ -135,7 +135,7 @@ public class VentanaLogin extends JFrame {
 							
 							//Obtener usuario a partir del email
 							Usuario userLogeado = controller.DevolverUsuario(email);
-							//logger.info(userLogeado);
+							logger.info(userLogeado);
 							
 							
 							/******/

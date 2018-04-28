@@ -25,6 +25,8 @@ import javax.swing.border.EmptyBorder;
 import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
+
 import javax.swing.JList;
 import javax.swing.JSlider;
 import javax.swing.JComboBox;
@@ -75,7 +77,7 @@ public class VentanaSaldo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaSaldo(CinePlusController controller, final ResourceBundle resourceBundle) {
+	public VentanaSaldo(CinePlusController controller, final ResourceBundle resourceBundle, Usuario userLogeado) {
 		logger.info("VentanaSaldo");
 		// Inicializamos el controlador
 		this.setController(controller);
@@ -117,7 +119,19 @@ public class VentanaSaldo extends JFrame {
 		btnRecargarSaldo = new JButton(resourceBundle.getString("confirm_msg"));
 		btnRecargarSaldo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//aki krear nueo usuario y pasarselo al dao
+				//aki krear nuevo usuario y pasarselo al dao
+				String saldo = (String) comboBox.getSelectedItem();
+
+				float saldof = Float.parseFloat(saldo);
+						
+				userLogeado.setSaldo(saldof);
+				try {
+					controller.actualizarUsuario(userLogeado);
+				} catch (RemoteException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				dispose();
 			}
 		});
 		panel.add(btnRecargarSaldo);
@@ -198,7 +212,7 @@ public class VentanaSaldo extends JFrame {
 		panel_10.add(panel_13);
 
 		comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] { "5€", "10€", "25€", "50€" }));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] { "5", "10", "25", "50" }));
 		panel_13.add(comboBox);
 
 		panel_5 = new JPanel();
