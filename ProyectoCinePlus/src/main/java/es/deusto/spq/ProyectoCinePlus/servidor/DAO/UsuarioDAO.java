@@ -10,6 +10,7 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 
@@ -152,15 +153,8 @@ public class UsuarioDAO implements IUsuarioDAO{
 			Extent<Usuario> ex = pm.getExtent(Usuario.class, true);
 			for (Usuario u : ex) {
 				if (u.getEmail().equals(email)) {
-					usuario.setAdmin(false);
-					u.getUsuario();
-					u.getNombre();
-					u.getEmail();
-					u.getApellido();
-					u.getPais();
-					u.getSaldo();
-					u.getPassword();
-					u.getPeliculasList();
+					usuario= new Usuario(u.getUsuario(),u.getEmail(),u.getNombre(),u.getApellido(),u.getPassword(),u.getPais(),false,u.getPeliculasList());
+					usuario.setSaldo(u.getSaldo());
 				}
 			}
 	    	
