@@ -143,11 +143,27 @@ public class UsuarioDAO implements IUsuarioDAO{
 		try {
 			System.out.println ("   * Querying a Product: " + email);
 			
-	    	tx.begin();
+	    	//tx.begin();
 	    	//Query<?> query = pm.newQuery("SELECT FROM " + Usuario.class.getName() + " WHERE email = '" + email + "'");
 	    	//query.setUnique(true);
 	    	//usuario = (Usuario)query.execute();
-	    	usuario = pm.getObjectById(Usuario.class, email);
+	
+	    	tx.begin();
+			Extent<Usuario> ex = pm.getExtent(Usuario.class, true);
+			for (Usuario u : ex) {
+				if (u.getEmail().equals(email)) {
+					usuario.setAdmin(false);
+					u.getUsuario();
+					u.getNombre();
+					u.getEmail();
+					u.getApellido();
+					u.getPais();
+					u.getSaldo();
+					u.getPassword();
+					u.getPeliculasList();
+				}
+			}
+	    	
  	    	tx.commit();
  	    	
    	    

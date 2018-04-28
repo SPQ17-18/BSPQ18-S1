@@ -125,22 +125,24 @@ public class VentanaLogin extends JFrame {
 						logger.info("EMAIL=" + email);
 						boolean login = controller.LoginUsuario(textFieldUsuario.getText(), pass);
 						
-						System.out.println("userLogeado");
+						logger.info("userLogeado");
 						if (login) {
-							System.out.println("TRUE");
 							
 							logger.info("Usuario logueado:  " + textFieldUsuario.getText());
-							logger.info("Obteniendo datos del usuario del login" + textFieldUsuario.getText());
+							logger.info("Obteniendo datos del usuario del login: " + textFieldUsuario.getText());
 							
 							/******/
 							
 							//Obtener usuario a partir del email
 							Usuario userLogeado = controller.DevolverUsuario(email);
-							System.out.println(userLogeado);
+							//logger.info(userLogeado);
+							
+							
 							/******/
 							
 							VentanaLogin.this.setVisible(false);
 							VentanaUsuario windowusuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
+							
 							windowusuario.setVisible(true);
 						} else {
 							JOptionPane.showMessageDialog(null, resourceBundle.getString("error_login_msg"), "ERROR!",

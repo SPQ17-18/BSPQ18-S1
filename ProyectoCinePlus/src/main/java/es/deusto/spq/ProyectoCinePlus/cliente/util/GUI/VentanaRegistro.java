@@ -255,16 +255,32 @@ public class VentanaRegistro extends JFrame {
 					String nombre = textFieldnombre.getText().trim();
 					String apellido = textFieldApellido.getText().trim();
 					String pais =  textFieldPais.getText();
-					Usuario reg = new Usuario (user, email, nombre, apellido, pass, pais, false);
+					//Usuario reg = new Usuario (user, email, nombre, apellido, pass, pais, false);
 					
-					reg.toString();
-					try {
+					logger.info(pass);
+					logger.info(user);
+					logger.info(email);
+					logger.info(nombre);
+					logger.info(apellido);
+					logger.info(pais);
+					
+					
+					logger.info(textFielduser.getText());
+					logger.info(passwordField.getText());
+					logger.info(textFieldemail.getText());
+					logger.info(textFieldnombre.getText());
+					logger.info(textFieldApellido.getText());
+					logger.info(textFieldPais.getText());
+					
+					
+					/*try {
 						boolean login = controller.RegistrarUsuario(user, email, nombre, apellido, pass, pais, false);
 						System.out.println("registro ok");
 					} catch (RemoteException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
-					}
+					}*/
+					
 					VentanaPrincipal.frame.setVisible(true);
 					dispose();
 				}
