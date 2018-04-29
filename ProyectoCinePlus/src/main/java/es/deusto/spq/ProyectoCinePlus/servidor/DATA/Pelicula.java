@@ -1,5 +1,6 @@
 package es.deusto.spq.ProyectoCinePlus.servidor.DATA;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.jdo.annotations.Inheritance;
@@ -9,8 +10,12 @@ import javax.jdo.annotations.PersistenceCapable;
 
 @PersistenceCapable
 @Inheritance(strategy = InheritanceStrategy.NEW_TABLE)
-public class Pelicula {
+public class Pelicula implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int id_pelicula;
 	private String nombre;
 	private int duracion;

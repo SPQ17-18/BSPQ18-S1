@@ -283,9 +283,18 @@ public class VentanaUsuario extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				logger.info("Boton busqueda");
 				//TODO añadir la busqueda y linkearlo con la lista de pelis que se muestra
-
+				String nombre=textFieldNombrePeli.getText();
+				String anyo="a";
+				//FIXME el toString da nullpointer
+				//if(comboBoxAnio.getSelectedItem().toString()!=null) {anyo=comboBoxAnio.getSelectedItem().toString();}
+				String genero="a";
+				//if(comboBoxAnio.getSelectedItem().toString()!=null) {genero=comboBox.getSelectedItem().toString();}
+				System.out.println(nombre);
+				System.out.println(anyo);
+				System.out.println(genero);
 				try {
-					prueba=VentanaUsuario.this.controller.Busqueda(textFieldNombrePeli.getText(), comboBoxAnio.getSelectedItem().toString(), comboBox.getSelectedItem().toString());
+					prueba=controller.Busqueda(nombre, anyo, genero);
+					System.out.println("La primera peli:"+prueba.get(0).getNombre());
 				} catch (RemoteException e) {
 					logger.info("Busqueda sin resultados");
 					e.printStackTrace();

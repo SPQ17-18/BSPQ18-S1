@@ -44,6 +44,7 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
         return usuarioDAO.loginUser(usuario, password);
 	}
 
+
 	public synchronized List<Pelicula> Busqueda(String nombre, String anyo, String genero) {
 		//Devuelve una lista de peliculas
 		//FIXME no se si esta comprobacion habria que hacerla al principio y enviar un determinado string y posteriormente comprobarlo con equals
@@ -54,8 +55,11 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 //		else if(anyo==null) {return peliculaDAO.getPeliculas(nombre,"a",genero);}
 //		else if(genero==null) {return peliculaDAO.getPeliculas(nombre,anyo,"a");}
 //		else {
-//		return peliculaDAO.getPeliculas(nombre,anyo,genero);}
-		return peliculaDAO.getPeliculas();
+//		return peliculaDAO.getPeliculas();
+//		return peliculaDAO.getPeliculas(nombre,anyo,genero);
+		List<Pelicula> a=new ArrayList<Pelicula>();
+		a.add(peliculaDAO.getPelicula(nombre));
+		return a;
 	}
 	
 
