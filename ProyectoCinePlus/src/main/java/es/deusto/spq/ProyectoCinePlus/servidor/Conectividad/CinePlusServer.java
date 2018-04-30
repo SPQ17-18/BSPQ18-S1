@@ -56,10 +56,12 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 //		else if(genero==null) {return peliculaDAO.getPeliculas(nombre,anyo,"a");}
 //		else {
 //		return peliculaDAO.getPeliculas();
-//		return peliculaDAO.getPeliculas(nombre,anyo,genero);
-		List<Pelicula> a=new ArrayList<Pelicula>();
-		a.add(peliculaDAO.getPelicula(nombre));
-		return a;
+		return peliculaDAO.getPeliculas(nombre,anyo,genero);
+//		List<Pelicula> a=new ArrayList<Pelicula>();
+//		System.out.println("Pelicula="+peliculaDAO.getPelicula(nombre));
+//		a.add(peliculaDAO.getPelicula(nombre));
+//		System.out.println("server este="+a.get(0));
+//		return a;
 	}
 	
 
