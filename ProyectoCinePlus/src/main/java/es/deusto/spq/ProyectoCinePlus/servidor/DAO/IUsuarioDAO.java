@@ -15,7 +15,7 @@ public interface IUsuarioDAO {
 	public List<Usuario> getUsuarios();
 	public List<Usuario> getUsuarios(String condition);
 	public Usuario getUsuario(String username);
-	public void updateUsuario(Usuario usuario);
+	public boolean updateUsuario(Usuario usuario);
 	
 
 	
