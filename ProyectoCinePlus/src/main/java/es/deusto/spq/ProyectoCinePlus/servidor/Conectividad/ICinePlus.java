@@ -13,4 +13,6 @@ public interface ICinePlus extends Remote {
 	public List<Pelicula> Busqueda(String nombre, String anyo, String genero)throws RemoteException;//Busca peliculas
 	public Usuario devuelveUsuario(String email) throws RemoteException;//Devuelve usuario
 	public boolean actualizarUsuario(Usuario user) throws RemoteException;
+	public List<String> Anyos() throws RemoteException;;
+	public List<String> Generos() throws RemoteException;;
 }

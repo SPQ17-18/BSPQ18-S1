@@ -44,44 +44,6 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    }
 	}
 	
-	
-	public List<Pelicula> getPeliculas() {
-//		PersistenceManager pm = pmf.getPersistenceManager();
-//		/* By default only 1 level is retrieved from the db
-//		 * so if we wish to fetch more than one level, we must indicate it
-//		 */
-//		pm.getFetchPlan().setMaxFetchDepth(3);
-//		
-//		Transaction tx = pm.currentTransaction();
-//		List<Pelicula> Peliculas = new ArrayList<Pelicula>();
-//		
-//		try {
-//			System.out.println("   * Retrieving an Extent for Products.");
-//			
-//			tx.begin();			
-//			Extent<Pelicula> extent = pm.getExtent(Pelicula.class, true);
-//			
-//			for (Pelicula Pelicula : extent) {
-//				Peliculas.add(Pelicula);
-//			}
-//
-//			tx.commit();			
-//		} catch (Exception ex) {
-//	    	System.out.println("   $ Error retrieving an extent: " + ex.getMessage());
-//	    } finally {
-//	    	if (tx != null && tx.isActive()) {
-//	    		tx.rollback();
-//	    	}
-//
-//    		pm.close();    		
-//	    }
-//	    				
-//		return Peliculas;
-		List<Pelicula> Peliculas = new ArrayList<Pelicula>();
-		Pelicula e=new Pelicula(1,"C",30,"A",1997,"Ce",12,null);
-		Peliculas.add(e);
-		return Peliculas;
-	}
 
 	
 	@SuppressWarnings("unchecked")
@@ -90,7 +52,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	 * @param condicion de la WHERE
 	 * @return lista de Peliculas que cumpla la condicion
 	 */
-	public List<Pelicula> getPeliculassss(String condition) {
+	public List<Pelicula> getPeliculas(String condition) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		
@@ -134,26 +96,26 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    	tx.begin();
 	    	Extent<Pelicula> extent = pm.getExtent(Pelicula.class, true);
 	    	Query<Pelicula> query=null;
-	    	if(anyo.equals("a") && genero.equals("a")) {
+//	    	if(anyo.equals("a") && genero.equals("a")) {
 	    		System.out.println("ENTRA");
-	    	//	query = pm.newQuery("SELECT FROM " + Pelicula.class.getName() + " WHERE nombre.startsWith(\""+a+"\")");}//FIXME conseguir que funcionen los filtros
-    			query = pm.newQuery("SELECT FROM " + Pelicula.class.getName());}
+//	    		query = pm.newQuery("SELECT FROM " + Pelicula.class.getName() + " WHERE nombre.startsWith(\""+a+"\")");}//FIXME conseguir que funcionen los filtros
+    			query = pm.newQuery("SELECT FROM " + Pelicula.class.getName());//}
+//	    		query = pm.newQuery(extent,"SELECT FROM " + Pelicula.class.getName() + " WHERE :nombre.startsWith(cadena)");}
 	    	
 	    	
+//	    	else if(anyo.equals("a")) {query = pm.newQuery(extent,"SELECT FROM pelicula WHERE nombre LIKE '%" + nombre + "%' AND categoria='"+genero+"'");}
+//	    	else if(genero.equals("a")) {query = pm.newQuery(extent,"SELECT FROM pelicula WHERE nombre LIKE '%" + nombre + "%' AND categoria='"+genero+"'");}
 	    	
-	    	else if(anyo.equals("a")) {query = pm.newQuery(extent,"SELECT FROM pelicula WHERE nombre LIKE '%" + nombre + "%' AND categoria='"+genero+"'");}
-	    	else if(genero.equals("a")) {query = pm.newQuery(extent,"SELECT FROM pelicula WHERE nombre LIKE '%" + nombre + "%' AND categoria='"+genero+"'");}
-	    	
-	    	else {    	
-	    	query = pm.newQuery(extent,"SELECT FROM pelicula WHERE nombre LIKE '%" + nombre + "%' AND anyo ='" + anyo + "' AND categoria='"+genero+"'");
-	    	}
+//	    	else {    	
+//	    	query = pm.newQuery(extent,"SELECT FROM pelicula WHERE nombre LIKE '%" + nombre + "%' AND anyo ='" + anyo + "' AND categoria='"+genero+"'");
+//	    	}
 	    	System.out.println("SIGUE");
-	    	List result= (List<Pelicula>)query.execute();
-	    	System.out.println("LISTA="+result.get(0));
-			for (Pelicula Pelicula : (List<Pelicula>)query.execute()) {
-				System.out.println("PELICULA DE LA BD="+Pelicula);
-				Peliculas.add(Pelicula);
-			}
+	    	Peliculas= (List<Pelicula>)query.execute();
+	    	System.out.println("LISTA="+Peliculas.get(0));
+//			for (Pelicula Pelicula : (List<Pelicula>)query.execute()) {
+//				System.out.println("PELICULA DE LA BD="+Pelicula);
+//				Peliculas.add(Pelicula);
+//			}
 			
 	        tx.commit();
    	    
@@ -169,6 +131,64 @@ public class PeliculaDAO implements IPeliculaDAO{
 
 	    return Peliculas;
 	}	
+	
+	
+	@SuppressWarnings("unchecked")
+	public List<String> Anyos(){
+		PersistenceManager pm = pmf.getPersistenceManager();
+		pm.getFetchPlan().setMaxFetchDepth(3);
+		
+		Transaction tx = pm.currentTransaction();
+		List<String> Anyos = new ArrayList<String>();
+	    
+		try {
+	    	tx.begin();
+	    	Query<String> query=null;
+	    	query = pm.newQuery("SELECT DISTINCT anyo FROM " + Pelicula.class.getName());
+	    	Anyos= (List<String>)query.execute();
+	    	tx.commit();
+   	    
+	     } catch (Exception ex) {
+		   	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
+	     } finally {
+		   	if (tx != null && tx.isActive()) {
+		   		tx.rollback();
+		 }
+				
+	   		pm.close();
+	     }
+
+	    return Anyos;
+	}	
+	
+	@SuppressWarnings("unchecked")
+	public List<String> Generos(){
+		PersistenceManager pm = pmf.getPersistenceManager();
+		pm.getFetchPlan().setMaxFetchDepth(3);
+		
+		Transaction tx = pm.currentTransaction();
+		List<String> Generos = new ArrayList<String>();
+	    
+		try {
+	    	tx.begin();
+	    	Query<String> query=null;
+	    	query = pm.newQuery("SELECT DISTINCT categoria FROM " + Pelicula.class.getName());
+	    	Generos= (List<String>)query.execute();
+	    	tx.commit();
+   	    
+	     } catch (Exception ex) {
+		   	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
+	     } finally {
+		   	if (tx != null && tx.isActive()) {
+		   		tx.rollback();
+		 }
+				
+	   		pm.close();
+	     }
+
+	    return Generos;
+	}	
+	
 	public Pelicula getPelicula(String name){
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
@@ -220,11 +240,6 @@ public class PeliculaDAO implements IPeliculaDAO{
 	     }
 	}
 
-	@Override
-	public List<Pelicula> getPeliculas(String condition) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 
 }

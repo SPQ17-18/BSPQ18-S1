@@ -51,17 +51,38 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 		//Por ejemplo hacer que el string=="vacio" al enviar y que luego lo compruebe
 		//Lo de abajo seria el concepto si envia null
 		logger.info("NOMBRE="+nombre+" anyo="+anyo+" genero="+genero);
-//		if(anyo==null && genero==null) {return peliculaDAO.getPeliculas(nombre,"a","a");}
-//		else if(anyo==null) {return peliculaDAO.getPeliculas(nombre,"a",genero);}
-//		else if(genero==null) {return peliculaDAO.getPeliculas(nombre,anyo,"a");}
-//		else {
-//		return peliculaDAO.getPeliculas();
-		return peliculaDAO.getPeliculas(nombre,anyo,genero);
-//		List<Pelicula> a=new ArrayList<Pelicula>();
-//		System.out.println("Pelicula="+peliculaDAO.getPelicula(nombre));
-//		a.add(peliculaDAO.getPelicula(nombre));
-//		System.out.println("server este="+a.get(0));
-//		return a;
+
+		List<Pelicula> a=new ArrayList<Pelicula>();
+		List<Pelicula> aux=new ArrayList<Pelicula>();
+		a=peliculaDAO.getPeliculas(nombre,anyo,genero);
+		System.out.println("ESTOY EN CINEPLUS TAMAÑO="+a.size());
+		String nombre1=nombre.toLowerCase();
+		String anyo1=anyo.toLowerCase();
+		String genero1=genero.toLowerCase();
+		int it=0;
+		for(Pelicula p:a) {
+			if(it<(a.size()-1)) {
+			it++;
+			String nom=p.getNombre().toLowerCase();
+			String any=""+p.getAnyo();
+			String gen=p.getCategoria().toLowerCase();
+			System.out.println("NOMBRE PARAM="+nombre1);
+			System.out.println("NOMBRE PELI="+nom);
+			System.out.println("anyo PARAM="+anyo1);
+			System.out.println("anyo PELI="+any);
+			System.out.println("genero PARAM="+genero1);
+			System.out.println("genero PELI="+gen);
+			if(nom.contains(nombre1) && anyo1.equals(any) && genero1.equals(gen)) {
+				System.out.println("AÑADIENDO PELI="+p);
+				System.out.println("A LA LISTA AUX DE TAMAÑO="+aux.size());
+				aux.add(p);
+				System.out.println("Se ha añadido el p="+p.getDescripcion());
+			}
+		}
+		//System.out.println("aux 1="+aux.get(0).getId_pelicula());
+		}
+		return aux;
+//		return peliculaDAO.getPeliculas(nombre,anyo,genero);
 	}
 	
 	@Override
@@ -72,5 +93,15 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	@Override
 	public boolean actualizarUsuario(Usuario user) throws RemoteException {
 		return usuarioDAO.updateUsuario(user);
+	}
+
+	@Override
+	public List<String> Anyos() throws RemoteException {
+		return peliculaDAO.Anyos();
+	}
+
+	@Override
+	public List<String> Generos() throws RemoteException {
+		return peliculaDAO.Generos();
 	}
 }

@@ -19,7 +19,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.imageio.ImageIO;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JSeparator;
 import java.awt.Font;
@@ -99,7 +101,7 @@ public class VentanaUsuario extends JFrame {
 	private JPanel panel_29;
 	private JButton btnAnadirSaldo;
 	private JButton btnBuscar;
-	private List<Pelicula> prueba=new ArrayList<>();
+	private List<Pelicula> prueba=new ArrayList<Pelicula>();
 	static Logger logger = Logger.getLogger(VentanaUsuario.class.getName());
 	/**
 	 * Create the frame.
@@ -286,19 +288,22 @@ public class VentanaUsuario extends JFrame {
 				String nombre=textFieldNombrePeli.getText();
 				String anyo="a";
 				//FIXME el toString da nullpointer
-				//if(comboBoxAnio.getSelectedItem().toString()!=null) {anyo=comboBoxAnio.getSelectedItem().toString();}
+				if(comboBoxAnio.getSelectedItem().toString()!=null) {anyo=comboBoxAnio.getSelectedItem().toString();}
 				String genero="a";
-				//if(comboBoxAnio.getSelectedItem().toString()!=null) {genero=comboBox.getSelectedItem().toString();}
+				if(comboBoxAnio.getSelectedItem().toString()!=null) {genero=comboBox.getSelectedItem().toString();}
 				System.out.println(nombre);
 				System.out.println(anyo);
 				System.out.println(genero);
 				try {
+					System.out.println("Entra en el try");
 					prueba=controller.Busqueda(nombre, anyo, genero);
-					System.out.println("La primera peli:"+prueba.get(0).getNombre());
-				} catch (RemoteException e) {
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_login_msg"), "ERROR DE BUSQUEDA!",
+							JOptionPane.WARNING_MESSAGE);
 					logger.info("Busqueda sin resultados");
 					e.printStackTrace();
 				}
+				System.out.println("La primera peli:"+prueba.get(0));
 				logger.info("Busqueda completada");
 			}
 		});
@@ -315,6 +320,13 @@ public class VentanaUsuario extends JFrame {
 		panel_12.add(panel_21);
 		
 		comboBoxAnio = new JComboBox<Object>();
+		List<String> lo = null;
+		try {
+			lo = controller.ObtenerAnyo();
+		} catch (RemoteException e1) {
+			e1.printStackTrace();
+		}
+		comboBoxAnio.setModel(new DefaultComboBoxModel(lo.toArray()));
 		panel_21.add(comboBoxAnio);
 		
 		panel_23 = new JPanel();
@@ -327,6 +339,13 @@ public class VentanaUsuario extends JFrame {
 		panel_12.add(panel_20);
 		
 		comboBox = new JComboBox<Object>();
+		List<String> ls = null;
+		try {
+			ls = controller.ObtenerGenero();
+		} catch (RemoteException e1) {
+			e1.printStackTrace();
+		}
+		comboBox.setModel(new DefaultComboBoxModel(ls.toArray()));
 		panel_20.add(comboBox);
 		
 		panel_13 = new JPanel();
