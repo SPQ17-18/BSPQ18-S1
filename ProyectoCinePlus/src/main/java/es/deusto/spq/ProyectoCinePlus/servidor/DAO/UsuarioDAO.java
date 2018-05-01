@@ -10,6 +10,9 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
+import org.apache.log4j.Logger;
+
+import es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaSaldo;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 
@@ -18,6 +21,8 @@ public class UsuarioDAO implements IUsuarioDAO{
 	private PersistenceManagerFactory pmf; 
 	private String username;
 	private String usermail;
+	
+	static Logger logger = Logger.getLogger(UsuarioDAO.class.getName());
 	
 	public UsuarioDAO(){
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
@@ -29,9 +34,9 @@ public class UsuarioDAO implements IUsuarioDAO{
 		if (!this.checkUser(usuario)) {
 			resul = this.storeObject(usuario);
 		} else {
-			System.out.println("The user mail " + usuario.getEmail() + " already exists");
+			logger.info("The user mail " + usuario.getEmail() + " already exists");
 		}
-		System.out.println("usuario almacenado: "+usuario.toString());
+		logger.info("usuario almacenado: "+usuario.toString());
 		return resul;
 	}
 	
@@ -42,12 +47,12 @@ public class UsuarioDAO implements IUsuarioDAO{
 	   
 	    try {
 	       tx.begin();
-	       System.out.println("   * Storing an object: " + usuario);
+	       logger.info("   * Storing an object: " + usuario);
 	       pm.makePersistent(usuario);
 	       tx.commit();
 	       resul =true;
 	    } catch (Exception ex) {
-	    	System.out.println("   $ Error storing an object: " + ex.getMessage());
+	    	logger.error("   $ Error storing an object: " + ex.getMessage());
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -69,7 +74,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 		List<Usuario> Usuarios = new ArrayList<Usuario>();
 		
 		try {
-			System.out.println("   * Sacando un Extent para Usuarios.");
+			logger.info("   * Sacando un Extent para Usuarios.");
 			
 			tx.begin();			
 			Extent<Usuario> extent = pm.getExtent(Usuario.class, true);
@@ -80,7 +85,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 
 			tx.commit();			
 		} catch (Exception ex) {
-	    	System.out.println("   $ Error retrieving an extent: " + ex.getMessage());
+			logger.error("   $ Error retrieving an extent: " + ex.getMessage());
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -107,7 +112,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 	    List<Usuario> Usuarios = new ArrayList<Usuario>();
 	        
 	    try {
-	    	System.out.println("   * Ejecutando Query para Usuarios bajo la condicion: " + condition);
+	    	logger.info("   * Ejecutando Query para Usuarios bajo la condicion: " + condition);
 	    	
 	    	tx.begin();	    	
 			Extent<Usuario> extent = pm.getExtent(Usuario.class, true);
@@ -119,7 +124,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 			
 	        tx.commit();
 	    } catch (Exception ex) {
-	    	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
+	    	logger.error("   $ Error retreiving an extent: " + ex.getMessage());
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -136,29 +141,30 @@ public class UsuarioDAO implements IUsuarioDAO{
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		
 		Transaction tx = pm.currentTransaction();
-		Usuario usuario = null;
+		Usuario usuario = new Usuario();
 	    
 		try {
-			System.out.println ("   * Querying a Product: " + username);
+			logger.info("   * Querying a Product: " + username);
 			
-			//tx.begin();
-	    	//Query<?> query = pm.newQuery("SELECT FROM " + Usuario.class.getName() + " WHERE email = '" + email + "'");
-	    	//query.setUnique(true);
-	    	//usuario = (Usuario)query.execute();
-	
-	    	tx.begin();
+			tx.begin();
+	    	Query<?> query = pm.newQuery("SELECT FROM " + Usuario.class.getName() + " WHERE email == '" + email + "'");
+	    	query.setUnique(true);
+	    	Usuario result = (Usuario) query.execute();
+	    	usuario.copiarUsuario(result);
+	    	
+	    	/*tx.begin();
 			Extent<Usuario> ex = pm.getExtent(Usuario.class, true);
 			for (Usuario u : ex) {
 				if (u.getEmail().equals(email)) {
 					usuario= new Usuario(u.getUsuario(),u.getEmail(),u.getNombre(),u.getApellido(),u.getPassword(),u.getPais(),false,u.getPeliculasList());
 					usuario.setSaldo(u.getSaldo());
 				}
-			}
+			}*/
 			
  	    	tx.commit();
    	    
 	     } catch (Exception ex) {
-		   	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
+	    	 logger.error("   $ Error retreiving an extent: " + ex.getMessage());
 	     } finally {
 		   	if (tx != null && tx.isActive()) {
 		   		tx.rollback();
@@ -180,7 +186,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 	    	pm.makePersistent(usuario);
 	    	tx.commit();
 	     } catch (Exception ex) {
-		   	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
+	    	 logger.error("   $ Error retreiving an extent: " + ex.getMessage());
 	     } finally {
 		   	if (tx != null && tx.isActive()) {
 		   		tx.rollback();
@@ -209,7 +215,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("   $ Error login for user: " + ex.getMessage());
+			logger.error("   $ Error login for user: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -228,7 +234,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 
 		try {
 			tx.begin();
-			System.out.println("   * Checking if " + usuario + " exists in the database");
+			logger.info("   * Checking if " + usuario + " exists in the database");
 			Extent<Usuario> ex = pm.getExtent(Usuario.class, true);
 			for (Usuario u : ex) {
 				if (u.getEmail().equals(usuario.getEmail())) {
@@ -237,7 +243,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 			}
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("   $ Error during the checking of user: " + ex.getMessage());
+			logger.error("   $ Error during the checking of user: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();

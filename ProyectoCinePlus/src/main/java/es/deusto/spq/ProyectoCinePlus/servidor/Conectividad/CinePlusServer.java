@@ -64,5 +64,9 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 //		return a;
 	}
 	
+	@Override
+	public Usuario devuelveUsuario(String email) throws RemoteException {
+		return usuarioDAO.getUsuario(email);
+	}
 
 }

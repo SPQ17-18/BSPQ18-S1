@@ -22,7 +22,9 @@ public class Usuario {
 	@Join
 	private List<Pelicula> peliculasList = new ArrayList<Pelicula>();
 
-	
+	public Usuario() {
+		
+	}
 	public Usuario(String usuario, String email, String nombre, String apellido, String password, String pais,
 			boolean admin, List<Pelicula> peliculasList) {
 		super();
@@ -108,5 +110,21 @@ public class Usuario {
 		this.saldo = saldo;
 	}
 	
+
+	public void copiarUsuario(Usuario user) {
+		
+		this.usuario = user.usuario;
+		this.email = user.email;
+		this.nombre = user.nombre;
+		this.apellido = user.apellido;
+		this.password = user.password;
+		this.pais = user.pais;
+		this.admin = user.admin;
+		this.saldo = user.saldo;
+		for (int i = 0; i < user.getPeliculasList().size(); i++) {
+			this.peliculasList.add(user.getPeliculasList().get(i));
+		}
+		
+	}
 	
 }
