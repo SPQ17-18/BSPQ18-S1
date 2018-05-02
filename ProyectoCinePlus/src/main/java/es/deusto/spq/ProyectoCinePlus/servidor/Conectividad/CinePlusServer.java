@@ -22,12 +22,16 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	public CinePlusServer () throws RemoteException {
 		super();
 		usuarioDAO=new UsuarioDAO();
-        usuarioDAO.storeUsuario(new Usuario("mikel", "mikelspq@gmail.com", "mikel", "fernandez", "spq", "españa", false));
-        usuarioDAO.storeUsuario(new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false));
-        List<Usuario> a=new ArrayList<>();
-        a.add(new Usuario("mikel", "mspq@gmail.com", "mikel", "fernandez", "spq", "españa", false));
+		Usuario mikel = new Usuario("mikel", "mikelspq@gmail.com", "mikel", "fernandez", "spq", "españa", false);
+		Usuario spq = new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false);
+		usuarioDAO.storeUsuario(mikel);
+		usuarioDAO.storeUsuario(spq);
+	
+		List<Usuario> listUsuarios=new ArrayList<>();
+        listUsuarios.add(mikel);
+        
         peliculaDAO= new PeliculaDAO();
-        peliculaDAO.storePelicula(new Pelicula(1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 14, a));
+        peliculaDAO.storePelicula(new Pelicula(1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 14, listUsuarios));
         //TODO una busqueda test
 	}
 	
