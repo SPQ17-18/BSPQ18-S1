@@ -132,14 +132,12 @@ public class RMITest {
 	////TODO Modificar
 	
 	@Test
-//	@PerfTest(invocations = 100, threads = 10)
-//	@Required(max = 1000, average = 1000)
+	@PerfTest(invocations = 100, threads = 10)
+	@Required(max = 10, average = 10)
 	
 	/*
 	 * Login Test
-	 */
-	
-	
+	 */	
 	public void loginNewUserTest() {
 		logger.info("loginNewUserTest");
 		boolean resul=false;
@@ -175,8 +173,8 @@ public class RMITest {
 	}
 	
 	
-	//@Test	
-	
+	/*
+	//@Test		
 	public void registerNewUserTest() {
 		logger.info("registerNewUserTest");
 		
@@ -200,8 +198,9 @@ public class RMITest {
 		logger.info("Si es TRUE, se ha registrado");
 		assertTrue( resul );
 	}
+	*/
 	
-	/*
+	
 	@Test public void registerExistingUserTest() {
 		logger.info("registerExistingUserTest");
 		boolean resul=false;
@@ -220,7 +219,7 @@ public class RMITest {
 	}
 	
 
-
+	/*
 	
 	@After public  void deleteDatabase() {
 		PersistenceManagerFactory pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
@@ -248,6 +247,7 @@ public class RMITest {
 		
 	}
 	
+	*/
 	
 	
 	@AfterClass static public void tearDown() {
@@ -259,6 +259,6 @@ public class RMITest {
 		}	
 
 	} 
-	*/
+	
 }
 
