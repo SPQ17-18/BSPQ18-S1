@@ -72,7 +72,7 @@ public class RMITest {
 				logger.info("This is a test to check how mvn test executes this test without external interaction; JVM properties by program");
 				logger.info("**************: " + cwd);
 				System.setProperty("java.rmi.server.codebase", "file:" + cwd);
-				System.setProperty("java.security.policy", "target\\test-classes\\security\\java.policy");
+				System.setProperty("java.security.policy", "target\\classes\\security\\java.policy");
 
 				if (System.getSecurityManager() == null) {
 					System.setSecurityManager(new SecurityManager());
@@ -110,7 +110,8 @@ public class RMITest {
 
 	@Before public void setUpClient() {
 		try {
-		System.setProperty("java.security.policy", "target\\test-classes\\security\\java.policy");
+			
+		//System.getProperty("java.security.policy", "target\\test-classes\\security\\java.policy");
 
 		if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new SecurityManager());
@@ -131,18 +132,20 @@ public class RMITest {
 	////TODO Modificar
 	
 	@Test
-	@PerfTest(invocations = 100, threads = 10)
-	@Required(max = 1000, average = 1000)
+//	@PerfTest(invocations = 100, threads = 10)
+//	@Required(max = 1000, average = 1000)
 	
 	/*
 	 * Login Test
 	 */
+	
+	
 	public void loginNewUserTest() {
 		logger.info("loginNewUserTest");
 		boolean resul=false;
 		try{
 			logger.info("Test 1 - Loging new user");
-			resul=cineplus.usuarioRegistrado("Javier", "Javier");//Usuario y contraseña
+			resul=cineplus.usuarioRegistrado("noesta@gmail.com", "noesta");//Usuario y contraseña
 		}
 		catch (Exception re) {
 			logger.error(" # CinePlus RemoteException: " + re.getMessage());
@@ -151,31 +154,32 @@ public class RMITest {
 		 * Very simple test, inserting a valid new user
 		 */
 		logger.info("Si es TRUE, se ha logeado");
-		assertTrue( resul );
+		assertFalse( resul );
 	}
 	
+	@PerfTest(invocations = 100, threads = 10)
+	@Required(max = 1000, average = 1000)
 	@Test public void loginExistingUserTest() {
 		logger.info("loginExistingUserTest");
 		boolean resul=false;
 		try{
 			logger.info("Test 2 - Login existing user.");
-			resul=cineplus.usuarioRegistrado("Fercol", "Fercol");			
+			resul=cineplus.usuarioRegistrado("spq@gmail.com", "spq");			
 		}
 		catch (Exception re) {
 			logger.error(" # CinePlus RemoteException: " + re.getMessage());
 		} 
-		/*
-		 * Very simple test 
-		 */
+		
 		logger.info("Si es TRUE, se ha logeado");
 		assertTrue( resul );
 	}
 	
-	/*
-	 * Register Test
-	 */	
+	
+	//@Test	
+	
 	public void registerNewUserTest() {
 		logger.info("registerNewUserTest");
+		
 		boolean resul=false;
 		iteration++;
 		
@@ -190,13 +194,14 @@ public class RMITest {
 		catch (Exception re) {
 			logger.error(" # CinePlus RemoteException: " + re.getMessage());
 		} 
-		/*
-		 * Very simple test, inserting a valid new user
-		 */
+		
+		
+		
 		logger.info("Si es TRUE, se ha registrado");
 		assertTrue( resul );
 	}
 	
+	/*
 	@Test public void registerExistingUserTest() {
 		logger.info("registerExistingUserTest");
 		boolean resul=false;
@@ -207,15 +212,15 @@ public class RMITest {
 		catch (Exception re) {
 			logger.error(" # CinePlus RemoteException: " + re.getMessage());
 		} 
-		/*
-		 * Very simple test 
-		 */
-		logger.info("Si es TRUE, se no se ha podido registar");
-		assertFalse( resul );
+		
+		
+		
+		logger.info("Si es TRUE, no se ha podido registar");
+		assertTrue( resul );
 	}
 	
 
-	
+
 	
 	@After public  void deleteDatabase() {
 		PersistenceManagerFactory pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
@@ -254,5 +259,6 @@ public class RMITest {
 		}	
 
 	} 
+	*/
 }
 
