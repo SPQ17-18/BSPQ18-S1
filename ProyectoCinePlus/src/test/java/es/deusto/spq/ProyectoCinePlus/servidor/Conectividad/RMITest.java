@@ -173,6 +173,7 @@ public class RMITest {
 	}
 	
 	
+	
 	/*
 	//@Test		
 	public void registerNewUserTest() {
@@ -198,7 +199,33 @@ public class RMITest {
 		logger.info("Si es TRUE, se ha registrado");
 		assertTrue( resul );
 	}
-	*/
+	
+	
+	public void checkUserTest() {
+		
+		logger.info("CheckingSeveralUsersTest");
+		boolean resul=false;
+		for (int i =0;i<iteration;i++) {
+			String user="user"+i;
+			String email=user+"@gmail.com";
+			String surname= user+"_surname";
+			
+			try{
+				logger.info("Test 4 - Check new user");
+				resul=cineplus.checkUser(user, email, user, surname, "P@ssw0rd", "es", false);
+			}
+			catch (Exception re) {
+				logger.error(" # CinePlus RemoteException: " + re.getMessage());
+			} 
+			
+			logger.info("Si es TRUE, se ha encontrado");
+			assertTrue( resul );
+		}
+				
+	}
+	
+*/
+	
 	
 	
 	@Test public void registerExistingUserTest() {
@@ -249,6 +276,7 @@ public class RMITest {
 	
 	*/
 	
+
 	
 	@AfterClass static public void tearDown() {
 		try	{
