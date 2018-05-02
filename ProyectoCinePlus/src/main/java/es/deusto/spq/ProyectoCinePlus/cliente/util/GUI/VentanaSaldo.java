@@ -57,9 +57,9 @@ public class VentanaSaldo extends JFrame {
 	protected ResourceBundle resourceBundle;
 	private JComboBox comboBox;
 	private JPanel panel_9;
-	private JTextField textField;
+	private JTextField textFieldNombre;
 	private JPanel panel_17;
-	private JTextField textField_1;
+	private JTextField textFieldNumero;
 	private JPanel panel_12;
 	private JPanel panel_14;
 	private JPanel panel_15;
@@ -70,7 +70,7 @@ public class VentanaSaldo extends JFrame {
 	private JPanel panel_19;
 	private JPanel panel_20;
 	private JLabel lblCvc;
-	private JTextField textField_2;
+	private JTextField textFieldCVC;
 
 	static Logger logger = Logger.getLogger(VentanaSaldo.class.getName());
 	
@@ -121,18 +121,25 @@ public class VentanaSaldo extends JFrame {
 		btnRecargarSaldo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//aki krear nuevo usuario y pasarselo al dao
-				/*String saldo = (String) comboBox.getSelectedItem();
-
-				float saldof = Float.parseFloat(saldo);
-						
-				userLogeado.setSaldo(saldof);
-				try {
-					controller.actualizarUsuario(userLogeado);
-				} catch (RemoteException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+				if(comprobarcampos()) {
+					String saldoS = (String) comboBox.getSelectedItem();
+					float saldoF = Float.parseFloat(saldoS);
+					logger.info(saldoF);
+					userLogeado.setSaldo(saldoF);
+					logger.info(userLogeado);
+					try {
+						controller.actualizarUsuario(userLogeado);
+					} catch (RemoteException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
+					ventanaUsuario.setVisible(true);
+					dispose();
+				}else {
+					limpiarCampos();
 				}
-				dispose();*/
+				
 			}
 		});
 		panel.add(btnRecargarSaldo);
@@ -190,9 +197,9 @@ public class VentanaSaldo extends JFrame {
 		panel_19 = new JPanel();
 		panel_18.add(panel_19);
 
-		textField_2 = new JTextField();
-		panel_19.add(textField_2);
-		textField_2.setColumns(3);
+		textFieldCVC = new JTextField();
+		panel_19.add(textFieldCVC);
+		textFieldCVC.setColumns(3);
 
 		panel_11 = new JPanel();
 		panel_4.add(panel_11);
@@ -205,16 +212,16 @@ public class VentanaSaldo extends JFrame {
 		panel_9 = new JPanel();
 		panel_10.add(panel_9);
 
-		textField = new JTextField();
-		panel_9.add(textField);
-		textField.setColumns(10);
+		textFieldNombre = new JTextField();
+		panel_9.add(textFieldNombre);
+		textFieldNombre.setColumns(10);
 
 		panel_17 = new JPanel();
 		panel_10.add(panel_17);
 
-		textField_1 = new JTextField();
-		panel_17.add(textField_1);
-		textField_1.setColumns(10);
+		textFieldNumero = new JTextField();
+		panel_17.add(textFieldNumero);
+		textFieldNumero.setColumns(10);
 
 		panel_13 = new JPanel();
 		panel_10.add(panel_13);
@@ -237,5 +244,38 @@ public class VentanaSaldo extends JFrame {
 
 	public void setController(CinePlusController controller) {
 		this.controller = controller;
+	}
+	
+	public boolean comprobarcampos() {
+		logger.info("Función comprobar campos");
+		boolean comprobar = true;
+		String error ="";
+		if(textFieldNombre.getText().trim().equals("")) {
+			error = resourceBundle.getString("full_name2_msg");
+		}
+		if(textFieldNumero.getText().trim().equals("")) {
+			if(!error.isEmpty()){
+				error+=" - "+resourceBundle.getString("credit_card2_msg");
+			}else{
+				error+=resourceBundle.getString("credit_card2_msg");
+			}
+		}
+		if(textFieldCVC.getText().trim().equals("")) {
+			if(!error.isEmpty()){
+				error+=" - CVC";
+			}else{
+				error+="CVC";
+			}
+		}
+		if(!error.isEmpty()) {
+			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_data_msg") + error, "ERROR!", JOptionPane.ERROR_MESSAGE);
+			comprobar=false;
+		}
+		return comprobar;
+	}
+	private void limpiarCampos() {
+		textFieldNombre.setText("");
+		textFieldNumero.setText("");
+		textFieldCVC.setText("");
 	}
 }
