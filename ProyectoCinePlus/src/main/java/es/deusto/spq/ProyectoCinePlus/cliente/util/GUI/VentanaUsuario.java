@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -107,7 +108,7 @@ public class VentanaUsuario extends JFrame {
 	 * Create the frame.
 	 */
 
-	public VentanaUsuario(CinePlusController controller, ResourceBundle resourceBundle) {
+	public VentanaUsuario(CinePlusController controller, ResourceBundle resourceBundle, Usuario userLogeado) {
 		logger.info("VentanaUsuario");
 		this.controller =controller;
 		this.resourceBundle=resourceBundle;
@@ -186,7 +187,7 @@ public class VentanaUsuario extends JFrame {
 		separator_2 = new JSeparator();
 		panel_16.add(separator_2);
 		
-		label_2 = new JLabel("NomUser");
+		label_2 = new JLabel(userLogeado.getUsuario());
 		label_2.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_16.add(label_2);
 		
@@ -200,7 +201,7 @@ public class VentanaUsuario extends JFrame {
 		separator = new JSeparator();
 		panel_17.add(separator);
 		
-		lblnumpelis = new JLabel("8 peliculas");
+		lblnumpelis = new JLabel(String.valueOf(userLogeado.getPeliculasList().size()));
 		lblnumpelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_17.add(lblnumpelis);
 		
@@ -215,7 +216,7 @@ public class VentanaUsuario extends JFrame {
 		separator_3 = new JSeparator();
 		panel_19.add(separator_3);
 		
-		lblSaldo = new JLabel("Saldo");
+		lblSaldo = new JLabel(String.valueOf(userLogeado.getSaldo()));
 		lblSaldo.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_19.add(lblSaldo);
 		
@@ -298,7 +299,7 @@ public class VentanaUsuario extends JFrame {
 					System.out.println("Entra en el try");
 					prueba=controller.Busqueda(nombre, anyo, genero);
 				} catch (Exception e) {
-					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_login_msg"), "ERROR DE BUSQUEDA!",
+					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_in_search_msg"), resourceBundle.getString("error_in_search_msg"),
 							JOptionPane.WARNING_MESSAGE);
 					logger.info("Busqueda sin resultados");
 					e.printStackTrace();

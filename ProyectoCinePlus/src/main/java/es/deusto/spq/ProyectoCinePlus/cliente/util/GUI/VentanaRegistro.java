@@ -265,9 +265,11 @@ public class VentanaRegistro extends JFrame {
 				}
 
 				
-				VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle);
-				ventanaUsuario.setVisible(true);
+				//VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle);
+				//ventanaUsuario.setVisible(true);
+				VentanaPrincipal.frame.setVisible(true);
 				dispose();
+				
 			}
 		});
 		panel_9.add(btnRegistrarse);

@@ -138,7 +138,7 @@ public class VentanaLogin extends JFrame {
 							/******/
 							
 							VentanaLogin.this.setVisible(false);
-							VentanaUsuario windowusuario = new VentanaUsuario(controller, resourceBundle);
+							VentanaUsuario windowusuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
 							windowusuario.setVisible(true);
 						} else {
 							JOptionPane.showMessageDialog(null, resourceBundle.getString("error_login_msg"), "ERROR!",
