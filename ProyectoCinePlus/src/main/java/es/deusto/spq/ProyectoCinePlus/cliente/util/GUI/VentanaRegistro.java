@@ -242,33 +242,40 @@ public class VentanaRegistro extends JFrame {
 		btnRegistrarse = new JButton(resourceBundle.getString("register_msg"));
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				logger.info("Boton registar");
-				logger.info(textFielduser.getText()+
-						textFieldemail.getText()+
-						textFieldnombre.getText()+
-						textFieldApellido.getText()+
-						new String(passwordField.getPassword())+
-						textFieldPais.getText());
-				
-				try {
-					controller.RegistrarUsuario(textFielduser.getText(),
-							textFieldemail.getText(),
-							textFieldnombre.getText(),
-							textFieldApellido.getText(),
-							new String(passwordField.getPassword()),
-							textFieldPais.getText(),
-							false);
-				} catch (RemoteException e2) {
-					// TODO Auto-generated catch block
-					e2.printStackTrace();
+				if(comprobarcampos()) {
+					logger.info("Boton registar");
+					logger.info(textFielduser.getText()+
+							textFieldemail.getText()+
+							textFieldnombre.getText()+
+							textFieldApellido.getText()+
+							new String(passwordField.getPassword())+
+							textFieldPais.getText());
+					
+					if(validarEmail()) {
+						if (validarPass()) {
+					
+							try {
+								controller.RegistrarUsuario(textFielduser.getText(),
+										textFieldemail.getText(),
+										textFieldnombre.getText(),
+										textFieldApellido.getText(),
+										new String(passwordField.getPassword()),
+										textFieldPais.getText(),
+										false);
+							} catch (RemoteException e2) {
+								// TODO Auto-generated catch block
+								e2.printStackTrace();
+							}
+			
+							//VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle);
+							//ventanaUsuario.setVisible(true);
+							VentanaPrincipal.frame.setVisible(true);
+							dispose();
+						}
+					}
+				}else {
+					limpiarCampos();
 				}
-
-				
-				//VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle);
-				//ventanaUsuario.setVisible(true);
-				VentanaPrincipal.frame.setVisible(true);
-				dispose();
 				
 			}
 		});
@@ -327,23 +334,9 @@ public class VentanaRegistro extends JFrame {
 		}
 		if(!error.isEmpty()) {
 			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_data_msg") + error, "ERROR!", JOptionPane.ERROR_MESSAGE);
-		} else {
-			comprobar=validarPass();
-			if(comprobar) {
-				comprobar=validarEmail();
-			}
-			
+			comprobar=false;
 		} 
-		//ME FALLA ESTE METDODO
-		/*System.out.println(passwordField.getPassword().equals(passwordField_1.getPassword()));
-		if(passwordField.getPassword().equals(passwordField_1.getPassword())) {
-			JOptionPane.showMessageDialog(null, resourceBundle.getString("error_pass_match_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
-		}*/
 		
-		limpiarCampos();
-		if(!error.isEmpty()) {
-			comprobar= false;
-		}
 		return comprobar;
 	}
 	
