@@ -22,6 +22,8 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 import org.junit.AfterClass;
 import org.apache.log4j.Logger;
+import org.databene.contiperf.PerfTest;
+import org.databene.contiperf.Required;
 import org.junit.After;
 
 public class RMITest {
