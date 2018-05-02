@@ -1,5 +1,6 @@
 package es.deusto.spq.ProyectoCinePlus.servidor.DATA;
 
+import java.awt.image.BufferedImage;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +8,7 @@ import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
 import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.PrimaryKey;
 
 @PersistenceCapable
 @Inheritance(strategy = InheritanceStrategy.NEW_TABLE)
@@ -16,6 +18,7 @@ public class Pelicula implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	@PrimaryKey
 	private int id_pelicula;
 	private String nombre;
 	private int duracion;
@@ -23,11 +26,12 @@ public class Pelicula implements Serializable{
 	private int anyo;
 	private String categoria;
 	private float precio;
-	@Join
-	private List<Usuario> usuariosList = new ArrayList<Usuario>();
+	private String portada;
+//	@Join
+//	private List<Usuario> usuariosList = new ArrayList<Usuario>();
 	
 	public Pelicula(int id_pelicula, String nombre, int duracion, String descripcion, int anyo, String categoria,
-			 float precio, List<Usuario> usuariosList) {
+			 float precio, List<Usuario> usuariosList,String portada) {
 		super();
 		this.id_pelicula = id_pelicula;
 		this.nombre = nombre;
@@ -36,7 +40,8 @@ public class Pelicula implements Serializable{
 		this.anyo = anyo;
 		this.categoria = categoria;
 		this.precio = precio;
-		this.usuariosList = usuariosList;
+//		this.usuariosList = usuariosList;
+		this.portada = portada;
 	}
 
 	public int getId_pelicula() {
@@ -95,12 +100,20 @@ public class Pelicula implements Serializable{
 		this.precio = precio;
 	}
 
-	public List<Usuario> getUsuariosList() {
-		return usuariosList;
+//	public List<Usuario> getUsuariosList() {
+//		return usuariosList;
+//	}
+//
+//	public void setUsuariosList(List<Usuario> usuariosList) {
+//		this.usuariosList = usuariosList;
+//	}
+
+	public String getPortada() {
+		return portada;
 	}
 
-	public void setUsuariosList(List<Usuario> usuariosList) {
-		this.usuariosList = usuariosList;
+	public void setPortada(String portada) {
+		this.portada = portada;
 	}
 	
 }

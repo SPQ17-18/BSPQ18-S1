@@ -1,6 +1,8 @@
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -19,14 +21,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.awt.GridLayout;
+import java.awt.Image;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.imageio.ImageIO;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JSeparator;
 import java.awt.Font;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 import javax.swing.JComboBox;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
@@ -79,7 +85,6 @@ public class VentanaUsuario extends JFrame {
 	private JPanel panel_21;
 	private JPanel panel_23;
 	private JPanel panel_20;
-	private JPanel panel_13; 
 	private JPanel panel_8; 
 	private JPanel panel_25; 
 	private JPanel panel_26;
@@ -205,10 +210,10 @@ public class VentanaUsuario extends JFrame {
 		
 		separator = new JSeparator();
 		panel_17.add(separator);
-		
-		lblnumpelis = new JLabel(String.valueOf(userLogeado.getPeliculasList().size()));
-		lblnumpelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
-		panel_17.add(lblnumpelis);
+		//FIXME hay que restaurarlo de alguna otra manera
+//		lblnumpelis = new JLabel(String.valueOf(userLogeado.getPeliculasList().size()));
+//		lblnumpelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
+//		panel_17.add(lblnumpelis);
 		
 		
 		panel_19 = new JPanel();
@@ -262,11 +267,13 @@ public class VentanaUsuario extends JFrame {
 		
 		panel_9 = new JPanel();
 		panel_4.add(panel_9, BorderLayout.EAST);
-		
+		//FIXME
 		panel_5 = new JPanel();
 		panel_4.add(panel_5, BorderLayout.CENTER);
-		panel_5.setLayout(new BorderLayout(0, 0));
-		
+		panel_5.setLayout(new GridLayout(3,3));
+//		panel_5 = new JPanel();
+//		panel_4.add(panel_5, BorderLayout.CENTER);
+//		panel_5.setLayout(new BorderLayout(0, 0));
 		panel_12 = new JPanel();
 		panel_5.add(panel_12, BorderLayout.NORTH);
 		panel_12.setLayout(new GridLayout(0, 1, 0, 0));
@@ -303,7 +310,16 @@ public class VentanaUsuario extends JFrame {
 		panel_30= new JPanel();
 		panel_SUP.add(panel_30);
 		
+		//FIXME variables del gridlayout
+		
 
+		
+		
+		
+		
+		/////////////////
+		
+		
 		
 		btnBuscar = new JButton(resourceBundle.getString("find_msg"));//FIXME cambiar esto por: buscar
 		btnBuscar.addActionListener(new ActionListener() {
@@ -328,7 +344,40 @@ public class VentanaUsuario extends JFrame {
 					logger.info("Busqueda sin resultados");
 					e.printStackTrace();
 				}
-				System.out.println("La primera peli:"+prueba.get(0));
+				//TODO aqui meter el codigo de mostrar los paneles una vez que tengamos la lista
+				
+				List<String> Pelis = new ArrayList<String>();
+			    for (int index = 0; index < prueba.size(); index++) {
+			    	Pelis.add("Pelicula: " + prueba.get(index).getNombre());
+			    }
+			    String[] projectNames = Pelis.toArray(new String[0]);
+
+			    // Adding buttons to the project
+			    JButton[] buttons = new JButton[Pelis.size()];
+			    try {
+			    	panel_26.removeAll();
+			    	panel_26.revalidate();
+			    	panel_26.repaint();
+			        for (int i = 0; i < projectNames.length; i++) {
+			        	
+			            buttons[i] = new JButton(projectNames[i]);
+			            //buttons[i].addActionListener(this);
+
+			        //    System.out.println("IMAGEN="+bi.toString());
+			        //    System.out.println("PATH="+VentanaPrincipal.pathn+"films\\"+prueba.get(i).getPortada()+".jpg");
+			            Image img = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+prueba.get(i).getPortada()+".jpg"));
+			            buttons[i].setIcon(new ImageIcon(img));
+			        //    ImageIcon a=new ImageIcon(bi);
+			        //    JLabel la=new JLabel();
+			        //    la.setIcon(a);
+			           // buttons[i].setIcon((Icon) la);
+			            panel_26.add(buttons[i]);
+			         //   panel_26.repaint(); //TODO meter el refresco
+
+			        }
+			    }catch(Exception e) {}
+			    
+			
 				logger.info("Busqueda completada");
 			}
 		});
@@ -363,9 +412,6 @@ public class VentanaUsuario extends JFrame {
 		comboBox = new JComboBox<Object>();
 		comboBox.setModel(new DefaultComboBoxModel(ls.toArray()));
 		panel_20.add(comboBox);
-		
-		panel_13 = new JPanel();
-		panel_5.add(panel_13, BorderLayout.SOUTH);
 		
 		scrollPane = new JScrollPane();
 		panel_5.add(scrollPane, BorderLayout.CENTER);

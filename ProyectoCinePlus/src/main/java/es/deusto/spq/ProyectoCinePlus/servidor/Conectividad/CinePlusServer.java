@@ -1,12 +1,18 @@
 package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.imageio.ImageIO;
+
 import org.apache.log4j.Logger;
 
+import es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.PeliculaDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
@@ -18,21 +24,24 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	private PeliculaDAO peliculaDAO;
 	static Logger logger = Logger.getLogger(CinePlusServer.class.getName());
 	private static final long serialVersionUID = 1L;
-	
-	public CinePlusServer () throws RemoteException {
+	public static String pathn=(System.getProperty("user.dir")+ "\\src\\main\\resources\\images\\films\\");
+	public CinePlusServer () throws RemoteException{
 		super();
-		usuarioDAO=new UsuarioDAO();
 		Usuario mikel = new Usuario("mikel", "mikelspq@gmail.com", "mikel", "fernandez", "spq", "españa", false);
 		Usuario spq = new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false);
-		usuarioDAO.storeUsuario(mikel);
-		usuarioDAO.storeUsuario(spq);
-	
+		//FIXME meter dos try catch para los duplicados(?)
 		List<Usuario> listUsuarios=new ArrayList<>();
-        listUsuarios.add(mikel);
+        listUsuarios.add(spq);
+		usuarioDAO=new UsuarioDAO();
         
         peliculaDAO= new PeliculaDAO();
-        peliculaDAO.storePelicula(new Pelicula(1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 14, listUsuarios));
-        //TODO una busqueda test
+        peliculaDAO.storePelicula(new Pelicula(1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 14, listUsuarios,"14"));
+        peliculaDAO.storePelicula(new Pelicula(2, "Alternativa", 140, "vida de prisioneros 2", 1995, "Suspense", 15, listUsuarios,"15"));
+
+		usuarioDAO.storeUsuario(mikel);
+		usuarioDAO.storeUsuario(spq);
+
+
 	}
 	
 	public synchronized boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password,
@@ -50,10 +59,7 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 
 
 	public synchronized List<Pelicula> Busqueda(String nombre, String anyo, String genero) {
-		//Devuelve una lista de peliculas
-		//FIXME no se si esta comprobacion habria que hacerla al principio y enviar un determinado string y posteriormente comprobarlo con equals
-		//Por ejemplo hacer que el string=="vacio" al enviar y que luego lo compruebe
-		//Lo de abajo seria el concepto si envia null
+//FIXME meter un catch de null pointer
 		logger.info("NOMBRE="+nombre+" anyo="+anyo+" genero="+genero);
 
 		List<Pelicula> a=new ArrayList<Pelicula>();
@@ -64,12 +70,23 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 		String anyo1=anyo.toLowerCase();
 		String genero1=genero.toLowerCase();
 		int it=0;
+//		for(Pelicula p:a) {
+		int cont=0;
 		for(Pelicula p:a) {
-			if(it<(a.size()-1)) {
+			System.out.println("CONT p1="+cont);
+			try {
+			System.out.println(p.getNombre());
+			}catch(NullPointerException e) {
+				System.out.println("CONT p2="+cont);
+				System.out.println("Null pointer");
+			}
+		}
+		for(int j=0;j<a.size();j++) {
+		//	if(it<(a.size()-1)) {//
 			it++;
-			String nom=p.getNombre().toLowerCase();
-			String any=""+p.getAnyo();
-			String gen=p.getCategoria().toLowerCase();
+			String nom=a.get(j).getNombre().toLowerCase();
+			String any=""+a.get(j).getAnyo();
+			String gen=a.get(j).getCategoria().toLowerCase();
 			System.out.println("NOMBRE PARAM="+nombre1);
 			System.out.println("NOMBRE PELI="+nom);
 			System.out.println("anyo PARAM="+anyo1);
@@ -77,12 +94,12 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 			System.out.println("genero PARAM="+genero1);
 			System.out.println("genero PELI="+gen);
 			if(nom.contains(nombre1) && anyo1.equals(any) && genero1.equals(gen)) {
-				System.out.println("AÑADIENDO PELI="+p);
+				System.out.println("AÑADIENDO PELI="+a.get(j));
 				System.out.println("A LA LISTA AUX DE TAMAÑO="+aux.size());
-				aux.add(p);
-				System.out.println("Se ha añadido el p="+p.getDescripcion());
+				aux.add(a.get(j));
+				System.out.println("Se ha añadido el p="+a.get(j).getDescripcion());
 			}
-		}
+		//}
 		//System.out.println("aux 1="+aux.get(0).getId_pelicula());
 		}
 		return aux;

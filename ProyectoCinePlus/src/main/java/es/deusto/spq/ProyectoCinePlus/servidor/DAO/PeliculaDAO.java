@@ -54,6 +54,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	 */
 	public List<Pelicula> getPeliculas(String condition) {
 		PersistenceManager pm = pmf.getPersistenceManager();
+		pm.setDetachAllOnCommit(true);
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		
 	    Transaction tx = pm.currentTransaction();
@@ -86,7 +87,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	public List<Pelicula> getPeliculas(String nombre,String anyo,String genero){
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
-		
+		pm.setDetachAllOnCommit(true);
 		Transaction tx = pm.currentTransaction();
 		List<Pelicula> Peliculas = new ArrayList<Pelicula>();
 	    
@@ -137,7 +138,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	public List<String> Anyos(){
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
-		
+		pm.setDetachAllOnCommit(true);
 		Transaction tx = pm.currentTransaction();
 		List<String> Anyos = new ArrayList<String>();
 	    
@@ -165,7 +166,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	public List<String> Generos(){
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
-		
+		pm.setDetachAllOnCommit(true);
 		Transaction tx = pm.currentTransaction();
 		List<String> Generos = new ArrayList<String>();
 	    
@@ -192,7 +193,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	public Pelicula getPelicula(String name){
 		PersistenceManager pm = pmf.getPersistenceManager();
 		pm.getFetchPlan().setMaxFetchDepth(3);
-		
+		pm.setDetachAllOnCommit(true);
 		Transaction tx = pm.currentTransaction();
 		Pelicula Pelicula = null;
 	    

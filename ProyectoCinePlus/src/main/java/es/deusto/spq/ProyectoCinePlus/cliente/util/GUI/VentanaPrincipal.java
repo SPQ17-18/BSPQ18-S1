@@ -64,7 +64,7 @@ public class VentanaPrincipal extends JFrame {
 	
 
 	private String lang="en";
-	protected static String pathn;
+	public static String pathn;
 	
 	static Logger logger = Logger.getLogger(VentanaPrincipal.class.getName());
 
