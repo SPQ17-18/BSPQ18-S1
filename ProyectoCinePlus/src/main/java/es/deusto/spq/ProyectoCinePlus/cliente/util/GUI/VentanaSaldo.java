@@ -74,6 +74,7 @@ public class VentanaSaldo extends JFrame {
 
 	static Logger logger = Logger.getLogger(VentanaSaldo.class.getName());
 	
+	
 	/**
 	 * Create the frame.
 	 */
@@ -137,6 +138,13 @@ public class VentanaSaldo extends JFrame {
 		panel.add(btnRecargarSaldo);
 
 		btnAtras = new JButton(resourceBundle.getString("back_msg"));
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				logger.info("Boton Atras (Ventana Saldo)");
+				//VentanaUsuario.frame.setVisible(true);
+				dispose();
+			}
+		});
 		panel.add(btnAtras);
 
 		panel_7 = new JPanel();

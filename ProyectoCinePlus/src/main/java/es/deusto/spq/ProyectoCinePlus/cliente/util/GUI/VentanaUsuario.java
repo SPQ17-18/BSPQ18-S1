@@ -104,6 +104,9 @@ public class VentanaUsuario extends JFrame {
 	private JButton btnBuscar;
 	private List<Pelicula> prueba=new ArrayList<Pelicula>();
 	static Logger logger = Logger.getLogger(VentanaUsuario.class.getName());
+	
+	
+	//public static VentanaUsuario frame;
 	/**
 	 * Create the frame.
 	 */
@@ -236,6 +239,7 @@ public class VentanaUsuario extends JFrame {
 				logger.info("Boton añadir saldo");
 				VentanaSaldo ventanaSaldo = new VentanaSaldo(controller,resourceBundle,userLogeado);
 				ventanaSaldo.setVisible(true);
+				//VentanaUsuario.frame.setVisible(false);
 			}
 		});
 		panel_29.add(btnAnadirSaldo);
