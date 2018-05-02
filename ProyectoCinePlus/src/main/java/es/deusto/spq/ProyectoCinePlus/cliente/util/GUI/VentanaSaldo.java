@@ -25,6 +25,8 @@ import javax.swing.border.EmptyBorder;
 import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
+
 import javax.swing.JList;
 import javax.swing.JSlider;
 import javax.swing.JComboBox;
@@ -75,7 +77,7 @@ public class VentanaSaldo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaSaldo(CinePlusController controller, final ResourceBundle resourceBundle) {
+	public VentanaSaldo(CinePlusController controller, final ResourceBundle resourceBundle, Usuario userLogeado) {
 		logger.info("VentanaSaldo");
 		// Inicializamos el controlador
 		this.setController(controller);

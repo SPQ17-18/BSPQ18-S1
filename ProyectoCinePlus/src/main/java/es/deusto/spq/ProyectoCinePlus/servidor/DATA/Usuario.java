@@ -15,7 +15,7 @@ public class Usuario implements Serializable{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 2L;
 	private String usuario;
 	private String email;
 	private String nombre;
