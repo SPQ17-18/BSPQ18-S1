@@ -137,6 +137,7 @@ public class VentanaSaldo extends JFrame {
 				}else {
 					limpiarCampos();
 				}
+				
 			}
 		});
 		panel.add(btnRecargarSaldo);
