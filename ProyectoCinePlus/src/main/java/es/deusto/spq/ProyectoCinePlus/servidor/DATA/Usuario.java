@@ -1,5 +1,6 @@
 package es.deusto.spq.ProyectoCinePlus.servidor.DATA;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.jdo.annotations.Inheritance;
@@ -9,8 +10,9 @@ import javax.jdo.annotations.PersistenceCapable;
 
 @PersistenceCapable
 @Inheritance(strategy = InheritanceStrategy.NEW_TABLE)
-public class Usuario {
+public class Usuario implements Serializable{
 
+	private static final long serialVersionUID = 1L;
 	private String usuario;
 	private String email;
 	private String nombre;
@@ -36,6 +38,20 @@ public class Usuario {
 		this.pais = pais;
 		this.admin = admin;
 		this.saldo = 0;
+		this.peliculasList = peliculasList;
+	}
+	
+	public Usuario(String usuario, String email, String nombre, String apellido, String password, String pais,
+			boolean admin, float saldo, List<Pelicula> peliculasList) {
+		super();
+		this.usuario = usuario;
+		this.email = email;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.password = password;
+		this.pais = pais;
+		this.admin = admin;
+		this.saldo = saldo;
 		this.peliculasList = peliculasList;
 	}
 	
@@ -125,6 +141,12 @@ public class Usuario {
 			this.peliculasList.add(user.getPeliculasList().get(i));
 		}
 		
+	}
+	@Override
+	public String toString() {
+		return "Usuario [usuario=" + usuario + ", email=" + email + ", nombre=" + nombre + ", apellido=" + apellido
+				+ ", password=" + password + ", pais=" + pais + ", admin=" + admin + ", saldo=" + saldo
+				+ ", peliculasList=" + peliculasList + "]";
 	}
 	
 }

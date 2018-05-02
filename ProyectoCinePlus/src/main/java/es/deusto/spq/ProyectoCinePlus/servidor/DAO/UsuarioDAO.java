@@ -142,25 +142,18 @@ public class UsuarioDAO implements IUsuarioDAO{
 		
 		Transaction tx = pm.currentTransaction();
 		Usuario usuario = new Usuario();
+		//Usuario usuario = null;
 	    
 		try {
-			logger.info("   * Querying a Product: " + username);
+			logger.info("   * Querying a Product: " + email);
 			
 			tx.begin();
 	    	Query<?> query = pm.newQuery("SELECT FROM " + Usuario.class.getName() + " WHERE email == '" + email + "'");
 	    	query.setUnique(true);
-	    	Usuario result = (Usuario) query.execute();
+	    	//usuario = (Usuario)query.execute();
+	    	Usuario result = (Usuario)query.execute();
 	    	usuario.copiarUsuario(result);
 	    	
-	    	/*tx.begin();
-			Extent<Usuario> ex = pm.getExtent(Usuario.class, true);
-			for (Usuario u : ex) {
-				if (u.getEmail().equals(email)) {
-					usuario= new Usuario(u.getUsuario(),u.getEmail(),u.getNombre(),u.getApellido(),u.getPassword(),u.getPais(),false,u.getPeliculasList());
-					usuario.setSaldo(u.getSaldo());
-				}
-			}*/
-			
  	    	tx.commit();
    	    
 	     } catch (Exception ex) {
@@ -172,7 +165,9 @@ public class UsuarioDAO implements IUsuarioDAO{
 				
 	   		pm.close();
 	     }
-
+		
+		logger.info("QUERY getUsuario: "+usuario);
+		
 	    return usuario;
 	}	
 	

@@ -23,6 +23,7 @@ import javax.swing.border.EmptyBorder;
 import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 import javax.swing.JPasswordField;
 
@@ -58,6 +59,8 @@ public class VentanaLogin extends JFrame {
 	private JLabel lblIniciaSesion;
 	private JPasswordField passwordField;
 	protected ResourceBundle resourceBundle;
+	
+	protected Usuario userLogeado;
 
 	static Logger logger = Logger.getLogger(VentanaLogin.class.getName());
 
@@ -127,9 +130,10 @@ public class VentanaLogin extends JFrame {
 							/******/
 							
 							//Obtener usuario a partir del email
-							//Usuario userLogeado = controller.DevolverUsuario(email);
-							//logger.info(userLogeado);
-							
+							String email = textFieldUsuario.getText();
+							logger.info("USUARIO: "+ email);
+							Usuario userLogeado = controller.DevolverUsuario(email);
+							logger.info("***USUARIO LOGEADO: *** "+ userLogeado);
 							
 							/******/
 							
