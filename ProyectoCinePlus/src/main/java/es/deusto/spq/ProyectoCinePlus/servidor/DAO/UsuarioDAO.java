@@ -33,10 +33,11 @@ public class UsuarioDAO implements IUsuarioDAO{
 		boolean resul = false;
 		if (!this.checkUser(usuario)) {
 			resul = this.storeObject(usuario);
+			logger.info("usuario almacenado: "+usuario.toString());
 		} else {
 			logger.info("The user mail " + usuario.getEmail() + " already exists");
 		}
-		logger.info("usuario almacenado: "+usuario.toString());
+		
 		return resul;
 	}
 	
