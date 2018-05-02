@@ -104,6 +104,8 @@ public class VentanaUsuario extends JFrame {
 	private JButton btnBuscar;
 	private List<Pelicula> prueba=new ArrayList<Pelicula>();
 	static Logger logger = Logger.getLogger(VentanaUsuario.class.getName());
+	private JPanel panel_SUP;
+	private JPanel panel_INF;
 	
 	
 	//public static VentanaUsuario frame;
@@ -240,6 +242,7 @@ public class VentanaUsuario extends JFrame {
 				VentanaSaldo ventanaSaldo = new VentanaSaldo(controller,resourceBundle,userLogeado);
 				ventanaSaldo.setVisible(true);
 				//VentanaUsuario.frame.setVisible(false);
+				dispose();
 			}
 		});
 		panel_29.add(btnAnadirSaldo);
@@ -266,26 +269,43 @@ public class VentanaUsuario extends JFrame {
 		
 		panel_12 = new JPanel();
 		panel_5.add(panel_12, BorderLayout.NORTH);
-		panel_12.setLayout(new GridLayout(0, 6, 0, 0));
+		panel_12.setLayout(new GridLayout(0, 1, 0, 0));
+		List<String> lo = null;
+		try {
+			lo = controller.ObtenerAnyo();
+		} catch (RemoteException e1) {
+			e1.printStackTrace();
+		}
+		List<String> ls = null;
+		try {
+			ls = controller.ObtenerGenero();
+		} catch (RemoteException e1) {
+			e1.printStackTrace();
+		}
+		
+		panel_SUP = new JPanel();
+		panel_12.add(panel_SUP);
+		panel_SUP.setLayout(new GridLayout(0, 3, 0, 0));
 		
 		panel_24 = new JPanel();
-		panel_12.add(panel_24);
+		panel_SUP.add(panel_24);
 		
 		lblNombre = new JLabel(resourceBundle.getString("title_msg"));
 		panel_24.add(lblNombre);
 		
 		panel_25 = new JPanel();
-		panel_12.add(panel_25);
+		panel_SUP.add(panel_25);
 		
 		textFieldNombrePeli = new JTextField();
 		panel_25.add(textFieldNombrePeli);
 		textFieldNombrePeli.setColumns(15);//FIXME 10
 		//////////////////
 		panel_30= new JPanel();
+		panel_SUP.add(panel_30);
 		
 
 		
-		btnBuscar = new JButton(resourceBundle.getString("logout_msg"));//FIXME cambiar esto por: buscar
+		btnBuscar = new JButton(resourceBundle.getString("find_msg"));//FIXME cambiar esto por: buscar
 		btnBuscar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				logger.info("Boton busqueda");
@@ -313,43 +333,34 @@ public class VentanaUsuario extends JFrame {
 			}
 		});
 		panel_30.add(btnBuscar);
-		panel_12.add(panel_30);
+		
+		panel_INF = new JPanel();
+		panel_12.add(panel_INF);
+		panel_INF.setLayout(new GridLayout(0, 4, 0, 0));
 		
 		panel_22 = new JPanel();
-		panel_12.add(panel_22);
+		panel_INF.add(panel_22);
 		
 		lblAnio = new JLabel(resourceBundle.getString("year_msg"));
 		panel_22.add(lblAnio);
 		
 		panel_21 = new JPanel();
-		panel_12.add(panel_21);
+		panel_INF.add(panel_21);
 		
 		comboBoxAnio = new JComboBox<Object>();
-		List<String> lo = null;
-		try {
-			lo = controller.ObtenerAnyo();
-		} catch (RemoteException e1) {
-			e1.printStackTrace();
-		}
 		comboBoxAnio.setModel(new DefaultComboBoxModel(lo.toArray()));
 		panel_21.add(comboBoxAnio);
 		
 		panel_23 = new JPanel();
-		panel_12.add(panel_23);
+		panel_INF.add(panel_23);
 		
 		lblGnero = new JLabel(resourceBundle.getString("kind_msg"));
 		panel_23.add(lblGnero);
 		
 		panel_20 = new JPanel();
-		panel_12.add(panel_20);
+		panel_INF.add(panel_20);
 		
 		comboBox = new JComboBox<Object>();
-		List<String> ls = null;
-		try {
-			ls = controller.ObtenerGenero();
-		} catch (RemoteException e1) {
-			e1.printStackTrace();
-		}
 		comboBox.setModel(new DefaultComboBoxModel(ls.toArray()));
 		panel_20.add(comboBox);
 		

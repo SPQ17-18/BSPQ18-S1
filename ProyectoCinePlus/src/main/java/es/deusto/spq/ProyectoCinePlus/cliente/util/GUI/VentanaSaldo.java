@@ -133,6 +133,8 @@ public class VentanaSaldo extends JFrame {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+					VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
+					ventanaUsuario.setVisible(true);
 					dispose();
 				}else {
 					limpiarCampos();
