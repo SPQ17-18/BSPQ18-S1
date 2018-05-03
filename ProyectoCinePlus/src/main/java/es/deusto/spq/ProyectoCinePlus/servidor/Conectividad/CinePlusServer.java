@@ -25,6 +25,8 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	static Logger logger = Logger.getLogger(CinePlusServer.class.getName());
 	private static final long serialVersionUID = 1L;
 	public static String pathn=(System.getProperty("user.dir")+ "\\src\\main\\resources\\images\\films\\");
+	
+	
 	public CinePlusServer () throws RemoteException{
 		super();
 		Usuario mikel = new Usuario("mikel", "mikelspq@gmail.com", "mikel", "fernandez", "spq", "españa", false);
@@ -65,7 +67,7 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 		List<Pelicula> a=new ArrayList<Pelicula>();
 		List<Pelicula> aux=new ArrayList<Pelicula>();
 		a=peliculaDAO.getPeliculas(nombre,anyo,genero);
-		System.out.println("ESTOY EN CINEPLUS TAMAÑO="+a.size());
+		logger.debug("ESTOY EN CINEPLUS TAMAÑO="+a.size());
 		String nombre1=nombre.toLowerCase();
 		String anyo1=anyo.toLowerCase();
 		String genero1=genero.toLowerCase();
@@ -73,12 +75,12 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 //		for(Pelicula p:a) {
 		int cont=0;
 		for(Pelicula p:a) {
-			System.out.println("CONT p1="+cont);
+			logger.debug("CONT p1="+cont);
 			try {
 			System.out.println(p.getNombre());
 			}catch(NullPointerException e) {
-				System.out.println("CONT p2="+cont);
-				System.out.println("Null pointer");
+				logger.debug("CONT p2="+cont);
+				logger.debug("Null pointer");
 			}
 		}
 		for(int j=0;j<a.size();j++) {
@@ -87,17 +89,17 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 			String nom=a.get(j).getNombre().toLowerCase();
 			String any=""+a.get(j).getAnyo();
 			String gen=a.get(j).getCategoria().toLowerCase();
-			System.out.println("NOMBRE PARAM="+nombre1);
-			System.out.println("NOMBRE PELI="+nom);
-			System.out.println("anyo PARAM="+anyo1);
-			System.out.println("anyo PELI="+any);
-			System.out.println("genero PARAM="+genero1);
-			System.out.println("genero PELI="+gen);
+			logger.debug("NOMBRE PARAM="+nombre1);
+			logger.debug("NOMBRE PELI="+nom);
+			logger.debug("anyo PARAM="+anyo1);
+			logger.debug("anyo PELI="+any);
+			logger.debug("genero PARAM="+genero1);
+			logger.debug("genero PELI="+gen);
 			if(nom.contains(nombre1) && anyo1.equals(any) && genero1.equals(gen)) {
-				System.out.println("AÑADIENDO PELI="+a.get(j));
-				System.out.println("A LA LISTA AUX DE TAMAÑO="+aux.size());
+				logger.debug("AÑADIENDO PELI="+a.get(j));
+				logger.debug("A LA LISTA AUX DE TAMAÑO="+aux.size());
 				aux.add(a.get(j));
-				System.out.println("Se ha añadido el p="+a.get(j).getDescripcion());
+				logger.debug("Se ha añadido el p="+a.get(j).getDescripcion());
 			}
 		//}
 		//System.out.println("aux 1="+aux.get(0).getId_pelicula());
