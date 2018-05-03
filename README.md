@@ -24,7 +24,18 @@ Repository for Team BSPQ18-S1
               ⭕ Sistema de registro de usuario.
               ⭕ Sistema de login.
               ⭕ Ventana de perfil personal.
+              ⭕ Resource Bundle.
+              ⭕ Documentación Sprint1.
         
-###### ⬜ SPRINT 2:
+###### ✅ SPRINT 2:
+       
+        - Tareas a realizar:
+              ⭕ Sistema Buscar películas.
+              ⭕ Sistema de añadir saldo
+              ⭕ Loggers.
+              ⭕ JUnit.
+              ⭕ Cobertura.
+              ⭕ VisualVM.
+              ⭕ Documentación Sprint2.
        
 ###### ⬜ SPRINT 3:
