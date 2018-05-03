@@ -9,12 +9,15 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
+
+import org.apache.log4j.Logger;
+
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 
 public class PeliculaDAO implements IPeliculaDAO{
 
 	private PersistenceManagerFactory pmf;
-
+	static Logger logger = Logger.getLogger(PeliculaDAO.class.getName());
 
 	public PeliculaDAO(){
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
@@ -30,11 +33,11 @@ public class PeliculaDAO implements IPeliculaDAO{
 	   
 	    try {
 	       tx.begin();
-	       System.out.println("   * Storing an object: " + Pelicula);
+	       logger.info("   * Storing an object: " + Pelicula);
 	       pm.makePersistent(Pelicula);
 	       tx.commit();
 	    } catch (Exception ex) {
-	    	System.out.println("   $ Error storing an object: " + ex.getMessage());
+	    	logger.error("   $ Error storing an object: " + ex.getMessage());
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -71,7 +74,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 			
 	        tx.commit();
 	    } catch (Exception ex) {
-	    	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
+	    	logger.error("   $ Error retreiving an extent: " + ex.getMessage());
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
@@ -92,13 +95,13 @@ public class PeliculaDAO implements IPeliculaDAO{
 		List<Pelicula> Peliculas = new ArrayList<Pelicula>();
 	    
 		try {
-			System.out.println ("   * Querying a Product: " + nombre+anyo+genero);
+			logger.info ("   * Querying a Product: " + nombre+anyo+genero);
 			String a="%"+nombre+"%";
 	    	tx.begin();
 	    	Extent<Pelicula> extent = pm.getExtent(Pelicula.class, true);
 	    	Query<Pelicula> query=null;
 //	    	if(anyo.equals("a") && genero.equals("a")) {
-	    		System.out.println("ENTRA");
+	    		logger.debug("ENTRA");
 //	    		query = pm.newQuery("SELECT FROM " + Pelicula.class.getName() + " WHERE nombre.startsWith(\""+a+"\")");}//FIXME conseguir que funcionen los filtros
     			query = pm.newQuery("SELECT FROM " + Pelicula.class.getName());//}
 //	    		query = pm.newQuery(extent,"SELECT FROM " + Pelicula.class.getName() + " WHERE :nombre.startsWith(cadena)");}
@@ -110,9 +113,9 @@ public class PeliculaDAO implements IPeliculaDAO{
 //	    	else {    	
 //	    	query = pm.newQuery(extent,"SELECT FROM pelicula WHERE nombre LIKE '%" + nombre + "%' AND anyo ='" + anyo + "' AND categoria='"+genero+"'");
 //	    	}
-	    	System.out.println("SIGUE");
+    			logger.debug("SIGUE");
 	    	Peliculas= (List<Pelicula>)query.execute();
-	    	System.out.println("LISTA="+Peliculas.get(0));
+	    	logger.debug("LISTA="+Peliculas.get(0));
 //			for (Pelicula Pelicula : (List<Pelicula>)query.execute()) {
 //				System.out.println("PELICULA DE LA BD="+Pelicula);
 //				Peliculas.add(Pelicula);
@@ -121,7 +124,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	        tx.commit();
    	    
 	     } catch (Exception ex) {
-		   	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
+	    	 logger.error("   $ Error retreiving an extent: " + ex.getMessage());
 	     } finally {
 		   	if (tx != null && tx.isActive()) {
 		   		tx.rollback();
@@ -150,7 +153,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    	tx.commit();
    	    
 	     } catch (Exception ex) {
-		   	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
+	    	 logger.error("   $ Error retreiving an extent: " + ex.getMessage());
 	     } finally {
 		   	if (tx != null && tx.isActive()) {
 		   		tx.rollback();
@@ -178,7 +181,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    	tx.commit();
    	    
 	     } catch (Exception ex) {
-		   	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
+	    	logger.error("   $ Error retreiving an extent: " + ex.getMessage());
 	     } finally {
 		   	if (tx != null && tx.isActive()) {
 		   		tx.rollback();
@@ -198,7 +201,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 		Pelicula Pelicula = null;
 	    
 		try {
-			System.out.println ("   * Querying a Product: " + name);
+			logger.info("   * Querying a Product: " + name);
 			String a="%"+name+"%";
 	    	tx.begin();
 //	    	Query<?> query = pm.newQuery("SELECT FROM " + Pelicula.class.getName() + " WHERE nombre == '" + name + "'");
@@ -209,7 +212,7 @@ public class PeliculaDAO implements IPeliculaDAO{
  	    	tx.commit();
    	    
 	     } catch (Exception ex) {
-		   	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
+	    	 logger.error("   $ Error retreiving an extent: " + ex.getMessage());
 	     } finally {
 		   	if (tx != null && tx.isActive()) {
 		   		tx.rollback();
@@ -231,7 +234,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    	pm.makePersistent(Pelicula);
 	    	tx.commit();
 	     } catch (Exception ex) {
-		   	System.out.println("   $ Error retreiving an extent: " + ex.getMessage());
+	    	 logger.error("   $ Error retreiving an extent: " + ex.getMessage());
 	     } finally {
 		   	if (tx != null && tx.isActive()) {
 		   		tx.rollback();
