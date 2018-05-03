@@ -27,9 +27,6 @@ public class PeliculaTest {
         
         listUsuarios.add(spq);
         
-        //UsuarioDAO usuarioDAO=new UsuarioDAO();
-        //PeliculaDAO peliculaDAO= new PeliculaDAO();
-        
 		pelicula1 = new Pelicula (1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 14,listUsuarios,"14");
 		pelicula2 = new Pelicula (2, "Alternativa", 140, "vida de prisioneros 2", 1995, "Suspense", 15,listUsuarios,"15");
 	}
