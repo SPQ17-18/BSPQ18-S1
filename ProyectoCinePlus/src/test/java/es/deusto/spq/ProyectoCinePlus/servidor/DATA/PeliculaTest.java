@@ -30,8 +30,8 @@ public class PeliculaTest {
         //UsuarioDAO usuarioDAO=new UsuarioDAO();
         //PeliculaDAO peliculaDAO= new PeliculaDAO();
         
-		pelicula1 = new Pelicula (1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 14, listUsuarios,"14");
-		pelicula2 = new Pelicula (2, "Alternativa", 140, "vida de prisioneros 2", 1995, "Suspense", 15, listUsuarios,"15");
+		pelicula1 = new Pelicula (1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 14,listUsuarios,"14");
+		pelicula2 = new Pelicula (2, "Alternativa", 140, "vida de prisioneros 2", 1995, "Suspense", 15,listUsuarios,"15");
 	}
 
 
@@ -42,17 +42,17 @@ public class PeliculaTest {
 		assertEquals("vida de prisioneros", pelicula1.getDescripcion());
 		assertEquals(1994, pelicula1.getAnyo());
 		assertEquals("Drama", pelicula1.getCategoria());
-		assertEquals("14", pelicula1.getPrecio());
+		assertEquals("14.0", String.valueOf(pelicula1.getPrecio()));
 	}
 	
 	@Test
 	public void comprobarcamposPelicula2test() {
 		assertEquals("Alternativa", pelicula2.getNombre());
 		assertEquals(140, pelicula2.getDuracion());
-		assertEquals("vida de prisioneros", pelicula2.getDescripcion());
+		assertEquals("vida de prisioneros 2", pelicula2.getDescripcion());
 		assertEquals(1995, pelicula2.getAnyo());
 		assertEquals("Suspense", pelicula2.getCategoria());
-		assertEquals("15", pelicula2.getPrecio());
+		assertEquals("15.0", String.valueOf(pelicula2.getPrecio()));
 	}
 
 

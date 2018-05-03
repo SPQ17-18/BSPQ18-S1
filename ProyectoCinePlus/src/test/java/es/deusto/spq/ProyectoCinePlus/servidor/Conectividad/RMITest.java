@@ -243,7 +243,7 @@ public class RMITest {
 		
 		
 		logger.info("Si es TRUE, no se ha podido registar");
-		assertTrue( resul );
+		assertFalse( resul );
 	}
 	
 
