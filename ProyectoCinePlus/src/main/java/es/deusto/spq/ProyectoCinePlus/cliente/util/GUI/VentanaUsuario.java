@@ -337,11 +337,11 @@ public class VentanaUsuario extends JFrame {
 				if(comboBoxAnio.getSelectedItem().toString()!=null) {anyo=comboBoxAnio.getSelectedItem().toString();}
 				String genero="a";
 				if(comboBoxAnio.getSelectedItem().toString()!=null) {genero=comboBox.getSelectedItem().toString();}
-				System.out.println(nombre);
-				System.out.println(anyo);
-				System.out.println(genero);
+				logger.debug(nombre);
+				logger.debug(anyo);
+				logger.debug(genero);
 				try {
-					System.out.println("Entra en el try");
+					logger.debug("Entra en el try");
 					prueba=controller.Busqueda(nombre, anyo, genero);
 				} catch (Exception e) {
 					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_in_search_msg"), resourceBundle.getString("error_in_search_msg"),

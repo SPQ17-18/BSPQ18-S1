@@ -66,6 +66,7 @@ public class RMITest {
 			ie.printStackTrace();
 		}
 		
+		//Lanzar servidor
 		class RMIServerRunnable implements Runnable {
 
 			public void run() {
