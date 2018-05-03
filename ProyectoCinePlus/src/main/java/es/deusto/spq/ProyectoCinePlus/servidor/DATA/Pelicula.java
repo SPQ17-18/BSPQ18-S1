@@ -10,7 +10,7 @@ import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.PrimaryKey;
 
-@PersistenceCapable
+@PersistenceCapable (detachable = "true")
 @Inheritance(strategy = InheritanceStrategy.NEW_TABLE)
 public class Pelicula implements Serializable{
 	
