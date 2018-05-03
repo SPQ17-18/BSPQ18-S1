@@ -9,13 +9,15 @@ import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.PrimaryKey;
 
-@PersistenceCapable
+
+@PersistenceCapable (detachable = "true")
 @Inheritance(strategy = InheritanceStrategy.NEW_TABLE)
 public class Usuario implements Serializable{
 
 	/**
 	 * 
 	 */
+	
 	private static final long serialVersionUID = 2L;
 	private String usuario;
 	@PrimaryKey
@@ -26,6 +28,8 @@ public class Usuario implements Serializable{
 	private String pais;
 	private boolean admin;
 	private float saldo;
+	
+//	@Persistent(defaultFetchGroup="true", mappedBy="user", dependentElement="true")
 //	@Join
 //	private List<Pelicula> peliculasList = new ArrayList<Pelicula>();
 
