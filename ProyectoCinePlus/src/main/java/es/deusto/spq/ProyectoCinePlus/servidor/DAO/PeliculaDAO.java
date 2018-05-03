@@ -64,7 +64,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    List<Pelicula> Peliculas = new ArrayList<Pelicula>();
 	        
 	    try {
-	    	System.out.println("   * Executing a Query for Products given a condition: " + condition);
+	    	logger.info("   * Executing a Query for Products given a condition: " + condition);
 	    	tx.begin();	    	
 			Extent<Pelicula> extent = pm.getExtent(Pelicula.class, true);
 			Query<Pelicula> query = pm.newQuery(extent, condition);
