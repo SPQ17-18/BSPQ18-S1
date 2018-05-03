@@ -12,7 +12,6 @@ import javax.jdo.Transaction;
 
 import org.apache.log4j.Logger;
 
-import es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaSaldo;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 
@@ -66,9 +65,6 @@ public class UsuarioDAO implements IUsuarioDAO{
 	
 	public List<Usuario> getUsuarios() {
 		PersistenceManager pm = pmf.getPersistenceManager();
-		/* By default only 1 level is retrieved from the db
-		 * so if we wish to fetch more than one level, we must indicate it
-		 */
 		pm.getFetchPlan().setMaxFetchDepth(3);
 		
 		Transaction tx = pm.currentTransaction();
@@ -143,15 +139,13 @@ public class UsuarioDAO implements IUsuarioDAO{
 		
 		Transaction tx = pm.currentTransaction();
 		Usuario usuario = new Usuario();
-		//Usuario usuario = null;
-	    
+
 		try {
 			logger.info("   * Querying a Product: " + email);
 			
 			tx.begin();
 	    	Query<?> query = pm.newQuery("SELECT FROM " + Usuario.class.getName() + " WHERE email == '" + email + "'");
 	    	query.setUnique(true);
-	    	//usuario = (Usuario)query.execute();
 	    	Usuario result = (Usuario)query.execute();
 	    	usuario.copiarUsuario(result);
 	    	
@@ -197,7 +191,6 @@ public class UsuarioDAO implements IUsuarioDAO{
 
 
 	public boolean loginUser(String email, String password) {
-		// TODO Auto-generated method stub
 		boolean resul = false;
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx = pm.currentTransaction();
@@ -226,7 +219,6 @@ public class UsuarioDAO implements IUsuarioDAO{
 
 
 	public boolean checkUser(Usuario usuario) {
-		// TODO Auto-generated method stub
 		boolean resul = false;
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx = pm.currentTransaction();
@@ -255,7 +247,6 @@ public class UsuarioDAO implements IUsuarioDAO{
 
 
 	public List<UsuarioDAO> getClientes() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 	

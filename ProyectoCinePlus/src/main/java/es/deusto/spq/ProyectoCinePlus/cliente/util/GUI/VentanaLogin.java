@@ -82,7 +82,6 @@ public class VentanaLogin extends JFrame {
 		}
 		setIconImage(img);
 
-		// setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource(VentanaPrincipal.pathn+"logocuadrado50.png")));
 
 		setTitle(resourceBundle.getString("title_login_msg"));
 		setBounds(100, 100, 450, 300);

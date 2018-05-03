@@ -131,7 +131,6 @@ public class VentanaUsuario extends JFrame {
 		} catch (IOException e) {
 		}
 		setIconImage(img);
-		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaUsuario.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, anchuraPanel, alturaPanel);
 		contentPane = new JPanel();
@@ -154,8 +153,6 @@ public class VentanaUsuario extends JFrame {
 		} catch (IOException e) {
 		}
 		ImageIcon a1=new ImageIcon(img2);
-		
-		//lblLogo.setIcon(new ImageIcon(VentanaUsuario.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logo300.png")));
 		panel.add(lblLogo);
 		
 		panel_11 = new JPanel();
@@ -214,12 +211,7 @@ public class VentanaUsuario extends JFrame {
 		
 		lblnumPelis = new JLabel("0");
 		lblnumPelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
-		panel_17.add(lblnumPelis);
-		//FIXME hay que restaurarlo de alguna otra manera
-//		lblnumpelis = new JLabel(String.valueOf(userLogeado.getPeliculasList().size()));
-//		lblnumpelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
-//		panel_17.add(lblnumpelis);
-		
+		panel_17.add(lblnumPelis);	
 		
 		panel_19 = new JPanel();
 		panel_7.add(panel_19);
@@ -251,8 +243,7 @@ public class VentanaUsuario extends JFrame {
 				logger.info("Boton añadir saldo");
 				VentanaSaldo ventanaSaldo = new VentanaSaldo(controller,resourceBundle,userLogeado);
 				ventanaSaldo.setVisible(true);
-				//VentanaUsuario.frame.setVisible(false);
-				dispose();
+					dispose();
 			}
 		});
 		panel_29.add(btnAnadirSaldo);
@@ -272,13 +263,9 @@ public class VentanaUsuario extends JFrame {
 		
 		panel_9 = new JPanel();
 		panel_4.add(panel_9, BorderLayout.EAST);
-		//FIXME
 		panel_5 = new JPanel();
 		panel_4.add(panel_5, BorderLayout.CENTER);
 		panel_5.setLayout(new GridLayout(3,3));
-//		panel_5 = new JPanel();
-//		panel_4.add(panel_5, BorderLayout.CENTER);
-//		panel_5.setLayout(new BorderLayout(0, 0));
 		panel_12 = new JPanel();
 		panel_5.add(panel_12, BorderLayout.NORTH);
 		panel_12.setLayout(new GridLayout(0, 1, 0, 0));
@@ -310,30 +297,20 @@ public class VentanaUsuario extends JFrame {
 		
 		textFieldNombrePeli = new JTextField();
 		panel_25.add(textFieldNombrePeli);
-		textFieldNombrePeli.setColumns(15);//FIXME 10
-		//////////////////
+		textFieldNombrePeli.setColumns(15);
+
 		panel_30= new JPanel();
 		panel_SUP.add(panel_30);
 		
-		//FIXME variables del gridlayout
-		
-
 		
 		
 		
-		
-		/////////////////
-		
-		
-		
-		btnBuscar = new JButton(resourceBundle.getString("find_msg"));//FIXME cambiar esto por: buscar
+		btnBuscar = new JButton(resourceBundle.getString("find_msg"));
 		btnBuscar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				logger.info("Boton busqueda");
-				//TODO añadir la busqueda y linkearlo con la lista de pelis que se muestra
 				String nombre=textFieldNombrePeli.getText();
 				String anyo="a";
-				//FIXME el toString da nullpointer
 				if(comboBoxAnio.getSelectedItem().toString()!=null) {anyo=comboBoxAnio.getSelectedItem().toString();}
 				String genero="a";
 				if(comboBoxAnio.getSelectedItem().toString()!=null) {genero=comboBox.getSelectedItem().toString();}
@@ -349,7 +326,6 @@ public class VentanaUsuario extends JFrame {
 					logger.info("Busqueda sin resultados");
 					e.printStackTrace();
 				}
-				//TODO aqui meter el codigo de mostrar los paneles una vez que tengamos la lista
 				
 				List<String> Pelis = new ArrayList<String>();
 			    for (int index = 0; index < prueba.size(); index++) {
@@ -357,28 +333,16 @@ public class VentanaUsuario extends JFrame {
 			    }
 			    String[] projectNames = Pelis.toArray(new String[0]);
 
-			    // Adding buttons to the project
 			    JButton[] buttons = new JButton[Pelis.size()];
 			    try {
 			    	panel_26.removeAll();
 			    	panel_26.revalidate();
 			    	panel_26.repaint();
-			        for (int i = 0; i < projectNames.length; i++) {
-			        	
+			        for (int i = 0; i < projectNames.length; i++) {	
 			            buttons[i] = new JButton(projectNames[i]);
-			            //buttons[i].addActionListener(this);
-
-			        //    System.out.println("IMAGEN="+bi.toString());
-			        //    System.out.println("PATH="+VentanaPrincipal.pathn+"films\\"+prueba.get(i).getPortada()+".jpg");
 			            Image img = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+prueba.get(i).getPortada()+".jpg"));
 			            buttons[i].setIcon(new ImageIcon(img));
-			        //    ImageIcon a=new ImageIcon(bi);
-			        //    JLabel la=new JLabel();
-			        //    la.setIcon(a);
-			           // buttons[i].setIcon((Icon) la);
 			            panel_26.add(buttons[i]);
-			         //   panel_26.repaint(); //TODO meter el refresco
-
 			        }
 			    }catch(Exception e) {}
 			    

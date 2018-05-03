@@ -96,7 +96,6 @@ public class VentanaRegistro extends JFrame {
 		} catch (IOException e) {
 		}
 		setIconImage(img);
-		//setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaRegistro.class.getResource("/es/deusto/spq/ProyectoCinePlus/cliente/util/Resources/Imagenes/logocuadrado50.png")));
 		setTitle(resourceBundle.getString("title_register_users_msg"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 350);
@@ -263,12 +262,9 @@ public class VentanaRegistro extends JFrame {
 										textFieldPais.getText(),
 										false);
 							} catch (RemoteException e2) {
-								// TODO Auto-generated catch block
 								e2.printStackTrace();
 							}
-			
-							//VentanaUsuario ventanaUsuario = new VentanaUsuario(VentanaRegistro.this.controller, resourceBundle);
-							//ventanaUsuario.setVisible(true);
+
 							VentanaPrincipal.frame.setVisible(true);
 							dispose();
 						}

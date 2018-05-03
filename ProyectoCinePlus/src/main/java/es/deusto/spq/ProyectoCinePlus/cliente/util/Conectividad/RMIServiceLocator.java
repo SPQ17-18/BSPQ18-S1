@@ -21,7 +21,6 @@ public class RMIServiceLocator {
 			ICP = (ICinePlus) java.rmi.Naming.lookup(name);
 
 		} catch (Exception e) {
-			System.err.println("- Exception running CinePlus: " + e.getMessage());
 			e.printStackTrace();
 		}
 	}

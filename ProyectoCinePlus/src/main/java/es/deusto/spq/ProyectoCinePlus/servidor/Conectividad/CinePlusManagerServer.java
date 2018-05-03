@@ -9,8 +9,6 @@ import java.rmi.RemoteException;
 
 import org.apache.log4j.Logger;
 
-import es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaRegistro;
-
 
 public class CinePlusManagerServer  {
 	static Logger logger = Logger.getLogger(CinePlusManagerServer.class.getName());
@@ -76,7 +74,6 @@ public class CinePlusManagerServer  {
 					murle.printStackTrace();
 					System.exit(-1);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 

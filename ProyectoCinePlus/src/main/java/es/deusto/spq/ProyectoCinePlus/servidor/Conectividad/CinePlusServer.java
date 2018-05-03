@@ -1,25 +1,18 @@
 package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.imageio.ImageIO;
-
 import org.apache.log4j.Logger;
 
-import es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.PeliculaDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
-	//Maantener esto para unir sesion de usuario/servidor para los metodos o(?)
 	private UsuarioDAO usuarioDAO;
 	private PeliculaDAO peliculaDAO;
 	static Logger logger = Logger.getLogger(CinePlusServer.class.getName());
@@ -31,7 +24,6 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 		super();
 		Usuario mikel = new Usuario("mikel", "mikelspq@gmail.com", "mikel", "fernandez", "spq", "españa", false);
 		Usuario spq = new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false);
-		//FIXME meter dos try catch para los duplicados(?)
 		List<Usuario> listUsuarios=new ArrayList<>();
         listUsuarios.add(spq);
 		usuarioDAO=new UsuarioDAO();
@@ -61,7 +53,6 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 
 
 	public synchronized List<Pelicula> Busqueda(String nombre, String anyo, String genero) {
-//FIXME meter un catch de null pointer
 		logger.info("NOMBRE="+nombre+" anyo="+anyo+" genero="+genero);
 
 		List<Pelicula> a=new ArrayList<Pelicula>();
@@ -71,41 +62,15 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 		String nombre1=nombre.toLowerCase();
 		String anyo1=anyo.toLowerCase();
 		String genero1=genero.toLowerCase();
-		int it=0;
-//		for(Pelicula p:a) {
-		int cont=0;
-		for(Pelicula p:a) {
-			logger.debug("CONT p1="+cont);
-			try {
-			System.out.println(p.getNombre());
-			}catch(NullPointerException e) {
-				logger.debug("CONT p2="+cont);
-				logger.debug("Null pointer");
-			}
-		}
 		for(int j=0;j<a.size();j++) {
-		//	if(it<(a.size()-1)) {//
-			it++;
 			String nom=a.get(j).getNombre().toLowerCase();
 			String any=""+a.get(j).getAnyo();
 			String gen=a.get(j).getCategoria().toLowerCase();
-			logger.debug("NOMBRE PARAM="+nombre1);
-			logger.debug("NOMBRE PELI="+nom);
-			logger.debug("anyo PARAM="+anyo1);
-			logger.debug("anyo PELI="+any);
-			logger.debug("genero PARAM="+genero1);
-			logger.debug("genero PELI="+gen);
 			if(nom.contains(nombre1) && anyo1.equals(any) && genero1.equals(gen)) {
-				logger.debug("AÑADIENDO PELI="+a.get(j));
-				logger.debug("A LA LISTA AUX DE TAMAÑO="+aux.size());
 				aux.add(a.get(j));
-				logger.debug("Se ha añadido el p="+a.get(j).getDescripcion());
 			}
-		//}
-		//System.out.println("aux 1="+aux.get(0).getId_pelicula());
 		}
 		return aux;
-//		return peliculaDAO.getPeliculas(nombre,anyo,genero);
 	}
 	
 	@Override

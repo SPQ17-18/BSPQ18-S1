@@ -96,31 +96,10 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    
 		try {
 			logger.info ("   * Querying a Product: " + nombre+anyo+genero);
-			String a="%"+nombre+"%";
 	    	tx.begin();
-	    	Extent<Pelicula> extent = pm.getExtent(Pelicula.class, true);
 	    	Query<Pelicula> query=null;
-//	    	if(anyo.equals("a") && genero.equals("a")) {
-	    		logger.debug("ENTRA");
-//	    		query = pm.newQuery("SELECT FROM " + Pelicula.class.getName() + " WHERE nombre.startsWith(\""+a+"\")");}//FIXME conseguir que funcionen los filtros
-    			query = pm.newQuery("SELECT FROM " + Pelicula.class.getName());//}
-//	    		query = pm.newQuery(extent,"SELECT FROM " + Pelicula.class.getName() + " WHERE :nombre.startsWith(cadena)");}
-	    	
-	    	
-//	    	else if(anyo.equals("a")) {query = pm.newQuery(extent,"SELECT FROM pelicula WHERE nombre LIKE '%" + nombre + "%' AND categoria='"+genero+"'");}
-//	    	else if(genero.equals("a")) {query = pm.newQuery(extent,"SELECT FROM pelicula WHERE nombre LIKE '%" + nombre + "%' AND categoria='"+genero+"'");}
-	    	
-//	    	else {    	
-//	    	query = pm.newQuery(extent,"SELECT FROM pelicula WHERE nombre LIKE '%" + nombre + "%' AND anyo ='" + anyo + "' AND categoria='"+genero+"'");
-//	    	}
-    			logger.debug("SIGUE");
+    		query = pm.newQuery("SELECT FROM " + Pelicula.class.getName());//}
 	    	Peliculas= (List<Pelicula>)query.execute();
-	    	logger.debug("LISTA="+Peliculas.get(0));
-//			for (Pelicula Pelicula : (List<Pelicula>)query.execute()) {
-//				System.out.println("PELICULA DE LA BD="+Pelicula);
-//				Peliculas.add(Pelicula);
-//			}
-			
 	        tx.commit();
    	    
 	     } catch (Exception ex) {
@@ -204,9 +183,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 			logger.info("   * Querying a Product: " + name);
 			String a="%"+name+"%";
 	    	tx.begin();
-//	    	Query<?> query = pm.newQuery("SELECT FROM " + Pelicula.class.getName() + " WHERE nombre == '" + name + "'");
 	    	Query<?> query = pm.newQuery("SELECT FROM " + Pelicula.class.getName() + " WHERE nombre.startsWith(\""+a+"\")");
-//	    	Query<?> query = pm.newQuery("SELECT FROM " + Pelicula.class.getName());
 	    	query.setUnique(true);
 	    	Pelicula = (Pelicula)query.execute();	    
  	    	tx.commit();

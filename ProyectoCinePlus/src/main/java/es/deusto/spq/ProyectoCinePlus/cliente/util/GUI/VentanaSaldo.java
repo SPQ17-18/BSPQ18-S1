@@ -91,8 +91,6 @@ public class VentanaSaldo extends JFrame {
 		}
 		setIconImage(img);
 
-		// setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaLogin.class.getResource(VentanaPrincipal.pathn+"logocuadrado50.png")));
-
 		setTitle(resourceBundle.getString("title_balance_msg"));
 		setBounds(100, 100, 450, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -120,7 +118,6 @@ public class VentanaSaldo extends JFrame {
 		btnRecargarSaldo = new JButton(resourceBundle.getString("confirm_msg"));
 		btnRecargarSaldo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//aki krear nuevo usuario y pasarselo al dao
 				if(comprobarcampos()) {
 					String saldoS = (String) comboBox.getSelectedItem();
 					float saldoF = Float.parseFloat(saldoS);
@@ -130,7 +127,6 @@ public class VentanaSaldo extends JFrame {
 					try {
 						controller.actualizarUsuario(userLogeado);
 					} catch (RemoteException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 					VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
