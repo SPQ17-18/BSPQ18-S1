@@ -111,6 +111,7 @@ public class VentanaUsuario extends JFrame {
 	static Logger logger = Logger.getLogger(VentanaUsuario.class.getName());
 	private JPanel panel_SUP;
 	private JPanel panel_INF;
+	private JLabel lblnumPelis;
 	
 	
 	//public static VentanaUsuario frame;
@@ -210,6 +211,10 @@ public class VentanaUsuario extends JFrame {
 		
 		separator = new JSeparator();
 		panel_17.add(separator);
+		
+		lblnumPelis = new JLabel("0");
+		lblnumPelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
+		panel_17.add(lblnumPelis);
 		//FIXME hay que restaurarlo de alguna otra manera
 //		lblnumpelis = new JLabel(String.valueOf(userLogeado.getPeliculasList().size()));
 //		lblnumpelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
