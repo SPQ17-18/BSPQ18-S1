@@ -148,7 +148,8 @@ public class VentanaSaldo extends JFrame {
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				logger.info("Boton Atras (Ventana Saldo)");
-				//VentanaUsuario.frame.setVisible(true);
+				VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
+				ventanaUsuario.setVisible(true);
 				dispose();
 			}
 		});
