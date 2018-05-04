@@ -56,7 +56,7 @@ public class PeliculaDAOTest {
 
 		peliculaDAO.storePelicula(alien3);
 		Pelicula prueba2 = peliculaDAO.getPelicula("Alien 3");
-
+		logger.info(prueba2.getNombre());
 		assertEquals("Alien 3", prueba2.getNombre());
 		assertEquals("Terror", prueba2.getCategoria());
 		assertEquals("1979", prueba2.getAnyo());

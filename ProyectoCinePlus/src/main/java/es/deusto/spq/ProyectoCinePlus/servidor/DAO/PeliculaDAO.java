@@ -34,10 +34,12 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    try {
 	       tx.begin();
 	       logger.info("   * Storing an object: " + Pelicula);
+	       
 	       pm.makePersistent(Pelicula);
 	       tx.commit();
+	       logger.info("   * Pelicula: " + Pelicula.getNombre() + " insertada con exito");
 	    } catch (Exception ex) {
-	    	logger.error("   $ Error storing an object: " + ex.getMessage());
+	    	logger.info("La pelicula " + Pelicula.getNombre()+ " ya existe");
 	    } finally {
 	    	if (tx != null && tx.isActive()) {
 	    		tx.rollback();
