@@ -64,17 +64,16 @@ public class UsuarioDAOTest {
 	}
 	
 	@Test
-	public void updateUsuarioTest() throws Exception{
+	public void deleteUsuarioTest() throws Exception{
 		logger.info("Test para hacer un update de usuario");
 		Usuario prueba1 = new Usuario ("MikelSPQ", "prueba1@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "España", false);
 		usuarioDAO.storeUsuario(prueba1);
-		Usuario prueba2 = usuarioDAO.getUsuario("prueba1@gmail.com");
-		
-		prueba1.setUsuario("MikelSPQ_2");
-		usuarioDAO.updateUsuario(prueba1);
+		logger.info("Eliminando usuario");
+		usuarioDAO.deleteUsuario(prueba1);
 		
 		Usuario prueba3 = usuarioDAO.getUsuario("prueba1@gmail.com");
-		assertEquals("MikelSPQ_2",prueba3.getUsuario());
+		logger.info(prueba3.toString());
+		assertEquals(null,prueba3.getNombre());
 
 	}
 	
