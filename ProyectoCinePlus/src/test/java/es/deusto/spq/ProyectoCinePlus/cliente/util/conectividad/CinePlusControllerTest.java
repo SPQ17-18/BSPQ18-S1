@@ -9,7 +9,9 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.PeliculaDAO;
@@ -17,6 +19,8 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CinePlusControllerTest {
 
 	private String usuario;
@@ -63,45 +67,45 @@ public class CinePlusControllerTest {
 	}
 
 	@Test
-	public void RegistrarUsuario1Test() throws RemoteException {
+	public void Test1_RegistrarUsuario1Test() throws RemoteException {
 		assertTrue(rsl.getCinePlusService().registrarUsuario(usuario, email, nombre, apellido, password, pais, admin));
 	}
 
 	@Test
-	public void RegistrarUsuario2Test() throws RemoteException {
+	public void Test2_RegistrarUsuario2Test() throws RemoteException {
 		assertTrue(rsl.getCinePlusService().registrarUsuario(usuario, email, nombre, apellido, password, pais, saldo, admin));
 	}
 	
 	@Test
-	public void LoginUsuarioTest() throws RemoteException {
+	public void Test3_LoginUsuarioTest() throws RemoteException {
 		assertTrue(rsl.getCinePlusService().usuarioRegistrado(usuario, password));
 	}
 	
 	@Test
-	public void ObtenerAnyoTest() throws RemoteException {
+	public void Test4_ObtenerAnyoTest() throws RemoteException {
 		assertTrue(rsl.getCinePlusService().Anyos().size() > 0);
 	}
 	
 	@Test
-	public void ObtenerGeneroTest() throws RemoteException {
+	public void Test5_ObtenerGeneroTest() throws RemoteException {
 		assertTrue(rsl.getCinePlusService().Generos().size() >0);
 	}
 	
 	@Test
-	public void BusquedaTest() throws RemoteException {
+	public void Test6_BusquedaTest() throws RemoteException {
 		assertTrue(rsl.getCinePlusService().Busqueda(nombrePeli, anyo,genero).size() > 0);
 	}
 	
 	@Test
-	public void DevolverUsuarioTest() throws RemoteException {
+	public void Test7_DevolverUsuarioTest() throws RemoteException {
 		assertEquals(rsl.getCinePlusService().devuelveUsuario(email), user);
 	}
 	
-	/*
+	
 	@Test
-	public void eliminarUsuarioTest() throws RemoteException {
+	public void Test8_eliminarUsuarioTest() throws RemoteException {
 		 rsl.getCinePlusService().eliminarUsuario(user);
 	}
-	*/
+	
 	
 }
