@@ -27,6 +27,7 @@ public class Pelicula implements Serializable{
 //	@Join
 //	private List<Usuario> usuariosList = new ArrayList<Usuario>();
 	
+	
 	public Pelicula(int id_pelicula, String nombre, int duracion, String descripcion, int anyo, String categoria,
 			 float precio,  List<Usuario> usuariosList ,String portada) {
 		super();
