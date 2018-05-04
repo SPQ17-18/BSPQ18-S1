@@ -29,7 +29,7 @@ import junit.framework.JUnit4TestAdapter;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CinePlusControllerTest {
-
+/*
 	private String usuario;
 	private String email;
 	private String nombre;
@@ -212,4 +212,5 @@ public class CinePlusControllerTest {
 		}	
 
 	} 
+	*/
 }
