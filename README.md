@@ -31,7 +31,7 @@ Repository for Team BSPQ18-S1
        
         - Tareas a realizar:
               ⭕ Sistema Buscar películas.
-              ⭕ Sistema de añadir saldo
+              ⭕ Sistema de añadir saldo.
               ⭕ Loggers.
               ⭕ JUnit.
               ⭕ Cobertura.
