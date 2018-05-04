@@ -197,13 +197,6 @@ public class RMITest {
 	}
 	
 
-<<<<<<< HEAD
-
-	
-
-=======
->>>>>>> branch 'master' of https://github.com/SPQ17-18/BSPQ18-S1.git
-	
 	@AfterClass static public void tearDown() {
 		try	{
 			rmiServerThread.join();
