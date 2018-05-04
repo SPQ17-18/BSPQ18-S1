@@ -66,12 +66,10 @@ public class UsuarioDAOTest {
 	@Test
 	public void deleteUsuarioTest() throws Exception{
 		logger.info("Test para hacer un update de usuario");
-		Usuario prueba1 = new Usuario ("MikelSPQ", "prueba1@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "España", false);
-		usuarioDAO.storeUsuario(prueba1);
 		logger.info("Eliminando usuario");
-		usuarioDAO.deleteUsuario(prueba1);
+		usuarioDAO.deleteUsuario(xabi);
 		
-		Usuario prueba3 = usuarioDAO.getUsuario("prueba1@gmail.com");
+		Usuario prueba3 = usuarioDAO.getUsuario("Xabi@gmail.com");
 		logger.info(prueba3.toString());
 		assertEquals(null,prueba3.getNombre());
 
@@ -79,12 +77,9 @@ public class UsuarioDAOTest {
 	
 	@Test
 	public void getUsuarioTest() throws Exception{
-
 		logger.info("Test para obtener un usuario de la base de datos");
-		Usuario prueba1 = new Usuario ("MikelSPQ", "prueba1@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "España", false);
-		usuarioDAO.storeUsuario(prueba1);
-		Usuario prueba2 = usuarioDAO.getUsuario("prueba1@gmail.com");
-		assertEquals(prueba1.getEmail(), prueba2.getEmail());
+		Usuario prueba2 = usuarioDAO.getUsuario("Mikel@gmail.com");
+		assertEquals(mikel.getEmail(), prueba2.getEmail());
 	}
 	
 	/*
