@@ -145,10 +145,7 @@ public class Usuario implements Serializable{
 		this.pais = user.pais;
 		this.admin = user.admin;
 		this.saldo = user.saldo;
-//		for (int i = 0; i < user.getPeliculasList().size(); i++) {
-//			this.peliculasList.add(user.getPeliculasList().get(i));
-//		}
-//		
+		
 	}
 	@Override
 	public String toString() {

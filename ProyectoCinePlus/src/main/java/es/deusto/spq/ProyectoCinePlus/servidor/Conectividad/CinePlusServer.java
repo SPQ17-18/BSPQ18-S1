@@ -104,4 +104,8 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 		usuarioDAO.deleteUsuario(user);
 	}
 	
+	public boolean checkUsuario(Usuario user) throws RemoteException {
+		return usuarioDAO.checkUser(user);
+	}
+	
 }
