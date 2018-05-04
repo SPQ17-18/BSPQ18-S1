@@ -16,6 +16,7 @@ public interface IUsuarioDAO {
 	public List<Usuario> getUsuarios(String condition);
 	public Usuario getUsuario(String username);
 	public boolean updateUsuario(Usuario usuario);
+	public void deleteUsuario(Usuario usuario);
 	
 
 	

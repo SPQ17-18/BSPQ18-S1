@@ -21,6 +21,11 @@ public class CinePlusController {
 		return rsl.getCinePlusService().registrarUsuario(usuario, email, nombre, apellido, password, pais, admin);
 	}
 
+	public boolean RegistrarUsuario(String usuario, String email, String nombre, String apellido, String password,
+			String pais, float saldo, boolean admin) throws RemoteException {
+		return rsl.getCinePlusService().registrarUsuario(usuario, email, nombre, apellido, password, pais, saldo, admin);
+	}
+	
 	public boolean LoginUsuario(String usuario, String password) throws RemoteException {
 		return rsl.getCinePlusService().usuarioRegistrado(usuario, password);
 	}
@@ -39,6 +44,10 @@ public class CinePlusController {
 	}
 	public boolean actualizarUsuario(Usuario user)throws RemoteException {
 		return rsl.getCinePlusService().actualizarUsuario(user);
+	}
+	
+	public void eliminarUsuario(Usuario user)throws RemoteException {
+		 rsl.getCinePlusService().eliminarUsuario(user);
 	}
 	
 	public static void main(String[] args) {

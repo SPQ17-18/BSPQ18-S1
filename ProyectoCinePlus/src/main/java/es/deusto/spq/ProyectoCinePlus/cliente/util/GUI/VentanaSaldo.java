@@ -125,7 +125,9 @@ public class VentanaSaldo extends JFrame {
 					userLogeado.setSaldo(saldoF);
 					logger.info(userLogeado);
 					try {
-						controller.actualizarUsuario(userLogeado);
+						//controller.actualizarUsuario(userLogeado);
+						controller.eliminarUsuario(userLogeado);
+						controller.RegistrarUsuario(userLogeado.getUsuario(), userLogeado.getEmail(), userLogeado.getNombre(), userLogeado.getApellido(), userLogeado.getPassword(), userLogeado.getPais(), userLogeado.getSaldo(), userLogeado.isAdmin());
 					} catch (RemoteException e) {
 						e.printStackTrace();
 					}

@@ -45,7 +45,14 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 		return usuarioDAO.storeUsuario(user);
 	}
 
-
+	public synchronized boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password,
+			String pais, float saldo, boolean admin) throws RemoteException {
+				Usuario user = new Usuario (usuario, email, nombre, apellido, password, pais, admin);
+				user.setSaldo(saldo);
+				// 1.- Ese metodo comprueba que no esta el usuario y lo registra
+				return usuarioDAO.storeUsuario(user);
+			}
+	
 	public synchronized boolean usuarioRegistrado (String usuario, String password) throws RemoteException {
 		//1.- Ese metodo comprueba que existe el usuaio y que la contraseña es igual
         return usuarioDAO.loginUser(usuario, password);
@@ -92,4 +99,9 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	public List<String> Generos() throws RemoteException {
 		return peliculaDAO.Generos();
 	}
+	
+	public void eliminarUsuario(Usuario user) throws RemoteException {
+		usuarioDAO.deleteUsuario(user);
+	}
+	
 }

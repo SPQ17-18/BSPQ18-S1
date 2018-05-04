@@ -1,6 +1,7 @@
 package es.deusto.spq.ProyectoCinePlus.servidor.DAO;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import javax.jdo.Extent;
@@ -12,6 +13,7 @@ import javax.jdo.Transaction;
 
 import org.apache.log4j.Logger;
 
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 
@@ -167,6 +169,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 	}	
 	
 	
+	
 	public boolean updateUsuario(Usuario usuario) {
 		boolean resul =false;
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -175,6 +178,11 @@ public class UsuarioDAO implements IUsuarioDAO{
 	    try {
 	    	tx.begin();
 	    	pm.makePersistent(usuario);
+	    	//Query<Usuario> query=null;
+    		//query = pm.newQuery("UPDATE" + Usuario.class.getName() + "SET  saldo = " + usuario.getSaldo() + " WHERE email = '"+ usuario.getEmail() +"'");
+    		//query.executeUpdate();
+    		//
+    		
 	    	tx.commit();
 	    	resul =true;
 	     } catch (Exception ex) {
@@ -251,5 +259,29 @@ public class UsuarioDAO implements IUsuarioDAO{
 	}
 	
 
+	public void deleteUsuario(Usuario usuario) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+
+		try {
+			tx.begin();
+			Query<Usuario> query = pm.newQuery(Usuario.class, "email =='" + usuario.getEmail() + "'");
+			Collection<?> result = (Collection<?>) query.execute();
+			Usuario user = (Usuario) result.iterator().next();
+			query.close(result);
+			pm.deletePersistent(user);
+			tx.commit();
+		} catch (Exception ex) {
+			logger.error( "Error cleaning a film: " + ex.getMessage());
+		
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+}
 	
 }

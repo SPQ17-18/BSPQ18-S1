@@ -26,6 +26,10 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	public boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password, String pais, boolean admin)  throws RemoteException {
 		return cpser.registrarUsuario(usuario, email, nombre, apellido, password, pais, admin);
 	}
+	
+	public boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password, String pais, float saldo, boolean admin)  throws RemoteException {
+		return cpser.registrarUsuario(usuario, email, nombre, apellido, password, pais, saldo, admin);
+	}
 
 	public boolean usuarioRegistrado(String usuario, String password) throws RemoteException {
 		return cpser.usuarioRegistrado(usuario, password);
@@ -46,6 +50,10 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	@Override
 	public boolean actualizarUsuario(Usuario user) throws RemoteException {
 		return cpser.actualizarUsuario(user);
+	}
+	@Override
+	public void eliminarUsuario(Usuario user) throws RemoteException {
+		cpser.actualizarUsuario(user);
 	}
 	
 }
