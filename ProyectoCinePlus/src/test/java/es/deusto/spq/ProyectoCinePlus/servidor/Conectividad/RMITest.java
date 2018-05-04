@@ -134,13 +134,13 @@ public class RMITest {
 	
 	////TODO Modificar
 	
-	@Test
-	@PerfTest(invocations = 100, threads = 10)
-	@Required(max = 10, average = 10)
+
 	
 	/*
 	 * Login Test
 	 */	
+	@Test
+	@Required(totalTime = 500)
 	public void loginNewUserTest() {
 		logger.info("loginNewUserTest");
 		boolean resul=false;
@@ -158,9 +158,10 @@ public class RMITest {
 		assertFalse( resul );
 	}
 	
+	@Test
 	@PerfTest(invocations = 100, threads = 10)
 	@Required(max = 1000, average = 1000)
-	@Test public void loginExistingUserTest() {
+	public void loginExistingUserTest() {
 		logger.info("loginExistingUserTest");
 		boolean resul=false;
 		try{
@@ -176,62 +177,9 @@ public class RMITest {
 	}
 	
 	
-	
-	/*
-	//@Test		
-	public void registerNewUserTest() {
-		logger.info("registerNewUserTest");
-		
-		boolean resul=false;
-		iteration++;
-		
-		String user="user"+iteration;
-		String email=user+"@gmail.com";
-		String surname= user+"_surname";
-		
-		try{
-			logger.info("Test 3 - Register new user");
-			resul=cineplus.registrarUsuario(user, email, user, surname, "P@ssw0rd", "es", false);
-		}
-		catch (Exception re) {
-			logger.error(" # CinePlus RemoteException: " + re.getMessage());
-		} 
-		
-		
-		
-		logger.info("Si es TRUE, se ha registrado");
-		assertTrue( resul );
-	}
-	
-	
-	public void checkUserTest() {
-		
-		logger.info("CheckingSeveralUsersTest");
-		boolean resul=false;
-		for (int i =0;i<iteration;i++) {
-			String user="user"+i;
-			String email=user+"@gmail.com";
-			String surname= user+"_surname";
-			
-			try{
-				logger.info("Test 4 - Check new user");
-				resul=cineplus.checkUser(user, email, user, surname, "P@ssw0rd", "es", false);
-			}
-			catch (Exception re) {
-				logger.error(" # CinePlus RemoteException: " + re.getMessage());
-			} 
-			
-			logger.info("Si es TRUE, se ha encontrado");
-			assertTrue( resul );
-		}
-				
-	}
-	
-*/
-	
-	
-	
-	@Test public void registerExistingUserTest() {
+	@Test
+	@Required(throughput = 20)
+	public void registerExistingUserTest() {
 		logger.info("registerExistingUserTest");
 		boolean resul=false;
 		try{
@@ -249,9 +197,12 @@ public class RMITest {
 	}
 	
 
+<<<<<<< HEAD
 
 	
 
+=======
+>>>>>>> branch 'master' of https://github.com/SPQ17-18/BSPQ18-S1.git
 	
 	@AfterClass static public void tearDown() {
 		try	{

@@ -75,7 +75,32 @@ public class UsuarioDAOTest {
 		assertEquals("MikelSPQ",prueba2.getUsuario());
 		assertEquals("Mikel",prueba2.getNombre());
 		assertEquals("Fernandez",prueba2.getApellido());
+<<<<<<< HEAD
+=======
+		//assertEquals(prueba1, prueba2);
+	}
+	
+	@Test
+	public void deleteUsuarioTest() throws Exception{
+		logger.info("Test para hacer un update de usuario");
+		logger.info("Eliminando usuario");
+		usuarioDAO.deleteUsuario(xabi);
+>>>>>>> branch 'master' of https://github.com/SPQ17-18/BSPQ18-S1.git
 		
+<<<<<<< HEAD
+=======
+		Usuario prueba3 = usuarioDAO.getUsuario("Xabi@gmail.com");
+		logger.info(prueba3.toString());
+		assertEquals(null,prueba3.getNombre());
+
+	}
+	
+	@Test
+	public void getUsuarioTest() throws Exception{
+		logger.info("Test para obtener un usuario de la base de datos");
+		Usuario prueba2 = usuarioDAO.getUsuario("Mikel@gmail.com");
+		assertEquals(mikel.getEmail(), prueba2.getEmail());
+>>>>>>> branch 'master' of https://github.com/SPQ17-18/BSPQ18-S1.git
 	}
 	
 	/*
