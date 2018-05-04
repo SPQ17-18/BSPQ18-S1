@@ -28,6 +28,8 @@ import org.junit.After;
 
 public class RMITest {
 	
+	
+	
 	private static String cwd = RMITest.class.getProtectionDomain().getCodeSource().getLocation().getFile();
 	private static Thread rmiRegistryThread = null;
 	private static Thread rmiServerThread = null;
@@ -175,8 +177,8 @@ public class RMITest {
 	
 	
 	
-	
-	@Test		
+	/*
+	//@Test		
 	public void registerNewUserTest() {
 		logger.info("registerNewUserTest");
 		
@@ -188,7 +190,6 @@ public class RMITest {
 		String surname= user+"_surname";
 		
 		try{
-			cineplus.eliminarUsuario(new Usuario(user, email, user, surname, "P@ssw0rd", "es", false));
 			logger.info("Test 3 - Register new user");
 			resul=cineplus.registrarUsuario(user, email, user, surname, "P@ssw0rd", "es", false);
 		}
@@ -202,7 +203,7 @@ public class RMITest {
 		assertTrue( resul );
 	}
 	
-	@Test
+	
 	public void checkUserTest() {
 		
 		logger.info("CheckingSeveralUsersTest");
@@ -214,7 +215,7 @@ public class RMITest {
 			
 			try{
 				logger.info("Test 4 - Check new user");
-				resul=cineplus.checkUsuario(new Usuario(user, email, user, surname, "P@ssw0rd", "es", false));
+				resul=cineplus.checkUser(user, email, user, surname, "P@ssw0rd", "es", false);
 			}
 			catch (Exception re) {
 				logger.error(" # CinePlus RemoteException: " + re.getMessage());
@@ -226,7 +227,7 @@ public class RMITest {
 				
 	}
 	
-
+*/
 	
 	
 	
@@ -246,6 +247,38 @@ public class RMITest {
 		logger.info("Si es TRUE, no se ha podido registar");
 		assertFalse( resul );
 	}
+	
+
+	/*
+	
+	@After public  void deleteDatabase() {
+		PersistenceManagerFactory pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
+		PersistenceManager pm = pmf.getPersistenceManager();
+        Transaction tx = pm.currentTransaction();
+        try
+        {
+            tx.begin();
+	
+            logger.info("Deleting test users from persistence. Cleaning up.");
+            Query<Usuario> q1 = pm.newQuery(Usuario.class);
+            long numberInstancesDeleted = q1.deletePersistentAll();
+            logger.info("Deleted " + numberInstancesDeleted + " user");
+			
+            tx.commit();
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+            pm.close();
+        }
+		
+	}
+	
+	*/
+	
 
 	
 	@AfterClass static public void tearDown() {

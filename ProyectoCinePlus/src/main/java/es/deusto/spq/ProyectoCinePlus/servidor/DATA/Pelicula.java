@@ -114,4 +114,26 @@ public class Pelicula implements Serializable{
 		this.portada = portada;
 	}
 	
+	public void copiarPelicula(Pelicula peli) {
+		
+		this.id_pelicula = peli.id_pelicula;
+		this.nombre = peli.nombre;
+		this.duracion = peli.duracion;
+		this.descripcion = peli.descripcion;
+		this.anyo = peli.anyo;
+		this.categoria = peli.categoria;
+		this.precio = peli.precio;
+		this.portada = peli.portada;
+		
+	}
+
+	@Override
+	public String toString() {
+		return "Pelicula [id_pelicula=" + id_pelicula + ", nombre=" + nombre + ", duracion=" + duracion
+				+ ", descripcion=" + descripcion + ", anyo=" + anyo + ", categoria=" + categoria + ", precio=" + precio
+				+ ", portada=" + portada + "]";
+	}
+	
+	
+	
 }

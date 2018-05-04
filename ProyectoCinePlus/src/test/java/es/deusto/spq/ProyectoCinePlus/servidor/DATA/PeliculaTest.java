@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -16,6 +17,9 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
 
 public class PeliculaTest {
 
+	
+	static Logger logger = Logger.getLogger(PeliculaTest.class.getName());
+	
 	private Pelicula pelicula1;
 	private Pelicula pelicula2;
 	private Usuario spq;
@@ -52,5 +56,18 @@ public class PeliculaTest {
 		assertEquals("15.0", String.valueOf(pelicula2.getPrecio()));
 	}
 
+	@Test
+	public void copiarPeliculaTest() {
+		pelicula1.copiarPelicula(pelicula2);
+		logger.info(pelicula1.toString());
+		
+		assertEquals("Alternativa", pelicula2.getNombre());
+		assertEquals(140, pelicula2.getDuracion());
+		assertEquals("vida de prisioneros 2", pelicula2.getDescripcion());
+		assertEquals(1995, pelicula2.getAnyo());
+		assertEquals("Suspense", pelicula2.getCategoria());
+		assertEquals("15.0", String.valueOf(pelicula2.getPrecio()));
+	}
 
+	
 }

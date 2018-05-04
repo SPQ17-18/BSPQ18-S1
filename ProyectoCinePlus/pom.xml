@@ -127,7 +127,15 @@
 					<formats>
 						<format>xml</format>
 						<format>html</format>
-					</formats> 
+					</formats>
+   			<!--############## ignora getters y setters ##############-->
+					<instrumentation>
+						<ignoreTrivial>true</ignoreTrivial>
+						<excludes>
+							<exclude>**/some/trivial/classes/**</exclude>
+						</excludes>
+					</instrumentation> 
+					
 					<check>
 						<branchRate>50</branchRate>
 						<lineRate>50</lineRate>
