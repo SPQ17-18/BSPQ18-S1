@@ -1,0 +1,3780 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+
+<coverage line-rate="0.16377171215880892" branch-rate="0.39285714285714285" lines-covered="198" lines-valid="1209" branches-covered="88" branches-valid="224" complexity="1.7532467532467533" version="2.1.1" timestamp="1525454110874">
+	<sources>
+		<source>C:/SoftLabs/CinePlus/BSPQ18-S1/ProyectoCinePlus/src/main/java</source>
+		<source>--source</source>
+		<source>C:/SoftLabs/CinePlus/BSPQ18-S1/ProyectoCinePlus/target/generated-sources/annotations</source>
+	</sources>
+	<packages>
+		<package name="es.deusto.spq.ProyectoCinePlus.cliente" line-rate="0.0" branch-rate="0.0" complexity="4.0">
+			<classes>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.Cliente" filename="es/deusto/spq/ProyectoCinePlus/cliente/Cliente.java" line-rate="0.0" branch-rate="0.0" complexity="4.0">
+					<methods>
+						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="9" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="10" hits="0" branch="false"/>
+								<line number="11" hits="0" branch="false"/>
+								<line number="15" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="16" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="false"/>
+								<line number="22" hits="0" branch="false"/>
+								<line number="23" hits="0" branch="false"/>
+								<line number="24" hits="0" branch="false"/>
+								<line number="25" hits="0" branch="false"/>
+								<line number="26" hits="0" branch="false"/>
+								<line number="27" hits="0" branch="false"/>
+								<line number="29" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="9" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="10" hits="0" branch="false"/>
+						<line number="11" hits="0" branch="false"/>
+						<line number="15" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="16" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
+						<line number="22" hits="0" branch="false"/>
+						<line number="23" hits="0" branch="false"/>
+						<line number="24" hits="0" branch="false"/>
+						<line number="25" hits="0" branch="false"/>
+						<line number="26" hits="0" branch="false"/>
+						<line number="27" hits="0" branch="false"/>
+						<line number="29" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad" line-rate="0.0" branch-rate="0.0" complexity="1.2857142857142858">
+			<classes>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/Conectividad/CinePlusController.java" line-rate="0.0" branch-rate="0.0" complexity="1.2727272727272727">
+					<methods>
+						<method name="Busqueda" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="39" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="DevolverUsuario" signature="(Ljava/lang/String;)Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="43" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="LoginUsuario" signature="(Ljava/lang/String;Ljava/lang/String;)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="30" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="ObtenerAnyo" signature="()Ljava/util/List;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="33" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="ObtenerGenero" signature="()Ljava/util/List;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="36" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="RegistrarUsuario" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FZ)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="26" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="RegistrarUsuario" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="21" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="actualizarUsuario" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="46" hits="0" branch="false"/>
+								<line number="47" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="eliminarUsuario" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="50" hits="0" branch="false"/>
+								<line number="51" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="54" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="55" hits="0" branch="false"/>
+								<line number="58" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="59" hits="0" branch="false"/>
+								<line number="64" hits="0" branch="false"/>
+								<line number="65" hits="0" branch="false"/>
+								<line number="66" hits="0" branch="false"/>
+								<line number="67" hits="0" branch="false"/>
+								<line number="68" hits="0" branch="false"/>
+								<line number="69" hits="0" branch="false"/>
+								<line number="70" hits="0" branch="false"/>
+								<line number="73" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="21" hits="0" branch="false"/>
+						<line number="26" hits="0" branch="false"/>
+						<line number="30" hits="0" branch="false"/>
+						<line number="33" hits="0" branch="false"/>
+						<line number="36" hits="0" branch="false"/>
+						<line number="39" hits="0" branch="false"/>
+						<line number="43" hits="0" branch="false"/>
+						<line number="46" hits="0" branch="false"/>
+						<line number="47" hits="0" branch="false"/>
+						<line number="50" hits="0" branch="false"/>
+						<line number="51" hits="0" branch="false"/>
+						<line number="54" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="55" hits="0" branch="false"/>
+						<line number="58" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="59" hits="0" branch="false"/>
+						<line number="64" hits="0" branch="false"/>
+						<line number="65" hits="0" branch="false"/>
+						<line number="66" hits="0" branch="false"/>
+						<line number="67" hits="0" branch="false"/>
+						<line number="68" hits="0" branch="false"/>
+						<line number="69" hits="0" branch="false"/>
+						<line number="70" hits="0" branch="false"/>
+						<line number="73" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/Conectividad/RMIServiceLocator.java" line-rate="0.0" branch-rate="1.0" complexity="1.3333333333333333">
+					<methods>
+						<method name="setService" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="20" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="false"/>
+								<line number="23" hits="0" branch="false"/>
+								<line number="24" hits="0" branch="false"/>
+								<line number="26" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="20" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
+						<line number="23" hits="0" branch="false"/>
+						<line number="24" hits="0" branch="false"/>
+						<line number="26" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI" line-rate="0.0" branch-rate="0.0" complexity="2.5">
+			<classes>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaLogin" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaLogin.java" line-rate="0.0" branch-rate="1.0" complexity="1.8333333333333333">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="65" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/Conectividad/CinePlusController;Ljava/util/ResourceBundle;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="70" hits="0" branch="false"/>
+								<line number="72" hits="0" branch="false"/>
+								<line number="75" hits="0" branch="false"/>
+								<line number="76" hits="0" branch="false"/>
+								<line number="78" hits="0" branch="false"/>
+								<line number="80" hits="0" branch="false"/>
+								<line number="81" hits="0" branch="false"/>
+								<line number="83" hits="0" branch="false"/>
+								<line number="86" hits="0" branch="false"/>
+								<line number="87" hits="0" branch="false"/>
+								<line number="88" hits="0" branch="false"/>
+								<line number="89" hits="0" branch="false"/>
+								<line number="90" hits="0" branch="false"/>
+								<line number="91" hits="0" branch="false"/>
+								<line number="92" hits="0" branch="false"/>
+								<line number="94" hits="0" branch="false"/>
+								<line number="95" hits="0" branch="false"/>
+								<line number="97" hits="0" branch="false"/>
+								<line number="98" hits="0" branch="false"/>
+								<line number="100" hits="0" branch="false"/>
+								<line number="101" hits="0" branch="false"/>
+								<line number="102" hits="0" branch="false"/>
+								<line number="104" hits="0" branch="false"/>
+								<line number="105" hits="0" branch="false"/>
+								<line number="107" hits="0" branch="false"/>
+								<line number="108" hits="0" branch="false"/>
+								<line number="110" hits="0" branch="false"/>
+								<line number="111" hits="0" branch="false"/>
+								<line number="156" hits="0" branch="false"/>
+								<line number="158" hits="0" branch="false"/>
+								<line number="159" hits="0" branch="false"/>
+								<line number="166" hits="0" branch="false"/>
+								<line number="168" hits="0" branch="false"/>
+								<line number="169" hits="0" branch="false"/>
+								<line number="171" hits="0" branch="false"/>
+								<line number="172" hits="0" branch="false"/>
+								<line number="174" hits="0" branch="false"/>
+								<line number="175" hits="0" branch="false"/>
+								<line number="176" hits="0" branch="false"/>
+								<line number="178" hits="0" branch="false"/>
+								<line number="179" hits="0" branch="false"/>
+								<line number="180" hits="0" branch="false"/>
+								<line number="182" hits="0" branch="false"/>
+								<line number="183" hits="0" branch="false"/>
+								<line number="184" hits="0" branch="false"/>
+								<line number="186" hits="0" branch="false"/>
+								<line number="187" hits="0" branch="false"/>
+								<line number="189" hits="0" branch="false"/>
+								<line number="190" hits="0" branch="false"/>
+								<line number="192" hits="0" branch="false"/>
+								<line number="193" hits="0" branch="false"/>
+								<line number="195" hits="0" branch="false"/>
+								<line number="196" hits="0" branch="false"/>
+								<line number="197" hits="0" branch="false"/>
+								<line number="199" hits="0" branch="false"/>
+								<line number="200" hits="0" branch="false"/>
+								<line number="202" hits="0" branch="false"/>
+								<line number="203" hits="0" branch="false"/>
+								<line number="204" hits="0" branch="false"/>
+								<line number="206" hits="0" branch="false"/>
+								<line number="207" hits="0" branch="false"/>
+								<line number="209" hits="0" branch="false"/>
+								<line number="210" hits="0" branch="false"/>
+								<line number="212" hits="0" branch="false"/>
+								<line number="213" hits="0" branch="false"/>
+								<line number="214" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$0" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaLogin;)Ljavax/swing/JTextField;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="38" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$1" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaLogin;)Ljavax/swing/JPasswordField;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="60" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$2" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaLogin;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="216" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="limpiarCampos" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="217" hits="0" branch="false"/>
+								<line number="218" hits="0" branch="false"/>
+								<line number="219" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="38" hits="0" branch="false"/>
+						<line number="60" hits="0" branch="false"/>
+						<line number="65" hits="0" branch="false"/>
+						<line number="70" hits="0" branch="false"/>
+						<line number="72" hits="0" branch="false"/>
+						<line number="75" hits="0" branch="false"/>
+						<line number="76" hits="0" branch="false"/>
+						<line number="78" hits="0" branch="false"/>
+						<line number="80" hits="0" branch="false"/>
+						<line number="81" hits="0" branch="false"/>
+						<line number="83" hits="0" branch="false"/>
+						<line number="86" hits="0" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
+						<line number="88" hits="0" branch="false"/>
+						<line number="89" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+						<line number="91" hits="0" branch="false"/>
+						<line number="92" hits="0" branch="false"/>
+						<line number="94" hits="0" branch="false"/>
+						<line number="95" hits="0" branch="false"/>
+						<line number="97" hits="0" branch="false"/>
+						<line number="98" hits="0" branch="false"/>
+						<line number="100" hits="0" branch="false"/>
+						<line number="101" hits="0" branch="false"/>
+						<line number="102" hits="0" branch="false"/>
+						<line number="104" hits="0" branch="false"/>
+						<line number="105" hits="0" branch="false"/>
+						<line number="107" hits="0" branch="false"/>
+						<line number="108" hits="0" branch="false"/>
+						<line number="110" hits="0" branch="false"/>
+						<line number="111" hits="0" branch="false"/>
+						<line number="156" hits="0" branch="false"/>
+						<line number="158" hits="0" branch="false"/>
+						<line number="159" hits="0" branch="false"/>
+						<line number="166" hits="0" branch="false"/>
+						<line number="168" hits="0" branch="false"/>
+						<line number="169" hits="0" branch="false"/>
+						<line number="171" hits="0" branch="false"/>
+						<line number="172" hits="0" branch="false"/>
+						<line number="174" hits="0" branch="false"/>
+						<line number="175" hits="0" branch="false"/>
+						<line number="176" hits="0" branch="false"/>
+						<line number="178" hits="0" branch="false"/>
+						<line number="179" hits="0" branch="false"/>
+						<line number="180" hits="0" branch="false"/>
+						<line number="182" hits="0" branch="false"/>
+						<line number="183" hits="0" branch="false"/>
+						<line number="184" hits="0" branch="false"/>
+						<line number="186" hits="0" branch="false"/>
+						<line number="187" hits="0" branch="false"/>
+						<line number="189" hits="0" branch="false"/>
+						<line number="190" hits="0" branch="false"/>
+						<line number="192" hits="0" branch="false"/>
+						<line number="193" hits="0" branch="false"/>
+						<line number="195" hits="0" branch="false"/>
+						<line number="196" hits="0" branch="false"/>
+						<line number="197" hits="0" branch="false"/>
+						<line number="199" hits="0" branch="false"/>
+						<line number="200" hits="0" branch="false"/>
+						<line number="202" hits="0" branch="false"/>
+						<line number="203" hits="0" branch="false"/>
+						<line number="204" hits="0" branch="false"/>
+						<line number="206" hits="0" branch="false"/>
+						<line number="207" hits="0" branch="false"/>
+						<line number="209" hits="0" branch="false"/>
+						<line number="210" hits="0" branch="false"/>
+						<line number="212" hits="0" branch="false"/>
+						<line number="213" hits="0" branch="false"/>
+						<line number="214" hits="0" branch="false"/>
+						<line number="216" hits="0" branch="false"/>
+						<line number="217" hits="0" branch="false"/>
+						<line number="218" hits="0" branch="false"/>
+						<line number="219" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaLogin$1" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaLogin.java" line-rate="0.0" branch-rate="0.0" complexity="1.8333333333333333">
+					<methods>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="113" hits="0" branch="false"/>
+								<line number="115" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="116" hits="0" branch="false"/>
+								<line number="117" hits="0" branch="false"/>
+								<line number="118" hits="0" branch="false"/>
+								<line number="119" hits="0" branch="false"/>
+								<line number="123" hits="0" branch="false"/>
+								<line number="124" hits="0" branch="false"/>
+								<line number="125" hits="0" branch="false"/>
+								<line number="126" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="127" hits="0" branch="false"/>
+								<line number="132" hits="0" branch="false"/>
+								<line number="133" hits="0" branch="false"/>
+								<line number="134" hits="0" branch="false"/>
+								<line number="135" hits="0" branch="false"/>
+								<line number="139" hits="0" branch="false"/>
+								<line number="140" hits="0" branch="false"/>
+								<line number="141" hits="0" branch="false"/>
+								<line number="142" hits="0" branch="false"/>
+								<line number="143" hits="0" branch="false"/>
+								<line number="144" hits="0" branch="false"/>
+								<line number="145" hits="0" branch="false"/>
+								<line number="148" hits="0" branch="false"/>
+								<line number="150" hits="0" branch="false"/>
+								<line number="154" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="113" hits="0" branch="false"/>
+						<line number="115" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="116" hits="0" branch="false"/>
+						<line number="117" hits="0" branch="false"/>
+						<line number="118" hits="0" branch="false"/>
+						<line number="119" hits="0" branch="false"/>
+						<line number="123" hits="0" branch="false"/>
+						<line number="124" hits="0" branch="false"/>
+						<line number="125" hits="0" branch="false"/>
+						<line number="126" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="127" hits="0" branch="false"/>
+						<line number="132" hits="0" branch="false"/>
+						<line number="133" hits="0" branch="false"/>
+						<line number="134" hits="0" branch="false"/>
+						<line number="135" hits="0" branch="false"/>
+						<line number="139" hits="0" branch="false"/>
+						<line number="140" hits="0" branch="false"/>
+						<line number="141" hits="0" branch="false"/>
+						<line number="142" hits="0" branch="false"/>
+						<line number="143" hits="0" branch="false"/>
+						<line number="144" hits="0" branch="false"/>
+						<line number="145" hits="0" branch="false"/>
+						<line number="148" hits="0" branch="false"/>
+						<line number="150" hits="0" branch="false"/>
+						<line number="154" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaLogin$2" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaLogin.java" line-rate="0.0" branch-rate="1.0" complexity="1.8333333333333333">
+					<methods>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="161" hits="0" branch="false"/>
+								<line number="162" hits="0" branch="false"/>
+								<line number="163" hits="0" branch="false"/>
+								<line number="164" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="161" hits="0" branch="false"/>
+						<line number="162" hits="0" branch="false"/>
+						<line number="163" hits="0" branch="false"/>
+						<line number="164" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaPrincipal.java" line-rate="0.0" branch-rate="1.0" complexity="1.625">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="69" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/Conectividad/RMIServiceLocator;Les/deusto/spq/ProyectoCinePlus/cliente/util/Conectividad/CinePlusController;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="75" hits="0" branch="false"/>
+								<line number="77" hits="0" branch="false"/>
+								<line number="78" hits="0" branch="false"/>
+								<line number="81" hits="0" branch="false"/>
+								<line number="82" hits="0" branch="false"/>
+								<line number="85" hits="0" branch="false"/>
+								<line number="87" hits="0" branch="false"/>
+								<line number="89" hits="0" branch="false"/>
+								<line number="90" hits="0" branch="false"/>
+								<line number="94" hits="0" branch="false"/>
+								<line number="95" hits="0" branch="false"/>
+								<line number="96" hits="0" branch="false"/>
+								<line number="97" hits="0" branch="false"/>
+								<line number="98" hits="0" branch="false"/>
+								<line number="99" hits="0" branch="false"/>
+								<line number="100" hits="0" branch="false"/>
+								<line number="101" hits="0" branch="false"/>
+								<line number="103" hits="0" branch="false"/>
+								<line number="104" hits="0" branch="false"/>
+								<line number="106" hits="0" branch="false"/>
+								<line number="107" hits="0" branch="false"/>
+								<line number="109" hits="0" branch="false"/>
+								<line number="110" hits="0" branch="false"/>
+								<line number="111" hits="0" branch="false"/>
+								<line number="113" hits="0" branch="false"/>
+								<line number="114" hits="0" branch="false"/>
+								<line number="117" hits="0" branch="false"/>
+								<line number="119" hits="0" branch="false"/>
+								<line number="120" hits="0" branch="false"/>
+								<line number="122" hits="0" branch="false"/>
+								<line number="125" hits="0" branch="false"/>
+								<line number="126" hits="0" branch="false"/>
+								<line number="127" hits="0" branch="false"/>
+								<line number="129" hits="0" branch="false"/>
+								<line number="130" hits="0" branch="false"/>
+								<line number="131" hits="0" branch="false"/>
+								<line number="133" hits="0" branch="false"/>
+								<line number="134" hits="0" branch="false"/>
+								<line number="135" hits="0" branch="false"/>
+								<line number="137" hits="0" branch="false"/>
+								<line number="138" hits="0" branch="false"/>
+								<line number="140" hits="0" branch="false"/>
+								<line number="141" hits="0" branch="false"/>
+								<line number="150" hits="0" branch="false"/>
+								<line number="152" hits="0" branch="false"/>
+								<line number="153" hits="0" branch="false"/>
+								<line number="155" hits="0" branch="false"/>
+								<line number="157" hits="0" branch="false"/>
+								<line number="158" hits="0" branch="false"/>
+								<line number="160" hits="0" branch="false"/>
+								<line number="161" hits="0" branch="false"/>
+								<line number="163" hits="0" branch="false"/>
+								<line number="164" hits="0" branch="false"/>
+								<line number="178" hits="0" branch="false"/>
+								<line number="180" hits="0" branch="false"/>
+								<line number="181" hits="0" branch="false"/>
+								<line number="183" hits="0" branch="false"/>
+								<line number="186" hits="0" branch="false"/>
+								<line number="187" hits="0" branch="false"/>
+								<line number="189" hits="0" branch="false"/>
+								<line number="190" hits="0" branch="false"/>
+								<line number="192" hits="0" branch="false"/>
+								<line number="193" hits="0" branch="false"/>
+								<line number="201" hits="0" branch="false"/>
+								<line number="203" hits="0" branch="false"/>
+								<line number="204" hits="0" branch="false"/>
+								<line number="206" hits="0" branch="false"/>
+								<line number="209" hits="0" branch="false"/>
+								<line number="210" hits="0" branch="false"/>
+								<line number="212" hits="0" branch="false"/>
+								<line number="213" hits="0" branch="false"/>
+								<line number="215" hits="0" branch="false"/>
+								<line number="216" hits="0" branch="false"/>
+								<line number="218" hits="0" branch="false"/>
+								<line number="219" hits="0" branch="false"/>
+								<line number="221" hits="0" branch="false"/>
+								<line number="222" hits="0" branch="false"/>
+								<line number="223" hits="0" branch="false"/>
+								<line number="225" hits="0" branch="false"/>
+								<line number="226" hits="0" branch="false"/>
+								<line number="234" hits="0" branch="false"/>
+								<line number="236" hits="0" branch="false"/>
+								<line number="237" hits="0" branch="false"/>
+								<line number="246" hits="0" branch="false"/>
+								<line number="247" hits="0" branch="false"/>
+								<line number="248" hits="0" branch="false"/>
+								<line number="249" hits="0" branch="false"/>
+								<line number="255" hits="0" branch="false"/>
+								<line number="257" hits="0" branch="false"/>
+								<line number="258" hits="0" branch="false"/>
+								<line number="264" hits="0" branch="false"/>
+								<line number="265" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$0" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaPrincipal;Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="66" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$1" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaPrincipal;)Les/deusto/spq/ProyectoCinePlus/cliente/util/Conectividad/CinePlusController;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="34" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$2" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaPrincipal;)Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="55" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="34" hits="0" branch="false"/>
+						<line number="55" hits="0" branch="false"/>
+						<line number="66" hits="0" branch="false"/>
+						<line number="69" hits="0" branch="false"/>
+						<line number="75" hits="0" branch="false"/>
+						<line number="77" hits="0" branch="false"/>
+						<line number="78" hits="0" branch="false"/>
+						<line number="81" hits="0" branch="false"/>
+						<line number="82" hits="0" branch="false"/>
+						<line number="85" hits="0" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
+						<line number="89" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+						<line number="94" hits="0" branch="false"/>
+						<line number="95" hits="0" branch="false"/>
+						<line number="96" hits="0" branch="false"/>
+						<line number="97" hits="0" branch="false"/>
+						<line number="98" hits="0" branch="false"/>
+						<line number="99" hits="0" branch="false"/>
+						<line number="100" hits="0" branch="false"/>
+						<line number="101" hits="0" branch="false"/>
+						<line number="103" hits="0" branch="false"/>
+						<line number="104" hits="0" branch="false"/>
+						<line number="106" hits="0" branch="false"/>
+						<line number="107" hits="0" branch="false"/>
+						<line number="109" hits="0" branch="false"/>
+						<line number="110" hits="0" branch="false"/>
+						<line number="111" hits="0" branch="false"/>
+						<line number="113" hits="0" branch="false"/>
+						<line number="114" hits="0" branch="false"/>
+						<line number="117" hits="0" branch="false"/>
+						<line number="119" hits="0" branch="false"/>
+						<line number="120" hits="0" branch="false"/>
+						<line number="122" hits="0" branch="false"/>
+						<line number="125" hits="0" branch="false"/>
+						<line number="126" hits="0" branch="false"/>
+						<line number="127" hits="0" branch="false"/>
+						<line number="129" hits="0" branch="false"/>
+						<line number="130" hits="0" branch="false"/>
+						<line number="131" hits="0" branch="false"/>
+						<line number="133" hits="0" branch="false"/>
+						<line number="134" hits="0" branch="false"/>
+						<line number="135" hits="0" branch="false"/>
+						<line number="137" hits="0" branch="false"/>
+						<line number="138" hits="0" branch="false"/>
+						<line number="140" hits="0" branch="false"/>
+						<line number="141" hits="0" branch="false"/>
+						<line number="150" hits="0" branch="false"/>
+						<line number="152" hits="0" branch="false"/>
+						<line number="153" hits="0" branch="false"/>
+						<line number="155" hits="0" branch="false"/>
+						<line number="157" hits="0" branch="false"/>
+						<line number="158" hits="0" branch="false"/>
+						<line number="160" hits="0" branch="false"/>
+						<line number="161" hits="0" branch="false"/>
+						<line number="163" hits="0" branch="false"/>
+						<line number="164" hits="0" branch="false"/>
+						<line number="178" hits="0" branch="false"/>
+						<line number="180" hits="0" branch="false"/>
+						<line number="181" hits="0" branch="false"/>
+						<line number="183" hits="0" branch="false"/>
+						<line number="186" hits="0" branch="false"/>
+						<line number="187" hits="0" branch="false"/>
+						<line number="189" hits="0" branch="false"/>
+						<line number="190" hits="0" branch="false"/>
+						<line number="192" hits="0" branch="false"/>
+						<line number="193" hits="0" branch="false"/>
+						<line number="201" hits="0" branch="false"/>
+						<line number="203" hits="0" branch="false"/>
+						<line number="204" hits="0" branch="false"/>
+						<line number="206" hits="0" branch="false"/>
+						<line number="209" hits="0" branch="false"/>
+						<line number="210" hits="0" branch="false"/>
+						<line number="212" hits="0" branch="false"/>
+						<line number="213" hits="0" branch="false"/>
+						<line number="215" hits="0" branch="false"/>
+						<line number="216" hits="0" branch="false"/>
+						<line number="218" hits="0" branch="false"/>
+						<line number="219" hits="0" branch="false"/>
+						<line number="221" hits="0" branch="false"/>
+						<line number="222" hits="0" branch="false"/>
+						<line number="223" hits="0" branch="false"/>
+						<line number="225" hits="0" branch="false"/>
+						<line number="226" hits="0" branch="false"/>
+						<line number="234" hits="0" branch="false"/>
+						<line number="236" hits="0" branch="false"/>
+						<line number="237" hits="0" branch="false"/>
+						<line number="246" hits="0" branch="false"/>
+						<line number="247" hits="0" branch="false"/>
+						<line number="248" hits="0" branch="false"/>
+						<line number="249" hits="0" branch="false"/>
+						<line number="255" hits="0" branch="false"/>
+						<line number="257" hits="0" branch="false"/>
+						<line number="258" hits="0" branch="false"/>
+						<line number="264" hits="0" branch="false"/>
+						<line number="265" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal$1" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaPrincipal.java" line-rate="0.0" branch-rate="1.0" complexity="1.625">
+					<methods>
+						<method name="mouseClicked" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="144" hits="0" branch="false"/>
+								<line number="145" hits="0" branch="false"/>
+								<line number="146" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="144" hits="0" branch="false"/>
+						<line number="145" hits="0" branch="false"/>
+						<line number="146" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal$2" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaPrincipal.java" line-rate="0.0" branch-rate="1.0" complexity="1.625">
+					<methods>
+						<method name="mouseClicked" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="167" hits="0" branch="false"/>
+								<line number="168" hits="0" branch="false"/>
+								<line number="174" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="167" hits="0" branch="false"/>
+						<line number="168" hits="0" branch="false"/>
+						<line number="174" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal$3" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaPrincipal.java" line-rate="0.0" branch-rate="1.0" complexity="1.625">
+					<methods>
+						<method name="mouseClicked" signature="(Ljava/awt/event/MouseEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="196" hits="0" branch="false"/>
+								<line number="197" hits="0" branch="false"/>
+								<line number="198" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="196" hits="0" branch="false"/>
+						<line number="197" hits="0" branch="false"/>
+						<line number="198" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal$4" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaPrincipal.java" line-rate="0.0" branch-rate="1.0" complexity="1.625">
+					<methods>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="228" hits="0" branch="false"/>
+								<line number="229" hits="0" branch="false"/>
+								<line number="230" hits="0" branch="false"/>
+								<line number="231" hits="0" branch="false"/>
+								<line number="232" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="228" hits="0" branch="false"/>
+						<line number="229" hits="0" branch="false"/>
+						<line number="230" hits="0" branch="false"/>
+						<line number="231" hits="0" branch="false"/>
+						<line number="232" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal$5" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaPrincipal.java" line-rate="0.0" branch-rate="1.0" complexity="1.625">
+					<methods>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="239" hits="0" branch="false"/>
+								<line number="240" hits="0" branch="false"/>
+								<line number="241" hits="0" branch="false"/>
+								<line number="242" hits="0" branch="false"/>
+								<line number="243" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="239" hits="0" branch="false"/>
+						<line number="240" hits="0" branch="false"/>
+						<line number="241" hits="0" branch="false"/>
+						<line number="242" hits="0" branch="false"/>
+						<line number="243" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal$6" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaPrincipal.java" line-rate="0.0" branch-rate="1.0" complexity="1.625">
+					<methods>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="251" hits="0" branch="false"/>
+								<line number="252" hits="0" branch="false"/>
+								<line number="253" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="251" hits="0" branch="false"/>
+						<line number="252" hits="0" branch="false"/>
+						<line number="253" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal$7" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaPrincipal.java" line-rate="0.0" branch-rate="1.0" complexity="1.625">
+					<methods>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="260" hits="0" branch="false"/>
+								<line number="261" hits="0" branch="false"/>
+								<line number="262" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="260" hits="0" branch="false"/>
+						<line number="261" hits="0" branch="false"/>
+						<line number="262" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaRegistro" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaRegistro.java" line-rate="0.0" branch-rate="0.0" complexity="3.7142857142857144">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="82" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/Conectividad/CinePlusController;Ljava/util/ResourceBundle;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="88" hits="0" branch="false"/>
+								<line number="89" hits="0" branch="false"/>
+								<line number="90" hits="0" branch="false"/>
+								<line number="91" hits="0" branch="false"/>
+								<line number="93" hits="0" branch="false"/>
+								<line number="95" hits="0" branch="false"/>
+								<line number="96" hits="0" branch="false"/>
+								<line number="98" hits="0" branch="false"/>
+								<line number="99" hits="0" branch="false"/>
+								<line number="100" hits="0" branch="false"/>
+								<line number="101" hits="0" branch="false"/>
+								<line number="102" hits="0" branch="false"/>
+								<line number="103" hits="0" branch="false"/>
+								<line number="104" hits="0" branch="false"/>
+								<line number="105" hits="0" branch="false"/>
+								<line number="107" hits="0" branch="false"/>
+								<line number="108" hits="0" branch="false"/>
+								<line number="110" hits="0" branch="false"/>
+								<line number="111" hits="0" branch="false"/>
+								<line number="113" hits="0" branch="false"/>
+								<line number="114" hits="0" branch="false"/>
+								<line number="116" hits="0" branch="false"/>
+								<line number="117" hits="0" branch="false"/>
+								<line number="118" hits="0" branch="false"/>
+								<line number="120" hits="0" branch="false"/>
+								<line number="121" hits="0" branch="false"/>
+								<line number="123" hits="0" branch="false"/>
+								<line number="124" hits="0" branch="false"/>
+								<line number="126" hits="0" branch="false"/>
+								<line number="127" hits="0" branch="false"/>
+								<line number="129" hits="0" branch="false"/>
+								<line number="130" hits="0" branch="false"/>
+								<line number="132" hits="0" branch="false"/>
+								<line number="133" hits="0" branch="false"/>
+								<line number="134" hits="0" branch="false"/>
+								<line number="136" hits="0" branch="false"/>
+								<line number="137" hits="0" branch="false"/>
+								<line number="138" hits="0" branch="false"/>
+								<line number="140" hits="0" branch="false"/>
+								<line number="141" hits="0" branch="false"/>
+								<line number="142" hits="0" branch="false"/>
+								<line number="143" hits="0" branch="false"/>
+								<line number="144" hits="0" branch="false"/>
+								<line number="145" hits="0" branch="false"/>
+								<line number="147" hits="0" branch="false"/>
+								<line number="148" hits="0" branch="false"/>
+								<line number="149" hits="0" branch="false"/>
+								<line number="151" hits="0" branch="false"/>
+								<line number="152" hits="0" branch="false"/>
+								<line number="154" hits="0" branch="false"/>
+								<line number="155" hits="0" branch="false"/>
+								<line number="156" hits="0" branch="false"/>
+								<line number="158" hits="0" branch="false"/>
+								<line number="159" hits="0" branch="false"/>
+								<line number="161" hits="0" branch="false"/>
+								<line number="162" hits="0" branch="false"/>
+								<line number="163" hits="0" branch="false"/>
+								<line number="165" hits="0" branch="false"/>
+								<line number="166" hits="0" branch="false"/>
+								<line number="168" hits="0" branch="false"/>
+								<line number="169" hits="0" branch="false"/>
+								<line number="170" hits="0" branch="false"/>
+								<line number="172" hits="0" branch="false"/>
+								<line number="173" hits="0" branch="false"/>
+								<line number="175" hits="0" branch="false"/>
+								<line number="176" hits="0" branch="false"/>
+								<line number="177" hits="0" branch="false"/>
+								<line number="179" hits="0" branch="false"/>
+								<line number="180" hits="0" branch="false"/>
+								<line number="182" hits="0" branch="false"/>
+								<line number="183" hits="0" branch="false"/>
+								<line number="184" hits="0" branch="false"/>
+								<line number="186" hits="0" branch="false"/>
+								<line number="187" hits="0" branch="false"/>
+								<line number="189" hits="0" branch="false"/>
+								<line number="190" hits="0" branch="false"/>
+								<line number="191" hits="0" branch="false"/>
+								<line number="193" hits="0" branch="false"/>
+								<line number="194" hits="0" branch="false"/>
+								<line number="196" hits="0" branch="false"/>
+								<line number="197" hits="0" branch="false"/>
+								<line number="198" hits="0" branch="false"/>
+								<line number="200" hits="0" branch="false"/>
+								<line number="201" hits="0" branch="false"/>
+								<line number="203" hits="0" branch="false"/>
+								<line number="204" hits="0" branch="false"/>
+								<line number="205" hits="0" branch="false"/>
+								<line number="207" hits="0" branch="false"/>
+								<line number="208" hits="0" branch="false"/>
+								<line number="210" hits="0" branch="false"/>
+								<line number="211" hits="0" branch="false"/>
+								<line number="212" hits="0" branch="false"/>
+								<line number="214" hits="0" branch="false"/>
+								<line number="215" hits="0" branch="false"/>
+								<line number="217" hits="0" branch="false"/>
+								<line number="218" hits="0" branch="false"/>
+								<line number="219" hits="0" branch="false"/>
+								<line number="221" hits="0" branch="false"/>
+								<line number="222" hits="0" branch="false"/>
+								<line number="224" hits="0" branch="false"/>
+								<line number="225" hits="0" branch="false"/>
+								<line number="226" hits="0" branch="false"/>
+								<line number="228" hits="0" branch="false"/>
+								<line number="229" hits="0" branch="false"/>
+								<line number="231" hits="0" branch="false"/>
+								<line number="232" hits="0" branch="false"/>
+								<line number="233" hits="0" branch="false"/>
+								<line number="235" hits="0" branch="false"/>
+								<line number="236" hits="0" branch="false"/>
+								<line number="238" hits="0" branch="false"/>
+								<line number="239" hits="0" branch="false"/>
+								<line number="241" hits="0" branch="false"/>
+								<line number="242" hits="0" branch="false"/>
+								<line number="278" hits="0" branch="false"/>
+								<line number="280" hits="0" branch="false"/>
+								<line number="281" hits="0" branch="false"/>
+								<line number="288" hits="0" branch="false"/>
+								<line number="291" hits="0" branch="false"/>
+								<line number="292" hits="0" branch="false"/>
+								<line number="293" hits="0" branch="false"/>
+								<line number="294" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$0" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaRegistro;)Ljavax/swing/JTextField;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="53" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$1" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaRegistro;)Ljavax/swing/JTextField;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="57" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$2" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaRegistro;)Ljavax/swing/JTextField;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="72" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$3" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaRegistro;)Ljavax/swing/JTextField;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="66" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$4" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaRegistro;)Ljavax/swing/JPasswordField;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="76" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$5" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaRegistro;)Ljavax/swing/JTextField;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="79" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$6" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaRegistro;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="358" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="comprobarcampos" signature="()Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="297" hits="0" branch="false"/>
+								<line number="298" hits="0" branch="false"/>
+								<line number="299" hits="0" branch="false"/>
+								<line number="300" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="301" hits="0" branch="false"/>
+								<line number="303" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="304" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="305" hits="0" branch="false"/>
+								<line number="306" hits="0" branch="false"/>
+								<line number="307" hits="0" branch="false"/>
+								<line number="310" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="311" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="312" hits="0" branch="false"/>
+								<line number="313" hits="0" branch="false"/>
+								<line number="314" hits="0" branch="false"/>
+								<line number="317" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="318" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="319" hits="0" branch="false"/>
+								<line number="320" hits="0" branch="false"/>
+								<line number="321" hits="0" branch="false"/>
+								<line number="324" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="325" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="326" hits="0" branch="false"/>
+								<line number="327" hits="0" branch="false"/>
+								<line number="328" hits="0" branch="false"/>
+								<line number="331" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="332" hits="0" branch="false"/>
+								<line number="333" hits="0" branch="false"/>
+								<line number="336" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="limpiarCampos" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="359" hits="0" branch="false"/>
+								<line number="360" hits="0" branch="false"/>
+								<line number="361" hits="0" branch="false"/>
+								<line number="362" hits="0" branch="false"/>
+								<line number="363" hits="0" branch="false"/>
+								<line number="364" hits="0" branch="false"/>
+								<line number="365" hits="0" branch="false"/>
+								<line number="366" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="validarEmail" signature="()Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="340" hits="0" branch="false"/>
+								<line number="341" hits="0" branch="false"/>
+								<line number="342" hits="0" branch="true" condition-coverage="0% (0/6)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+										<condition number="2" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="343" hits="0" branch="false"/>
+								<line number="344" hits="0" branch="false"/>
+								<line number="346" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="validarPass" signature="()Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="349" hits="0" branch="false"/>
+								<line number="350" hits="0" branch="false"/>
+								<line number="351" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="352" hits="0" branch="false"/>
+								<line number="353" hits="0" branch="false"/>
+								<line number="355" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="53" hits="0" branch="false"/>
+						<line number="57" hits="0" branch="false"/>
+						<line number="66" hits="0" branch="false"/>
+						<line number="72" hits="0" branch="false"/>
+						<line number="76" hits="0" branch="false"/>
+						<line number="79" hits="0" branch="false"/>
+						<line number="82" hits="0" branch="false"/>
+						<line number="88" hits="0" branch="false"/>
+						<line number="89" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+						<line number="91" hits="0" branch="false"/>
+						<line number="93" hits="0" branch="false"/>
+						<line number="95" hits="0" branch="false"/>
+						<line number="96" hits="0" branch="false"/>
+						<line number="98" hits="0" branch="false"/>
+						<line number="99" hits="0" branch="false"/>
+						<line number="100" hits="0" branch="false"/>
+						<line number="101" hits="0" branch="false"/>
+						<line number="102" hits="0" branch="false"/>
+						<line number="103" hits="0" branch="false"/>
+						<line number="104" hits="0" branch="false"/>
+						<line number="105" hits="0" branch="false"/>
+						<line number="107" hits="0" branch="false"/>
+						<line number="108" hits="0" branch="false"/>
+						<line number="110" hits="0" branch="false"/>
+						<line number="111" hits="0" branch="false"/>
+						<line number="113" hits="0" branch="false"/>
+						<line number="114" hits="0" branch="false"/>
+						<line number="116" hits="0" branch="false"/>
+						<line number="117" hits="0" branch="false"/>
+						<line number="118" hits="0" branch="false"/>
+						<line number="120" hits="0" branch="false"/>
+						<line number="121" hits="0" branch="false"/>
+						<line number="123" hits="0" branch="false"/>
+						<line number="124" hits="0" branch="false"/>
+						<line number="126" hits="0" branch="false"/>
+						<line number="127" hits="0" branch="false"/>
+						<line number="129" hits="0" branch="false"/>
+						<line number="130" hits="0" branch="false"/>
+						<line number="132" hits="0" branch="false"/>
+						<line number="133" hits="0" branch="false"/>
+						<line number="134" hits="0" branch="false"/>
+						<line number="136" hits="0" branch="false"/>
+						<line number="137" hits="0" branch="false"/>
+						<line number="138" hits="0" branch="false"/>
+						<line number="140" hits="0" branch="false"/>
+						<line number="141" hits="0" branch="false"/>
+						<line number="142" hits="0" branch="false"/>
+						<line number="143" hits="0" branch="false"/>
+						<line number="144" hits="0" branch="false"/>
+						<line number="145" hits="0" branch="false"/>
+						<line number="147" hits="0" branch="false"/>
+						<line number="148" hits="0" branch="false"/>
+						<line number="149" hits="0" branch="false"/>
+						<line number="151" hits="0" branch="false"/>
+						<line number="152" hits="0" branch="false"/>
+						<line number="154" hits="0" branch="false"/>
+						<line number="155" hits="0" branch="false"/>
+						<line number="156" hits="0" branch="false"/>
+						<line number="158" hits="0" branch="false"/>
+						<line number="159" hits="0" branch="false"/>
+						<line number="161" hits="0" branch="false"/>
+						<line number="162" hits="0" branch="false"/>
+						<line number="163" hits="0" branch="false"/>
+						<line number="165" hits="0" branch="false"/>
+						<line number="166" hits="0" branch="false"/>
+						<line number="168" hits="0" branch="false"/>
+						<line number="169" hits="0" branch="false"/>
+						<line number="170" hits="0" branch="false"/>
+						<line number="172" hits="0" branch="false"/>
+						<line number="173" hits="0" branch="false"/>
+						<line number="175" hits="0" branch="false"/>
+						<line number="176" hits="0" branch="false"/>
+						<line number="177" hits="0" branch="false"/>
+						<line number="179" hits="0" branch="false"/>
+						<line number="180" hits="0" branch="false"/>
+						<line number="182" hits="0" branch="false"/>
+						<line number="183" hits="0" branch="false"/>
+						<line number="184" hits="0" branch="false"/>
+						<line number="186" hits="0" branch="false"/>
+						<line number="187" hits="0" branch="false"/>
+						<line number="189" hits="0" branch="false"/>
+						<line number="190" hits="0" branch="false"/>
+						<line number="191" hits="0" branch="false"/>
+						<line number="193" hits="0" branch="false"/>
+						<line number="194" hits="0" branch="false"/>
+						<line number="196" hits="0" branch="false"/>
+						<line number="197" hits="0" branch="false"/>
+						<line number="198" hits="0" branch="false"/>
+						<line number="200" hits="0" branch="false"/>
+						<line number="201" hits="0" branch="false"/>
+						<line number="203" hits="0" branch="false"/>
+						<line number="204" hits="0" branch="false"/>
+						<line number="205" hits="0" branch="false"/>
+						<line number="207" hits="0" branch="false"/>
+						<line number="208" hits="0" branch="false"/>
+						<line number="210" hits="0" branch="false"/>
+						<line number="211" hits="0" branch="false"/>
+						<line number="212" hits="0" branch="false"/>
+						<line number="214" hits="0" branch="false"/>
+						<line number="215" hits="0" branch="false"/>
+						<line number="217" hits="0" branch="false"/>
+						<line number="218" hits="0" branch="false"/>
+						<line number="219" hits="0" branch="false"/>
+						<line number="221" hits="0" branch="false"/>
+						<line number="222" hits="0" branch="false"/>
+						<line number="224" hits="0" branch="false"/>
+						<line number="225" hits="0" branch="false"/>
+						<line number="226" hits="0" branch="false"/>
+						<line number="228" hits="0" branch="false"/>
+						<line number="229" hits="0" branch="false"/>
+						<line number="231" hits="0" branch="false"/>
+						<line number="232" hits="0" branch="false"/>
+						<line number="233" hits="0" branch="false"/>
+						<line number="235" hits="0" branch="false"/>
+						<line number="236" hits="0" branch="false"/>
+						<line number="238" hits="0" branch="false"/>
+						<line number="239" hits="0" branch="false"/>
+						<line number="241" hits="0" branch="false"/>
+						<line number="242" hits="0" branch="false"/>
+						<line number="278" hits="0" branch="false"/>
+						<line number="280" hits="0" branch="false"/>
+						<line number="281" hits="0" branch="false"/>
+						<line number="288" hits="0" branch="false"/>
+						<line number="291" hits="0" branch="false"/>
+						<line number="292" hits="0" branch="false"/>
+						<line number="293" hits="0" branch="false"/>
+						<line number="294" hits="0" branch="false"/>
+						<line number="297" hits="0" branch="false"/>
+						<line number="298" hits="0" branch="false"/>
+						<line number="299" hits="0" branch="false"/>
+						<line number="300" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="301" hits="0" branch="false"/>
+						<line number="303" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="304" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="305" hits="0" branch="false"/>
+						<line number="306" hits="0" branch="false"/>
+						<line number="307" hits="0" branch="false"/>
+						<line number="310" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="311" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="312" hits="0" branch="false"/>
+						<line number="313" hits="0" branch="false"/>
+						<line number="314" hits="0" branch="false"/>
+						<line number="317" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="318" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="319" hits="0" branch="false"/>
+						<line number="320" hits="0" branch="false"/>
+						<line number="321" hits="0" branch="false"/>
+						<line number="324" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="325" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="326" hits="0" branch="false"/>
+						<line number="327" hits="0" branch="false"/>
+						<line number="328" hits="0" branch="false"/>
+						<line number="331" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="332" hits="0" branch="false"/>
+						<line number="333" hits="0" branch="false"/>
+						<line number="336" hits="0" branch="false"/>
+						<line number="340" hits="0" branch="false"/>
+						<line number="341" hits="0" branch="false"/>
+						<line number="342" hits="0" branch="true" condition-coverage="0% (0/6)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+								<condition number="2" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="343" hits="0" branch="false"/>
+						<line number="344" hits="0" branch="false"/>
+						<line number="346" hits="0" branch="false"/>
+						<line number="349" hits="0" branch="false"/>
+						<line number="350" hits="0" branch="false"/>
+						<line number="351" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="352" hits="0" branch="false"/>
+						<line number="353" hits="0" branch="false"/>
+						<line number="355" hits="0" branch="false"/>
+						<line number="358" hits="0" branch="false"/>
+						<line number="359" hits="0" branch="false"/>
+						<line number="360" hits="0" branch="false"/>
+						<line number="361" hits="0" branch="false"/>
+						<line number="362" hits="0" branch="false"/>
+						<line number="363" hits="0" branch="false"/>
+						<line number="364" hits="0" branch="false"/>
+						<line number="365" hits="0" branch="false"/>
+						<line number="366" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaRegistro$1" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaRegistro.java" line-rate="0.0" branch-rate="0.0" complexity="3.7142857142857144">
+					<methods>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="244" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="245" hits="0" branch="false"/>
+								<line number="246" hits="0" branch="false"/>
+								<line number="247" hits="0" branch="false"/>
+								<line number="248" hits="0" branch="false"/>
+								<line number="249" hits="0" branch="false"/>
+								<line number="250" hits="0" branch="false"/>
+								<line number="251" hits="0" branch="false"/>
+								<line number="253" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="254" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="257" hits="0" branch="false"/>
+								<line number="258" hits="0" branch="false"/>
+								<line number="259" hits="0" branch="false"/>
+								<line number="260" hits="0" branch="false"/>
+								<line number="261" hits="0" branch="false"/>
+								<line number="262" hits="0" branch="false"/>
+								<line number="263" hits="0" branch="false"/>
+								<line number="264" hits="0" branch="false"/>
+								<line number="265" hits="0" branch="false"/>
+								<line number="268" hits="0" branch="false"/>
+								<line number="269" hits="0" branch="false"/>
+								<line number="272" hits="0" branch="false"/>
+								<line number="273" hits="0" branch="false"/>
+								<line number="276" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="244" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="245" hits="0" branch="false"/>
+						<line number="246" hits="0" branch="false"/>
+						<line number="247" hits="0" branch="false"/>
+						<line number="248" hits="0" branch="false"/>
+						<line number="249" hits="0" branch="false"/>
+						<line number="250" hits="0" branch="false"/>
+						<line number="251" hits="0" branch="false"/>
+						<line number="253" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="254" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="257" hits="0" branch="false"/>
+						<line number="258" hits="0" branch="false"/>
+						<line number="259" hits="0" branch="false"/>
+						<line number="260" hits="0" branch="false"/>
+						<line number="261" hits="0" branch="false"/>
+						<line number="262" hits="0" branch="false"/>
+						<line number="263" hits="0" branch="false"/>
+						<line number="264" hits="0" branch="false"/>
+						<line number="265" hits="0" branch="false"/>
+						<line number="268" hits="0" branch="false"/>
+						<line number="269" hits="0" branch="false"/>
+						<line number="272" hits="0" branch="false"/>
+						<line number="273" hits="0" branch="false"/>
+						<line number="276" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaRegistro$2" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaRegistro.java" line-rate="0.0" branch-rate="1.0" complexity="3.7142857142857144">
+					<methods>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="283" hits="0" branch="false"/>
+								<line number="284" hits="0" branch="false"/>
+								<line number="285" hits="0" branch="false"/>
+								<line number="286" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="283" hits="0" branch="false"/>
+						<line number="284" hits="0" branch="false"/>
+						<line number="285" hits="0" branch="false"/>
+						<line number="286" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaSaldo" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaSaldo.java" line-rate="0.0" branch-rate="0.0" complexity="2.2857142857142856">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="75" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/Conectividad/CinePlusController;Ljava/util/ResourceBundle;Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="81" hits="0" branch="false"/>
+								<line number="82" hits="0" branch="false"/>
+								<line number="84" hits="0" branch="false"/>
+								<line number="85" hits="0" branch="false"/>
+								<line number="87" hits="0" branch="false"/>
+								<line number="89" hits="0" branch="false"/>
+								<line number="90" hits="0" branch="false"/>
+								<line number="92" hits="0" branch="false"/>
+								<line number="94" hits="0" branch="false"/>
+								<line number="95" hits="0" branch="false"/>
+								<line number="96" hits="0" branch="false"/>
+								<line number="97" hits="0" branch="false"/>
+								<line number="98" hits="0" branch="false"/>
+								<line number="99" hits="0" branch="false"/>
+								<line number="100" hits="0" branch="false"/>
+								<line number="102" hits="0" branch="false"/>
+								<line number="103" hits="0" branch="false"/>
+								<line number="105" hits="0" branch="false"/>
+								<line number="106" hits="0" branch="false"/>
+								<line number="108" hits="0" branch="false"/>
+								<line number="109" hits="0" branch="false"/>
+								<line number="110" hits="0" branch="false"/>
+								<line number="112" hits="0" branch="false"/>
+								<line number="113" hits="0" branch="false"/>
+								<line number="115" hits="0" branch="false"/>
+								<line number="116" hits="0" branch="false"/>
+								<line number="118" hits="0" branch="false"/>
+								<line number="119" hits="0" branch="false"/>
+								<line number="143" hits="0" branch="false"/>
+								<line number="145" hits="0" branch="false"/>
+								<line number="146" hits="0" branch="false"/>
+								<line number="154" hits="0" branch="false"/>
+								<line number="156" hits="0" branch="false"/>
+								<line number="157" hits="0" branch="false"/>
+								<line number="159" hits="0" branch="false"/>
+								<line number="160" hits="0" branch="false"/>
+								<line number="162" hits="0" branch="false"/>
+								<line number="163" hits="0" branch="false"/>
+								<line number="164" hits="0" branch="false"/>
+								<line number="166" hits="0" branch="false"/>
+								<line number="167" hits="0" branch="false"/>
+								<line number="168" hits="0" branch="false"/>
+								<line number="170" hits="0" branch="false"/>
+								<line number="171" hits="0" branch="false"/>
+								<line number="172" hits="0" branch="false"/>
+								<line number="174" hits="0" branch="false"/>
+								<line number="175" hits="0" branch="false"/>
+								<line number="177" hits="0" branch="false"/>
+								<line number="178" hits="0" branch="false"/>
+								<line number="180" hits="0" branch="false"/>
+								<line number="181" hits="0" branch="false"/>
+								<line number="183" hits="0" branch="false"/>
+								<line number="184" hits="0" branch="false"/>
+								<line number="186" hits="0" branch="false"/>
+								<line number="187" hits="0" branch="false"/>
+								<line number="188" hits="0" branch="false"/>
+								<line number="190" hits="0" branch="false"/>
+								<line number="191" hits="0" branch="false"/>
+								<line number="193" hits="0" branch="false"/>
+								<line number="194" hits="0" branch="false"/>
+								<line number="196" hits="0" branch="false"/>
+								<line number="197" hits="0" branch="false"/>
+								<line number="199" hits="0" branch="false"/>
+								<line number="200" hits="0" branch="false"/>
+								<line number="201" hits="0" branch="false"/>
+								<line number="203" hits="0" branch="false"/>
+								<line number="204" hits="0" branch="false"/>
+								<line number="205" hits="0" branch="false"/>
+								<line number="207" hits="0" branch="false"/>
+								<line number="208" hits="0" branch="false"/>
+								<line number="209" hits="0" branch="false"/>
+								<line number="211" hits="0" branch="false"/>
+								<line number="212" hits="0" branch="false"/>
+								<line number="214" hits="0" branch="false"/>
+								<line number="215" hits="0" branch="false"/>
+								<line number="216" hits="0" branch="false"/>
+								<line number="218" hits="0" branch="false"/>
+								<line number="219" hits="0" branch="false"/>
+								<line number="221" hits="0" branch="false"/>
+								<line number="222" hits="0" branch="false"/>
+								<line number="223" hits="0" branch="false"/>
+								<line number="225" hits="0" branch="false"/>
+								<line number="226" hits="0" branch="false"/>
+								<line number="228" hits="0" branch="false"/>
+								<line number="229" hits="0" branch="false"/>
+								<line number="230" hits="0" branch="false"/>
+								<line number="232" hits="0" branch="false"/>
+								<line number="233" hits="0" branch="false"/>
+								<line number="235" hits="0" branch="false"/>
+								<line number="236" hits="0" branch="false"/>
+								<line number="238" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$0" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaSaldo;)Ljavax/swing/JComboBox;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="58" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$1" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaSaldo;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="275" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="comprobarcampos" signature="()Z" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="249" hits="0" branch="false"/>
+								<line number="250" hits="0" branch="false"/>
+								<line number="251" hits="0" branch="false"/>
+								<line number="252" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="253" hits="0" branch="false"/>
+								<line number="255" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="256" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="257" hits="0" branch="false"/>
+								<line number="258" hits="0" branch="false"/>
+								<line number="259" hits="0" branch="false"/>
+								<line number="262" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="263" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="264" hits="0" branch="false"/>
+								<line number="265" hits="0" branch="false"/>
+								<line number="266" hits="0" branch="false"/>
+								<line number="269" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="270" hits="0" branch="false"/>
+								<line number="271" hits="0" branch="false"/>
+								<line number="273" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="limpiarCampos" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="276" hits="0" branch="false"/>
+								<line number="277" hits="0" branch="false"/>
+								<line number="278" hits="0" branch="false"/>
+								<line number="279" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="58" hits="0" branch="false"/>
+						<line number="75" hits="0" branch="false"/>
+						<line number="81" hits="0" branch="false"/>
+						<line number="82" hits="0" branch="false"/>
+						<line number="84" hits="0" branch="false"/>
+						<line number="85" hits="0" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
+						<line number="89" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+						<line number="92" hits="0" branch="false"/>
+						<line number="94" hits="0" branch="false"/>
+						<line number="95" hits="0" branch="false"/>
+						<line number="96" hits="0" branch="false"/>
+						<line number="97" hits="0" branch="false"/>
+						<line number="98" hits="0" branch="false"/>
+						<line number="99" hits="0" branch="false"/>
+						<line number="100" hits="0" branch="false"/>
+						<line number="102" hits="0" branch="false"/>
+						<line number="103" hits="0" branch="false"/>
+						<line number="105" hits="0" branch="false"/>
+						<line number="106" hits="0" branch="false"/>
+						<line number="108" hits="0" branch="false"/>
+						<line number="109" hits="0" branch="false"/>
+						<line number="110" hits="0" branch="false"/>
+						<line number="112" hits="0" branch="false"/>
+						<line number="113" hits="0" branch="false"/>
+						<line number="115" hits="0" branch="false"/>
+						<line number="116" hits="0" branch="false"/>
+						<line number="118" hits="0" branch="false"/>
+						<line number="119" hits="0" branch="false"/>
+						<line number="143" hits="0" branch="false"/>
+						<line number="145" hits="0" branch="false"/>
+						<line number="146" hits="0" branch="false"/>
+						<line number="154" hits="0" branch="false"/>
+						<line number="156" hits="0" branch="false"/>
+						<line number="157" hits="0" branch="false"/>
+						<line number="159" hits="0" branch="false"/>
+						<line number="160" hits="0" branch="false"/>
+						<line number="162" hits="0" branch="false"/>
+						<line number="163" hits="0" branch="false"/>
+						<line number="164" hits="0" branch="false"/>
+						<line number="166" hits="0" branch="false"/>
+						<line number="167" hits="0" branch="false"/>
+						<line number="168" hits="0" branch="false"/>
+						<line number="170" hits="0" branch="false"/>
+						<line number="171" hits="0" branch="false"/>
+						<line number="172" hits="0" branch="false"/>
+						<line number="174" hits="0" branch="false"/>
+						<line number="175" hits="0" branch="false"/>
+						<line number="177" hits="0" branch="false"/>
+						<line number="178" hits="0" branch="false"/>
+						<line number="180" hits="0" branch="false"/>
+						<line number="181" hits="0" branch="false"/>
+						<line number="183" hits="0" branch="false"/>
+						<line number="184" hits="0" branch="false"/>
+						<line number="186" hits="0" branch="false"/>
+						<line number="187" hits="0" branch="false"/>
+						<line number="188" hits="0" branch="false"/>
+						<line number="190" hits="0" branch="false"/>
+						<line number="191" hits="0" branch="false"/>
+						<line number="193" hits="0" branch="false"/>
+						<line number="194" hits="0" branch="false"/>
+						<line number="196" hits="0" branch="false"/>
+						<line number="197" hits="0" branch="false"/>
+						<line number="199" hits="0" branch="false"/>
+						<line number="200" hits="0" branch="false"/>
+						<line number="201" hits="0" branch="false"/>
+						<line number="203" hits="0" branch="false"/>
+						<line number="204" hits="0" branch="false"/>
+						<line number="205" hits="0" branch="false"/>
+						<line number="207" hits="0" branch="false"/>
+						<line number="208" hits="0" branch="false"/>
+						<line number="209" hits="0" branch="false"/>
+						<line number="211" hits="0" branch="false"/>
+						<line number="212" hits="0" branch="false"/>
+						<line number="214" hits="0" branch="false"/>
+						<line number="215" hits="0" branch="false"/>
+						<line number="216" hits="0" branch="false"/>
+						<line number="218" hits="0" branch="false"/>
+						<line number="219" hits="0" branch="false"/>
+						<line number="221" hits="0" branch="false"/>
+						<line number="222" hits="0" branch="false"/>
+						<line number="223" hits="0" branch="false"/>
+						<line number="225" hits="0" branch="false"/>
+						<line number="226" hits="0" branch="false"/>
+						<line number="228" hits="0" branch="false"/>
+						<line number="229" hits="0" branch="false"/>
+						<line number="230" hits="0" branch="false"/>
+						<line number="232" hits="0" branch="false"/>
+						<line number="233" hits="0" branch="false"/>
+						<line number="235" hits="0" branch="false"/>
+						<line number="236" hits="0" branch="false"/>
+						<line number="238" hits="0" branch="false"/>
+						<line number="249" hits="0" branch="false"/>
+						<line number="250" hits="0" branch="false"/>
+						<line number="251" hits="0" branch="false"/>
+						<line number="252" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="253" hits="0" branch="false"/>
+						<line number="255" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="256" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="257" hits="0" branch="false"/>
+						<line number="258" hits="0" branch="false"/>
+						<line number="259" hits="0" branch="false"/>
+						<line number="262" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="263" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="264" hits="0" branch="false"/>
+						<line number="265" hits="0" branch="false"/>
+						<line number="266" hits="0" branch="false"/>
+						<line number="269" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="270" hits="0" branch="false"/>
+						<line number="271" hits="0" branch="false"/>
+						<line number="273" hits="0" branch="false"/>
+						<line number="275" hits="0" branch="false"/>
+						<line number="276" hits="0" branch="false"/>
+						<line number="277" hits="0" branch="false"/>
+						<line number="278" hits="0" branch="false"/>
+						<line number="279" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaSaldo$1" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaSaldo.java" line-rate="0.0" branch-rate="0.0" complexity="2.2857142857142856">
+					<methods>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="121" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="122" hits="0" branch="false"/>
+								<line number="123" hits="0" branch="false"/>
+								<line number="124" hits="0" branch="false"/>
+								<line number="125" hits="0" branch="false"/>
+								<line number="126" hits="0" branch="false"/>
+								<line number="129" hits="0" branch="false"/>
+								<line number="130" hits="0" branch="false"/>
+								<line number="131" hits="0" branch="false"/>
+								<line number="132" hits="0" branch="false"/>
+								<line number="134" hits="0" branch="false"/>
+								<line number="135" hits="0" branch="false"/>
+								<line number="136" hits="0" branch="false"/>
+								<line number="137" hits="0" branch="false"/>
+								<line number="138" hits="0" branch="false"/>
+								<line number="141" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="121" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="122" hits="0" branch="false"/>
+						<line number="123" hits="0" branch="false"/>
+						<line number="124" hits="0" branch="false"/>
+						<line number="125" hits="0" branch="false"/>
+						<line number="126" hits="0" branch="false"/>
+						<line number="129" hits="0" branch="false"/>
+						<line number="130" hits="0" branch="false"/>
+						<line number="131" hits="0" branch="false"/>
+						<line number="132" hits="0" branch="false"/>
+						<line number="134" hits="0" branch="false"/>
+						<line number="135" hits="0" branch="false"/>
+						<line number="136" hits="0" branch="false"/>
+						<line number="137" hits="0" branch="false"/>
+						<line number="138" hits="0" branch="false"/>
+						<line number="141" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaSaldo$2" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaSaldo.java" line-rate="0.0" branch-rate="1.0" complexity="2.2857142857142856">
+					<methods>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="148" hits="0" branch="false"/>
+								<line number="149" hits="0" branch="false"/>
+								<line number="150" hits="0" branch="false"/>
+								<line number="151" hits="0" branch="false"/>
+								<line number="152" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="148" hits="0" branch="false"/>
+						<line number="149" hits="0" branch="false"/>
+						<line number="150" hits="0" branch="false"/>
+						<line number="151" hits="0" branch="false"/>
+						<line number="152" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaUsuario" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaUsuario.java" line-rate="0.0" branch-rate="1.0" complexity="3.5">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="111" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/Conectividad/CinePlusController;Ljava/util/ResourceBundle;Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="52" hits="0" branch="false"/>
+								<line number="53" hits="0" branch="false"/>
+								<line number="122" hits="0" branch="false"/>
+								<line number="123" hits="0" branch="false"/>
+								<line number="124" hits="0" branch="false"/>
+								<line number="125" hits="0" branch="false"/>
+								<line number="126" hits="0" branch="false"/>
+								<line number="128" hits="0" branch="false"/>
+								<line number="130" hits="0" branch="false"/>
+								<line number="131" hits="0" branch="false"/>
+								<line number="133" hits="0" branch="false"/>
+								<line number="134" hits="0" branch="false"/>
+								<line number="135" hits="0" branch="false"/>
+								<line number="136" hits="0" branch="false"/>
+								<line number="137" hits="0" branch="false"/>
+								<line number="138" hits="0" branch="false"/>
+								<line number="139" hits="0" branch="false"/>
+								<line number="141" hits="0" branch="false"/>
+								<line number="142" hits="0" branch="false"/>
+								<line number="143" hits="0" branch="false"/>
+								<line number="145" hits="0" branch="false"/>
+								<line number="146" hits="0" branch="false"/>
+								<line number="148" hits="0" branch="false"/>
+								<line number="150" hits="0" branch="false"/>
+								<line number="152" hits="0" branch="false"/>
+								<line number="153" hits="0" branch="false"/>
+								<line number="155" hits="0" branch="false"/>
+								<line number="156" hits="0" branch="false"/>
+								<line number="158" hits="0" branch="false"/>
+								<line number="159" hits="0" branch="false"/>
+								<line number="161" hits="0" branch="false"/>
+								<line number="162" hits="0" branch="false"/>
+								<line number="163" hits="0" branch="false"/>
+								<line number="165" hits="0" branch="false"/>
+								<line number="166" hits="0" branch="false"/>
+								<line number="168" hits="0" branch="false"/>
+								<line number="169" hits="0" branch="false"/>
+								<line number="171" hits="0" branch="false"/>
+								<line number="172" hits="0" branch="false"/>
+								<line number="174" hits="0" branch="false"/>
+								<line number="175" hits="0" branch="false"/>
+								<line number="177" hits="0" branch="false"/>
+								<line number="178" hits="0" branch="false"/>
+								<line number="179" hits="0" branch="false"/>
+								<line number="181" hits="0" branch="false"/>
+								<line number="182" hits="0" branch="false"/>
+								<line number="184" hits="0" branch="false"/>
+								<line number="185" hits="0" branch="false"/>
+								<line number="186" hits="0" branch="false"/>
+								<line number="188" hits="0" branch="false"/>
+								<line number="189" hits="0" branch="false"/>
+								<line number="190" hits="0" branch="false"/>
+								<line number="192" hits="0" branch="false"/>
+								<line number="193" hits="0" branch="false"/>
+								<line number="195" hits="0" branch="false"/>
+								<line number="196" hits="0" branch="false"/>
+								<line number="198" hits="0" branch="false"/>
+								<line number="199" hits="0" branch="false"/>
+								<line number="200" hits="0" branch="false"/>
+								<line number="202" hits="0" branch="false"/>
+								<line number="203" hits="0" branch="false"/>
+								<line number="204" hits="0" branch="false"/>
+								<line number="206" hits="0" branch="false"/>
+								<line number="207" hits="0" branch="false"/>
+								<line number="209" hits="0" branch="false"/>
+								<line number="210" hits="0" branch="false"/>
+								<line number="212" hits="0" branch="false"/>
+								<line number="213" hits="0" branch="false"/>
+								<line number="214" hits="0" branch="false"/>
+								<line number="216" hits="0" branch="false"/>
+								<line number="217" hits="0" branch="false"/>
+								<line number="218" hits="0" branch="false"/>
+								<line number="220" hits="0" branch="false"/>
+								<line number="221" hits="0" branch="false"/>
+								<line number="223" hits="0" branch="false"/>
+								<line number="224" hits="0" branch="false"/>
+								<line number="226" hits="0" branch="false"/>
+								<line number="227" hits="0" branch="false"/>
+								<line number="228" hits="0" branch="false"/>
+								<line number="230" hits="0" branch="false"/>
+								<line number="231" hits="0" branch="false"/>
+								<line number="232" hits="0" branch="false"/>
+								<line number="234" hits="0" branch="false"/>
+								<line number="235" hits="0" branch="false"/>
+								<line number="237" hits="0" branch="false"/>
+								<line number="238" hits="0" branch="false"/>
+								<line number="240" hits="0" branch="false"/>
+								<line number="241" hits="0" branch="false"/>
+								<line number="249" hits="0" branch="false"/>
+								<line number="251" hits="0" branch="false"/>
+								<line number="252" hits="0" branch="false"/>
+								<line number="254" hits="0" branch="false"/>
+								<line number="255" hits="0" branch="false"/>
+								<line number="262" hits="0" branch="false"/>
+								<line number="264" hits="0" branch="false"/>
+								<line number="265" hits="0" branch="false"/>
+								<line number="266" hits="0" branch="false"/>
+								<line number="267" hits="0" branch="false"/>
+								<line number="268" hits="0" branch="false"/>
+								<line number="269" hits="0" branch="false"/>
+								<line number="270" hits="0" branch="false"/>
+								<line number="271" hits="0" branch="false"/>
+								<line number="272" hits="0" branch="false"/>
+								<line number="274" hits="0" branch="false"/>
+								<line number="275" hits="0" branch="false"/>
+								<line number="276" hits="0" branch="false"/>
+								<line number="278" hits="0" branch="false"/>
+								<line number="280" hits="0" branch="false"/>
+								<line number="281" hits="0" branch="false"/>
+								<line number="282" hits="0" branch="false"/>
+								<line number="285" hits="0" branch="false"/>
+								<line number="286" hits="0" branch="false"/>
+								<line number="287" hits="0" branch="false"/>
+								<line number="289" hits="0" branch="false"/>
+								<line number="290" hits="0" branch="false"/>
+								<line number="292" hits="0" branch="false"/>
+								<line number="293" hits="0" branch="false"/>
+								<line number="295" hits="0" branch="false"/>
+								<line number="296" hits="0" branch="false"/>
+								<line number="298" hits="0" branch="false"/>
+								<line number="299" hits="0" branch="false"/>
+								<line number="300" hits="0" branch="false"/>
+								<line number="302" hits="0" branch="false"/>
+								<line number="303" hits="0" branch="false"/>
+								<line number="308" hits="0" branch="false"/>
+								<line number="309" hits="0" branch="false"/>
+								<line number="353" hits="0" branch="false"/>
+								<line number="355" hits="0" branch="false"/>
+								<line number="356" hits="0" branch="false"/>
+								<line number="357" hits="0" branch="false"/>
+								<line number="359" hits="0" branch="false"/>
+								<line number="360" hits="0" branch="false"/>
+								<line number="362" hits="0" branch="false"/>
+								<line number="363" hits="0" branch="false"/>
+								<line number="365" hits="0" branch="false"/>
+								<line number="366" hits="0" branch="false"/>
+								<line number="368" hits="0" branch="false"/>
+								<line number="369" hits="0" branch="false"/>
+								<line number="370" hits="0" branch="false"/>
+								<line number="372" hits="0" branch="false"/>
+								<line number="373" hits="0" branch="false"/>
+								<line number="375" hits="0" branch="false"/>
+								<line number="376" hits="0" branch="false"/>
+								<line number="378" hits="0" branch="false"/>
+								<line number="379" hits="0" branch="false"/>
+								<line number="381" hits="0" branch="false"/>
+								<line number="382" hits="0" branch="false"/>
+								<line number="383" hits="0" branch="false"/>
+								<line number="385" hits="0" branch="false"/>
+								<line number="386" hits="0" branch="false"/>
+								<line number="388" hits="0" branch="false"/>
+								<line number="389" hits="0" branch="false"/>
+								<line number="391" hits="0" branch="false"/>
+								<line number="392" hits="0" branch="false"/>
+								<line number="393" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$0" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaUsuario;)Ljavax/swing/JTextField;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="54" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$1" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaUsuario;)Ljavax/swing/JComboBox;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="97" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$2" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaUsuario;)Ljavax/swing/JComboBox;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="96" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$3" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaUsuario;Ljava/util/List;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+							</lines>
+						</method>
+						<method name="access$4" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaUsuario;)Ljava/util/List;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="110" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="access$5" signature="(Les/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaUsuario;)Ljavax/swing/JPanel;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="90" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="52" hits="0" branch="false"/>
+						<line number="53" hits="0" branch="false"/>
+						<line number="54" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+						<line number="96" hits="0" branch="false"/>
+						<line number="97" hits="0" branch="false"/>
+						<line number="110" hits="0" branch="false"/>
+						<line number="111" hits="0" branch="false"/>
+						<line number="122" hits="0" branch="false"/>
+						<line number="123" hits="0" branch="false"/>
+						<line number="124" hits="0" branch="false"/>
+						<line number="125" hits="0" branch="false"/>
+						<line number="126" hits="0" branch="false"/>
+						<line number="128" hits="0" branch="false"/>
+						<line number="130" hits="0" branch="false"/>
+						<line number="131" hits="0" branch="false"/>
+						<line number="133" hits="0" branch="false"/>
+						<line number="134" hits="0" branch="false"/>
+						<line number="135" hits="0" branch="false"/>
+						<line number="136" hits="0" branch="false"/>
+						<line number="137" hits="0" branch="false"/>
+						<line number="138" hits="0" branch="false"/>
+						<line number="139" hits="0" branch="false"/>
+						<line number="141" hits="0" branch="false"/>
+						<line number="142" hits="0" branch="false"/>
+						<line number="143" hits="0" branch="false"/>
+						<line number="145" hits="0" branch="false"/>
+						<line number="146" hits="0" branch="false"/>
+						<line number="148" hits="0" branch="false"/>
+						<line number="150" hits="0" branch="false"/>
+						<line number="152" hits="0" branch="false"/>
+						<line number="153" hits="0" branch="false"/>
+						<line number="155" hits="0" branch="false"/>
+						<line number="156" hits="0" branch="false"/>
+						<line number="158" hits="0" branch="false"/>
+						<line number="159" hits="0" branch="false"/>
+						<line number="161" hits="0" branch="false"/>
+						<line number="162" hits="0" branch="false"/>
+						<line number="163" hits="0" branch="false"/>
+						<line number="165" hits="0" branch="false"/>
+						<line number="166" hits="0" branch="false"/>
+						<line number="168" hits="0" branch="false"/>
+						<line number="169" hits="0" branch="false"/>
+						<line number="171" hits="0" branch="false"/>
+						<line number="172" hits="0" branch="false"/>
+						<line number="174" hits="0" branch="false"/>
+						<line number="175" hits="0" branch="false"/>
+						<line number="177" hits="0" branch="false"/>
+						<line number="178" hits="0" branch="false"/>
+						<line number="179" hits="0" branch="false"/>
+						<line number="181" hits="0" branch="false"/>
+						<line number="182" hits="0" branch="false"/>
+						<line number="184" hits="0" branch="false"/>
+						<line number="185" hits="0" branch="false"/>
+						<line number="186" hits="0" branch="false"/>
+						<line number="188" hits="0" branch="false"/>
+						<line number="189" hits="0" branch="false"/>
+						<line number="190" hits="0" branch="false"/>
+						<line number="192" hits="0" branch="false"/>
+						<line number="193" hits="0" branch="false"/>
+						<line number="195" hits="0" branch="false"/>
+						<line number="196" hits="0" branch="false"/>
+						<line number="198" hits="0" branch="false"/>
+						<line number="199" hits="0" branch="false"/>
+						<line number="200" hits="0" branch="false"/>
+						<line number="202" hits="0" branch="false"/>
+						<line number="203" hits="0" branch="false"/>
+						<line number="204" hits="0" branch="false"/>
+						<line number="206" hits="0" branch="false"/>
+						<line number="207" hits="0" branch="false"/>
+						<line number="209" hits="0" branch="false"/>
+						<line number="210" hits="0" branch="false"/>
+						<line number="212" hits="0" branch="false"/>
+						<line number="213" hits="0" branch="false"/>
+						<line number="214" hits="0" branch="false"/>
+						<line number="216" hits="0" branch="false"/>
+						<line number="217" hits="0" branch="false"/>
+						<line number="218" hits="0" branch="false"/>
+						<line number="220" hits="0" branch="false"/>
+						<line number="221" hits="0" branch="false"/>
+						<line number="223" hits="0" branch="false"/>
+						<line number="224" hits="0" branch="false"/>
+						<line number="226" hits="0" branch="false"/>
+						<line number="227" hits="0" branch="false"/>
+						<line number="228" hits="0" branch="false"/>
+						<line number="230" hits="0" branch="false"/>
+						<line number="231" hits="0" branch="false"/>
+						<line number="232" hits="0" branch="false"/>
+						<line number="234" hits="0" branch="false"/>
+						<line number="235" hits="0" branch="false"/>
+						<line number="237" hits="0" branch="false"/>
+						<line number="238" hits="0" branch="false"/>
+						<line number="240" hits="0" branch="false"/>
+						<line number="241" hits="0" branch="false"/>
+						<line number="249" hits="0" branch="false"/>
+						<line number="251" hits="0" branch="false"/>
+						<line number="252" hits="0" branch="false"/>
+						<line number="254" hits="0" branch="false"/>
+						<line number="255" hits="0" branch="false"/>
+						<line number="262" hits="0" branch="false"/>
+						<line number="264" hits="0" branch="false"/>
+						<line number="265" hits="0" branch="false"/>
+						<line number="266" hits="0" branch="false"/>
+						<line number="267" hits="0" branch="false"/>
+						<line number="268" hits="0" branch="false"/>
+						<line number="269" hits="0" branch="false"/>
+						<line number="270" hits="0" branch="false"/>
+						<line number="271" hits="0" branch="false"/>
+						<line number="272" hits="0" branch="false"/>
+						<line number="274" hits="0" branch="false"/>
+						<line number="275" hits="0" branch="false"/>
+						<line number="276" hits="0" branch="false"/>
+						<line number="278" hits="0" branch="false"/>
+						<line number="280" hits="0" branch="false"/>
+						<line number="281" hits="0" branch="false"/>
+						<line number="282" hits="0" branch="false"/>
+						<line number="285" hits="0" branch="false"/>
+						<line number="286" hits="0" branch="false"/>
+						<line number="287" hits="0" branch="false"/>
+						<line number="289" hits="0" branch="false"/>
+						<line number="290" hits="0" branch="false"/>
+						<line number="292" hits="0" branch="false"/>
+						<line number="293" hits="0" branch="false"/>
+						<line number="295" hits="0" branch="false"/>
+						<line number="296" hits="0" branch="false"/>
+						<line number="298" hits="0" branch="false"/>
+						<line number="299" hits="0" branch="false"/>
+						<line number="300" hits="0" branch="false"/>
+						<line number="302" hits="0" branch="false"/>
+						<line number="303" hits="0" branch="false"/>
+						<line number="308" hits="0" branch="false"/>
+						<line number="309" hits="0" branch="false"/>
+						<line number="353" hits="0" branch="false"/>
+						<line number="355" hits="0" branch="false"/>
+						<line number="356" hits="0" branch="false"/>
+						<line number="357" hits="0" branch="false"/>
+						<line number="359" hits="0" branch="false"/>
+						<line number="360" hits="0" branch="false"/>
+						<line number="362" hits="0" branch="false"/>
+						<line number="363" hits="0" branch="false"/>
+						<line number="365" hits="0" branch="false"/>
+						<line number="366" hits="0" branch="false"/>
+						<line number="368" hits="0" branch="false"/>
+						<line number="369" hits="0" branch="false"/>
+						<line number="370" hits="0" branch="false"/>
+						<line number="372" hits="0" branch="false"/>
+						<line number="373" hits="0" branch="false"/>
+						<line number="375" hits="0" branch="false"/>
+						<line number="376" hits="0" branch="false"/>
+						<line number="378" hits="0" branch="false"/>
+						<line number="379" hits="0" branch="false"/>
+						<line number="381" hits="0" branch="false"/>
+						<line number="382" hits="0" branch="false"/>
+						<line number="383" hits="0" branch="false"/>
+						<line number="385" hits="0" branch="false"/>
+						<line number="386" hits="0" branch="false"/>
+						<line number="388" hits="0" branch="false"/>
+						<line number="389" hits="0" branch="false"/>
+						<line number="391" hits="0" branch="false"/>
+						<line number="392" hits="0" branch="false"/>
+						<line number="393" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaUsuario$1" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaUsuario.java" line-rate="0.0" branch-rate="1.0" complexity="3.5">
+					<methods>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="243" hits="0" branch="false"/>
+								<line number="244" hits="0" branch="false"/>
+								<line number="245" hits="0" branch="false"/>
+								<line number="246" hits="0" branch="false"/>
+								<line number="247" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="243" hits="0" branch="false"/>
+						<line number="244" hits="0" branch="false"/>
+						<line number="245" hits="0" branch="false"/>
+						<line number="246" hits="0" branch="false"/>
+						<line number="247" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaUsuario$2" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaUsuario.java" line-rate="0.0" branch-rate="1.0" complexity="3.5">
+					<methods>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="257" hits="0" branch="false"/>
+								<line number="258" hits="0" branch="false"/>
+								<line number="259" hits="0" branch="false"/>
+								<line number="260" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="257" hits="0" branch="false"/>
+						<line number="258" hits="0" branch="false"/>
+						<line number="259" hits="0" branch="false"/>
+						<line number="260" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaUsuario$3" filename="es/deusto/spq/ProyectoCinePlus/cliente/util/GUI/VentanaUsuario.java" line-rate="0.0" branch-rate="0.0" complexity="3.5">
+					<methods>
+						<method name="actionPerformed" signature="(Ljava/awt/event/ActionEvent;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="311" hits="0" branch="false"/>
+								<line number="312" hits="0" branch="false"/>
+								<line number="313" hits="0" branch="false"/>
+								<line number="314" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="315" hits="0" branch="false"/>
+								<line number="316" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="317" hits="0" branch="false"/>
+								<line number="318" hits="0" branch="false"/>
+								<line number="319" hits="0" branch="false"/>
+								<line number="321" hits="0" branch="false"/>
+								<line number="322" hits="0" branch="false"/>
+								<line number="323" hits="0" branch="false"/>
+								<line number="324" hits="0" branch="false"/>
+								<line number="325" hits="0" branch="false"/>
+								<line number="326" hits="0" branch="false"/>
+								<line number="327" hits="0" branch="false"/>
+								<line number="330" hits="0" branch="false"/>
+								<line number="331" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="332" hits="0" branch="false"/>
+								<line number="334" hits="0" branch="false"/>
+								<line number="336" hits="0" branch="false"/>
+								<line number="338" hits="0" branch="false"/>
+								<line number="339" hits="0" branch="false"/>
+								<line number="340" hits="0" branch="false"/>
+								<line number="341" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="342" hits="0" branch="false"/>
+								<line number="343" hits="0" branch="false"/>
+								<line number="344" hits="0" branch="false"/>
+								<line number="345" hits="0" branch="false"/>
+								<line number="347" hits="0" branch="false"/>
+								<line number="350" hits="0" branch="false"/>
+								<line number="351" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="311" hits="0" branch="false"/>
+						<line number="312" hits="0" branch="false"/>
+						<line number="313" hits="0" branch="false"/>
+						<line number="314" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="315" hits="0" branch="false"/>
+						<line number="316" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="317" hits="0" branch="false"/>
+						<line number="318" hits="0" branch="false"/>
+						<line number="319" hits="0" branch="false"/>
+						<line number="321" hits="0" branch="false"/>
+						<line number="322" hits="0" branch="false"/>
+						<line number="323" hits="0" branch="false"/>
+						<line number="324" hits="0" branch="false"/>
+						<line number="325" hits="0" branch="false"/>
+						<line number="326" hits="0" branch="false"/>
+						<line number="327" hits="0" branch="false"/>
+						<line number="330" hits="0" branch="false"/>
+						<line number="331" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="332" hits="0" branch="false"/>
+						<line number="334" hits="0" branch="false"/>
+						<line number="336" hits="0" branch="false"/>
+						<line number="338" hits="0" branch="false"/>
+						<line number="339" hits="0" branch="false"/>
+						<line number="340" hits="0" branch="false"/>
+						<line number="341" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="342" hits="0" branch="false"/>
+						<line number="343" hits="0" branch="false"/>
+						<line number="344" hits="0" branch="false"/>
+						<line number="345" hits="0" branch="false"/>
+						<line number="347" hits="0" branch="false"/>
+						<line number="350" hits="0" branch="false"/>
+						<line number="351" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="es.deusto.spq.ProyectoCinePlus.servidor.Conectividad" line-rate="0.1717171717171717" branch-rate="0.0" complexity="1.3428571428571427">
+			<classes>
+				<class name="es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusFacade" filename="es/deusto/spq/ProyectoCinePlus/servidor/Conectividad/CinePlusFacade.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="Anyos" signature="()Ljava/util/List;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="41" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="Busqueda" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="38" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="Generos" signature="()Ljava/util/List;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="44" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="actualizarUsuario" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="52" hits="0" branch="false"/>
+								<line number="53" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="checkUsuario" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="61" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="devuelveUsuario" signature="(Ljava/lang/String;)Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="48" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="eliminarUsuario" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="56" hits="0" branch="false"/>
+								<line number="57" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="registrarUsuario" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FZ)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="31" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="registrarUsuario" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="27" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="usuarioRegistrado" signature="(Ljava/lang/String;Ljava/lang/String;)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="35" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="27" hits="0" branch="false"/>
+						<line number="31" hits="0" branch="false"/>
+						<line number="35" hits="0" branch="false"/>
+						<line number="38" hits="0" branch="false"/>
+						<line number="41" hits="0" branch="false"/>
+						<line number="44" hits="0" branch="false"/>
+						<line number="48" hits="0" branch="false"/>
+						<line number="52" hits="0" branch="false"/>
+						<line number="53" hits="0" branch="false"/>
+						<line number="56" hits="0" branch="false"/>
+						<line number="57" hits="0" branch="false"/>
+						<line number="61" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusManagerServer" filename="es/deusto/spq/ProyectoCinePlus/servidor/Conectividad/CinePlusManagerServer.java" line-rate="0.0" branch-rate="0.0" complexity="3.6666666666666665">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="14" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="main" signature="([Ljava/lang/String;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="17" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="18" hits="0" branch="false"/>
+								<line number="21" hits="0" branch="false"/>
+								<line number="22" hits="0" branch="false"/>
+								<line number="24" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="25" hits="0" branch="false"/>
+								<line number="28" hits="0" branch="false"/>
+								<line number="43" hits="0" branch="false"/>
+								<line number="44" hits="0" branch="false"/>
+								<line number="46" hits="0" branch="false"/>
+								<line number="47" hits="0" branch="false"/>
+								<line number="48" hits="0" branch="false"/>
+								<line number="82" hits="0" branch="false"/>
+								<line number="83" hits="0" branch="false"/>
+								<line number="85" hits="0" branch="false"/>
+								<line number="86" hits="0" branch="false"/>
+								<line number="87" hits="0" branch="false"/>
+								<line number="92" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="14" hits="0" branch="false"/>
+						<line number="17" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="18" hits="0" branch="false"/>
+						<line number="21" hits="0" branch="false"/>
+						<line number="22" hits="0" branch="false"/>
+						<line number="24" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="25" hits="0" branch="false"/>
+						<line number="28" hits="0" branch="false"/>
+						<line number="43" hits="0" branch="false"/>
+						<line number="44" hits="0" branch="false"/>
+						<line number="46" hits="0" branch="false"/>
+						<line number="47" hits="0" branch="false"/>
+						<line number="48" hits="0" branch="false"/>
+						<line number="82" hits="0" branch="false"/>
+						<line number="83" hits="0" branch="false"/>
+						<line number="85" hits="0" branch="false"/>
+						<line number="86" hits="0" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
+						<line number="92" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusManagerServer$1RMIRegistryRunnable" filename="es/deusto/spq/ProyectoCinePlus/servidor/Conectividad/CinePlusManagerServer.java" line-rate="0.0" branch-rate="1.0" complexity="3.6666666666666665">
+					<methods>
+						<method name="run" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="34" hits="0" branch="false"/>
+								<line number="35" hits="0" branch="false"/>
+								<line number="36" hits="0" branch="false"/>
+								<line number="37" hits="0" branch="false"/>
+								<line number="38" hits="0" branch="false"/>
+								<line number="40" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="34" hits="0" branch="false"/>
+						<line number="35" hits="0" branch="false"/>
+						<line number="36" hits="0" branch="false"/>
+						<line number="37" hits="0" branch="false"/>
+						<line number="38" hits="0" branch="false"/>
+						<line number="40" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusManagerServer$1RMIServerRunnable" filename="es/deusto/spq/ProyectoCinePlus/servidor/Conectividad/CinePlusManagerServer.java" line-rate="0.0" branch-rate="1.0" complexity="3.6666666666666665">
+					<methods>
+						<method name="run" signature="()V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="55" hits="0" branch="false"/>
+								<line number="56" hits="0" branch="false"/>
+								<line number="60" hits="0" branch="false"/>
+								<line number="61" hits="0" branch="false"/>
+								<line number="62" hits="0" branch="false"/>
+								<line number="63" hits="0" branch="false"/>
+								<line number="64" hits="0" branch="false"/>
+								<line number="65" hits="0" branch="false"/>
+								<line number="68" hits="0" branch="false"/>
+								<line number="69" hits="0" branch="false"/>
+								<line number="70" hits="0" branch="false"/>
+								<line number="71" hits="0" branch="false"/>
+								<line number="72" hits="0" branch="false"/>
+								<line number="73" hits="0" branch="false"/>
+								<line number="74" hits="0" branch="false"/>
+								<line number="75" hits="0" branch="false"/>
+								<line number="76" hits="0" branch="false"/>
+								<line number="77" hits="0" branch="false"/>
+								<line number="80" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="55" hits="0" branch="false"/>
+						<line number="56" hits="0" branch="false"/>
+						<line number="60" hits="0" branch="false"/>
+						<line number="61" hits="0" branch="false"/>
+						<line number="62" hits="0" branch="false"/>
+						<line number="63" hits="0" branch="false"/>
+						<line number="64" hits="0" branch="false"/>
+						<line number="65" hits="0" branch="false"/>
+						<line number="68" hits="0" branch="false"/>
+						<line number="69" hits="0" branch="false"/>
+						<line number="70" hits="0" branch="false"/>
+						<line number="71" hits="0" branch="false"/>
+						<line number="72" hits="0" branch="false"/>
+						<line number="73" hits="0" branch="false"/>
+						<line number="74" hits="0" branch="false"/>
+						<line number="75" hits="0" branch="false"/>
+						<line number="76" hits="0" branch="false"/>
+						<line number="77" hits="0" branch="false"/>
+						<line number="80" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusServer" filename="es/deusto/spq/ProyectoCinePlus/servidor/Conectividad/CinePlusServer.java" line-rate="0.3953488372093023" branch-rate="0.0" complexity="1.3636363636363635">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="18" hits="2" branch="false"/>
+								<line number="20" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="24" hits="2" branch="false"/>
+								<line number="25" hits="2" branch="false"/>
+								<line number="26" hits="2" branch="false"/>
+								<line number="27" hits="2" branch="false"/>
+								<line number="28" hits="2" branch="false"/>
+								<line number="29" hits="2" branch="false"/>
+								<line number="31" hits="2" branch="false"/>
+								<line number="32" hits="2" branch="false"/>
+								<line number="33" hits="2" branch="false"/>
+								<line number="35" hits="2" branch="false"/>
+								<line number="36" hits="2" branch="false"/>
+								<line number="39" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="Anyos" signature="()Ljava/util/List;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="95" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="Busqueda" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="63" hits="0" branch="false"/>
+								<line number="65" hits="0" branch="false"/>
+								<line number="66" hits="0" branch="false"/>
+								<line number="67" hits="0" branch="false"/>
+								<line number="68" hits="0" branch="false"/>
+								<line number="69" hits="0" branch="false"/>
+								<line number="70" hits="0" branch="false"/>
+								<line number="71" hits="0" branch="false"/>
+								<line number="72" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="73" hits="0" branch="false"/>
+								<line number="74" hits="0" branch="false"/>
+								<line number="75" hits="0" branch="false"/>
+								<line number="76" hits="0" branch="true" condition-coverage="0% (0/6)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+										<condition number="2" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="77" hits="0" branch="false"/>
+								<line number="80" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="Generos" signature="()Ljava/util/List;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="100" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="actualizarUsuario" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="90" hits="0" branch="false"/>
+								<line number="91" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="checkUsuario" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="108" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="devuelveUsuario" signature="(Ljava/lang/String;)Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="85" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="eliminarUsuario" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="104" hits="0" branch="false"/>
+								<line number="105" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="registrarUsuario" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;FZ)Z" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="50" hits="0" branch="false"/>
+								<line number="51" hits="0" branch="false"/>
+								<line number="53" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="registrarUsuario" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="43" hits="2" branch="false"/>
+								<line number="45" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="usuarioRegistrado" signature="(Ljava/lang/String;Ljava/lang/String;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="58" hits="4" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="18" hits="2" branch="false"/>
+						<line number="20" hits="2" branch="false"/>
+						<line number="24" hits="2" branch="false"/>
+						<line number="25" hits="2" branch="false"/>
+						<line number="26" hits="2" branch="false"/>
+						<line number="27" hits="2" branch="false"/>
+						<line number="28" hits="2" branch="false"/>
+						<line number="29" hits="2" branch="false"/>
+						<line number="31" hits="2" branch="false"/>
+						<line number="32" hits="2" branch="false"/>
+						<line number="33" hits="2" branch="false"/>
+						<line number="35" hits="2" branch="false"/>
+						<line number="36" hits="2" branch="false"/>
+						<line number="39" hits="2" branch="false"/>
+						<line number="43" hits="2" branch="false"/>
+						<line number="45" hits="2" branch="false"/>
+						<line number="50" hits="0" branch="false"/>
+						<line number="51" hits="0" branch="false"/>
+						<line number="53" hits="0" branch="false"/>
+						<line number="58" hits="4" branch="false"/>
+						<line number="63" hits="0" branch="false"/>
+						<line number="65" hits="0" branch="false"/>
+						<line number="66" hits="0" branch="false"/>
+						<line number="67" hits="0" branch="false"/>
+						<line number="68" hits="0" branch="false"/>
+						<line number="69" hits="0" branch="false"/>
+						<line number="70" hits="0" branch="false"/>
+						<line number="71" hits="0" branch="false"/>
+						<line number="72" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="73" hits="0" branch="false"/>
+						<line number="74" hits="0" branch="false"/>
+						<line number="75" hits="0" branch="false"/>
+						<line number="76" hits="0" branch="true" condition-coverage="0% (0/6)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+								<condition number="2" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="77" hits="0" branch="false"/>
+						<line number="80" hits="0" branch="false"/>
+						<line number="85" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+						<line number="91" hits="0" branch="false"/>
+						<line number="95" hits="0" branch="false"/>
+						<line number="100" hits="0" branch="false"/>
+						<line number="104" hits="0" branch="false"/>
+						<line number="105" hits="0" branch="false"/>
+						<line number="108" hits="0" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus" filename="es/deusto/spq/ProyectoCinePlus/servidor/Conectividad/ICinePlus.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="es.deusto.spq.ProyectoCinePlus.servidor.DAO" line-rate="0.6173913043478261" branch-rate="0.38636363636363635" complexity="2.689655172413793">
+			<classes>
+				<class name="es.deusto.spq.ProyectoCinePlus.servidor.DAO.IPeliculaDAO" filename="es/deusto/spq/ProyectoCinePlus/servidor/DAO/IPeliculaDAO.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.servidor.DAO.IUsuarioDAO" filename="es/deusto/spq/ProyectoCinePlus/servidor/DAO/IUsuarioDAO.java" line-rate="1.0" branch-rate="1.0" complexity="1.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.servidor.DAO.PeliculaDAO" filename="es/deusto/spq/ProyectoCinePlus/servidor/DAO/PeliculaDAO.java" line-rate="0.5" branch-rate="0.3" complexity="3.142857142857143">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="20" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="22" hits="4" branch="false"/>
+								<line number="23" hits="4" branch="false"/>
+								<line number="24" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="Anyos" signature="()Ljava/util/List;" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="87" hits="0" branch="false"/>
+								<line number="88" hits="0" branch="false"/>
+								<line number="89" hits="0" branch="false"/>
+								<line number="90" hits="0" branch="false"/>
+								<line number="91" hits="0" branch="false"/>
+								<line number="94" hits="0" branch="false"/>
+								<line number="95" hits="0" branch="false"/>
+								<line number="96" hits="0" branch="false"/>
+								<line number="97" hits="0" branch="false"/>
+								<line number="98" hits="0" branch="false"/>
+								<line number="100" hits="0" branch="false"/>
+								<line number="101" hits="0" branch="false"/>
+								<line number="103" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="104" hits="0" branch="false"/>
+								<line number="107" hits="0" branch="false"/>
+								<line number="108" hits="0" branch="false"/>
+								<line number="110" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="Generos" signature="()Ljava/util/List;" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="115" hits="0" branch="false"/>
+								<line number="116" hits="0" branch="false"/>
+								<line number="117" hits="0" branch="false"/>
+								<line number="118" hits="0" branch="false"/>
+								<line number="119" hits="0" branch="false"/>
+								<line number="122" hits="0" branch="false"/>
+								<line number="123" hits="0" branch="false"/>
+								<line number="124" hits="0" branch="false"/>
+								<line number="125" hits="0" branch="false"/>
+								<line number="126" hits="0" branch="false"/>
+								<line number="128" hits="0" branch="false"/>
+								<line number="129" hits="0" branch="false"/>
+								<line number="131" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="132" hits="0" branch="false"/>
+								<line number="135" hits="0" branch="false"/>
+								<line number="136" hits="0" branch="false"/>
+								<line number="138" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPeliculas" signature="(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;" line-rate="0.8333333333333334" branch-rate="0.5" complexity="0">
+							<lines>
+								<line number="57" hits="8" branch="false"/>
+								<line number="58" hits="8" branch="false"/>
+								<line number="59" hits="8" branch="false"/>
+								<line number="60" hits="8" branch="false"/>
+								<line number="61" hits="8" branch="false"/>
+								<line number="64" hits="8" branch="false"/>
+								<line number="65" hits="8" branch="false"/>
+								<line number="66" hits="8" branch="false"/>
+								<line number="67" hits="8" branch="false"/>
+								<line number="68" hits="8" branch="false"/>
+								<line number="69" hits="8" branch="false"/>
+								<line number="71" hits="0" branch="false"/>
+								<line number="72" hits="0" branch="false"/>
+								<line number="74" hits="8" branch="true" condition-coverage="50% (2/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+										<condition number="1" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="75" hits="0" branch="false"/>
+								<line number="78" hits="8" branch="false"/>
+								<line number="79" hits="8" branch="false"/>
+								<line number="81" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="storeObject" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Pelicula;)V" line-rate="0.8571428571428571" branch-rate="0.5" complexity="0">
+							<lines>
+								<line number="31" hits="28" branch="false"/>
+								<line number="32" hits="28" branch="false"/>
+								<line number="35" hits="28" branch="false"/>
+								<line number="36" hits="28" branch="false"/>
+								<line number="38" hits="28" branch="false"/>
+								<line number="39" hits="28" branch="false"/>
+								<line number="40" hits="0" branch="false"/>
+								<line number="41" hits="28" branch="false"/>
+								<line number="42" hits="28" branch="false"/>
+								<line number="44" hits="28" branch="true" condition-coverage="50% (2/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+										<condition number="1" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="45" hits="0" branch="false"/>
+								<line number="48" hits="28" branch="false"/>
+								<line number="49" hits="28" branch="false"/>
+								<line number="50" hits="28" branch="false"/>
+							</lines>
+						</method>
+						<method name="storePelicula" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Pelicula;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="27" hits="28" branch="false"/>
+								<line number="28" hits="28" branch="false"/>
+							</lines>
+						</method>
+						<method name="updatePelicula" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Pelicula;)V" line-rate="0.75" branch-rate="0.5" complexity="0">
+							<lines>
+								<line number="145" hits="2" branch="false"/>
+								<line number="146" hits="2" branch="false"/>
+								<line number="149" hits="2" branch="false"/>
+								<line number="150" hits="2" branch="false"/>
+								<line number="151" hits="2" branch="false"/>
+								<line number="152" hits="0" branch="false"/>
+								<line number="153" hits="0" branch="false"/>
+								<line number="155" hits="2" branch="true" condition-coverage="50% (2/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+										<condition number="1" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="156" hits="0" branch="false"/>
+								<line number="159" hits="2" branch="false"/>
+								<line number="160" hits="2" branch="false"/>
+								<line number="161" hits="2" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="20" hits="2" branch="false"/>
+						<line number="22" hits="4" branch="false"/>
+						<line number="23" hits="4" branch="false"/>
+						<line number="24" hits="4" branch="false"/>
+						<line number="27" hits="28" branch="false"/>
+						<line number="28" hits="28" branch="false"/>
+						<line number="31" hits="28" branch="false"/>
+						<line number="32" hits="28" branch="false"/>
+						<line number="35" hits="28" branch="false"/>
+						<line number="36" hits="28" branch="false"/>
+						<line number="38" hits="28" branch="false"/>
+						<line number="39" hits="28" branch="false"/>
+						<line number="40" hits="0" branch="false"/>
+						<line number="41" hits="28" branch="false"/>
+						<line number="42" hits="28" branch="false"/>
+						<line number="44" hits="28" branch="true" condition-coverage="50% (2/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+								<condition number="1" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="45" hits="0" branch="false"/>
+						<line number="48" hits="28" branch="false"/>
+						<line number="49" hits="28" branch="false"/>
+						<line number="50" hits="28" branch="false"/>
+						<line number="57" hits="8" branch="false"/>
+						<line number="58" hits="8" branch="false"/>
+						<line number="59" hits="8" branch="false"/>
+						<line number="60" hits="8" branch="false"/>
+						<line number="61" hits="8" branch="false"/>
+						<line number="64" hits="8" branch="false"/>
+						<line number="65" hits="8" branch="false"/>
+						<line number="66" hits="8" branch="false"/>
+						<line number="67" hits="8" branch="false"/>
+						<line number="68" hits="8" branch="false"/>
+						<line number="69" hits="8" branch="false"/>
+						<line number="71" hits="0" branch="false"/>
+						<line number="72" hits="0" branch="false"/>
+						<line number="74" hits="8" branch="true" condition-coverage="50% (2/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+								<condition number="1" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="75" hits="0" branch="false"/>
+						<line number="78" hits="8" branch="false"/>
+						<line number="79" hits="8" branch="false"/>
+						<line number="81" hits="8" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
+						<line number="88" hits="0" branch="false"/>
+						<line number="89" hits="0" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+						<line number="91" hits="0" branch="false"/>
+						<line number="94" hits="0" branch="false"/>
+						<line number="95" hits="0" branch="false"/>
+						<line number="96" hits="0" branch="false"/>
+						<line number="97" hits="0" branch="false"/>
+						<line number="98" hits="0" branch="false"/>
+						<line number="100" hits="0" branch="false"/>
+						<line number="101" hits="0" branch="false"/>
+						<line number="103" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="104" hits="0" branch="false"/>
+						<line number="107" hits="0" branch="false"/>
+						<line number="108" hits="0" branch="false"/>
+						<line number="110" hits="0" branch="false"/>
+						<line number="115" hits="0" branch="false"/>
+						<line number="116" hits="0" branch="false"/>
+						<line number="117" hits="0" branch="false"/>
+						<line number="118" hits="0" branch="false"/>
+						<line number="119" hits="0" branch="false"/>
+						<line number="122" hits="0" branch="false"/>
+						<line number="123" hits="0" branch="false"/>
+						<line number="124" hits="0" branch="false"/>
+						<line number="125" hits="0" branch="false"/>
+						<line number="126" hits="0" branch="false"/>
+						<line number="128" hits="0" branch="false"/>
+						<line number="129" hits="0" branch="false"/>
+						<line number="131" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="132" hits="0" branch="false"/>
+						<line number="135" hits="0" branch="false"/>
+						<line number="136" hits="0" branch="false"/>
+						<line number="138" hits="0" branch="false"/>
+						<line number="145" hits="2" branch="false"/>
+						<line number="146" hits="2" branch="false"/>
+						<line number="149" hits="2" branch="false"/>
+						<line number="150" hits="2" branch="false"/>
+						<line number="151" hits="2" branch="false"/>
+						<line number="152" hits="0" branch="false"/>
+						<line number="153" hits="0" branch="false"/>
+						<line number="155" hits="2" branch="true" condition-coverage="50% (2/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+								<condition number="1" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="156" hits="0" branch="false"/>
+						<line number="159" hits="2" branch="false"/>
+						<line number="160" hits="2" branch="false"/>
+						<line number="161" hits="2" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO" filename="es/deusto/spq/ProyectoCinePlus/servidor/DAO/UsuarioDAO.java" line-rate="0.684931506849315" branch-rate="0.4117647058823529" complexity="4.090909090909091">
+					<methods>
+						<method name="&lt;clinit&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="26" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="28" hits="4" branch="false"/>
+								<line number="29" hits="4" branch="false"/>
+								<line number="30" hits="4" branch="false"/>
+							</lines>
+						</method>
+						<method name="checkUser" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)Z" line-rate="0.8333333333333334" branch-rate="0.75" complexity="0">
+							<lines>
+								<line number="222" hits="92" branch="false"/>
+								<line number="223" hits="92" branch="false"/>
+								<line number="224" hits="92" branch="false"/>
+								<line number="227" hits="92" branch="false"/>
+								<line number="228" hits="92" branch="false"/>
+								<line number="229" hits="92" branch="false"/>
+								<line number="230" hits="92" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="231" hits="406" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="232" hits="8" branch="false"/>
+								<line number="234" hits="406" branch="false"/>
+								<line number="235" hits="92" branch="false"/>
+								<line number="236" hits="0" branch="false"/>
+								<line number="237" hits="0" branch="false"/>
+								<line number="239" hits="92" branch="true" condition-coverage="50% (2/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+										<condition number="1" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="240" hits="0" branch="false"/>
+								<line number="243" hits="92" branch="false"/>
+								<line number="244" hits="92" branch="false"/>
+								<line number="245" hits="92" branch="false"/>
+							</lines>
+						</method>
+						<method name="deleteUsuario" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)V" line-rate="0.8125" branch-rate="0.16666666666666666" complexity="0">
+							<lines>
+								<line number="255" hits="82" branch="false"/>
+								<line number="256" hits="82" branch="false"/>
+								<line number="259" hits="82" branch="false"/>
+								<line number="260" hits="82" branch="false"/>
+								<line number="261" hits="82" branch="false"/>
+								<line number="262" hits="82" branch="false"/>
+								<line number="263" hits="82" branch="false"/>
+								<line number="264" hits="82" branch="false"/>
+								<line number="265" hits="82" branch="false"/>
+								<line number="266" hits="0" branch="false"/>
+								<line number="267" hits="0" branch="false"/>
+								<line number="270" hits="82" branch="true" condition-coverage="16% (2/12)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+										<condition number="1" type="jump" coverage="50%"/>
+										<condition number="2" type="jump" coverage="0%"/>
+										<condition number="3" type="jump" coverage="0%"/>
+										<condition number="4" type="jump" coverage="0%"/>
+										<condition number="5" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="271" hits="0" branch="false"/>
+								<line number="273" hits="82" branch="true" condition-coverage="16% (2/12)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+										<condition number="1" type="jump" coverage="50%"/>
+										<condition number="2" type="jump" coverage="0%"/>
+										<condition number="3" type="jump" coverage="0%"/>
+										<condition number="4" type="jump" coverage="0%"/>
+										<condition number="5" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="274" hits="82" branch="false"/>
+								<line number="277" hits="82" branch="false"/>
+							</lines>
+						</method>
+						<method name="getUsuario" signature="(Ljava/lang/String;)Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;" line-rate="1.0" branch-rate="0.75" complexity="0">
+							<lines>
+								<line number="139" hits="6" branch="false"/>
+								<line number="140" hits="6" branch="false"/>
+								<line number="142" hits="6" branch="false"/>
+								<line number="143" hits="6" branch="false"/>
+								<line number="146" hits="6" branch="false"/>
+								<line number="148" hits="6" branch="false"/>
+								<line number="149" hits="6" branch="false"/>
+								<line number="150" hits="6" branch="false"/>
+								<line number="151" hits="6" branch="false"/>
+								<line number="152" hits="6" branch="false"/>
+								<line number="154" hits="4" branch="false"/>
+								<line number="156" hits="2" branch="false"/>
+								<line number="157" hits="2" branch="false"/>
+								<line number="159" hits="6" branch="true" condition-coverage="75% (3/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+										<condition number="1" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="160" hits="2" branch="false"/>
+								<line number="163" hits="6" branch="false"/>
+								<line number="164" hits="6" branch="false"/>
+								<line number="166" hits="6" branch="false"/>
+								<line number="168" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getUsuarios" signature="()Ljava/util/List;" line-rate="0.8333333333333334" branch-rate="0.6666666666666666" complexity="0">
+							<lines>
+								<line number="69" hits="2" branch="false"/>
+								<line number="70" hits="2" branch="false"/>
+								<line number="72" hits="2" branch="false"/>
+								<line number="73" hits="2" branch="false"/>
+								<line number="76" hits="2" branch="false"/>
+								<line number="78" hits="2" branch="false"/>
+								<line number="79" hits="2" branch="false"/>
+								<line number="81" hits="2" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="82" hits="14" branch="false"/>
+								<line number="83" hits="14" branch="false"/>
+								<line number="85" hits="2" branch="false"/>
+								<line number="86" hits="0" branch="false"/>
+								<line number="87" hits="0" branch="false"/>
+								<line number="89" hits="2" branch="true" condition-coverage="50% (2/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+										<condition number="1" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="90" hits="0" branch="false"/>
+								<line number="93" hits="2" branch="false"/>
+								<line number="94" hits="2" branch="false"/>
+								<line number="96" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="getUsuarios" signature="(Ljava/lang/String;)Ljava/util/List;" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="107" hits="0" branch="false"/>
+								<line number="108" hits="0" branch="false"/>
+								<line number="110" hits="0" branch="false"/>
+								<line number="111" hits="0" branch="false"/>
+								<line number="114" hits="0" branch="false"/>
+								<line number="116" hits="0" branch="false"/>
+								<line number="117" hits="0" branch="false"/>
+								<line number="118" hits="0" branch="false"/>
+								<line number="120" hits="0" branch="true" condition-coverage="0% (0/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="121" hits="0" branch="false"/>
+								<line number="122" hits="0" branch="false"/>
+								<line number="124" hits="0" branch="false"/>
+								<line number="125" hits="0" branch="false"/>
+								<line number="126" hits="0" branch="false"/>
+								<line number="128" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="129" hits="0" branch="false"/>
+								<line number="132" hits="0" branch="false"/>
+								<line number="133" hits="0" branch="false"/>
+								<line number="135" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="loginUser" signature="(Ljava/lang/String;Ljava/lang/String;)Z" line-rate="0.8421052631578947" branch-rate="0.7" complexity="0">
+							<lines>
+								<line number="194" hits="8" branch="false"/>
+								<line number="195" hits="8" branch="false"/>
+								<line number="196" hits="8" branch="false"/>
+								<line number="199" hits="8" branch="false"/>
+								<line number="200" hits="8" branch="false"/>
+								<line number="201" hits="8" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="202" hits="42" branch="true" condition-coverage="75% (3/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+										<condition number="1" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="203" hits="4" branch="false"/>
+								<line number="204" hits="4" branch="false"/>
+								<line number="205" hits="4" branch="false"/>
+								<line number="207" hits="42" branch="false"/>
+								<line number="208" hits="8" branch="false"/>
+								<line number="209" hits="0" branch="false"/>
+								<line number="210" hits="0" branch="false"/>
+								<line number="212" hits="8" branch="true" condition-coverage="50% (2/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+										<condition number="1" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="213" hits="0" branch="false"/>
+								<line number="215" hits="8" branch="false"/>
+								<line number="216" hits="8" branch="false"/>
+								<line number="217" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="storeObject" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)Z" line-rate="0.8" branch-rate="0.5" complexity="0">
+							<lines>
+								<line number="46" hits="82" branch="false"/>
+								<line number="47" hits="82" branch="false"/>
+								<line number="48" hits="82" branch="false"/>
+								<line number="51" hits="82" branch="false"/>
+								<line number="52" hits="82" branch="false"/>
+								<line number="53" hits="82" branch="false"/>
+								<line number="54" hits="82" branch="false"/>
+								<line number="55" hits="82" branch="false"/>
+								<line number="56" hits="0" branch="false"/>
+								<line number="57" hits="0" branch="false"/>
+								<line number="59" hits="82" branch="true" condition-coverage="50% (2/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="50%"/>
+										<condition number="1" type="jump" coverage="50%"/>
+									</conditions>
+								</line>
+								<line number="60" hits="0" branch="false"/>
+								<line number="62" hits="82" branch="false"/>
+								<line number="63" hits="82" branch="false"/>
+								<line number="64" hits="82" branch="false"/>
+							</lines>
+						</method>
+						<method name="storeUsuario" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="34" hits="88" branch="false"/>
+								<line number="35" hits="88" branch="true" condition-coverage="100% (2/2)">
+									<conditions>
+										<condition number="0" type="jump" coverage="100%"/>
+									</conditions>
+								</line>
+								<line number="36" hits="82" branch="false"/>
+								<line number="37" hits="82" branch="false"/>
+								<line number="39" hits="6" branch="false"/>
+								<line number="42" hits="88" branch="false"/>
+							</lines>
+						</method>
+						<method name="updateUsuario" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)V" line-rate="0.0" branch-rate="0.0" complexity="0">
+							<lines>
+								<line number="174" hits="0" branch="false"/>
+								<line number="175" hits="0" branch="false"/>
+								<line number="178" hits="0" branch="false"/>
+								<line number="179" hits="0" branch="false"/>
+								<line number="180" hits="0" branch="false"/>
+								<line number="181" hits="0" branch="false"/>
+								<line number="182" hits="0" branch="false"/>
+								<line number="184" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="185" hits="0" branch="false"/>
+								<line number="188" hits="0" branch="false"/>
+								<line number="189" hits="0" branch="false"/>
+								<line number="190" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="26" hits="2" branch="false"/>
+						<line number="28" hits="4" branch="false"/>
+						<line number="29" hits="4" branch="false"/>
+						<line number="30" hits="4" branch="false"/>
+						<line number="34" hits="88" branch="false"/>
+						<line number="35" hits="88" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="36" hits="82" branch="false"/>
+						<line number="37" hits="82" branch="false"/>
+						<line number="39" hits="6" branch="false"/>
+						<line number="42" hits="88" branch="false"/>
+						<line number="46" hits="82" branch="false"/>
+						<line number="47" hits="82" branch="false"/>
+						<line number="48" hits="82" branch="false"/>
+						<line number="51" hits="82" branch="false"/>
+						<line number="52" hits="82" branch="false"/>
+						<line number="53" hits="82" branch="false"/>
+						<line number="54" hits="82" branch="false"/>
+						<line number="55" hits="82" branch="false"/>
+						<line number="56" hits="0" branch="false"/>
+						<line number="57" hits="0" branch="false"/>
+						<line number="59" hits="82" branch="true" condition-coverage="50% (2/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+								<condition number="1" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="60" hits="0" branch="false"/>
+						<line number="62" hits="82" branch="false"/>
+						<line number="63" hits="82" branch="false"/>
+						<line number="64" hits="82" branch="false"/>
+						<line number="69" hits="2" branch="false"/>
+						<line number="70" hits="2" branch="false"/>
+						<line number="72" hits="2" branch="false"/>
+						<line number="73" hits="2" branch="false"/>
+						<line number="76" hits="2" branch="false"/>
+						<line number="78" hits="2" branch="false"/>
+						<line number="79" hits="2" branch="false"/>
+						<line number="81" hits="2" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="82" hits="14" branch="false"/>
+						<line number="83" hits="14" branch="false"/>
+						<line number="85" hits="2" branch="false"/>
+						<line number="86" hits="0" branch="false"/>
+						<line number="87" hits="0" branch="false"/>
+						<line number="89" hits="2" branch="true" condition-coverage="50% (2/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+								<condition number="1" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="90" hits="0" branch="false"/>
+						<line number="93" hits="2" branch="false"/>
+						<line number="94" hits="2" branch="false"/>
+						<line number="96" hits="2" branch="false"/>
+						<line number="107" hits="0" branch="false"/>
+						<line number="108" hits="0" branch="false"/>
+						<line number="110" hits="0" branch="false"/>
+						<line number="111" hits="0" branch="false"/>
+						<line number="114" hits="0" branch="false"/>
+						<line number="116" hits="0" branch="false"/>
+						<line number="117" hits="0" branch="false"/>
+						<line number="118" hits="0" branch="false"/>
+						<line number="120" hits="0" branch="true" condition-coverage="0% (0/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="121" hits="0" branch="false"/>
+						<line number="122" hits="0" branch="false"/>
+						<line number="124" hits="0" branch="false"/>
+						<line number="125" hits="0" branch="false"/>
+						<line number="126" hits="0" branch="false"/>
+						<line number="128" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="129" hits="0" branch="false"/>
+						<line number="132" hits="0" branch="false"/>
+						<line number="133" hits="0" branch="false"/>
+						<line number="135" hits="0" branch="false"/>
+						<line number="139" hits="6" branch="false"/>
+						<line number="140" hits="6" branch="false"/>
+						<line number="142" hits="6" branch="false"/>
+						<line number="143" hits="6" branch="false"/>
+						<line number="146" hits="6" branch="false"/>
+						<line number="148" hits="6" branch="false"/>
+						<line number="149" hits="6" branch="false"/>
+						<line number="150" hits="6" branch="false"/>
+						<line number="151" hits="6" branch="false"/>
+						<line number="152" hits="6" branch="false"/>
+						<line number="154" hits="4" branch="false"/>
+						<line number="156" hits="2" branch="false"/>
+						<line number="157" hits="2" branch="false"/>
+						<line number="159" hits="6" branch="true" condition-coverage="75% (3/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+								<condition number="1" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="160" hits="2" branch="false"/>
+						<line number="163" hits="6" branch="false"/>
+						<line number="164" hits="6" branch="false"/>
+						<line number="166" hits="6" branch="false"/>
+						<line number="168" hits="6" branch="false"/>
+						<line number="174" hits="0" branch="false"/>
+						<line number="175" hits="0" branch="false"/>
+						<line number="178" hits="0" branch="false"/>
+						<line number="179" hits="0" branch="false"/>
+						<line number="180" hits="0" branch="false"/>
+						<line number="181" hits="0" branch="false"/>
+						<line number="182" hits="0" branch="false"/>
+						<line number="184" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="185" hits="0" branch="false"/>
+						<line number="188" hits="0" branch="false"/>
+						<line number="189" hits="0" branch="false"/>
+						<line number="190" hits="0" branch="false"/>
+						<line number="194" hits="8" branch="false"/>
+						<line number="195" hits="8" branch="false"/>
+						<line number="196" hits="8" branch="false"/>
+						<line number="199" hits="8" branch="false"/>
+						<line number="200" hits="8" branch="false"/>
+						<line number="201" hits="8" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="202" hits="42" branch="true" condition-coverage="75% (3/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+								<condition number="1" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="203" hits="4" branch="false"/>
+						<line number="204" hits="4" branch="false"/>
+						<line number="205" hits="4" branch="false"/>
+						<line number="207" hits="42" branch="false"/>
+						<line number="208" hits="8" branch="false"/>
+						<line number="209" hits="0" branch="false"/>
+						<line number="210" hits="0" branch="false"/>
+						<line number="212" hits="8" branch="true" condition-coverage="50% (2/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+								<condition number="1" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="213" hits="0" branch="false"/>
+						<line number="215" hits="8" branch="false"/>
+						<line number="216" hits="8" branch="false"/>
+						<line number="217" hits="8" branch="false"/>
+						<line number="222" hits="92" branch="false"/>
+						<line number="223" hits="92" branch="false"/>
+						<line number="224" hits="92" branch="false"/>
+						<line number="227" hits="92" branch="false"/>
+						<line number="228" hits="92" branch="false"/>
+						<line number="229" hits="92" branch="false"/>
+						<line number="230" hits="92" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="231" hits="406" branch="true" condition-coverage="100% (2/2)">
+							<conditions>
+								<condition number="0" type="jump" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="232" hits="8" branch="false"/>
+						<line number="234" hits="406" branch="false"/>
+						<line number="235" hits="92" branch="false"/>
+						<line number="236" hits="0" branch="false"/>
+						<line number="237" hits="0" branch="false"/>
+						<line number="239" hits="92" branch="true" condition-coverage="50% (2/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+								<condition number="1" type="jump" coverage="50%"/>
+							</conditions>
+						</line>
+						<line number="240" hits="0" branch="false"/>
+						<line number="243" hits="92" branch="false"/>
+						<line number="244" hits="92" branch="false"/>
+						<line number="245" hits="92" branch="false"/>
+						<line number="255" hits="82" branch="false"/>
+						<line number="256" hits="82" branch="false"/>
+						<line number="259" hits="82" branch="false"/>
+						<line number="260" hits="82" branch="false"/>
+						<line number="261" hits="82" branch="false"/>
+						<line number="262" hits="82" branch="false"/>
+						<line number="263" hits="82" branch="false"/>
+						<line number="264" hits="82" branch="false"/>
+						<line number="265" hits="82" branch="false"/>
+						<line number="266" hits="0" branch="false"/>
+						<line number="267" hits="0" branch="false"/>
+						<line number="270" hits="82" branch="true" condition-coverage="16% (2/12)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+								<condition number="1" type="jump" coverage="50%"/>
+								<condition number="2" type="jump" coverage="0%"/>
+								<condition number="3" type="jump" coverage="0%"/>
+								<condition number="4" type="jump" coverage="0%"/>
+								<condition number="5" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="271" hits="0" branch="false"/>
+						<line number="273" hits="82" branch="true" condition-coverage="16% (2/12)">
+							<conditions>
+								<condition number="0" type="jump" coverage="50%"/>
+								<condition number="1" type="jump" coverage="50%"/>
+								<condition number="2" type="jump" coverage="0%"/>
+								<condition number="3" type="jump" coverage="0%"/>
+								<condition number="4" type="jump" coverage="0%"/>
+								<condition number="5" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="274" hits="82" branch="false"/>
+						<line number="277" hits="82" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+		<package name="es.deusto.spq.ProyectoCinePlus.servidor.DATA" line-rate="0.5571428571428572" branch-rate="1.0" complexity="1.0">
+			<classes>
+				<class name="es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula" filename="es/deusto/spq/ProyectoCinePlus/servidor/DATA/Pelicula.java" line-rate="0.5142857142857142" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="copiarPelicula" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Pelicula;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="119" hits="2" branch="false"/>
+								<line number="120" hits="2" branch="false"/>
+								<line number="121" hits="2" branch="false"/>
+								<line number="122" hits="2" branch="false"/>
+								<line number="123" hits="2" branch="false"/>
+								<line number="124" hits="2" branch="false"/>
+								<line number="125" hits="2" branch="false"/>
+								<line number="126" hits="2" branch="false"/>
+								<line number="128" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="getAnyo" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="78" hits="10" branch="false"/>
+							</lines>
+						</method>
+						<method name="getCategoria" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="86" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="getDescripcion" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="70" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getDuracion" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="62" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="getId_pelicula" signature="()I" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="46" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getNombre" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="54" hits="106" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPortada" signature="()Ljava/lang/String;" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="110" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPrecio" signature="()F" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="94" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="setAnyo" signature="(I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="82" hits="2" branch="false"/>
+								<line number="83" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="setCategoria" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="90" hits="0" branch="false"/>
+								<line number="91" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setDescripcion" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="74" hits="0" branch="false"/>
+								<line number="75" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setDuracion" signature="(I)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="66" hits="0" branch="false"/>
+								<line number="67" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setId_pelicula" signature="(I)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="50" hits="0" branch="false"/>
+								<line number="51" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setNombre" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="58" hits="0" branch="false"/>
+								<line number="59" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setPortada" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="114" hits="0" branch="false"/>
+								<line number="115" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setPrecio" signature="(F)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="98" hits="0" branch="false"/>
+								<line number="99" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="132" hits="30" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="0" hits="0" branch="true" condition-coverage="100% (27/27)">
+							<conditions>
+								<condition number="0" type="switch" coverage="100%"/>
+								<condition number="1" type="switch" coverage="100%"/>
+								<condition number="2" type="switch" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="46" hits="0" branch="false"/>
+						<line number="50" hits="0" branch="false"/>
+						<line number="51" hits="0" branch="false"/>
+						<line number="54" hits="106" branch="false"/>
+						<line number="58" hits="0" branch="false"/>
+						<line number="59" hits="0" branch="false"/>
+						<line number="62" hits="8" branch="false"/>
+						<line number="66" hits="0" branch="false"/>
+						<line number="67" hits="0" branch="false"/>
+						<line number="70" hits="6" branch="false"/>
+						<line number="74" hits="0" branch="false"/>
+						<line number="75" hits="0" branch="false"/>
+						<line number="78" hits="10" branch="false"/>
+						<line number="82" hits="2" branch="false"/>
+						<line number="83" hits="2" branch="false"/>
+						<line number="86" hits="8" branch="false"/>
+						<line number="90" hits="0" branch="false"/>
+						<line number="91" hits="0" branch="false"/>
+						<line number="94" hits="6" branch="false"/>
+						<line number="98" hits="0" branch="false"/>
+						<line number="99" hits="0" branch="false"/>
+						<line number="110" hits="0" branch="false"/>
+						<line number="114" hits="0" branch="false"/>
+						<line number="115" hits="0" branch="false"/>
+						<line number="119" hits="2" branch="false"/>
+						<line number="120" hits="2" branch="false"/>
+						<line number="121" hits="2" branch="false"/>
+						<line number="122" hits="2" branch="false"/>
+						<line number="123" hits="2" branch="false"/>
+						<line number="124" hits="2" branch="false"/>
+						<line number="125" hits="2" branch="false"/>
+						<line number="126" hits="2" branch="false"/>
+						<line number="128" hits="2" branch="false"/>
+						<line number="132" hits="30" branch="false"/>
+					</lines>
+				</class>
+				<class name="es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario" filename="es/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario.java" line-rate="0.6" branch-rate="1.0" complexity="1.0">
+					<methods>
+						<method name="copiarUsuario" signature="(Les/deusto/spq/ProyectoCinePlus/servidor/DATA/Usuario;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="140" hits="10" branch="false"/>
+								<line number="141" hits="8" branch="false"/>
+								<line number="142" hits="8" branch="false"/>
+								<line number="143" hits="8" branch="false"/>
+								<line number="144" hits="8" branch="false"/>
+								<line number="145" hits="8" branch="false"/>
+								<line number="146" hits="8" branch="false"/>
+								<line number="147" hits="8" branch="false"/>
+								<line number="149" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="getApellido" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="97" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="getEmail" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="85" hits="1046" branch="false"/>
+							</lines>
+						</method>
+						<method name="getNombre" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="91" hits="14" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPais" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="109" hits="6" branch="false"/>
+							</lines>
+						</method>
+						<method name="getPassword" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="103" hits="14" branch="false"/>
+							</lines>
+						</method>
+						<method name="getSaldo" signature="()F" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="130" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="getUsuario" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="79" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="isAdmin" signature="()Z" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="122" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="setAdmin" signature="(Z)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="126" hits="2" branch="false"/>
+								<line number="127" hits="2" branch="false"/>
+							</lines>
+						</method>
+						<method name="setApellido" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="100" hits="0" branch="false"/>
+								<line number="101" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setEmail" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="88" hits="0" branch="false"/>
+								<line number="89" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setNombre" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="94" hits="0" branch="false"/>
+								<line number="95" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setPais" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="112" hits="0" branch="false"/>
+								<line number="113" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setPassword" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="106" hits="0" branch="false"/>
+								<line number="107" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="setSaldo" signature="(F)V" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="134" hits="8" branch="false"/>
+								<line number="135" hits="8" branch="false"/>
+							</lines>
+						</method>
+						<method name="setUsuario" signature="(Ljava/lang/String;)V" line-rate="0.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="82" hits="0" branch="false"/>
+								<line number="83" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="toString" signature="()Ljava/lang/String;" line-rate="1.0" branch-rate="1.0" complexity="0">
+							<lines>
+								<line number="152" hits="266" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="0" hits="0" branch="true" condition-coverage="100% (27/27)">
+							<conditions>
+								<condition number="0" type="switch" coverage="100%"/>
+								<condition number="1" type="switch" coverage="100%"/>
+								<condition number="2" type="switch" coverage="100%"/>
+							</conditions>
+						</line>
+						<line number="79" hits="8" branch="false"/>
+						<line number="82" hits="0" branch="false"/>
+						<line number="83" hits="0" branch="false"/>
+						<line number="85" hits="1046" branch="false"/>
+						<line number="88" hits="0" branch="false"/>
+						<line number="89" hits="0" branch="false"/>
+						<line number="91" hits="14" branch="false"/>
+						<line number="94" hits="0" branch="false"/>
+						<line number="95" hits="0" branch="false"/>
+						<line number="97" hits="8" branch="false"/>
+						<line number="100" hits="0" branch="false"/>
+						<line number="101" hits="0" branch="false"/>
+						<line number="103" hits="14" branch="false"/>
+						<line number="106" hits="0" branch="false"/>
+						<line number="107" hits="0" branch="false"/>
+						<line number="109" hits="6" branch="false"/>
+						<line number="112" hits="0" branch="false"/>
+						<line number="113" hits="0" branch="false"/>
+						<line number="122" hits="8" branch="false"/>
+						<line number="126" hits="2" branch="false"/>
+						<line number="127" hits="2" branch="false"/>
+						<line number="130" hits="0" branch="false"/>
+						<line number="134" hits="8" branch="false"/>
+						<line number="135" hits="8" branch="false"/>
+						<line number="140" hits="10" branch="false"/>
+						<line number="141" hits="8" branch="false"/>
+						<line number="142" hits="8" branch="false"/>
+						<line number="143" hits="8" branch="false"/>
+						<line number="144" hits="8" branch="false"/>
+						<line number="145" hits="8" branch="false"/>
+						<line number="146" hits="8" branch="false"/>
+						<line number="147" hits="8" branch="false"/>
+						<line number="149" hits="8" branch="false"/>
+						<line number="152" hits="266" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>
