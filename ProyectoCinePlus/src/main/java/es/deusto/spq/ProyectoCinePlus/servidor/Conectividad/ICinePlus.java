@@ -17,5 +17,6 @@ public interface ICinePlus extends Remote {
 	public List<String> Anyos() throws RemoteException;
 	public List<String> Generos() throws RemoteException;
 	public void eliminarUsuario(Usuario user)throws RemoteException;
+	public boolean checkUsuario(Usuario user) throws RemoteException;
 	
 }

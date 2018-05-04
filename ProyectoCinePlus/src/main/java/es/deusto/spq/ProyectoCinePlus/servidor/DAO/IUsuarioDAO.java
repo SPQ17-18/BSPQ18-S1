@@ -10,7 +10,6 @@ public interface IUsuarioDAO {
 	public boolean storeObject(Usuario usuario);
 	
 	public boolean loginUser(String email, String password);
-	public boolean checkUser(Usuario usuario);
 	
 	public List<Usuario> getUsuarios();
 	public List<Usuario> getUsuarios(String condition);

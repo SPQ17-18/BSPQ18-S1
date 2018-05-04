@@ -51,42 +51,6 @@ public class PeliculaDAO implements IPeliculaDAO{
 	
 
 	
-	@SuppressWarnings("unchecked")
-	/**
-	 * Para un Pelicula concreto
-	 * @param condicion de la WHERE
-	 * @return lista de Peliculas que cumpla la condicion
-	 */
-	public List<Pelicula> getPeliculas(String condition) {
-		PersistenceManager pm = pmf.getPersistenceManager();
-		pm.setDetachAllOnCommit(true);
-		pm.getFetchPlan().setMaxFetchDepth(3);
-		
-	    Transaction tx = pm.currentTransaction();
-	    List<Pelicula> Peliculas = new ArrayList<Pelicula>();
-	        
-	    try {
-	    	logger.info("   * Executing a Query for Products given a condition: " + condition);
-	    	tx.begin();	    	
-			Extent<Pelicula> extent = pm.getExtent(Pelicula.class, true);
-			Query<Pelicula> query = pm.newQuery(extent, condition);
-			for (Pelicula Pelicula : (List<Pelicula>)query.execute()) {
-				Peliculas.add(Pelicula);
-			}
-			
-	        tx.commit();
-	    } catch (Exception ex) {
-	    	logger.error("   $ Error retreiving an extent: " + ex.getMessage());
-	    } finally {
-	    	if (tx != null && tx.isActive()) {
-	    		tx.rollback();
-	    	}
-			
-    		pm.close();
-	    }
-    
-	    return Peliculas;
-	}
 
 	@SuppressWarnings("unchecked")
 	public List<Pelicula> getPeliculas(String nombre,String anyo,String genero){
@@ -174,34 +138,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    return Generos;
 	}	
 	
-	public Pelicula getPelicula(String name){
-		PersistenceManager pm = pmf.getPersistenceManager();
-		pm.getFetchPlan().setMaxFetchDepth(3);
-		pm.setDetachAllOnCommit(true);
-		Transaction tx = pm.currentTransaction();
-		Pelicula Pelicula = null;
-	    
-		try {
-			logger.info("   * Querying a Product: " + name);
-			String a="%"+name+"%";
-	    	tx.begin();
-	    	Query<?> query = pm.newQuery("SELECT FROM " + Pelicula.class.getName() + " WHERE nombre.startsWith(\""+a+"\")");
-	    	query.setUnique(true);
-	    	Pelicula = (Pelicula)query.execute();	    
- 	    	tx.commit();
-   	    
-	     } catch (Exception ex) {
-	    	 logger.error("   $ Error retreiving an extent: " + ex.getMessage());
-	     } finally {
-		   	if (tx != null && tx.isActive()) {
-		   		tx.rollback();
-		 }
-				
-	   		pm.close();
-	     }
-
-	    return Pelicula;
-	}	
+	
 	
 	
 	public void updatePelicula(Pelicula Pelicula) {
