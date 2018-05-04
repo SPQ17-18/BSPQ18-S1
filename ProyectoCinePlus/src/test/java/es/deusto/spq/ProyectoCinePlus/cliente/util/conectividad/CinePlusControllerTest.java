@@ -63,7 +63,7 @@ public class CinePlusControllerTest {
 	}
 
 	@Test
-	public void RegistrarUsuarioTest() throws RemoteException {
+	public void RegistrarUsuario1Test() throws RemoteException {
 		assertTrue(rsl.getCinePlusService().registrarUsuario(usuario, email, nombre, apellido, password, pais, admin));
 	}
 
