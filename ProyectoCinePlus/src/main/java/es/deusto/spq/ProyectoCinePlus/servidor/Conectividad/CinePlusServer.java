@@ -86,8 +86,8 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	}
 
 	@Override
-	public boolean actualizarUsuario(Usuario user) throws RemoteException {
-		return usuarioDAO.updateUsuario(user);
+	public void actualizarUsuario(Usuario user) throws RemoteException {
+		usuarioDAO.updateUsuario(user);
 	}
 
 	@Override

@@ -42,8 +42,8 @@ public class CinePlusController {
 	public Usuario DevolverUsuario(String email)throws RemoteException {
 		return rsl.getCinePlusService().devuelveUsuario(email);
 	}
-	public boolean actualizarUsuario(Usuario user)throws RemoteException {
-		return rsl.getCinePlusService().actualizarUsuario(user);
+	public void actualizarUsuario(Usuario user)throws RemoteException {
+		rsl.getCinePlusService().actualizarUsuario(user);
 	}
 	
 	public void eliminarUsuario(Usuario user)throws RemoteException {

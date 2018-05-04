@@ -170,21 +170,14 @@ public class UsuarioDAO implements IUsuarioDAO{
 	
 	
 	
-	public boolean updateUsuario(Usuario usuario) {
-		boolean resul =false;
+	public void updateUsuario(Usuario usuario) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();
 	    
 	    try {
 	    	tx.begin();
 	    	pm.makePersistent(usuario);
-	    	//Query<Usuario> query=null;
-    		//query = pm.newQuery("UPDATE" + Usuario.class.getName() + "SET  saldo = " + usuario.getSaldo() + " WHERE email = '"+ usuario.getEmail() +"'");
-    		//query.executeUpdate();
-    		//
-    		
 	    	tx.commit();
-	    	resul =true;
 	     } catch (Exception ex) {
 	    	 logger.error("   $ Error retreiving an extent: " + ex.getMessage());
 	     } finally {
@@ -194,7 +187,6 @@ public class UsuarioDAO implements IUsuarioDAO{
 				
 	   		pm.close();
 	     }
-	    return resul;
 	}
 
 

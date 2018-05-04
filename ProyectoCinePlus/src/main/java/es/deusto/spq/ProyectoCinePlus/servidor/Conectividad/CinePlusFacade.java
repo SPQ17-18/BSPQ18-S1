@@ -48,8 +48,8 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 		return cpser.devuelveUsuario(usuario);
 	}
 	@Override
-	public boolean actualizarUsuario(Usuario user) throws RemoteException {
-		return cpser.actualizarUsuario(user);
+	public void actualizarUsuario(Usuario user) throws RemoteException {
+		cpser.actualizarUsuario(user);
 	}
 	@Override
 	public void eliminarUsuario(Usuario user) throws RemoteException {
