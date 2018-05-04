@@ -5,7 +5,7 @@ import java.rmi.RemoteException;
 import java.net.MalformedURLException;
 
 
-//mIERDA FUNCIONAL
+//mIERDA FUNCIONAL 2 3 
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
