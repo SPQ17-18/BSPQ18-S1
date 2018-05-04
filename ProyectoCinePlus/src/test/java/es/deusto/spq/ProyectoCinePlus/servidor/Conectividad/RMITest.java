@@ -249,35 +249,7 @@ public class RMITest {
 	}
 	
 
-	/*
-	
-	@After public  void deleteDatabase() {
-		PersistenceManagerFactory pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
-		PersistenceManager pm = pmf.getPersistenceManager();
-        Transaction tx = pm.currentTransaction();
-        try
-        {
-            tx.begin();
-	
-            logger.info("Deleting test users from persistence. Cleaning up.");
-            Query<Usuario> q1 = pm.newQuery(Usuario.class);
-            long numberInstancesDeleted = q1.deletePersistentAll();
-            logger.info("Deleted " + numberInstancesDeleted + " user");
-			
-            tx.commit();
-        }
-        finally
-        {
-            if (tx.isActive())
-            {
-                tx.rollback();
-            }
-            pm.close();
-        }
-		
-	}
-	
-	*/
+
 	
 
 	

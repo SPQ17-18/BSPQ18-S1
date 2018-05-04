@@ -44,23 +44,23 @@ public class PeliculaDAOTest {
 	@Before
 	public void setUp() throws Exception {
 		logger.info("Almacenando peliculas");
-		  peli3 = new Pelicula(3, "Alien", 120, "el octavo pasagero", 1979, "Terror", 9,listUsuarios,"9");
-		  peli4 = new Pelicula(4, "Star Trek", 128, "el futuro comienza", 2009, "ciencia ficcion", 5,listUsuarios,"5");
-		  spq = new Pelicula(5, "Prueba", 0, "prueba", 2018, "SPQ", 10,listUsuarios,"10");
-	    
-		  //Pelicula del test StorePelicula
-		  alien3 = new Pelicula(6, "Alien 3", 120, "el regreso", 1979, "Terror", 9, listUsuarios, "9");
-		  
-		  //GetPeliculaTest
-		  startrek2 = new Pelicula(7, "Star Trek 2", 142, "La ira de khan", 1994, "ciencia ficcion", 14, listUsuarios, "14");
+		peli3 = new Pelicula(3, "Alien", 120, "el octavo pasagero", 1979, "Terror", 9, listUsuarios, "9");
+		peli4 = new Pelicula(4, "Star Trek", 128, "el futuro comienza", 2009, "ciencia ficcion", 5, listUsuarios, "5");
+		spq = new Pelicula(5, "Prueba", 0, "prueba", 2018, "SPQ", 10, listUsuarios, "10");
 
-		  //UpdateUsuarioTest
-		  prueba1 = new Pelicula (8, "Star Wars", 125, "Una nueva esperanza", 1970, "ciencia ficcion", 6,listUsuarios,"6");
-		  
-	    peliculaDAO.storePelicula(peli3);
-	    peliculaDAO.storePelicula(peli4);
-	    peliculaDAO.storePelicula(spq);
-	
+		// Pelicula del test StorePelicula
+		alien3 = new Pelicula(6, "Alien 3", 120, "el regreso", 1979, "Terror", 9, listUsuarios, "9");
+
+		// GetPeliculaTest
+		startrek2 = new Pelicula(7, "Star Trek 2", 142, "La ira de khan", 1994, "ciencia ficcion", 14, listUsuarios,"14");
+
+		// UpdateUsuarioTest
+		prueba1 = new Pelicula(8, "Star Wars", 125, "Una nueva esperanza", 1970, "ciencia ficcion", 6, listUsuarios,"6");
+
+		peliculaDAO.storePelicula(peli3);
+		peliculaDAO.storePelicula(peli4);
+		peliculaDAO.storePelicula(spq);
+
 	}
 	
 	@Test
@@ -70,7 +70,7 @@ public class PeliculaDAOTest {
 		Pelicula prueba2 = null;
 		peliculaDAO.storePelicula(alien3);
 		
-		List<Pelicula> lista = peliculaDAO.getPeliculas("Alien 3", "1979", "Terror");
+		List<Pelicula> lista = peliculaDAO.getPeliculas(" ", " ", " ");
 		
 		for(Pelicula peli:lista) {
 			if(peli.getNombre().equals("Alien 3")) {
@@ -93,9 +93,8 @@ public class PeliculaDAOTest {
 		peliculaDAO.storePelicula(startrek2);
 		
 		Pelicula prueba2 = null;
-		List<Pelicula> lista = peliculaDAO.getPeliculas("Star Trek 2", "1994", "ciencia ficcion");
-		
-		
+		List<Pelicula> lista = peliculaDAO.getPeliculas(" ", " ", " ");
+			
 		for(Pelicula peli:lista) {
 			if(peli.getNombre().equals("Star Trek 2")) {
 				prueba2 =peli;
