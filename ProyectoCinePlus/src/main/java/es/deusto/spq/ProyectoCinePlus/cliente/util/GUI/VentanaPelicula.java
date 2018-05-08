@@ -10,10 +10,15 @@ import javax.swing.border.EmptyBorder;
 import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 import java.awt.GridLayout;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ResourceBundle;
 
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import java.awt.FlowLayout;
 import javax.swing.JTextField;
@@ -48,6 +53,10 @@ public class VentanaPelicula extends JFrame {
 	private JLabel lblCategoria;
 	
 	private JButton btnAlquilar;
+	
+	private Usuario user;
+	private CinePlusController controller;
+	private ResourceBundle resourceBundle;
 	private static final long serialVersionUID = 1L;
 	static Logger logger = Logger.getLogger(VentanaPrincipal.class.getName());
 
@@ -70,7 +79,20 @@ public class VentanaPelicula extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaPelicula(/*CinePlusController controller,ResourceBundle resourceBundle*/) {
+	public VentanaPelicula(/*CinePlusController controller, ResourceBundle resourceBundle, Usuario userLogeado*/) {
+		
+		logger.info("VentanaPelicula");
+		//this.controller =controller;
+		//this.resourceBundle=resourceBundle;
+		//this.user= userLogeado;
+		//setTitle(resourceBundle.getString("film_panel_msg"));
+		
+		BufferedImage img = null;
+		try {
+		    img = ImageIO.read(new File(VentanaPrincipal.pathn+"logocuadrado50.png"));
+		} catch (IOException e) {
+		}
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -94,7 +116,7 @@ public class VentanaPelicula extends JFrame {
 		panel_10 = new JPanel();
 		panel_2.add(panel_10);
 		
-		btnAlquilar = new JButton("Alquilar");
+		btnAlquilar = new JButton(resourceBundle.getString("rent_msg"));
 		panel_10.add(btnAlquilar);
 		
 		panel_11 = new JPanel();
