@@ -20,12 +20,12 @@ public class PeliculaTest {
 	
 	static Logger logger = Logger.getLogger(PeliculaTest.class.getName());
 	
-	private Pelicula pelicula1;
-	private Pelicula pelicula2;
-	private Usuario spq;
+	private static Pelicula pelicula1;
+	private static Pelicula pelicula2;
+	private static Usuario spq;
 	
-	@Before
-	public void setUp() throws Exception {
+	@BeforeClass
+	public static void setUp() throws Exception {
 		List<Usuario> listUsuarios=new ArrayList<>();
         Usuario spq = new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false);
         

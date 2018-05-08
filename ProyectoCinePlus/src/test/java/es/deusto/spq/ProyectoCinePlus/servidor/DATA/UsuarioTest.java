@@ -17,13 +17,13 @@ public class UsuarioTest {
 	
 	static Logger logger = Logger.getLogger(UsuarioTest.class.getName());
 	
-	private Usuario mikel;
-	private Usuario xabi;
-	private Usuario aritz;
-	private Usuario javi;
+	private static Usuario mikel;
+	private static Usuario xabi;
+	private static Usuario aritz;
+	private static Usuario javi;
 
-	@Before
-	public void setUp() throws Exception {
+	@BeforeClass
+	public static void setUp() throws Exception {
 		mikel = new Usuario ("MikelSPQ", "Mikel@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "España", false);
 		xabi = new Usuario ("XabiSPQ", "Xabi@gmail.com", "Xabi", "Sarrionandia", "P@ssw0rd", "España", false);
 		xabi.setSaldo(50);
