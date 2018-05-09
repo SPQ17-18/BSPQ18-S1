@@ -1,0 +1,6 @@
+es.deusto.spq.ProyectoCinePlus.cliente
+es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad
+es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
+es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
+es.deusto.spq.ProyectoCinePlus.servidor.DAO
+es.deusto.spq.ProyectoCinePlus.servidor.DATA
