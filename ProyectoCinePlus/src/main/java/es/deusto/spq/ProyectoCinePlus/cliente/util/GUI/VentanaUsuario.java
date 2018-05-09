@@ -112,6 +112,7 @@ public class VentanaUsuario extends JFrame {
 	private JPanel panel_SUP;
 	private JPanel panel_INF;
 	private JLabel lblnumPelis;
+	private JButton btnPerfilUser;
 	
 	
 	//public static VentanaUsuario frame;
@@ -223,7 +224,7 @@ public class VentanaUsuario extends JFrame {
 		separator_3 = new JSeparator();
 		panel_19.add(separator_3);
 		
-		lblSaldo = new JLabel(String.valueOf(userLogeado.getSaldo()));
+		lblSaldo = new JLabel(String.valueOf(userLogeado.getSaldo()) + " €");
 		lblSaldo.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_19.add(lblSaldo);
 		
@@ -234,6 +235,18 @@ public class VentanaUsuario extends JFrame {
 		panel_28 = new JPanel();
 		panel_18.add(panel_28);
 		
+		btnPerfilUser = new JButton(resourceBundle.getString("profile_msg"));
+		btnPerfilUser.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//TODO
+				logger.info("Boton Perfil peliculas");
+				VentanaPerfilPeliculas ventanaperfilpeliculas = new VentanaPerfilPeliculas(controller,resourceBundle,userLogeado);
+				ventanaperfilpeliculas.setVisible(true);
+				dispose();
+			}
+		});
+		panel_28.add(btnPerfilUser);
+		
 		panel_29 = new JPanel();
 		panel_18.add(panel_29);
 		
@@ -243,7 +256,7 @@ public class VentanaUsuario extends JFrame {
 				logger.info("Boton añadir saldo");
 				VentanaSaldo ventanaSaldo = new VentanaSaldo(controller,resourceBundle,userLogeado);
 				ventanaSaldo.setVisible(true);
-					dispose();
+				dispose();
 			}
 		});
 		panel_29.add(btnAnadirSaldo);
@@ -342,6 +355,14 @@ public class VentanaUsuario extends JFrame {
 			            buttons[i] = new JButton(projectNames[i]);
 			            Image img = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+prueba.get(i).getPortada()+".jpg"));
 			            buttons[i].setIcon(new ImageIcon(img));
+			           /* buttons[i].addActionListener(new ActionListener() {
+			    			public void actionPerformed(ActionEvent e) {
+			    				logger.info("Boton pelicula: ");
+			    				VentanaPelicula ventanaPeli = new VentanaPelicula(controller,resourceBundle,userLogeado, prueba.get(i));
+			    				ventanaPeli.setVisible(true);
+			    				dispose();
+			    			}
+			    		}); */
 			            panel_26.add(buttons[i]);
 			        }
 			    }catch(Exception e) {}

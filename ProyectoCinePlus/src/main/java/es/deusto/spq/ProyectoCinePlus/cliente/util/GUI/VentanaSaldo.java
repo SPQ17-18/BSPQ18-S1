@@ -122,7 +122,10 @@ public class VentanaSaldo extends JFrame {
 					String saldoS = (String) comboBox.getSelectedItem();
 					float saldoF = Float.parseFloat(saldoS);
 					logger.info(saldoF);
-					userLogeado.setSaldo(saldoF);
+					//obtenemos saldo que tiene y le añadimos más.
+					float saldoViejo = userLogeado.getSaldo();
+					saldoViejo += saldoF;
+					userLogeado.setSaldo(saldoViejo);
 					logger.info(userLogeado);
 					try {
 						//controller.actualizarUsuario(userLogeado);

@@ -29,8 +29,15 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 		usuarioDAO=new UsuarioDAO();
         
         peliculaDAO= new PeliculaDAO();
-        peliculaDAO.storePelicula(new Pelicula(1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 14, listUsuarios,"14"));
-        peliculaDAO.storePelicula(new Pelicula(2, "Alternativa", 140, "vida de prisioneros 2", 1995, "Suspense", 15, listUsuarios,"15"));
+        peliculaDAO.storePelicula(new Pelicula(1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 1, listUsuarios,"14"));
+        peliculaDAO.storePelicula(new Pelicula(2, "Alternativa", 140, "vida de prisioneros 2", 1995, "Suspense", 1, listUsuarios,"15"));
+        
+        peliculaDAO.storePelicula(new Pelicula(3, "Alien", 120, "el octavo pasagero", 1979, "Terror", 1, listUsuarios, "30"));
+        peliculaDAO.storePelicula(new Pelicula(4, "Star Trek", 128, "el futuro comienza", 2009, "ciencia ficcion", 2, listUsuarios, "31"));
+        peliculaDAO.storePelicula(new Pelicula(5, "Alien 3", 120, "el regreso", 1979, "Terror", 1, listUsuarios, "32"));
+        peliculaDAO.storePelicula(new Pelicula(6, "Star Trek 2", 142, "La ira de khan", 1994, "ciencia ficcion", 2, listUsuarios,"33"));
+        peliculaDAO.storePelicula(new Pelicula(7, "Star Wars", 125, "Una nueva esperanza", 1970, "ciencia ficcion", 3, listUsuarios,"34"));
+
 
 		usuarioDAO.storeUsuario(mikel);
 		usuarioDAO.storeUsuario(spq);
