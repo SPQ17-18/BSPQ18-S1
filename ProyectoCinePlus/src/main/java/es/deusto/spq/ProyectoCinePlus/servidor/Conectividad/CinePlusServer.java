@@ -22,23 +22,42 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	
 	public CinePlusServer () throws RemoteException{
 		super();
+		
+		List<Usuario> listUsuarios=new ArrayList<>();
+		List<Pelicula> peliculasList = new ArrayList<Pelicula>();
+		
+		//Peliculas		
+        peliculaDAO= new PeliculaDAO();
+        Pelicula cadena = new Pelicula(1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 1, "14");
+        Pelicula alternativa = new Pelicula(2, "Alternativa", 140, "vida de prisioneros 2", 1995, "Suspense", 1, "15");
+        Pelicula alien = new Pelicula(3, "Alien", 120, "el octavo pasagero", 1979, "Terror", 1, listUsuarios, "30");
+        Pelicula startrek = new Pelicula(4, "Star Trek", 128, "el futuro comienza", 2009, "ciencia ficcion", 2,  "31");
+        Pelicula alien3 = new Pelicula(5, "Alien 3", 120, "el regreso", 1979, "Terror", 1, listUsuarios, "32");
+        Pelicula startrek2 = new Pelicula(6, "Star Trek 2", 142, "La ira de khan", 1994, "ciencia ficcion", 2, "33");
+        Pelicula starwars = new Pelicula(7, "Star Wars", 125, "Una nueva esperanza", 1970, "ciencia ficcion", 3, "34");
+        
+        peliculaDAO.storePelicula(cadena);
+        peliculaDAO.storePelicula(alternativa);
+        peliculaDAO.storePelicula(alien);
+        peliculaDAO.storePelicula(startrek);
+        peliculaDAO.storePelicula(alien3);
+        peliculaDAO.storePelicula(startrek2);
+        peliculaDAO.storePelicula(starwars);
+
+        peliculasList.add(startrek);
+        peliculasList.add(starwars);
+        
+        //usuarios
+        usuarioDAO=new UsuarioDAO();
 		Usuario mikel = new Usuario("mikel", "mikelspq@gmail.com", "mikel", "fernandez", "spq", "españa", false);
 		Usuario spq = new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false);
-		List<Usuario> listUsuarios=new ArrayList<>();
+		
+		//NO FUNCIONA
+		//Usuario mikel = new Usuario("mikel", "mikelspq@gmail.com", "mikel", "fernandez", "spq", "españa", false, peliculasList);
+		//Usuario spq = new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false, peliculasList);
+		
         listUsuarios.add(spq);
-		usuarioDAO=new UsuarioDAO();
         
-        peliculaDAO= new PeliculaDAO();
-        peliculaDAO.storePelicula(new Pelicula(1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 1, listUsuarios,"14"));
-        peliculaDAO.storePelicula(new Pelicula(2, "Alternativa", 140, "vida de prisioneros 2", 1995, "Suspense", 1, listUsuarios,"15"));
-        
-        peliculaDAO.storePelicula(new Pelicula(3, "Alien", 120, "el octavo pasagero", 1979, "Terror", 1, listUsuarios, "30"));
-        peliculaDAO.storePelicula(new Pelicula(4, "Star Trek", 128, "el futuro comienza", 2009, "ciencia ficcion", 2, listUsuarios, "31"));
-        peliculaDAO.storePelicula(new Pelicula(5, "Alien 3", 120, "el regreso", 1979, "Terror", 1, listUsuarios, "32"));
-        peliculaDAO.storePelicula(new Pelicula(6, "Star Trek 2", 142, "La ira de khan", 1994, "ciencia ficcion", 2, listUsuarios,"33"));
-        peliculaDAO.storePelicula(new Pelicula(7, "Star Wars", 125, "Una nueva esperanza", 1970, "ciencia ficcion", 3, listUsuarios,"34"));
-
-
 		usuarioDAO.storeUsuario(mikel);
 		usuarioDAO.storeUsuario(spq);
 

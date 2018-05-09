@@ -238,7 +238,6 @@ public class VentanaUsuario extends JFrame {
 		btnPerfilUser = new JButton(resourceBundle.getString("profile_msg"));
 		btnPerfilUser.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//TODO 
 				logger.info("Boton Perfil peliculas");
 				VentanaPerfilPeliculas ventanaperfilpeliculas = new VentanaPerfilPeliculas(controller,resourceBundle,userLogeado);
 				ventanaperfilpeliculas.setVisible(true);

@@ -29,7 +29,7 @@ public class Pelicula implements Serializable{
 	
 	
 	public Pelicula(int id_pelicula, String nombre, int duracion, String descripcion, int anyo, String categoria,
-			 float precio,  List<Usuario> usuariosList ,String portada) {
+			 float precio, List<Usuario> usuariosList ,String portada) {
 		super();
 		this.id_pelicula = id_pelicula;
 		this.nombre = nombre;
@@ -38,8 +38,19 @@ public class Pelicula implements Serializable{
 		this.anyo = anyo;
 		this.categoria = categoria;
 		this.precio = precio;
-  
-		//		this.usuariosList = usuariosList;
+		//this.usuariosList = usuariosList;
+		this.portada = portada;
+	}
+	public Pelicula(int id_pelicula, String nombre, int duracion, String descripcion, int anyo, String categoria,
+			 float precio ,String portada) {
+		super();
+		this.id_pelicula = id_pelicula;
+		this.nombre = nombre;
+		this.duracion = duracion;
+		this.descripcion = descripcion;
+		this.anyo = anyo;
+		this.categoria = categoria;
+		this.precio = precio;
 		this.portada = portada;
 	}
 
