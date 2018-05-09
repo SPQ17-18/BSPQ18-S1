@@ -132,7 +132,8 @@
 					<instrumentation>
 						<ignoreTrivial>true</ignoreTrivial>
 						<excludes>
-							<exclude>**/some/trivial/classes/**</exclude>
+							<exclude>**/cliente/*.class</exclude>
+							<exclude>**/util/GUI/**/*.class</exclude>
 						</excludes>
 					</instrumentation> 
 					
