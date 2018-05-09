@@ -69,7 +69,6 @@ public class VentanaPerfilPeliculas extends JFrame {
 	private JPanel panel_19;
 	private JPanel panel_9;
 	private JPanel panel_5; 
-	private JPanel panel_12; 
 	private JPanel panel_24;
 	private JPanel panel_8; 
 	private JPanel panel_25; 
@@ -163,66 +162,10 @@ public class VentanaPerfilPeliculas extends JFrame {
 		
 		panel_6 = new JPanel();
 		panel_4.add(panel_6, BorderLayout.NORTH);
-		
-		panel_7 = new JPanel();
-		panel_4.add(panel_7, BorderLayout.SOUTH);
-		panel_7.setLayout(new GridLayout(0, 3, 0, 0));
-		
-		panel_16 = new JPanel();
-		panel_7.add(panel_16);
-		panel_16.setLayout(new GridLayout(3, 1, 0, 0));
-		
-		panel_18 = new JPanel();
-		panel_7.add(panel_18);
-		panel_18.setLayout(new GridLayout(3, 1, 0, 0));
-		
-		panel_28 = new JPanel();
-		panel_18.add(panel_28);
-		
-		panel_29 = new JPanel();
-		panel_18.add(panel_29);
-		
-		btnCerrarSesion = new JButton(resourceBundle.getString("back_msg"));
-		panel_29.add(btnCerrarSesion);
-		btnCerrarSesion.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				logger.info("Boton Atras");
-				VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
-				ventanaUsuario.setVisible(true);
-				dispose();
-			}
-		});
-		
-		panel_27 = new JPanel();
-		panel_18.add(panel_27);
-		
-		panel_19 = new JPanel();
-		panel_7.add(panel_19);
-		panel_19.setLayout(new GridLayout(3, 1, 0, 0));
-		
-		panel_9 = new JPanel();
-		panel_4.add(panel_9, BorderLayout.EAST);
-		panel_5 = new JPanel();
-		panel_4.add(panel_5, BorderLayout.CENTER);
-		panel_5.setLayout(new GridLayout(2,3));
-		panel_12 = new JPanel();
-		panel_5.add(panel_12, BorderLayout.NORTH);
-		panel_12.setLayout(new GridLayout(0, 1, 0, 0));
-		List<String> lo = null;
-		try {
-			lo = controller.ObtenerAnyo();
-		} catch (RemoteException e1) {
-			e1.printStackTrace();
-		}
-		List<String> ls = null;
-		try {
-			ls = controller.ObtenerGenero();
-		} catch (RemoteException e1) {
-			e1.printStackTrace();
-		}
+		panel_6.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		panel_SUP = new JPanel();
-		panel_12.add(panel_SUP);
+		panel_6.add(panel_SUP);
 		panel_SUP.setLayout(new GridLayout(0, 4, 0, 0));
 		
 		panel_24 = new JPanel();
@@ -252,34 +195,88 @@ public class VentanaPerfilPeliculas extends JFrame {
 		label_4 = new JLabel(userLogeado.getEmail());
 		label_4.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_25.add(label_4);
-
-		panel_30= new JPanel();
-		panel_SUP.add(panel_30);
-		panel_30.setLayout(new GridLayout(3, 0, 0, 0));
 		
-		lblpeliculas = new JLabel(resourceBundle.getString("number_films_msg"));
-		panel_30.add(lblpeliculas);
+				panel_30= new JPanel();
+				panel_SUP.add(panel_30);
+				panel_30.setLayout(new GridLayout(3, 0, 0, 0));
+				
+				lblpeliculas = new JLabel(resourceBundle.getString("number_films_msg"));
+				panel_30.add(lblpeliculas);
+				
+				separator = new JSeparator();
+				panel_30.add(separator);
+				
+				lblnumPelis = new JLabel("0");
+				panel_30.add(lblnumPelis);
+				lblnumPelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
+				
+				panel_13 = new JPanel();
+				panel_SUP.add(panel_13);
+				panel_13.setLayout(new GridLayout(3, 3, 0, 0));
+				
+				label_3 = new JLabel(resourceBundle.getString("balance_msg"));
+				panel_13.add(label_3);
+				
+				separator_3 = new JSeparator();
+				panel_13.add(separator_3);
+				
+				lblSaldo = new JLabel(String.valueOf(userLogeado.getSaldo()) + " €");
+				panel_13.add(lblSaldo);
+				lblSaldo.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		
-		separator = new JSeparator();
-		panel_30.add(separator);
+		panel_7 = new JPanel();
+		panel_4.add(panel_7, BorderLayout.SOUTH);
+		panel_7.setLayout(new GridLayout(0, 3, 0, 0));
 		
-		lblnumPelis = new JLabel("0");
-		panel_30.add(lblnumPelis);
-		lblnumPelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
+		panel_16 = new JPanel();
+		panel_7.add(panel_16);
+		panel_16.setLayout(new GridLayout(1, 1, 0, 0));
 		
-		panel_13 = new JPanel();
-		panel_SUP.add(panel_13);
-		panel_13.setLayout(new GridLayout(3, 3, 0, 0));
+		panel_18 = new JPanel();
+		panel_7.add(panel_18);
+		panel_18.setLayout(new GridLayout(3, 1, 0, 0));
 		
-		label_3 = new JLabel(resourceBundle.getString("balance_msg"));
-		panel_13.add(label_3);
+		panel_28 = new JPanel();
+		panel_18.add(panel_28);
 		
-		separator_3 = new JSeparator();
-		panel_13.add(separator_3);
+		panel_29 = new JPanel();
+		panel_18.add(panel_29);
 		
-		lblSaldo = new JLabel(String.valueOf(userLogeado.getSaldo()) + " €");
-		panel_13.add(lblSaldo);
-		lblSaldo.setFont(new Font("Segoe UI", Font.ITALIC, 18));
+		btnCerrarSesion = new JButton(resourceBundle.getString("back_msg"));
+		panel_29.add(btnCerrarSesion);
+		btnCerrarSesion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				logger.info("Boton Atras");
+				VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
+				ventanaUsuario.setVisible(true);
+				dispose();
+			}
+		});
+		
+		panel_27 = new JPanel();
+		panel_18.add(panel_27);
+		
+		panel_19 = new JPanel();
+		panel_7.add(panel_19);
+		panel_19.setLayout(new GridLayout(1, 1, 0, 0));
+		
+		panel_9 = new JPanel();
+		panel_4.add(panel_9, BorderLayout.EAST);
+		panel_5 = new JPanel();
+		panel_4.add(panel_5, BorderLayout.CENTER);
+		panel_5.setLayout(new GridLayout(1,3));
+		List<String> lo = null;
+		try {
+			lo = controller.ObtenerAnyo();
+		} catch (RemoteException e1) {
+			e1.printStackTrace();
+		}
+		List<String> ls = null;
+		try {
+			ls = controller.ObtenerGenero();
+		} catch (RemoteException e1) {
+			e1.printStackTrace();
+		}
 		
 		scrollPane = new JScrollPane();
 		panel_5.add(scrollPane, BorderLayout.CENTER);

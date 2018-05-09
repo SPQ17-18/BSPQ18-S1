@@ -238,7 +238,7 @@ public class VentanaUsuario extends JFrame {
 		btnPerfilUser = new JButton(resourceBundle.getString("profile_msg"));
 		btnPerfilUser.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//TODO
+				//TODO 
 				logger.info("Boton Perfil peliculas");
 				VentanaPerfilPeliculas ventanaperfilpeliculas = new VentanaPerfilPeliculas(controller,resourceBundle,userLogeado);
 				ventanaperfilpeliculas.setVisible(true);
@@ -355,6 +355,7 @@ public class VentanaUsuario extends JFrame {
 			            buttons[i] = new JButton(projectNames[i]);
 			            Image img = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+prueba.get(i).getPortada()+".jpg"));
 			            buttons[i].setIcon(new ImageIcon(img));
+			            //TODO
 			           /* buttons[i].addActionListener(new ActionListener() {
 			    			public void actionPerformed(ActionEvent e) {
 			    				logger.info("Boton pelicula: ");
