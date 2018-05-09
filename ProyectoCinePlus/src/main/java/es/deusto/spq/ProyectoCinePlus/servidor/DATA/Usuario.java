@@ -1,10 +1,13 @@
 package es.deusto.spq.ProyectoCinePlus.servidor.DATA;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
+import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 
@@ -27,9 +30,9 @@ public class Usuario implements Serializable{
 	private boolean admin;
 	private float saldo;
 	
-//	@Persistent(defaultFetchGroup="true", mappedBy="Usuario", dependentElement="true")
-//	@Join
-//	private List<Pelicula> peliculasList = new ArrayList<Pelicula>();
+	@Persistent(defaultFetchGroup="true", mappedBy="Usuario", dependentElement="true")
+	@Join
+	private List<Pelicula> peliculasList = new ArrayList<Pelicula>();
 
 	public Usuario() {
 		
@@ -45,7 +48,7 @@ public class Usuario implements Serializable{
 		this.pais = pais;
 		this.admin = admin;
 		this.saldo = 0;
-//		this.peliculasList = peliculasList;
+		this.peliculasList = peliculasList;
 	}
 	
 	public Usuario(String usuario, String email, String nombre, String apellido, String password, String pais,
@@ -59,7 +62,7 @@ public class Usuario implements Serializable{
 		this.pais = pais;
 		this.admin = admin;
 		this.saldo = saldo;
-	//	this.peliculasList = peliculasList;
+		this.peliculasList = peliculasList;
 	}
 	
 	public Usuario(String usuario, String email, String nombre, String apellido, String password, String pais,
@@ -112,10 +115,10 @@ public class Usuario implements Serializable{
 		this.pais = pais;
 	}
 	public List<Pelicula> getPeliculasList() {
-		return null;//peliculasList;
+		return peliculasList;
 	}
 	public void setPeliculasList(List<Pelicula> peliculasList) {
-//		this.peliculasList = peliculasList;
+		this.peliculasList = peliculasList;
 	}
 	
 	public boolean isAdmin() {
