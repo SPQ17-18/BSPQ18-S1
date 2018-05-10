@@ -30,7 +30,7 @@ public class Usuario implements Serializable{
 	private boolean admin;
 	private float saldo;
 	
-	//@Persistent(defaultFetchGroup="true", mappedBy="Usuario", dependentElement="true")
+	@Persistent(defaultFetchGroup="true", mappedBy="usuario", dependentElement="true")
 	@Join
 	private List<Pelicula> peliculasList = new ArrayList<Pelicula>();
 
