@@ -148,6 +148,10 @@ public class Usuario implements Serializable{
 		this.pais = user.pais;
 		this.admin = user.admin;
 		this.saldo = user.saldo;
+		for (int i = 0; i < user.getPeliculasList().size(); i++) {
+			Pelicula peli = new Pelicula(user.peliculasList.get(i).getId_pelicula(),user.peliculasList.get(i).getNombre(), user.peliculasList.get(i).getDuracion(), user.peliculasList.get(i).getDescripcion(), user.peliculasList.get(i).getAnyo(), user.peliculasList.get(i).getCategoria(), user.peliculasList.get(i).getPrecio(), user.peliculasList.get(i).getPortada());
+			this.peliculasList.add(peli);
+		}
 		
 	}
 	@Override
