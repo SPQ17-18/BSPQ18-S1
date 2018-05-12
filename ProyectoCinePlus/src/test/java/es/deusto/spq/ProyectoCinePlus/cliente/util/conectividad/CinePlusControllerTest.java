@@ -19,7 +19,6 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import es.deusto.spq.ProyectoCinePlus.cliente.Cliente;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator;
 import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusServer;
@@ -164,6 +163,7 @@ public class CinePlusControllerTest {
 		
 		 
 	}
+	
 	@Before
 	public void setUpClass() {
 		
