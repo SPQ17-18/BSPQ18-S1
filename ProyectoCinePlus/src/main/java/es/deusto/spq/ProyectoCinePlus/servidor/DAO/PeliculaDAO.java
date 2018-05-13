@@ -32,6 +32,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    Transaction tx = pm.currentTransaction();
 	   
 	    try {
+	    	
 	       tx.begin();
 	       logger.info("   * Storing an object: " + Pelicula);
 	       
