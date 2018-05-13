@@ -52,6 +52,7 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 		Usuario mikel = new Usuario("mikel", "mikelspq@gmail.com", "mikel", "fernandez", "spq", "españa", false);
 		Usuario spq = new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false);
 		
+		
 		//NO FUNCIONA
 		//Usuario mikel = new Usuario("mikel", "mikelspq@gmail.com", "mikel", "fernandez", "spq", "españa", false, peliculasList);
 		//Usuario spq = new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false, peliculasList);
@@ -60,7 +61,7 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
         
 		usuarioDAO.storeUsuario(mikel);
 		usuarioDAO.storeUsuario(spq);
-
+		
 
 	}
 	

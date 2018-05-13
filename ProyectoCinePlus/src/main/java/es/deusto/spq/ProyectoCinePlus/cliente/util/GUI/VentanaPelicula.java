@@ -88,18 +88,13 @@ public class VentanaPelicula extends JFrame {
 	private JPanel panel_32;
 	private JPanel panel_33;
 	private JLabel lblNewLabel;
-	private JPanel panel_34;
-	private JPanel panel_35;
-	private JPanel panel_36;
 	private JLabel lblNewLabel_1;
 	private JLabel lblNewLabel_2;
 	private JLabel lblNewLabel_3;
-	private JPanel panel_37;
-	private JPanel panel_38;
-	private JPanel panel_39;
 	private JSeparator separator;
 	private JSeparator separator_1;
 	private JSeparator separator_2;
+	private JPanel panel_34;
 
 	/**
 	 * Launch the application.
@@ -178,12 +173,21 @@ public class VentanaPelicula extends JFrame {
 		btnAlquilar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				logger.info("Boton Alquilar (Ventana Pelicula)");
+				logger.debug("Recuperamos el saldo antiguo");
+				float saldoViejo = userLogeado.getSaldo();
+				
+				if(saldoViejo >= peli.getPrecio()) {
+					
+				}else {
+					
+				}
+				
 				//Cambiar saldo.
 				try {
 					logger.info("Actualizamos el saldo del usuario");
 					controller.eliminarUsuario(userLogeado);
 					logger.info("Actualizamos el saldo del usuario (Saldo Viejo - Precio pelicula)");
-					float saldoViejo = userLogeado.getSaldo();
+					
 					saldoViejo -= peli.getPrecio();
 					userLogeado.setSaldo(saldoViejo);
 					controller.RegistrarUsuario(userLogeado.getUsuario(), userLogeado.getEmail(), userLogeado.getNombre(), userLogeado.getApellido(), userLogeado.getPassword(), userLogeado.getPais(), userLogeado.getSaldo(), userLogeado.isAdmin());
@@ -263,63 +267,48 @@ public class VentanaPelicula extends JFrame {
 		
 		panel_16 = new JPanel();
 		panel_8.add(panel_16, BorderLayout.SOUTH);
-		panel_16.setLayout(new GridLayout(3, 3, 0, 0));
+		panel_16.setLayout(new GridLayout(1, 3, 0, 0));
 		
 		panel_20 = new JPanel();
 		panel_16.add(panel_20);
+		panel_20.setLayout(new GridLayout(3, 1, 0, 0));
 		
 		lblCategoria = new JLabel(resourceBundle.getString("kind2_msg"));
 		panel_20.add(lblCategoria);
 		
+		separator = new JSeparator();
+		panel_20.add(separator);
+		
+		lblNewLabel_2 = new JLabel(peli.getCategoria());
+		panel_20.add(lblNewLabel_2);
+		
 		panel_19 = new JPanel();
 		panel_16.add(panel_19);
+		panel_19.setLayout(new GridLayout(3, 1, 0, 0));
 		lblAo = new JLabel(resourceBundle.getString("year2_msg"));
 		panel_19.add(lblAo);
 		
+		separator_1 = new JSeparator();
+		panel_19.add(separator_1);
+		
+		lblNewLabel_1 = new JLabel(String.valueOf(peli.getAnyo()));
+		panel_19.add(lblNewLabel_1);
+		
 		panel_17 = new JPanel();
 		panel_16.add(panel_17);
+		panel_17.setLayout(new GridLayout(3, 1, 0, 0));
 		
 		lblDuracion = new JLabel(resourceBundle.getString("duration2_msg"));
 		panel_17.add(lblDuracion);
 		
-		panel_37 = new JPanel();
-		panel_16.add(panel_37);
-		
-		separator = new JSeparator();
-		panel_37.add(separator);
-		
-		panel_38 = new JPanel();
-		panel_16.add(panel_38);
-		
-		separator_1 = new JSeparator();
-		panel_38.add(separator_1);
-		
-		panel_39 = new JPanel();
-		panel_16.add(panel_39);
-		
 		separator_2 = new JSeparator();
-		panel_39.add(separator_2);
-		
-		panel_34 = new JPanel();
-		panel_16.add(panel_34);
-		
-		lblNewLabel_2 = new JLabel(peli.getCategoria());
-		panel_34.add(lblNewLabel_2);
-		
-		panel_36 = new JPanel();
-		panel_16.add(panel_36);
-		
-		lblNewLabel_1 = new JLabel(String.valueOf(peli.getAnyo()));
-		panel_36.add(lblNewLabel_1);
-		
-		panel_35 = new JPanel();
-		panel_16.add(panel_35);
+		panel_17.add(separator_2);
 		
 		String duracion = String.valueOf(peli.getDuracion()) + " min.";
 		
 		lblNewLabel_3 = new JLabel(duracion);
-		panel_35.add(lblNewLabel_3);
-		
+		panel_17.add(lblNewLabel_3);
+			
 		panel_15 = new JPanel();
 		panel_8.add(panel_15, BorderLayout.NORTH);
 		
@@ -340,7 +329,10 @@ public class VentanaPelicula extends JFrame {
 		
 		panel_31 = new JPanel();
 		panel_13.add(panel_31);
-		panel_31.setLayout(new GridLayout(0, 2, 0, 0));
+		panel_31.setLayout(new GridLayout(0, 4, 0, 0));
+		
+		panel_34 = new JPanel();
+		panel_31.add(panel_34);
 		
 		panel_32 = new JPanel();
 		panel_31.add(panel_32);
