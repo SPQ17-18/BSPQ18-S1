@@ -136,7 +136,8 @@ public class VentanaPelicula extends JFrame {
 		
 		BufferedImage img = null;
 		try {
-		    img = ImageIO.read(new File(VentanaPrincipal.pathn+"logocuadrado50.png"));
+			img = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+peli.getPortada()+".jpg"));
+		    //img = ImageIO.read(new File(VentanaPrincipal.pathn+"logocuadrado50.png"));
 		} catch (IOException e) {
 		}
 		
@@ -344,7 +345,7 @@ public class VentanaPelicula extends JFrame {
 		panel_32 = new JPanel();
 		panel_31.add(panel_32);
 		
-		lblPrecio = new JLabel(resourceBundle.getString("price_ms"));
+		lblPrecio = new JLabel(resourceBundle.getString("price_msg"));
 		panel_32.add(lblPrecio);
 		
 		panel_33 = new JPanel();
@@ -362,7 +363,7 @@ public class VentanaPelicula extends JFrame {
 			Image imgPortada = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+peli.getPortada()+".jpg"));
 			lblCartel.setIcon(new ImageIcon(imgPortada));
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
+			
 			e1.printStackTrace();
 		}
 		panel_7.add(lblCartel);

@@ -284,7 +284,7 @@ public class VentanaPerfilPeliculas extends JFrame {
 		panel_26 = new JPanel();
 		
 		//Pelis
-		prueba = userLogeado.getPeliculasList();
+//		prueba = userLogeado.getPeliculasList();
 		List<String> Pelis = new ArrayList<String>();
 	    for (int index = 0; index < prueba.size(); index++) {
 	    	Pelis.add("Pelicula: " + prueba.get(index).getNombre());

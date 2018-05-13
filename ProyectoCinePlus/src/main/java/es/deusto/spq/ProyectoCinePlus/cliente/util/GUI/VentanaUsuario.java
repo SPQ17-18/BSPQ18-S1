@@ -355,14 +355,25 @@ public class VentanaUsuario extends JFrame {
 			            Image img = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+prueba.get(i).getPortada()+".jpg"));
 			            buttons[i].setIcon(new ImageIcon(img));
 			            //TODO
-			           /* buttons[i].addActionListener(new ActionListener() {
+			            buttons[i].addActionListener(new ActionListener() {
 			    			public void actionPerformed(ActionEvent e) {
 			    				logger.info("Boton pelicula: ");
-			    				VentanaPelicula ventanaPeli = new VentanaPelicula(controller,resourceBundle,userLogeado, prueba.get(i));
-			    				ventanaPeli.setVisible(true);
-			    				dispose();
+			    				
+			    			    for (int i = 0; i < prueba.size(); i++) {
+			    			    	 if(projectNames[i].equals("Pelicula: " +prueba.get(i).getNombre())){
+			    			    		 VentanaPelicula ventanaPeli = new VentanaPelicula(controller,resourceBundle,userLogeado, prueba.get(i));
+						    				ventanaPeli.setVisible(true);
+						    				dispose();
+			    			    		 
+			    			    	 }
+			    			    }
+			    				
+			    				
+			    				
+			    				
+			    				
 			    			}
-			    		}); */
+			    		}); 
 			            panel_26.add(buttons[i]);
 			        }
 			    }catch(Exception e) {}

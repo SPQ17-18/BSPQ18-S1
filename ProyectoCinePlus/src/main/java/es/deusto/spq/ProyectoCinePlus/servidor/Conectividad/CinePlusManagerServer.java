@@ -31,7 +31,7 @@ public class CinePlusManagerServer  {
 
 			public void run() {
 				try {
-					java.rmi.registry.LocateRegistry.createRegistry(33060);
+					//java.rmi.registry.LocateRegistry.createRegistry(33060);
 					logger.info("RMI registry ready.");
 				} catch (Exception e) {
 					logger.info("Exception starting RMI registry:");

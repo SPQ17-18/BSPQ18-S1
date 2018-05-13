@@ -30,9 +30,9 @@ public class Usuario implements Serializable{
 	private boolean admin;
 	private float saldo;
 	
-	@Persistent(defaultFetchGroup="true", mappedBy="usuario", dependentElement="true")
-	@Join
-	private List<Pelicula> peliculasList = new ArrayList<Pelicula>();
+	//@Persistent(defaultFetchGroup="true", mappedBy="usuario", dependentElement="true")
+	//@Join
+	//private List<Pelicula> peliculasList = new ArrayList<Pelicula>();
 
 	public Usuario() {
 		
@@ -48,7 +48,7 @@ public class Usuario implements Serializable{
 		this.pais = pais;
 		this.admin = admin;
 		this.saldo = 0;
-		this.peliculasList = peliculasList;
+	//	this.peliculasList = peliculasList;
 	}
 	
 	public Usuario(String usuario, String email, String nombre, String apellido, String password, String pais,
@@ -62,7 +62,7 @@ public class Usuario implements Serializable{
 		this.pais = pais;
 		this.admin = admin;
 		this.saldo = saldo;
-		this.peliculasList = peliculasList;
+	//	this.peliculasList = peliculasList;
 	}
 	
 	public Usuario(String usuario, String email, String nombre, String apellido, String password, String pais,
@@ -114,12 +114,12 @@ public class Usuario implements Serializable{
 	public void setPais(String pais) {
 		this.pais = pais;
 	}
-	public List<Pelicula> getPeliculasList() {
-		return peliculasList;
-	}
-	public void setPeliculasList(List<Pelicula> peliculasList) {
-		this.peliculasList = peliculasList;
-	}
+//	public List<Pelicula> getPeliculasList() {
+//		return peliculasList;
+//	}
+//	public void setPeliculasList(List<Pelicula> peliculasList) {
+//		this.peliculasList = peliculasList;
+//	}
 	
 	public boolean isAdmin() {
 		return admin;
@@ -148,11 +148,11 @@ public class Usuario implements Serializable{
 		this.pais = user.pais;
 		this.admin = user.admin;
 		this.saldo = user.saldo;
-		for (int i = 0; i < user.getPeliculasList().size(); i++) {
-			Pelicula peli = new Pelicula(user.peliculasList.get(i).getId_pelicula(),user.peliculasList.get(i).getNombre(), user.peliculasList.get(i).getDuracion(), user.peliculasList.get(i).getDescripcion(), user.peliculasList.get(i).getAnyo(), user.peliculasList.get(i).getCategoria(), user.peliculasList.get(i).getPrecio(), user.peliculasList.get(i).getPortada());
-			this.peliculasList.add(peli);
-		}
-		
+//		for (int i = 0; i < user.getPeliculasList().size(); i++) {
+//			Pelicula peli = new Pelicula(user.peliculasList.get(i).getId_pelicula(),user.peliculasList.get(i).getNombre(), user.peliculasList.get(i).getDuracion(), user.peliculasList.get(i).getDescripcion(), user.peliculasList.get(i).getAnyo(), user.peliculasList.get(i).getCategoria(), user.peliculasList.get(i).getPrecio(), user.peliculasList.get(i).getPortada());
+//			this.peliculasList.add(peli);
+//		}
+//		
 	}
 	@Override
 	public String toString() {
