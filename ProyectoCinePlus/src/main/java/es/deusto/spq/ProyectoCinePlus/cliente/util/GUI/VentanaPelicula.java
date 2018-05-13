@@ -26,6 +26,8 @@ import javax.swing.JButton;
 import java.awt.FlowLayout;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
@@ -177,25 +179,25 @@ public class VentanaPelicula extends JFrame {
 				float saldoViejo = userLogeado.getSaldo();
 				
 				if(saldoViejo >= peli.getPrecio()) {
-					
+					logger.debug("HAY SALDO");
+					try {
+						logger.info("Actualizamos el saldo del usuario");
+						controller.eliminarUsuario(userLogeado);
+						logger.info("Actualizamos el saldo del usuario (Saldo Viejo - Precio pelicula)");
+						
+						saldoViejo -= peli.getPrecio();
+						userLogeado.setSaldo(saldoViejo);
+						controller.RegistrarUsuario(userLogeado.getUsuario(), userLogeado.getEmail(), userLogeado.getNombre(), userLogeado.getApellido(), userLogeado.getPassword(), userLogeado.getPais(), userLogeado.getSaldo(), userLogeado.isAdmin());
+						
+					} catch (RemoteException e1) {
+						e1.printStackTrace();
+					}
 				}else {
-					
+					logger.debug("NO HAY SALDO");
+					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_money_msg"), "ERROR!",
+							JOptionPane.ERROR_MESSAGE);
 				}
-				
-				//Cambiar saldo.
-				try {
-					logger.info("Actualizamos el saldo del usuario");
-					controller.eliminarUsuario(userLogeado);
-					logger.info("Actualizamos el saldo del usuario (Saldo Viejo - Precio pelicula)");
-					
-					saldoViejo -= peli.getPrecio();
-					userLogeado.setSaldo(saldoViejo);
-					controller.RegistrarUsuario(userLogeado.getUsuario(), userLogeado.getEmail(), userLogeado.getNombre(), userLogeado.getApellido(), userLogeado.getPassword(), userLogeado.getPais(), userLogeado.getSaldo(), userLogeado.isAdmin());
-					
-				} catch (RemoteException e1) {
-					e1.printStackTrace();
-				}
-				
+							
 				VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
 				ventanaUsuario.setVisible(true);
 				dispose();
@@ -265,6 +267,8 @@ public class VentanaPelicula extends JFrame {
 		panel_8.add(panel_14);
 		panel_14.setLayout(new GridLayout(3, 0, 0, 0));
 		
+		String duracion = String.valueOf(peli.getDuracion()) + " min.";
+		
 		panel_16 = new JPanel();
 		panel_8.add(panel_16, BorderLayout.SOUTH);
 		panel_16.setLayout(new GridLayout(1, 3, 0, 0));
@@ -303,8 +307,6 @@ public class VentanaPelicula extends JFrame {
 		
 		separator_2 = new JSeparator();
 		panel_17.add(separator_2);
-		
-		String duracion = String.valueOf(peli.getDuracion()) + " min.";
 		
 		lblNewLabel_3 = new JLabel(duracion);
 		panel_17.add(lblNewLabel_3);
