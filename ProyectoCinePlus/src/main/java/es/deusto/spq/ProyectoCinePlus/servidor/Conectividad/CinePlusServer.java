@@ -30,7 +30,7 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
         peliculaDAO= new PeliculaDAO();
         Pelicula cadena = new Pelicula(1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 1, "14");
         Pelicula alternativa = new Pelicula(2, "Alternativa", 140, "vida de prisioneros 2", 1995, "Suspense", 1, "15");
-        Pelicula alien = new Pelicula(3, "Alien", 120, "el octavo pasagero", 1979, "Terror", 1, listUsuarios, "30");
+        Pelicula alien = new Pelicula(3, "Alien", 120, "el octavo pasajero", 1979, "Terror", 1, listUsuarios, "30");
         Pelicula startrek = new Pelicula(4, "Star Trek", 128, "el futuro comienza", 2009, "ciencia ficcion", 2,  "31");
         Pelicula alien3 = new Pelicula(5, "Alien 3", 120, "el regreso", 1979, "Terror", 1, listUsuarios, "32");
         Pelicula startrek2 = new Pelicula(6, "Star Trek 2", 142, "La ira de khan", 1994, "ciencia ficcion", 2, "33");
@@ -68,7 +68,6 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 	public synchronized boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password,
 	String pais, boolean admin) throws RemoteException {
 		Usuario user = new Usuario (usuario, email, nombre, apellido, password, pais, admin);
-		// 1.- Ese metodo comprueba que no esta el usuario y lo registra
 		return usuarioDAO.storeUsuario(user);
 	}
 
@@ -76,23 +75,40 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 			String pais, float saldo, boolean admin) throws RemoteException {
 				Usuario user = new Usuario (usuario, email, nombre, apellido, password, pais, admin);
 				user.setSaldo(saldo);
-				// 1.- Ese metodo comprueba que no esta el usuario y lo registra
 				return usuarioDAO.storeUsuario(user);
 			}
 	
 	public synchronized boolean usuarioRegistrado (String usuario, String password) throws RemoteException {
-		//1.- Ese metodo comprueba que existe el usuaio y que la contraseña es igual
         return usuarioDAO.loginUser(usuario, password);
 	}
+	public synchronized List<Pelicula> getPeliUsuario(String email) throws RemoteException {
+		List<String> codigosaux=peliculaDAO.getPeliUsuario(email);
+		List<String> codigos=new ArrayList<String>();
 
-
+		for(int p=0;p<codigosaux.size();p++) {
+		if(codigosaux.get(p).equals(email)) {
+			codigos.add(codigosaux.get(p));
+			}
+		}
+		List<Pelicula> a=new ArrayList<Pelicula>();
+		List<Pelicula> aux=new ArrayList<Pelicula>();
+		a=peliculaDAO.getPeliculas("","","");
+		for(int j=0;j<a.size();j++) {
+			for(int i=0;i<codigos.size();i++) {
+			if(Integer.toString(a.get(j).getId_pelicula()).equals(codigos.get(i))) {
+				aux.add(a.get(j));
+				break;
+				}
+			}
+		}
+		return aux;
+	}
 	public synchronized List<Pelicula> Busqueda(String nombre, String anyo, String genero) {
 		logger.info("NOMBRE="+nombre+" anyo="+anyo+" genero="+genero);
 
 		List<Pelicula> a=new ArrayList<Pelicula>();
 		List<Pelicula> aux=new ArrayList<Pelicula>();
 		a=peliculaDAO.getPeliculas(nombre,anyo,genero);
-		logger.debug("ESTOY EN CINEPLUS TAMAÑO="+a.size());
 		String nombre1=nombre.toLowerCase();
 		String anyo1=anyo.toLowerCase();
 		String genero1=genero.toLowerCase();

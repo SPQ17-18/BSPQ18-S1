@@ -37,6 +37,9 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	public List<Pelicula> Busqueda(String nombre, String anyo,String genero) throws RemoteException {
 		return cpser.Busqueda(nombre, anyo,genero);
 	}
+	public List<Pelicula> getPeliUsuario(String email) throws RemoteException {
+		return cpser.getPeliUsuario(email);
+	}
 	public List<String> Anyos() throws RemoteException {
 		return cpser.Anyos();
 	}

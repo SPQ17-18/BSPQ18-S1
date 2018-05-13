@@ -37,7 +37,9 @@ public class CinePlusController {
 	}
 	public List<Pelicula> Busqueda(String nombre, String anyo,String genero) throws RemoteException {
 		return rsl.getCinePlusService().Busqueda(nombre, anyo,genero);
-		
+	}
+	public List<Pelicula> getPeliUsuario(String email) throws RemoteException {
+		return rsl.getCinePlusService().getPeliUsuario(email);
 	}
 	public Usuario DevolverUsuario(String email)throws RemoteException {
 		return rsl.getCinePlusService().devuelveUsuario(email);

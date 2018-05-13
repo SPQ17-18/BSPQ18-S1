@@ -206,9 +206,24 @@ public class VentanaPerfilPeliculas extends JFrame {
 				separator = new JSeparator();
 				panel_30.add(separator);
 				
+				
+				//FIXME PONER CUANTAS?
+				
+				
+				
+				
+				
+				
 				lblnumPelis = new JLabel("0");
 				panel_30.add(lblnumPelis);
 				lblnumPelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
+				
+				
+				
+				
+				
+				//TODO
+				
 				
 				panel_13 = new JPanel();
 				panel_SUP.add(panel_13);
@@ -282,9 +297,16 @@ public class VentanaPerfilPeliculas extends JFrame {
 		panel_5.add(scrollPane, BorderLayout.CENTER);
 		
 		panel_26 = new JPanel();
-		
+		//prueba=controller.Busqueda(nombre, anyo, genero);
 		//Pelis
-//		prueba = userLogeado.getPeliculasList();
+		//TODO obtencion de las peliculas de la tabla de usuario_peliculas
+		
+		try {
+			prueba = controller.getPeliUsuario(userLogeado.getEmail());
+		} catch (RemoteException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		List<String> Pelis = new ArrayList<String>();
 	    for (int index = 0; index < prueba.size(); index++) {
 	    	Pelis.add("Pelicula: " + prueba.get(index).getNombre());

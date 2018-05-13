@@ -330,8 +330,9 @@ public class VentanaUsuario extends JFrame {
 				logger.debug(anyo);
 				logger.debug(genero);
 				try {
-					logger.debug("Entra en el try");
 					prueba=controller.Busqueda(nombre, anyo, genero);
+
+					
 				} catch (Exception e) {
 					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_in_search_msg"), resourceBundle.getString("error_in_search_msg"),
 							JOptionPane.WARNING_MESSAGE);
@@ -354,7 +355,6 @@ public class VentanaUsuario extends JFrame {
 			            buttons[i] = new JButton(projectNames[i]);
 			            Image img = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+prueba.get(i).getPortada()+".jpg"));
 			            buttons[i].setIcon(new ImageIcon(img));
-			            //TODO
 			            buttons[i].addActionListener(new ActionListener() {
 			    			public void actionPerformed(ActionEvent e) {
 			    				logger.info("Boton pelicula: ");
