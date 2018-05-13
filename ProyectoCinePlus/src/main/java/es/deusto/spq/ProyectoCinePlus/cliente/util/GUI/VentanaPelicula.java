@@ -40,7 +40,6 @@ public class VentanaPelicula extends JFrame {
 	private JPanel panel_3;
 	private JPanel panel_4;
 	private JPanel panel_2;
-	private JPanel panel_12;
 	private JPanel panel;
 	private JPanel panel_10;
 	private JPanel panel_11;
@@ -97,6 +96,12 @@ public class VentanaPelicula extends JFrame {
 	private JSeparator separator_1;
 	private JSeparator separator_2;
 	private JPanel panel_34;
+	private JPanel panel_12;
+	private JPanel panel_35;
+	private JPanel panel_36;
+	private JPanel panel_37;
+	private JPanel panel_38;
+	private JPanel panel_39;
 
 	/**
 	 * Launch the application.
@@ -127,6 +132,8 @@ public class VentanaPelicula extends JFrame {
 		this.peli = peliSelect;
 		setTitle(resourceBundle.getString("film_panel_msg"));
 		
+		String duracion = String.valueOf(peli.getDuracion()) + " min.";
+		
 		/*
 		 * O pasamos la peli o la buscamos desde aqui.
 		 */
@@ -153,124 +160,26 @@ public class VentanaPelicula extends JFrame {
 		
 		panel_2 = new JPanel();
 		contentPane.add(panel_2, BorderLayout.SOUTH);
-		panel_2.setLayout(new GridLayout(0, 4, 0, 0));
+		panel_2.setLayout(new GridLayout(2, 1, 0, 0));
 		
-		panel_12 = new JPanel();
-		panel_2.add(panel_12);
+		panel_35 = new JPanel();
+		panel_2.add(panel_35);
+		panel_35.setLayout(new BorderLayout(0, 0));
 		
-		panel_10 = new JPanel();
-		panel_2.add(panel_10);
-		panel_10.setLayout(new BorderLayout(0, 0));
+		panel_36 = new JPanel();
+		panel_35.add(panel_36, BorderLayout.NORTH);
 		
-		panel_22 = new JPanel();
-		panel_10.add(panel_22, BorderLayout.SOUTH);
+		panel_38 = new JPanel();
+		panel_35.add(panel_38, BorderLayout.WEST);
 		
-		panel_23 = new JPanel();
-		panel_10.add(panel_23, BorderLayout.WEST);
+		panel_39 = new JPanel();
+		panel_35.add(panel_39, BorderLayout.EAST);
 		
-		panel_25 = new JPanel();
-		panel_10.add(panel_25, BorderLayout.CENTER);
-		
-		btnAlquilar = new JButton(resourceBundle.getString("rent_msg"));
-		btnAlquilar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				logger.info("Boton Alquilar (Ventana Pelicula)");
-				logger.debug("Recuperamos el saldo antiguo");
-				float saldoViejo = userLogeado.getSaldo();
-				
-				if(saldoViejo >= peli.getPrecio()) {
-					logger.debug("HAY SALDO");
-					try {
-						logger.info("Actualizamos el saldo del usuario");
-						controller.eliminarUsuario(userLogeado);
-						logger.info("Actualizamos el saldo del usuario (Saldo Viejo - Precio pelicula)");
-						
-						saldoViejo -= peli.getPrecio();
-						userLogeado.setSaldo(saldoViejo);
-						controller.RegistrarUsuario(userLogeado.getUsuario(), userLogeado.getEmail(), userLogeado.getNombre(), userLogeado.getApellido(), userLogeado.getPassword(), userLogeado.getPais(), userLogeado.getSaldo(), userLogeado.isAdmin());
-						
-					} catch (RemoteException e1) {
-						e1.printStackTrace();
-					}
-				}else {
-					logger.debug("NO HAY SALDO");
-					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_money_msg"), "ERROR!",
-							JOptionPane.ERROR_MESSAGE);
-				}
-							
-				VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
-				ventanaUsuario.setVisible(true);
-				dispose();
-			}
-		});
-		panel_25.add(btnAlquilar);
-		
-		panel_24 = new JPanel();
-		panel_10.add(panel_24, BorderLayout.EAST);
-		
-		panel_21 = new JPanel();
-		panel_10.add(panel_21, BorderLayout.NORTH);
-		
-		panel_11 = new JPanel();
-		panel_2.add(panel_11);
-		panel_11.setLayout(new BorderLayout(0, 0));
-		
-		panel_26 = new JPanel();
-		panel_11.add(panel_26, BorderLayout.NORTH);
-		
-		panel_30 = new JPanel();
-		panel_11.add(panel_30, BorderLayout.CENTER);
-		
-		JButton btnAtras = new JButton(resourceBundle.getString("back_msg"));
-		btnAtras.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				logger.info("Boton Atras (Ventana Pelicula)");
-				VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
-				ventanaUsuario.setVisible(true);
-				dispose();
-			}
-		});
-		panel_30.add(btnAtras);
-		
-		panel_27 = new JPanel();
-		panel_11.add(panel_27, BorderLayout.SOUTH);
-		
-		panel_29 = new JPanel();
-		panel_11.add(panel_29, BorderLayout.EAST);
-		
-		panel_28 = new JPanel();
-		panel_11.add(panel_28, BorderLayout.WEST);
-		
-		panel_1 = new JPanel();
-		contentPane.add(panel_1, BorderLayout.NORTH);
-		
-		panel = new JPanel();
-		contentPane.add(panel, BorderLayout.CENTER);
-		panel.setLayout(new BorderLayout(0, 0));
-		
-		panel_5 = new JPanel();
-		panel.add(panel_5, BorderLayout.NORTH);
-		
-		panel_6 = new JPanel();
-		panel.add(panel_6, BorderLayout.SOUTH);
-		panel_6.setLayout(new GridLayout(1, 0, 0, 0));
-		
-		panel_9 = new JPanel();
-		panel.add(panel_9, BorderLayout.EAST);
-		panel_9.setLayout(new GridLayout(0, 3, 0, 0));
-		
-		panel_8 = new JPanel();
-		panel.add(panel_8, BorderLayout.CENTER);
-		panel_8.setLayout(new BorderLayout(0, 0));
-		
-		panel_14 = new JPanel();
-		panel_8.add(panel_14);
-		panel_14.setLayout(new GridLayout(3, 0, 0, 0));
-		
-		String duracion = String.valueOf(peli.getDuracion()) + " min.";
+		panel_37 = new JPanel();
+		panel_35.add(panel_37, BorderLayout.SOUTH);
 		
 		panel_16 = new JPanel();
-		panel_8.add(panel_16, BorderLayout.SOUTH);
+		panel_35.add(panel_16);
 		panel_16.setLayout(new GridLayout(1, 3, 0, 0));
 		
 		panel_20 = new JPanel();
@@ -310,7 +219,121 @@ public class VentanaPelicula extends JFrame {
 		
 		lblNewLabel_3 = new JLabel(duracion);
 		panel_17.add(lblNewLabel_3);
-			
+		
+		panel_12 = new JPanel();
+		panel_2.add(panel_12);
+		panel_12.setLayout(new GridLayout(0, 2, 0, 0));
+		
+		panel_10 = new JPanel();
+		panel_12.add(panel_10);
+		panel_10.setLayout(new BorderLayout(0, 0));
+		
+		panel_22 = new JPanel();
+		panel_10.add(panel_22, BorderLayout.SOUTH);
+		
+		panel_23 = new JPanel();
+		panel_10.add(panel_23, BorderLayout.WEST);
+		
+		panel_25 = new JPanel();
+		panel_10.add(panel_25, BorderLayout.CENTER);
+		
+		panel_24 = new JPanel();
+		panel_10.add(panel_24, BorderLayout.EAST);
+		
+		btnAlquilar = new JButton(resourceBundle.getString("rent_msg"));
+		panel_24.add(btnAlquilar);
+		btnAlquilar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				logger.info("Boton Alquilar (Ventana Pelicula)");
+				logger.debug("Recuperamos el saldo antiguo");
+				float saldoViejo = userLogeado.getSaldo();
+				
+				if(saldoViejo >= peli.getPrecio()) {
+					logger.debug("HAY SALDO");
+					try {
+						logger.info("Actualizamos el saldo del usuario");
+						controller.eliminarUsuario(userLogeado);
+						logger.info("Actualizamos el saldo del usuario (Saldo Viejo - Precio pelicula)");
+						
+						saldoViejo -= peli.getPrecio();
+						userLogeado.setSaldo(saldoViejo);
+						controller.RegistrarUsuario(userLogeado.getUsuario(), userLogeado.getEmail(), userLogeado.getNombre(), userLogeado.getApellido(), userLogeado.getPassword(), userLogeado.getPais(), userLogeado.getSaldo(), userLogeado.isAdmin());
+						
+					} catch (RemoteException e1) {
+						e1.printStackTrace();
+					}
+				}else {
+					logger.debug("NO HAY SALDO");
+					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_money_msg"), "ERROR!",
+							JOptionPane.ERROR_MESSAGE);
+				}
+							
+				VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
+				ventanaUsuario.setVisible(true);
+				dispose();
+			}
+		});
+		
+		panel_21 = new JPanel();
+		panel_10.add(panel_21, BorderLayout.NORTH);
+		
+		panel_11 = new JPanel();
+		panel_12.add(panel_11);
+		panel_11.setLayout(new BorderLayout(0, 0));
+		
+		panel_26 = new JPanel();
+		panel_11.add(panel_26, BorderLayout.NORTH);
+		
+		panel_30 = new JPanel();
+		panel_11.add(panel_30, BorderLayout.CENTER);
+		
+		panel_27 = new JPanel();
+		panel_11.add(panel_27, BorderLayout.SOUTH);
+		
+		panel_29 = new JPanel();
+		panel_11.add(panel_29, BorderLayout.EAST);
+		
+		panel_28 = new JPanel();
+		panel_11.add(panel_28, BorderLayout.WEST);
+		
+		JButton btnAtras = new JButton(resourceBundle.getString("back_msg"));
+		panel_28.add(btnAtras);
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				logger.info("Boton Atras (Ventana Pelicula)");
+				VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
+				ventanaUsuario.setVisible(true);
+				dispose();
+			}
+		});
+		
+		panel_1 = new JPanel();
+		contentPane.add(panel_1, BorderLayout.NORTH);
+		
+		panel = new JPanel();
+		contentPane.add(panel, BorderLayout.CENTER);
+		panel.setLayout(new BorderLayout(0, 0));
+		
+		panel_5 = new JPanel();
+		panel.add(panel_5, BorderLayout.NORTH);
+		
+		panel_6 = new JPanel();
+		panel.add(panel_6, BorderLayout.SOUTH);
+		panel_6.setLayout(new GridLayout(1, 0, 0, 0));
+		
+		panel_9 = new JPanel();
+		panel.add(panel_9, BorderLayout.EAST);
+		panel_9.setLayout(new GridLayout(0, 3, 0, 0));
+		
+		panel_8 = new JPanel();
+		panel.add(panel_8, BorderLayout.CENTER);
+		panel_8.setLayout(new BorderLayout(0, 0));
+		
+		panel_14 = new JPanel();
+		panel_8.add(panel_14);
+		panel_14.setLayout(new GridLayout(3, 0, 0, 0));
+		
+		
 		panel_15 = new JPanel();
 		panel_8.add(panel_15, BorderLayout.NORTH);
 		
