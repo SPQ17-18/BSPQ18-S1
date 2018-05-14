@@ -6,6 +6,7 @@ import java.util.List;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusServer;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 
@@ -42,6 +43,10 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	}
 	public List<String> Anyos() throws RemoteException {
 		return cpser.Anyos();
+	}
+	//storePelisPerfil(PelisPerfil PelisPerfil)
+	public boolean Alquilar(PelisPerfil PelisPerfil) throws RemoteException {
+		return cpser.Alquilar(PelisPerfil);
 	}
 	public List<String> Generos() throws RemoteException {
 		return cpser.Generos();

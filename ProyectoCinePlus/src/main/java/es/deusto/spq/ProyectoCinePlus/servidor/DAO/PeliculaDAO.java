@@ -49,35 +49,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    }
 	}
 	
-//FIXME este es el metodo que he intentado pero da error
-	@SuppressWarnings("unchecked")
-	public List<String> getPeliUsuario(String email){
-		PersistenceManager pm = pmf.getPersistenceManager();
-		pm.getFetchPlan().setMaxFetchDepth(3);
-		pm.setDetachAllOnCommit(true);
-		Transaction tx = pm.currentTransaction();
-		List<String> Peliculas = new ArrayList<String>();
-	    
-		try {
-			logger.info ("   * Querying a Product: " + email);
-	    	tx.begin();
-	    	Query<String> query=null;
-    		query = pm.newQuery("SELECT FROM usuario_peliculaslist");// WHERE email == '" + email + "'");
-	    	Peliculas= (List<String>)query.execute();
-	        tx.commit();        
-	     } catch (Exception ex) {
-	    	 logger.error("   $ Error retreiving an extent: " + ex.getMessage());
-	     } finally {
-		   	if (tx != null && tx.isActive()) {
-		   		tx.rollback();
-		 }
-				
-	   		pm.close();
-	     }
 
-	    return Peliculas;
-	}	
-//FIXME
 	@SuppressWarnings("unchecked")
 	public List<Pelicula> getPeliculas(String nombre,String anyo,String genero){
 		PersistenceManager pm = pmf.getPersistenceManager();

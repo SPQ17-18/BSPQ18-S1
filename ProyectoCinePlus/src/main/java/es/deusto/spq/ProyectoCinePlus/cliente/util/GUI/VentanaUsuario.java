@@ -113,7 +113,7 @@ public class VentanaUsuario extends JFrame {
 	private JPanel panel_INF;
 	private JLabel lblnumPelis;
 	private JButton btnPerfilUser;
-	
+	private int numpeliculs;
 	
 	//public static VentanaUsuario frame;
 	/**
@@ -210,7 +210,7 @@ public class VentanaUsuario extends JFrame {
 		separator = new JSeparator();
 		panel_17.add(separator);
 		
-		lblnumPelis = new JLabel("0");
+		lblnumPelis = new JLabel("0");//FIXME
 		lblnumPelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_17.add(lblnumPelis);	
 		
@@ -326,9 +326,6 @@ public class VentanaUsuario extends JFrame {
 				if(comboBoxAnio.getSelectedItem().toString()!=null) {anyo=comboBoxAnio.getSelectedItem().toString();}
 				String genero="a";
 				if(comboBoxAnio.getSelectedItem().toString()!=null) {genero=comboBox.getSelectedItem().toString();}
-				logger.debug(nombre);
-				logger.debug(anyo);
-				logger.debug(genero);
 				try {
 					prueba=controller.Busqueda(nombre, anyo, genero);
 
@@ -344,6 +341,7 @@ public class VentanaUsuario extends JFrame {
 			    for (int index = 0; index < prueba.size(); index++) {
 			    	Pelis.add("Pelicula: " + prueba.get(index).getNombre());
 			    }
+			    lblnumPelis.setText(Integer.toString(Pelis.size()));
 			    String[] projectNames = Pelis.toArray(new String[0]);
 
 			    JButton[] buttons = new JButton[Pelis.size()];

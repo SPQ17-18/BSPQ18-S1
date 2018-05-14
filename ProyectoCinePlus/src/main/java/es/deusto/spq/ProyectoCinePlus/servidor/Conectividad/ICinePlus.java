@@ -5,6 +5,7 @@ import java.rmi.RemoteException;
 import java.util.List;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 public interface ICinePlus extends Remote {
@@ -15,6 +16,7 @@ public interface ICinePlus extends Remote {
 	public List<Pelicula> getPeliUsuario(String email)throws RemoteException;//Busca peliculas
 	public Usuario devuelveUsuario(String email) throws RemoteException;//Devuelve usuario
 	public void actualizarUsuario(Usuario user) throws RemoteException;
+	public boolean Alquilar(PelisPerfil PelisPerfil) throws RemoteException;
 	public List<String> Anyos() throws RemoteException;
 	public List<String> Generos() throws RemoteException;
 	public void eliminarUsuario(Usuario user)throws RemoteException;

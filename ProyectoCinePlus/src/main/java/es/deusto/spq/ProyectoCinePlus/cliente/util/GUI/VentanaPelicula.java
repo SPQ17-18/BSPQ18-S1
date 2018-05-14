@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 import java.awt.GridLayout;
@@ -134,10 +135,6 @@ public class VentanaPelicula extends JFrame {
 		
 		String duracion = String.valueOf(peli.getDuracion()) + " min.";
 		
-		/*
-		 * O pasamos la peli o la buscamos desde aqui.
-		 */
-		
 		BufferedImage img = null;
 		try {
 			img = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+peli.getPortada()+".jpg"));
@@ -204,7 +201,7 @@ public class VentanaPelicula extends JFrame {
 		separator_1 = new JSeparator();
 		panel_19.add(separator_1);
 		
-		lblNewLabel_1 = new JLabel(String.valueOf(peli.getAnyo()));
+		lblNewLabel_1 = new JLabel("0");
 		panel_19.add(lblNewLabel_1);
 		
 		panel_17 = new JPanel();
@@ -247,18 +244,24 @@ public class VentanaPelicula extends JFrame {
 				logger.info("Boton Alquilar (Ventana Pelicula)");
 				logger.debug("Recuperamos el saldo antiguo");
 				float saldoViejo = userLogeado.getSaldo();
-				
 				if(saldoViejo >= peli.getPrecio()) {
 					logger.debug("HAY SALDO");
 					try {
+
+						boolean comprado=controller.Alquilar(new PelisPerfil(userLogeado.getEmail(),peliSelect.getId_pelicula()));
+						if(!comprado) {
 						logger.info("Actualizamos el saldo del usuario");
 						controller.eliminarUsuario(userLogeado);
 						logger.info("Actualizamos el saldo del usuario (Saldo Viejo - Precio pelicula)");
 						
 						saldoViejo -= peli.getPrecio();
 						userLogeado.setSaldo(saldoViejo);
-						controller.RegistrarUsuario(userLogeado.getUsuario(), userLogeado.getEmail(), userLogeado.getNombre(), userLogeado.getApellido(), userLogeado.getPassword(), userLogeado.getPais(), userLogeado.getSaldo(), userLogeado.isAdmin());
+						controller.RegistrarUsuario(userLogeado.getUsuario(), userLogeado.getEmail(), userLogeado.getNombre(), userLogeado.getApellido(), userLogeado.getPassword(), userLogeado.getPais(), userLogeado.getSaldo(), userLogeado.isAdmin());}
+						else {logger.info("La pelicula esta comprada");
+						JOptionPane.showMessageDialog(null, resourceBundle.getString("error_already_msg"), "ERROR!",
+								JOptionPane.ERROR_MESSAGE);
 						
+						}
 					} catch (RemoteException e1) {
 						e1.printStackTrace();
 					}

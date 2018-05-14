@@ -6,6 +6,7 @@ import java.util.List;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaPrincipal;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 public class CinePlusController {
@@ -34,6 +35,9 @@ public class CinePlusController {
 	}
 	public List<String> ObtenerGenero() throws RemoteException {
 		return rsl.getCinePlusService().Generos();
+	}
+	public boolean Alquilar(PelisPerfil PelisPerfil) throws RemoteException {
+		return rsl.getCinePlusService().Alquilar(PelisPerfil);
 	}
 	public List<Pelicula> Busqueda(String nombre, String anyo,String genero) throws RemoteException {
 		return rsl.getCinePlusService().Busqueda(nombre, anyo,genero);
