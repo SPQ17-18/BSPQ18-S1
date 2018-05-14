@@ -328,12 +328,16 @@ public class VentanaUsuario extends JFrame {
 				if(comboBoxAnio.getSelectedItem().toString()!=null) {genero=comboBox.getSelectedItem().toString();}
 				try {
 					prueba=controller.Busqueda(nombre, anyo, genero);
-
+					if(prueba.size()==0) {
+						JOptionPane.showMessageDialog(null, resourceBundle.getString("error_in_search_msg"), resourceBundle.getString("error_in_search_msg"),
+								JOptionPane.WARNING_MESSAGE);
+						logger.info("Busqueda sin resultados");
+					}
 					
 				} catch (Exception e) {
 					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_in_search_msg"), resourceBundle.getString("error_in_search_msg"),
-							JOptionPane.WARNING_MESSAGE);
-					logger.info("Busqueda sin resultados");
+							JOptionPane.ERROR_MESSAGE);
+					logger.info("Error en la busqueda");
 					e.printStackTrace();
 				}
 				

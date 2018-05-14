@@ -1,7 +1,6 @@
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Image;
@@ -16,17 +15,13 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import javax.imageio.ImageIO;
-import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
-import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import org.apache.log4j.Logger;
@@ -34,14 +29,11 @@ import org.apache.log4j.Logger;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
-import javax.swing.BoxLayout;
 
 public class VentanaPerfilPeliculas extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 
-	private CinePlusController controller;
-	
 	private JPanel contentPane;
 	 
 	private JLabel lblLogo;
@@ -77,8 +69,6 @@ public class VentanaPerfilPeliculas extends JFrame {
 	private JScrollPane scrollPane;
 	private JLabel lblpeliculas;
 	private JSeparator separator;
-	private JLabel lblnumpelis;
-	
 	protected ResourceBundle resourceBundle;
 	private JButton btnCerrarSesion;
 	private JPanel panel_27;
@@ -92,7 +82,7 @@ public class VentanaPerfilPeliculas extends JFrame {
 	private JLabel label_1;
 	private JSeparator separator_1;
 	private JLabel label_4;
-	
+
 
 	/**
 	 * Create the frame.
@@ -100,7 +90,6 @@ public class VentanaPerfilPeliculas extends JFrame {
 
 	public VentanaPerfilPeliculas(CinePlusController controller, ResourceBundle resourceBundle, Usuario userLogeado) {
 		logger.info("VentanaPerfilPeliculas");
-		this.controller =controller;
 		this.resourceBundle=resourceBundle;
 		setTitle(resourceBundle.getString("user_panel_msg"));
 		
@@ -131,7 +120,7 @@ public class VentanaPerfilPeliculas extends JFrame {
 		    img2 = ImageIO.read(new File(VentanaPrincipal.pathn+"logo300.png"));
 		} catch (IOException e) {
 		}
-		ImageIcon a1=new ImageIcon(img2);
+		new ImageIcon(img2);
 		panel.add(lblLogo);
 		
 		panel_11 = new JPanel();
@@ -263,15 +252,13 @@ public class VentanaPerfilPeliculas extends JFrame {
 		panel_5 = new JPanel();
 		panel_4.add(panel_5, BorderLayout.CENTER);
 		panel_5.setLayout(new GridLayout(1,3));
-		List<String> lo = null;
 		try {
-			lo = controller.ObtenerAnyo();
+			controller.ObtenerAnyo();
 		} catch (RemoteException e1) {
 			e1.printStackTrace();
 		}
-		List<String> ls = null;
 		try {
-			ls = controller.ObtenerGenero();
+			controller.ObtenerGenero();
 		} catch (RemoteException e1) {
 			e1.printStackTrace();
 		}
@@ -292,8 +279,8 @@ public class VentanaPerfilPeliculas extends JFrame {
 	    }
 	    lblnumPelis.setText(Integer.toString(Pelis.size()));
 	    String[] projectNames = Pelis.toArray(new String[0]);
-
 	    JButton[] buttons = new JButton[Pelis.size()];
+	    
 	    try {
 	    	panel_26.removeAll();
 	    	panel_26.revalidate();
@@ -302,8 +289,26 @@ public class VentanaPerfilPeliculas extends JFrame {
 	            buttons[i] = new JButton(projectNames[i]);
 	            Image imgCartel = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+prueba.get(i).getPortada()+".jpg"));
 	            buttons[i].setIcon(new ImageIcon(imgCartel));
+	            buttons[i].addActionListener(new ActionListener() {
+	    			public void actionPerformed(ActionEvent e) {
+	    				Object source = e.getSource();
+	    				JButton btn= (JButton)source;  		        
+	    				for (int j = 0; j < projectNames.length; j++) {	
+	    					if(btn.getText().equals(projectNames[j])) {
+	    	    			    VentanaPeliculaDatos ventanaPeli = new VentanaPeliculaDatos(controller,resourceBundle,userLogeado, prueba.get(j));
+	    				    	ventanaPeli.setVisible(true);
+	    				    	dispose();	
+	    				    	break;
+	    					}
+	    					
+	    					
+	    				}
+  			}
+	    		});
 	            panel_26.add(buttons[i]);
 	        }
+	           
+
 	    }catch(Exception e) {}
 	    
 	

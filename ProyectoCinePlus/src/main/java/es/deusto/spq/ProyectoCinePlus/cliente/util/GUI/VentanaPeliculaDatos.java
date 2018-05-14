@@ -35,7 +35,7 @@ import javax.swing.ImageIcon;
 import java.awt.Font;
 import javax.swing.JSeparator;
 
-public class VentanaPelicula extends JFrame {
+public class VentanaPeliculaDatos extends JFrame {
 
 	private JPanel contentPane;
 	private JPanel panel_3;
@@ -75,8 +75,6 @@ public class VentanaPelicula extends JFrame {
 	private JLabel lblDuracion;
 	private JLabel lblAo;
 	private JLabel lblCategoria;
-	
-	private JButton btnAlquilar;
 	
 	private Usuario user;
 	private Pelicula peli;
@@ -124,7 +122,7 @@ public class VentanaPelicula extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VentanaPelicula(CinePlusController controller, ResourceBundle resourceBundle, Usuario userLogeado, Pelicula peliSelect ) {
+	public VentanaPeliculaDatos(CinePlusController controller, ResourceBundle resourceBundle, Usuario userLogeado, Pelicula peliSelect ) {
 		
 		logger.info("VentanaPelicula");
 		this.controller = controller;
@@ -201,7 +199,7 @@ public class VentanaPelicula extends JFrame {
 		separator_1 = new JSeparator();
 		panel_19.add(separator_1);
 		
-		lblNewLabel_1 = new JLabel(Integer.toString(peli.getAnyo()));
+		lblNewLabel_1 = new JLabel(Integer.toString(peli.getAnyo()));//FIXME no pilla el año ni aqui ni en el panel bueno
 		panel_19.add(lblNewLabel_1);
 		
 		panel_17 = new JPanel();
@@ -237,46 +235,6 @@ public class VentanaPelicula extends JFrame {
 		panel_24 = new JPanel();
 		panel_10.add(panel_24, BorderLayout.EAST);
 		
-		btnAlquilar = new JButton(resourceBundle.getString("rent_msg"));
-		panel_24.add(btnAlquilar);
-		btnAlquilar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				logger.info("Boton Alquilar (Ventana Pelicula)");
-				logger.debug("Recuperamos el saldo antiguo");
-				float saldoViejo = userLogeado.getSaldo();
-				if(saldoViejo >= peli.getPrecio()) {
-					logger.debug("HAY SALDO");
-					try {
-
-						boolean comprado=controller.Alquilar(new PelisPerfil(userLogeado.getEmail(),peliSelect.getId_pelicula()));
-						if(comprado) {
-						logger.info("Actualizamos el saldo del usuario");
-						controller.eliminarUsuario(userLogeado);
-						logger.info("Actualizamos el saldo del usuario (Saldo Viejo - Precio pelicula)");
-						
-						saldoViejo -= peli.getPrecio();
-						userLogeado.setSaldo(saldoViejo);
-						controller.RegistrarUsuario(userLogeado.getUsuario(), userLogeado.getEmail(), userLogeado.getNombre(), userLogeado.getApellido(), userLogeado.getPassword(), userLogeado.getPais(), userLogeado.getSaldo(), userLogeado.isAdmin());}
-						else {logger.info("La pelicula esta comprada");
-						JOptionPane.showMessageDialog(null, resourceBundle.getString("error_already_msg"), "ERROR!",
-								JOptionPane.ERROR_MESSAGE);
-						
-						}
-					} catch (RemoteException e1) {
-						e1.printStackTrace();
-					}
-				}else {
-					logger.debug("NO HAY SALDO");
-					JOptionPane.showMessageDialog(null, resourceBundle.getString("error_money_msg"), "ERROR!",
-							JOptionPane.ERROR_MESSAGE);
-				}
-							
-				VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
-				ventanaUsuario.setVisible(true);
-				dispose();
-			}
-		});
-		
 		panel_21 = new JPanel();
 		panel_10.add(panel_21, BorderLayout.NORTH);
 		
@@ -290,17 +248,8 @@ public class VentanaPelicula extends JFrame {
 		panel_30 = new JPanel();
 		panel_11.add(panel_30, BorderLayout.CENTER);
 		
-		panel_27 = new JPanel();
-		panel_11.add(panel_27, BorderLayout.SOUTH);
-		
-		panel_29 = new JPanel();
-		panel_11.add(panel_29, BorderLayout.EAST);
-		
-		panel_28 = new JPanel();
-		panel_11.add(panel_28, BorderLayout.WEST);
-		
 		JButton btnAtras = new JButton(resourceBundle.getString("back_msg"));
-		panel_28.add(btnAtras);
+		panel_30.add(btnAtras);
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				logger.info("Boton Atras (Ventana Pelicula)");
@@ -309,6 +258,15 @@ public class VentanaPelicula extends JFrame {
 				dispose();
 			}
 		});
+		
+		panel_27 = new JPanel();
+		panel_11.add(panel_27, BorderLayout.SOUTH);
+		
+		panel_29 = new JPanel();
+		panel_11.add(panel_29, BorderLayout.EAST);
+		
+		panel_28 = new JPanel();
+		panel_11.add(panel_28, BorderLayout.WEST);
 		
 		panel_1 = new JPanel();
 		contentPane.add(panel_1, BorderLayout.NORTH);

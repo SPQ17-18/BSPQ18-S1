@@ -30,12 +30,12 @@ public class PelisPerfilDAO {
 		if (!this.checkPelis(PelisPerfil)) {
 			this.storeObject(PelisPerfil);
 			logger.info("usuario almacenado: "+PelisPerfil.toString());
+			return true;
 		} else {
 			
 			logger.info("The user mail " + PelisPerfil.getEmail() + "and the respective film already exists");
 			return false;
 		}
-		return true;
 	}
 	
 	
