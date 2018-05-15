@@ -210,7 +210,6 @@ public class VentanaUsuario extends JFrame {
 		separator = new JSeparator();
 		panel_17.add(separator);
 		
-		//FIXME
 		int numPelis=0;
 		try {
 			numPelis = controller.getPeliUsuario(userLogeado.getEmail()).size();

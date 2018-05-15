@@ -111,6 +111,7 @@ public class PelisPerfilDAO {
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
+			
 			}
 
 			pm.close();
