@@ -133,9 +133,17 @@ public class VentanaPelicula extends JFrame {
 		this.peli = peliSelect;
 		setTitle(resourceBundle.getString("film_panel_msg"));
 		
+		BufferedImage img1 = null;
+		try {
+			img1 = ImageIO.read(new File(VentanaPrincipal.pathn + "logocuadrado50.png"));
+		} catch (IOException e) {
+		}
+		setIconImage(img1);
+
+		
 		String duracion = String.valueOf(peli.getDuracion()) + " min.";
 		
-		BufferedImage img = null;
+		BufferedImage img = null;	
 		try {
 			img = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+peli.getPortada()+".jpg"));
 		    //img = ImageIO.read(new File(VentanaPrincipal.pathn+"logocuadrado50.png"));
