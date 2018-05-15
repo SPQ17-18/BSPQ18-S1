@@ -38,4 +38,14 @@ Repository for Team BSPQ18-S1
               ⭕ VisualVM.
               ⭕ Documentación Sprint2.
        
-###### ⬜ SPRINT 3:
+###### ✅ SPRINT 3:
+
+       - Tareas a realizar:
+              ⭕ Corrección de bugs.
+              ⭕ Gestión de errores.
+              ⭕ Sistema de alquiler de películas.
+              ⭕ Sistema de perfil de películas de usuario.
+              ⭕ Jenkins.
+              ⭕ Doxygen.
+              ⭕ Documentación Sprint3.
+              
