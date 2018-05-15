@@ -23,8 +23,6 @@ public class PelisPerfilDAO {
 	}
 	
 	
-	
-	
 	public boolean storePelisPerfil(PelisPerfil PelisPerfil) {
 
 		if (!this.checkPelis(PelisPerfil)) {

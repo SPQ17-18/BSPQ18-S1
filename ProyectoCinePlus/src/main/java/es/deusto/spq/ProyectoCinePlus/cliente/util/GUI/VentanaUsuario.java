@@ -210,7 +210,15 @@ public class VentanaUsuario extends JFrame {
 		separator = new JSeparator();
 		panel_17.add(separator);
 		
-		lblnumPelis = new JLabel("0");//FIXME
+		//FIXME
+		int numPelis=0;
+		try {
+			numPelis = controller.getPeliUsuario(userLogeado.getEmail()).size();
+		} catch (RemoteException e1) {
+			e1.printStackTrace();
+		}
+		lblnumPelis = new JLabel(Integer.toString(numPelis));
+	    
 		lblnumPelis.setFont(new Font("Segoe UI", Font.ITALIC, 18));
 		panel_17.add(lblnumPelis);	
 		
