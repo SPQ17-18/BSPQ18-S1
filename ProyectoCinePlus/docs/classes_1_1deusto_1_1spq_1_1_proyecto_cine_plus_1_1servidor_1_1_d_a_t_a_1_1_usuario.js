@@ -1,0 +1,27 @@
+var classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario =
+[
+    [ "Usuario", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a022369112bf616639baade6437f52115", null ],
+    [ "Usuario", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a82604ed31a30bc811afc258acb7c9281", null ],
+    [ "Usuario", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a5ea187fd196177b362f568e81c71b369", null ],
+    [ "Usuario", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#aaf88fe945a8292f13b600730dd887ee9", null ],
+    [ "copiarUsuario", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a99fdd7e9516faec621e14b37e398536e", null ],
+    [ "getApellido", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a26b01902cc3f683989606d744458b191", null ],
+    [ "getEmail", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a271ba2a05295723709b5045b92009ef8", null ],
+    [ "getNombre", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a8b43586d90db38c81261ad6607ccfb79", null ],
+    [ "getPais", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a44270df89228a898c8e3bae538c757f0", null ],
+    [ "getPassword", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#aa1436b8a47754124d2e88d89bda662f4", null ],
+    [ "getPeliculasList", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a52a0cba420cdfb263cb26c2aa219e52d", null ],
+    [ "getSaldo", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#af3b59182d12f8084fcb88dc462f3acb2", null ],
+    [ "getUsuario", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#ab3082d1d4aa3b99f95835db07ffbabf1", null ],
+    [ "isAdmin", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a09be04948a415267a925c2654ef1dbfd", null ],
+    [ "setAdmin", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a94672edb65d5dcedd511dba3c2337a2f", null ],
+    [ "setApellido", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a1e77e46d8b53443a364f69a1825cc699", null ],
+    [ "setEmail", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a04b74e99bd1606b4839fce05f3666f81", null ],
+    [ "setNombre", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a4b289b3d933a452d9e786f385e83a12c", null ],
+    [ "setPais", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a4d7904356bcc515d1eca413e983fcc79", null ],
+    [ "setPassword", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#aad666a7cf9882147d9999a992af0b51b", null ],
+    [ "setPeliculasList", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#aba189dfada426d3a7fd4f5e4ea072494", null ],
+    [ "setSaldo", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a7829577f6b70056c2de6b071f589a30f", null ],
+    [ "setUsuario", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#affedb1b34d0a7a796d594f4a6e45520a", null ],
+    [ "toString", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a5ba9e7df1cc690272d9dfe350b6e1d9d", null ]
+];

@@ -1,0 +1,4 @@
+var classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_pelicula_datos =
+[
+    [ "VentanaPeliculaDatos", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_pelicula_datos.html#a33db66695962b214fdd87d5771b5491a", null ]
+];
