@@ -95,8 +95,8 @@ public class VentanaRegistro extends JFrame {
 	
 	/**
 	 * Constructor de la ventana Registro. 
-	 * @param controller - Recibe un objeto controlador.
-	 * @param resourceBundle - Recibe un objeto resourceBundle para realizar traducciones. 
+	 * @param controller - CinePlusController
+	 * @param resourceBundle - ResourceBundle 
 	 */
 	public VentanaRegistro(CinePlusController controller,ResourceBundle resourceBundle) {
 		logger.info("VentanaRegistro");
