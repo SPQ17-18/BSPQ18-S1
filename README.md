@@ -45,7 +45,7 @@ Repository for Team BSPQ18-S1
               ⭕ Gestión de errores.
               ⭕ Sistema de alquiler de películas.
               ⭕ Sistema de perfil de películas de usuario.
-              ⭕ Jenkins.
               ⭕ Doxygen.
+              ⭕ Jenkins.
               ⭕ Documentación Sprint3.
               
