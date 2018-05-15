@@ -19,13 +19,13 @@ public class RMIServiceLocator {
 	private ICinePlus ICP;
 
 	/**
-	 * Constructor vacio RMIServiceLocator
+	 * Constructor RMIServiceLocator
 	 */
 	public RMIServiceLocator(){ 
     }
 	
 	/**
-	 * Método getCinePlusService
+	 * Metodo que devuelve el servicio 
 	 * @return ICP - ICinePlus
 	 */
 	public ICinePlus getCinePlusService() {
@@ -33,7 +33,7 @@ public class RMIServiceLocator {
 	}
 	
 	/**
-	 * Método setService
+	 * Metodo que busca y pone en marcha el servicio
 	 * @param args - String[]
 	 */
 	public void setService(String[] args) {
