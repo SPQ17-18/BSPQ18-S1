@@ -101,6 +101,7 @@ public class VentanaPeliculaDatos extends JFrame {
 	private JPanel panel_37;
 	private JPanel panel_38;
 	private JPanel panel_39;
+	private JButton btnVerpelicula;
 
 	/**
 	 * Launch the application.
@@ -239,6 +240,9 @@ public class VentanaPeliculaDatos extends JFrame {
 		
 		panel_25 = new JPanel();
 		panel_10.add(panel_25, BorderLayout.CENTER);
+		
+		btnVerpelicula = new JButton(resourceBundle.getString("watch_tv_msg"));
+		panel_25.add(btnVerpelicula);
 		
 		panel_24 = new JPanel();
 		panel_10.add(panel_24, BorderLayout.EAST);
