@@ -324,7 +324,7 @@ public class VentanaPerfilPeliculas extends JFrame {
 				});
 				panel_26.add(buttons[i]);
 			}
-
+ 
 		} catch (Exception e) {
 		}
 

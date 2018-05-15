@@ -4,7 +4,7 @@
      Esta es la ventana de las fichas de las peliculas, la cual muestra los datos de las peliculas. 
 */
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
-
+ 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 

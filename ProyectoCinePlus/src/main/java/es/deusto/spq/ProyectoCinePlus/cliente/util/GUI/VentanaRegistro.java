@@ -93,7 +93,6 @@ public class VentanaRegistro extends JFrame {
 	protected ResourceBundle resourceBundle;
 	static Logger logger = Logger.getLogger(VentanaRegistro.class.getName());
 	
-	
 	/**
 	 * Constructor de la ventana Registro. 
 	 * @param controller - CinePlusController

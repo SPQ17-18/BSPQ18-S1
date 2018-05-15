@@ -39,7 +39,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import java.awt.Font;
 import javax.swing.JSeparator;
-
+ 
 /**
  * Ventana Pelicula Datos. En esta ventana se muestran los datos relevantes de las palículas y te aparece un boton para reproducirla.
  * @author Fercol

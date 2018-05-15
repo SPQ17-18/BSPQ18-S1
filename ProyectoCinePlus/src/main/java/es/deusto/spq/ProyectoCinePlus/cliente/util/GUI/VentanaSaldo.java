@@ -37,7 +37,7 @@ import javax.swing.JList;
 import javax.swing.JSlider;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
-
+ 
 /**
  * Ventana Saldo. Es la ventana de Saldo, la cual permite añadir saldo a un usuario.
  * @author Fercol

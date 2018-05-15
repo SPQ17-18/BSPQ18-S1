@@ -421,7 +421,7 @@ public class VentanaUsuario extends JFrame {
 		
 		panel_20 = new JPanel();
 		panel_INF.add(panel_20);
-		
+		 
 		comboBox = new JComboBox<Object>();
 		comboBox.setModel(new DefaultComboBoxModel(ls.toArray()));
 		panel_20.add(comboBox);

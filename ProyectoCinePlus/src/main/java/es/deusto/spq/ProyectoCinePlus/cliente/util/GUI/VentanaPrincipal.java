@@ -254,7 +254,7 @@ public class VentanaPrincipal extends JFrame {
 			}
 		});
 		panel_8.add(btnCopyright);
-		
+		 
 		btnSalir = new JButton(resourceBundle.getString("get_out_msg"));
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
