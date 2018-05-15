@@ -77,8 +77,8 @@ public class VentanaLogin extends JFrame {
 
 	/**
 	 * Constructor de la ventana Login. 
-	 * @param controller - Recibe un objeto controlador.
-	 * @param resourceBundle - Recibe un objeto resourceBundle para realizar traducciones. 
+	 * @param controller - CinePlusController
+	 * @param resourceBundle - ResourceBundle 
 	 */
 	public VentanaLogin(CinePlusController controller, final ResourceBundle resourceBundle) {
 
