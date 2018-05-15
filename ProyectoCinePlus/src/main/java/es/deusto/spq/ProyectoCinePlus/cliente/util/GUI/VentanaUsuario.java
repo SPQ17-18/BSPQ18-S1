@@ -7,8 +7,6 @@
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -33,12 +31,10 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.imageio.ImageIO;
 import javax.swing.DefaultComboBoxModel;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JSeparator;
 import java.awt.Font;
 import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
 import javax.swing.JComboBox;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
@@ -55,6 +51,7 @@ public class VentanaUsuario extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 
+	@SuppressWarnings("unused")
 	private CinePlusController controller;
 	
 	private JPanel contentPane;

@@ -59,13 +59,13 @@ public class UsuarioTest {
 		aritz.copiarUsuario(xabi);
 		logger.info(aritz.toString());
 		
-		assertEquals("XabiSPQ", xabi.getUsuario());
-		assertEquals("Xabi@gmail.com", xabi.getEmail());
-		assertEquals("Xabi", xabi.getNombre());
-		assertEquals("Sarrionandia", xabi.getApellido());
-		assertEquals("P@ssw0rd", xabi.getPassword());
-		assertEquals("España", xabi.getPais());
-		assertFalse( xabi.isAdmin());
+		assertEquals("XabiSPQ", aritz.getUsuario());
+		assertEquals("Xabi@gmail.com", aritz.getEmail());
+		assertEquals("Xabi", aritz.getNombre());
+		assertEquals("Sarrionandia", aritz.getApellido());
+		assertEquals("P@ssw0rd", aritz.getPassword());
+		assertEquals("España", aritz.getPais());
+		assertFalse( aritz.isAdmin());
 	}
 
 	@Test
