@@ -1,3 +1,11 @@
+/** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
+    @brief Ventana de inicio de sesión. May 15, 2018
+
+    Esta es la ventana que te da acceso a la funcionalidad completa de la aplicación. 
+    Para eso, tienes que estar registrado en la aplicación y disponer de un usuario y una contraseña valida.
+    Introduciendo un email valido y una contraseña valida te permite entrar a tu perfil personal.
+*/
+
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
@@ -27,11 +35,14 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 import javax.swing.JPasswordField;
 
+/**
+ * Ventana Login. Se trata de la ventana de login, la cual permite acceder a la aplicación.
+ * @author Fercol
+ *
+ */
 public class VentanaLogin extends JFrame {
 
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
 	private CinePlusController controller;
 	private JPanel contentPane;
@@ -65,13 +76,14 @@ public class VentanaLogin extends JFrame {
 	static Logger logger = Logger.getLogger(VentanaLogin.class.getName());
 
 	/**
-	 * Create the frame.
+	 * Constructor de la ventana Login. 
+	 * @param controller - Recibe un objeto controlador.
+	 * @param resourceBundle - Recibe un objeto resourceBundle para realizar traducciones. 
 	 */
 	public VentanaLogin(CinePlusController controller, final ResourceBundle resourceBundle) {
 
 		logger.info("VentanaLogin");
 
-		// Inicializamos el controlador
 		this.setController(controller);
 		this.resourceBundle = resourceBundle;
 
@@ -81,7 +93,6 @@ public class VentanaLogin extends JFrame {
 		} catch (IOException e) {
 		}
 		setIconImage(img);
-
 
 		setTitle(resourceBundle.getString("title_login_msg"));
 		setBounds(100, 100, 450, 300);
@@ -117,7 +128,6 @@ public class VentanaLogin extends JFrame {
 							JOptionPane.ERROR_MESSAGE);
 					limpiarCampos();
 				}
-				// Codigo del controller
 				else {
 					try {
 						String pass = new String(passwordField.getPassword());
@@ -126,16 +136,12 @@ public class VentanaLogin extends JFrame {
 						if (login) {
 							logger.info("Usuario logueado:  " + textFieldUsuario.getText());
 							
-							/******/
-							
 							//Obtener usuario a partir del email
 							String email = textFieldUsuario.getText();
 							logger.info("USUARIO: "+ email);
 							Usuario userLogeado = controller.DevolverUsuario(email);
 							logger.info("***USUARIO LOGEADO: *** "+ userLogeado);
-							
-							/******/
-							
+
 							VentanaLogin.this.setVisible(false);
 							VentanaUsuario windowusuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
 							windowusuario.setVisible(true);
@@ -146,7 +152,6 @@ public class VentanaLogin extends JFrame {
 						}
 
 					} catch (RemoteException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 
@@ -213,15 +218,26 @@ public class VentanaLogin extends JFrame {
 		panel_5.add(lblIniciaSesion);
 	}
 
+	/**
+	 * Método que limpia los campos de las ventana login.
+	 */
 	private void limpiarCampos() {
 		textFieldUsuario.setText("");
 		passwordField.setText("");
 	}
 
+	/**
+	 * Método get que devuelve el controlador.
+	 * @return controller
+	 */
 	public CinePlusController getController() {
 		return controller;
 	}
 
+	/**
+	 * Método set que cambia el controlador. 
+	 * @param controller
+	 */
 	public void setController(CinePlusController controller) {
 		this.controller = controller;
 	}

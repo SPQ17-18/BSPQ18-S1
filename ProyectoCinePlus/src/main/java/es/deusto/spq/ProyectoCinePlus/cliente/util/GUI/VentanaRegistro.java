@@ -1,3 +1,11 @@
+/** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
+    @brief Ventana de registro de usuario. May 15, 2018
+
+    Esta es la ventana que te permite crear nuevas cuentas de usuario. 
+    Para eso, tienes que introducir los datos cumpliendo los criterios y dar al boton de registrar.
+	Una vez que te registres podrás iniciar sesión en tu nueva cuenta de CinePlus.
+*/
+
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
@@ -26,8 +34,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.imageio.ImageIO;
 
+/**
+ * Ventana de Regitro. Se trata de la ventana de registro en la que se pueden registrar usuarios.
+ * @author Fercol
+ *
+ */
 public class VentanaRegistro extends JFrame {
-
 
 	private static final long serialVersionUID = 1L;
 
@@ -81,9 +93,10 @@ public class VentanaRegistro extends JFrame {
 	protected ResourceBundle resourceBundle;
 	static Logger logger = Logger.getLogger(VentanaRegistro.class.getName());
 	
-	
 	/**
-	 * Create the frame.
+	 * Constructor de la ventana Registro. 
+	 * @param controller - Recibe un objeto controlador.
+	 * @param resourceBundle - Recibe un objeto resourceBundle para realizar traducciones. 
 	 */
 	public VentanaRegistro(CinePlusController controller,ResourceBundle resourceBundle) {
 		logger.info("VentanaRegistro");
@@ -96,6 +109,7 @@ public class VentanaRegistro extends JFrame {
 		} catch (IOException e) {
 		}
 		setIconImage(img);
+		
 		setTitle(resourceBundle.getString("title_register_users_msg"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 350);
@@ -293,8 +307,14 @@ public class VentanaRegistro extends JFrame {
 		panel_1.setLayout(new BorderLayout(0, 0));
 	}
  
+	/**
+	 * Función que comprueba que todos los datos se han introducido en el formulario. 
+	 * Comprueba que no haya campos en blanco, y elimina los espacios del comienzo y del final. 
+	 * En caso de fallo, muestra una ventana de error informando del problema.
+	 * @return comprobar - boolean
+	 */
 	public boolean comprobarcampos() {
-		logger.info("FunciÃ³n comprobar campos");
+		logger.info("Funcion comprobar campos");
 		String error ="";
 		boolean comprobar = true;
 		if(textFielduser.getText().trim().equals("")) {
@@ -336,6 +356,12 @@ public class VentanaRegistro extends JFrame {
 		return comprobar;
 	}
 	
+	/**
+	 * Método que comprueba si se trata de un email valido. 
+	 * Devuelve TRUE si el email dispone de una "@" y termina por ".com".
+	 * Devuelve FALSE si el email no cumple con las condiciones anteriores. 
+	 * @return resul - boolean
+	 */
 	public boolean validarEmail() {
 		logger.info("Funcion validarEmail");
 		boolean resul=true;
@@ -345,6 +371,13 @@ public class VentanaRegistro extends JFrame {
 		}
 		return resul;
 	}
+	
+	/**
+	 * Método que comprueba su la contraseña cumple con las condiciones establecidas. 
+	 * Devuelve TRUE si la contraseña cumple las condiciones de ser más de 6 caracteres.
+	 * Devuelve FALSE si es más corta.
+	 * @return resul - boolean 
+	 */
 	public boolean validarPass() {
 		logger.info("Funcion validarPass");
 		boolean resul=true;
@@ -355,6 +388,9 @@ public class VentanaRegistro extends JFrame {
 		return resul;
 	}
 	
+	/**
+	 * Método que limpia los campos de las ventana registro.
+	 */
 	private void limpiarCampos() {
 		textFielduser.setText("");
 		textFieldemail.setText("");
