@@ -8,9 +8,23 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
+/**
+ * 
+ * @author Aritz
+ * @package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
+ * @version 3.0.3
+ * @since May 17, 2018
+ * 
+ * Interfaz remota del Servidor CinePlusServer
+ * Esta es implementada por @class CinePlusFacade
+ * para realizar la conexion remota
+ *
+ */
 public interface ICinePlus extends Remote {
 	
 	/**
+	 * Metodo que realiza el registro de un usuario y devuelve 
+	 * el resultado del proceso de insercion
 	 * --------------
 	 * @param usuario
 	 * @param email
