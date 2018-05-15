@@ -78,7 +78,7 @@ public class VentanaPrincipal extends JFrame {
 	static Logger logger = Logger.getLogger(VentanaPrincipal.class.getName());
 
 	/**
-	 * COntructor de la Ventana Principal. 
+	 * Contructor de la Ventana Principal. 
 	 * @param rmi - RMIServiceLocator
 	 * @param controller - CinePlusController
 	 */
@@ -175,7 +175,7 @@ public class VentanaPrincipal extends JFrame {
 				//frame.repaint();
 				//frame.dispose();
 				//frame.setVisible(true);
-				
+				//frame.getContentPane().repaint();
 			}
 		});
 		
