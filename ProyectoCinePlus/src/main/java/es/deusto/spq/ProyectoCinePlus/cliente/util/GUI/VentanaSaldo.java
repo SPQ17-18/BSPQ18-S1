@@ -1,3 +1,9 @@
+/** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
+    @brief Ventana de saldo. May 15, 2018
+
+    Esta es la ventana qte permite añadir saldo a la aplicación. 
+    Para eso, tendras que añadir, el numero de tarjeta, el nombre de usuario y el código de seguridad de la tarjeta y selecionar el importe que deseas recargar. 
+*/
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
@@ -32,6 +38,11 @@ import javax.swing.JSlider;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
+/**
+ * Ventana Saldo. Es la ventana de Saldo, la cual permite añadir saldo a un usuario.
+ * @author Fercol
+ *
+ */
 public class VentanaSaldo extends JFrame {
 
 	private static final long serialVersionUID = 1L;
@@ -74,13 +85,14 @@ public class VentanaSaldo extends JFrame {
 
 	static Logger logger = Logger.getLogger(VentanaSaldo.class.getName());
 	
-	
 	/**
-	 * Create the frame.
+	 * Constructor de la ventana Saldo. 
+	 * @param controller - CinePlusController
+	 * @param resourceBundle - ResourceBundle
+	 * @param userLogeado - Usuario
 	 */
 	public VentanaSaldo(CinePlusController controller, final ResourceBundle resourceBundle, Usuario userLogeado) {
 		logger.info("VentanaSaldo");
-		// Inicializamos el controlador
 		this.setController(controller);
 		this.resourceBundle = resourceBundle;
 
@@ -122,13 +134,12 @@ public class VentanaSaldo extends JFrame {
 					String saldoS = (String) comboBox.getSelectedItem();
 					float saldoF = Float.parseFloat(saldoS);
 					logger.info(saldoF);
-					//obtenemos saldo que tiene y le aÃ±adimos mÃ¡s.
+					//obtenemos saldo que tiene y le anyadimos mÃ¡s.
 					float saldoViejo = userLogeado.getSaldo();
 					saldoViejo += saldoF;
 					userLogeado.setSaldo(saldoViejo);
 					logger.info(userLogeado);
 					try {
-						//controller.actualizarUsuario(userLogeado);
 						controller.eliminarUsuario(userLogeado);
 						controller.RegistrarUsuario(userLogeado.getUsuario(), userLogeado.getEmail(), userLogeado.getNombre(), userLogeado.getApellido(), userLogeado.getPassword(), userLogeado.getPais(), userLogeado.getSaldo(), userLogeado.isAdmin());
 					} catch (RemoteException e) {
@@ -239,17 +250,30 @@ public class VentanaSaldo extends JFrame {
 		panel_5.add(lblIniciaSesion);
 
 	}
-
+	
+	/**
+	 * Método get del controller
+	 * @return controller - CinePlusController
+	 */
 	public CinePlusController getController() {
 		return controller;
 	}
 
+	/**
+	 * Método set del controller
+	 * @param controller - CinePlusController
+	 */
 	public void setController(CinePlusController controller) {
 		this.controller = controller;
 	}
 	
+	/**
+	 * Método que comprueba los datos de los campos esten llenos. 
+	 * En caso de error, lo mostrará en una ventana de error. 
+	 * @return comprobar - boolean
+	 */
 	public boolean comprobarcampos() {
-		logger.info("FunciÃ³n comprobar campos");
+		logger.info("Función comprobar campos");
 		boolean comprobar = true;
 		String error ="";
 		if(textFieldNombre.getText().trim().equals("")) {
@@ -275,6 +299,10 @@ public class VentanaSaldo extends JFrame {
 		}
 		return comprobar;
 	}
+	
+	/**
+	 * Método que limpia los campos de la ventana.
+	 */
 	private void limpiarCampos() {
 		textFieldNombre.setText("");
 		textFieldNumero.setText("");

@@ -1,3 +1,8 @@
+/** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
+    @brief Ventana de pelicula. May 15, 2018
+
+     Esta es la ventana de las fichas de las peliculas, la cual muestra los datos de las peliculas. 
+*/
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
@@ -35,6 +40,11 @@ import javax.swing.ImageIcon;
 import java.awt.Font;
 import javax.swing.JSeparator;
 
+/**
+ * Ventana de pelicula. Muestra los datos de las peliculas. 
+ * @author Fercol
+ *
+ */
 public class VentanaPelicula extends JFrame {
 
 	private JPanel contentPane;
@@ -78,13 +88,6 @@ public class VentanaPelicula extends JFrame {
 	
 	private JButton btnAlquilar;
 	
-	private Usuario user;
-	private Pelicula peli;
-	
-	private CinePlusController controller;
-	private ResourceBundle resourceBundle;
-	private static final long serialVersionUID = 1L;
-	static Logger logger = Logger.getLogger(VentanaPrincipal.class.getName());
 	private JPanel panel_31;
 	private JLabel lblPrecio;
 	private JPanel panel_32;
@@ -103,26 +106,21 @@ public class VentanaPelicula extends JFrame {
 	private JPanel panel_37;
 	private JPanel panel_38;
 	private JPanel panel_39;
+	
+	private Usuario user;
+	private Pelicula peli;
+	
+	private CinePlusController controller;
+	private ResourceBundle resourceBundle;
+	private static final long serialVersionUID = 1L;
+	static Logger logger = Logger.getLogger(VentanaPrincipal.class.getName());
 
 	/**
-	 * Launch the application.
-	 */
-	/*public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaPelicula frame = new VentanaPelicula();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-*/
-	
-	/**
-	 * Create the frame.
+	 * Contructor de la Ventana de pelicula
+	 * @param controller - CinePlusController
+	 * @param resourceBundle - ResourceBundle
+	 * @param userLogeado - Usuario
+	 * @param peliSelect - Pelicula
 	 */
 	public VentanaPelicula(CinePlusController controller, ResourceBundle resourceBundle, Usuario userLogeado, Pelicula peliSelect ) {
 		
@@ -139,14 +137,12 @@ public class VentanaPelicula extends JFrame {
 		} catch (IOException e) {
 		}
 		setIconImage(img1);
-
 		
 		String duracion = String.valueOf(peli.getDuracion()) + " min.";
 		
 		BufferedImage img = null;	
 		try {
 			img = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+peli.getPortada()+".jpg"));
-		    //img = ImageIO.read(new File(VentanaPrincipal.pathn+"logocuadrado50.png"));
 		} catch (IOException e) {
 		}
 		

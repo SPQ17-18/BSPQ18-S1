@@ -1,3 +1,9 @@
+/** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
+    @brief Ventana de principal. May 15, 2018
+
+    Esta es la ventana principal de la aplicación. 
+    Desde aquí puedes empezar a crear cuentas de usuario, iniciar sesión, ver los creditos de la aplicación o cerrar el programa. 
+*/
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
@@ -25,11 +31,13 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Ventana Prinicipal. Se trata de la ventana de inicio del programa, la cual permite acceder a la aplicación.
+ * @author Fercol
+ *
+ */
 public class VentanaPrincipal extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private CinePlusController controlador;
 	public static VentanaPrincipal frame;
@@ -69,14 +77,14 @@ public class VentanaPrincipal extends JFrame {
 	static Logger logger = Logger.getLogger(VentanaPrincipal.class.getName());
 
 	/**
-	 * Create the frame.
+	 * COntructor de la Ventana Principal. 
+	 * @param rmi - RMIServiceLocator
+	 * @param controller - CinePlusController
 	 */
-
 	public VentanaPrincipal(RMIServiceLocator rmi,CinePlusController controller) {
 		
 		logger.info("VentanaPrincipal");
 		pathn=(System.getProperty("user.dir")+ "\\src\\main\\resources\\images\\");
-		
 		
 		logger.debug(pathn);
 		resourceBundle = ResourceBundle.getBundle("SystemMessages", Locale.getDefault());
@@ -89,7 +97,6 @@ public class VentanaPrincipal extends JFrame {
 		    img = ImageIO.read(new File(pathn+"logocuadrado50.png"));
 		} catch (IOException e) {
 		}
-		
 		
 		setIconImage(img);
 		setTitle("CinePlus");
@@ -113,14 +120,12 @@ public class VentanaPrincipal extends JFrame {
 		panel_2 = new JPanel();
 		panel.add(panel_2, BorderLayout.NORTH);
 		
-		
 		BufferedImage img2 = null;
 		try {
 		    img2 = ImageIO.read(new File(pathn+"logo300.png"));
 		} catch (IOException e) {
 		}
 		ImageIcon a=new ImageIcon(img2);
-		
 		
 		label = new JLabel("");
 		label.setIcon(a);
@@ -145,7 +150,6 @@ public class VentanaPrincipal extends JFrame {
 				logger.info("Idioma: es");
 			}
 		});
-		
 		
 		BufferedImage img3 = null;
 		try {
@@ -174,14 +178,12 @@ public class VentanaPrincipal extends JFrame {
 			}
 		});
 		
-		
 		BufferedImage img4 = null;
 		try {
 		    img4 = ImageIO.read(new File(pathn+"eu25.png"));
 		} catch (IOException e) {
 		}
 		ImageIcon c=new ImageIcon(img4);
-		
 		
 		lblEu.setIcon(c);
 		panel_12.add(lblEu);
@@ -204,7 +206,6 @@ public class VentanaPrincipal extends JFrame {
 		} catch (IOException e) {
 		}
 		ImageIcon d=new ImageIcon(img5);
-		
 		
 		lblEn.setIcon(d);
 		panel_11.add(lblEn);

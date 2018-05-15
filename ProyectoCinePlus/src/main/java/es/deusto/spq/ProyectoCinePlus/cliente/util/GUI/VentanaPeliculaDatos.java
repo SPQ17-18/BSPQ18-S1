@@ -1,3 +1,8 @@
+/** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
+    @brief Ventana Pelicula de Datos. May 15, 2018
+
+     Esta es la ventana de los datos de las peliculas. Aquí aparece la información relevante de la ficha y te permite seleccionar la paleicula. 
+*/
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
@@ -35,6 +40,11 @@ import javax.swing.ImageIcon;
 import java.awt.Font;
 import javax.swing.JSeparator;
 
+/**
+ * Ventana Pelicula Datos. En esta ventana se muestran los datos relevantes de las palículas y te aparece un boton para reproducirla.
+ * @author Fercol
+ *
+ */
 public class VentanaPeliculaDatos extends JFrame {
 
 	private JPanel contentPane;
@@ -104,24 +114,11 @@ public class VentanaPeliculaDatos extends JFrame {
 	private JButton btnVerpelicula;
 
 	/**
-	 * Launch the application.
-	 */
-	/*public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaPelicula frame = new VentanaPelicula();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-*/
-	
-	/**
-	 * Create the frame.
+	 * Contructor de la clase Ventana Pelicula Datos
+	 * @param controller - CinePlusController
+	 * @param resourceBundle - ResourceBundle
+	 * @param userLogeado - Usuario
+	 * @param peliSelect - Pelicula
 	 */
 	public VentanaPeliculaDatos(CinePlusController controller, ResourceBundle resourceBundle, Usuario userLogeado, Pelicula peliSelect ) {
 		
@@ -145,7 +142,6 @@ public class VentanaPeliculaDatos extends JFrame {
 		BufferedImage img = null;
 				try {
 			img = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+peli.getPortada()+".jpg"));
-		    //img = ImageIO.read(new File(VentanaPrincipal.pathn+"logocuadrado50.png"));
 		} catch (IOException e) {
 		}
 		

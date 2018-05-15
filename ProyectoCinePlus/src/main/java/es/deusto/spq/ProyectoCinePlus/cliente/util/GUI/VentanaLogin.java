@@ -42,7 +42,7 @@ import javax.swing.JPasswordField;
  */
 public class VentanaLogin extends JFrame {
 
-
+	
 	private static final long serialVersionUID = 1L;
 	private CinePlusController controller;
 	private JPanel contentPane;

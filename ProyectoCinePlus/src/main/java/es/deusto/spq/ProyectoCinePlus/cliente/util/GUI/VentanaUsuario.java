@@ -1,3 +1,9 @@
+/** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
+    @brief Ventana del usuario. May 15, 2018
+
+    Esta es la ventana que muestra los datos más relevantes del usuario y te muestra el menú pricipal. 
+    Además existe un buscador con filtros para poder encontrar las películas más facilmente. 
+*/
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
@@ -39,11 +45,15 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * Ventana de Usuario. Se trata de la ventana de usuario, la cual dispone de varias ociones en un menú y permite buscar peliculas.
+ * @author Fercol
+ *
+ */
 public class VentanaUsuario extends JFrame {
 
 
 	private static final long serialVersionUID = 1L;
-
 
 	private CinePlusController controller;
 	
@@ -115,11 +125,12 @@ public class VentanaUsuario extends JFrame {
 	private JButton btnPerfilUser;
 	private int numpeliculs;
 	
-	//public static VentanaUsuario frame;
 	/**
-	 * Create the frame.
+	 * Constructor de la clase Ventama de Usuario
+	 * @param controller - CinePlusController
+	 * @param resourceBundle - ResourceBundle
+	 * @param userLogeado - Usuario
 	 */
-
 	public VentanaUsuario(CinePlusController controller, ResourceBundle resourceBundle, Usuario userLogeado) {
 		logger.info("VentanaUsuario");
 		this.controller =controller;
@@ -321,9 +332,6 @@ public class VentanaUsuario extends JFrame {
 		panel_30= new JPanel();
 		panel_SUP.add(panel_30);
 		
-		
-		
-		
 		btnBuscar = new JButton(resourceBundle.getString("find_msg"));
 		btnBuscar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -375,11 +383,7 @@ public class VentanaUsuario extends JFrame {
 						    				dispose();
 			    			    		 
 			    			    	 }
-			    			    }
-			    				
-			    				
-			    				
-			    				
+			    			    }		
 			    				
 			    			}
 			    		}); 
@@ -387,7 +391,6 @@ public class VentanaUsuario extends JFrame {
 			        }
 			    }catch(Exception e) {}
 			    
-			
 				logger.info("Busqueda completada");
 			}
 		});
@@ -432,6 +435,5 @@ public class VentanaUsuario extends JFrame {
 		panel_8 = new JPanel();
 		panel_4.add(panel_8, BorderLayout.WEST);
 	}
-
 	
 }
