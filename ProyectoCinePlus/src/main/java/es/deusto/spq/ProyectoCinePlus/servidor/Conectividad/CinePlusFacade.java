@@ -19,9 +19,9 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	private static final long serialVersionUID = 1L;
 	private CinePlusServer cpser;
 	
-	public CinePlusFacade(CinePlusServer cpser) throws RemoteException {
+	public CinePlusFacade() throws RemoteException {
 		super();
-		this.cpser=cpser;
+		this.cpser=new CinePlusServer();
 	}
 
 	public boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password, String pais, boolean admin)  throws RemoteException {
@@ -44,7 +44,7 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	public List<String> Anyos() throws RemoteException {
 		return cpser.Anyos();
 	}
-	//storePelisPerfil(PelisPerfil PelisPerfil)
+
 	public boolean Alquilar(PelisPerfil PelisPerfil) throws RemoteException {
 		return cpser.Alquilar(PelisPerfil);
 	}

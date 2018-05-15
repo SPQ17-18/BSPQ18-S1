@@ -21,6 +21,7 @@ import org.junit.runners.MethodSorters;
 
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.RMIServiceLocator;
+import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusFacade;
 import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusServer;
 import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.PeliculaDAO;
@@ -97,7 +98,7 @@ public class CinePlusControllerTest {
 
 				try {
 					
-					ICinePlus cineplus = new CinePlusServer();
+					ICinePlus cineplus = new CinePlusFacade();
 					Naming.rebind(name, cineplus);
 				} catch (RemoteException re) {
 					logger.error(" # CinePlusServer RemoteException: " + re.getMessage());

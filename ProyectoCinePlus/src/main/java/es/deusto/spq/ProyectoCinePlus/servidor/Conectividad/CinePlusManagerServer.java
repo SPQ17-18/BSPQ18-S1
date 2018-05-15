@@ -30,7 +30,7 @@ public class CinePlusManagerServer  {
 
 
 		try {
-			ICinePlus objServer = new CinePlusServer();
+			ICinePlus objServer = new CinePlusFacade();
 			Naming.rebind(name, objServer);	
 			logger.info("Server '" + name + "' active and waiting...");
 			InputStreamReader inputStreamReader = new InputStreamReader(System.in);

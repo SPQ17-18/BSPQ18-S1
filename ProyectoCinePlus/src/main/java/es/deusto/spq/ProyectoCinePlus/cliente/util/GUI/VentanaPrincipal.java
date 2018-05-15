@@ -1,8 +1,9 @@
 /** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
     @brief Ventana de principal. May 15, 2018
 
-    Esta es la ventana principal de la aplicación. 
-    Desde aquí puedes empezar a crear cuentas de usuario, iniciar sesión, ver los creditos de la aplicación o cerrar el programa. 
+    Esta es la ventana principal de la aplicacion. 
+    Desde aqui puedes empezar a crear cuentas de usuario, iniciar sesion, 
+    ver los creditos de la aplicacion o cerrar el programa. 
 */
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
@@ -32,7 +33,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Ventana Prinicipal. Se trata de la ventana de inicio del programa, la cual permite acceder a la aplicación.
+ * Ventana Prinicipal. Se trata de la ventana de inicio del programa, la cual permite acceder a la aplicaciï¿½n.
  * @author Fercol
  *
  */

@@ -1,8 +1,8 @@
 /** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
     @brief Ventana del usuario. May 15, 2018
 
-    Esta es la ventana que muestra los datos más relevantes del usuario y te muestra el menú pricipal. 
-    Además existe un buscador con filtros para poder encontrar las películas más facilmente. 
+    Esta es la ventana que muestra los datos mas relevantes del usuario y te muestra el menï¿½ pricipal. 
+    Ademas existe un buscador con filtros para poder encontrar las peliculas mas facilmente. 
 */
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
@@ -46,7 +46,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 /**
- * Ventana de Usuario. Se trata de la ventana de usuario, la cual dispone de varias ociones en un menú y permite buscar peliculas.
+ * Ventana de Usuario. Se trata de la ventana de usuario, la cual dispone de varias ociones en un menï¿½ y permite buscar peliculas.
  * @author Fercol
  *
  */
