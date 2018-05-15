@@ -241,11 +241,17 @@ public class VentanaPeliculaDatos extends JFrame {
 		panel_25 = new JPanel();
 		panel_10.add(panel_25, BorderLayout.CENTER);
 		
-		btnVerpelicula = new JButton(resourceBundle.getString("watch_tv_msg"));
-		panel_25.add(btnVerpelicula);
-		
 		panel_24 = new JPanel();
 		panel_10.add(panel_24, BorderLayout.EAST);
+		
+		btnVerpelicula = new JButton(resourceBundle.getString("watch_tv_msg"));
+		btnVerpelicula.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				logger.info("Boton Ver pelicula (Ventana Pelicula)");
+				JOptionPane.showMessageDialog(null, resourceBundle.getString("error_funtion_msg"), "ERROR!", JOptionPane.ERROR_MESSAGE);
+			}
+		});
+		panel_24.add(btnVerpelicula);
 		
 		panel_21 = new JPanel();
 		panel_10.add(panel_21, BorderLayout.NORTH);
@@ -260,17 +266,6 @@ public class VentanaPeliculaDatos extends JFrame {
 		panel_30 = new JPanel();
 		panel_11.add(panel_30, BorderLayout.CENTER);
 		
-		JButton btnAtras = new JButton(resourceBundle.getString("back_msg"));
-		panel_30.add(btnAtras);
-		btnAtras.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				logger.info("Boton Atras (Ventana Pelicula)");
-				VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
-				ventanaUsuario.setVisible(true);
-				dispose();
-			}
-		});
-		
 		panel_27 = new JPanel();
 		panel_11.add(panel_27, BorderLayout.SOUTH);
 		
@@ -279,6 +274,17 @@ public class VentanaPeliculaDatos extends JFrame {
 		
 		panel_28 = new JPanel();
 		panel_11.add(panel_28, BorderLayout.WEST);
+		
+		JButton btnAtras = new JButton(resourceBundle.getString("back_msg"));
+		panel_28.add(btnAtras);
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				logger.info("Boton Atras (Ventana Pelicula)");
+				VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
+				ventanaUsuario.setVisible(true);
+				dispose();
+			}
+		});
 		
 		panel_1 = new JPanel();
 		contentPane.add(panel_1, BorderLayout.NORTH);
