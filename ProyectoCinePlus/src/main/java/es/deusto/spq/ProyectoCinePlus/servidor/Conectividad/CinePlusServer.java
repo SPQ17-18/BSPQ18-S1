@@ -14,7 +14,7 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
-public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
+public class CinePlusServer {
 	private UsuarioDAO usuarioDAO;
 	private PeliculaDAO peliculaDAO;
 	private PelisPerfilDAO pelisperfilDAO;
@@ -131,22 +131,22 @@ public class CinePlusServer extends UnicastRemoteObject implements ICinePlus{
 		return aux;
 	}
 	
-	@Override
+	
 	public Usuario devuelveUsuario(String email) throws RemoteException {
 		return usuarioDAO.getUsuario(email);
 	}
 
-	@Override
+	
 	public void actualizarUsuario(Usuario user) throws RemoteException {
 		usuarioDAO.updateUsuario(user);
 	}
 
-	@Override
+	
 	public List<String> Anyos() throws RemoteException {
 		return peliculaDAO.Anyos();
 	}
 
-	@Override
+	
 	public List<String> Generos() throws RemoteException {
 		return peliculaDAO.Generos();
 	}
