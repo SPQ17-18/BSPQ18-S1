@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logoCuadrado100.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CinePlus
-   &#160;<span id="projectnumber">3.0.3</span>
+   &#160;<span id="projectnumber">3.0.4</span>
    </div>
    <div id="projectbrief">Aplicacion java de alquiler de peliculas.</div>
   </td>
@@ -131,7 +131,7 @@ Métodos públicos estáticos</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock">
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00012">12</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00023">23</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a id="a7cedfc3bf94105f1f5a99a02cc7302b2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7cedfc3bf94105f1f5a99a02cc7302b2">&#9670;&nbsp;</a></span>CinePlusController()</h2>
@@ -148,8 +148,14 @@ Métodos públicos estáticos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor de <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_cine_plus_controller.html">CinePlusController</a> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rmi</td><td>- <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_r_m_i_service_locator.html">RMIServiceLocator</a> </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00016">16</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00031">31</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas a esta función:</div>
 <div class="dyncontent">
@@ -177,8 +183,21 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo actualizarUsuario del controlador, que llama al metodo de actualizarUsuario del CinePlusService. Actualiza todos los campos de este aunque sean iguales</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td>objeto <code>Usuario</code> a actualizar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">RemoteException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00051">51</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00163">163</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -206,8 +225,22 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo Alquilar del controlador, que se encarga de llamar al metodo Alquilar de CinePlusService e indica si se ha podido alquilar o no</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PelisPerfil</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>boolean <code>true</code> si ha alquilado una pelicula correctamente. </dd></dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">RemoteException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00039">39</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00112">112</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -259,8 +292,24 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo Busqueda del controlador, que recibe el nombre el anyo y el genero y se encarga de llamar al metodo Busqueda del CinePlusService.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombre</td><td>String con el nombre de la pelicula </td></tr>
+    <tr><td class="paramname">anyo</td><td>String con el anyo de la pelicula </td></tr>
+    <tr><td class="paramname">genero</td><td>String con el genero de la pelicula</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>List&lt;Pelicula&gt; - Lista de peliculas buscadas </dd></dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">RemoteException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00042">42</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00127">127</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -296,8 +345,22 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo DevolverUsuario del controlador, que se encarga de llamar al metodo de devuelveUsuario (pasandole un email) del CinePlusService.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>- String </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Usuario - Devuelve un usuario </dd></dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">RemoteException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00048">48</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00151">151</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -333,8 +396,21 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo eliminarUsuario del controlador, que se encarga de llamar al metodo de eliminarUsuario del CinePlusService y elimina un usuario de la base de datos.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td>Objeto <code>Usuario</code> a eliminar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">RemoteException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00055">55</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00174">174</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -371,8 +447,22 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo getPeliUsuario del controlador, que dado un email llama al metodo getPeliUsuario del CinePlusService.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>String con el email del usuario </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>List&lt;Pelicula&gt; - Lista de peliculas del usuario </dd></dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">RemoteException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00045">45</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00139">139</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -387,7 +477,8 @@ Gráfico de llamadas a esta función:</div>
 <div class="dyncontent">
 <div class="center"><img src="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_cine_plus_controller_a3d2c1115e603bed303c8df389f87b9b2_icgraph.png" border="0" usemap="#classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_cine_plus_controller_a3d2c1115e603bed303c8df389f87b9b2_icgraph" alt=""/></div>
 <map name="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_cine_plus_controller_a3d2c1115e603bed303c8df389f87b9b2_icgraph" id="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_cine_plus_controller_a3d2c1115e603bed303c8df389f87b9b2_icgraph">
-<area shape="rect" id="node2" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_perfil_peliculas.html#a0b001fffb413bc54beae1e2f55e79556" title="es.deusto.spq.ProyectoCine\lPlus.cliente.util.GUI.VentanaPerfil\lPeliculas.VentanaPerfilPeliculas" alt="" coords="271,5,489,61"/>
+<area shape="rect" id="node2" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_perfil_peliculas.html#a0b001fffb413bc54beae1e2f55e79556" title="es.deusto.spq.ProyectoCine\lPlus.cliente.util.GUI.VentanaPerfil\lPeliculas.VentanaPerfilPeliculas" alt="" coords="280,5,499,61"/>
+<area shape="rect" id="node3" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_usuario.html#ac93ff7672aac8dd620d206df23681873" title="es.deusto.spq.ProyectoCine\lPlus.cliente.util.GUI.VentanaUsuario.\lVentanaUsuario" alt="" coords="271,85,508,141"/>
 </map>
 </div>
 
@@ -418,8 +509,22 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo LoginUsuario del controlador, que se encarga de llamar al metodo de usuarioRegistrado del CinePlusService y vuelve un true si se ha iniciado sesion correctamente. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">usuario</td><td>- String </td></tr>
+    <tr><td class="paramname">password</td><td>- String </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>boolean - <code>true</code> si ha iniciado sesion correctamente. </dd></dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">RemoteException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00030">30</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00081">81</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -463,8 +568,15 @@ Gráfico de llamadas a esta función:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Metodo Main de la aplicacion cliente. Aqui se inicia la aplicacion y se llama a la interfaz grafica.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>String[3] </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00059">59</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00184">184</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -491,8 +603,15 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo ObtenerAnyo del controlador, que se encarga de llamar al metodo de Anyos del CinePlusService y devuelve una lista con todos los anyos de las peliculas de la base de datos. </p><dl class="section return"><dt>Devuelve</dt><dd>List&lt;String&gt; - Lista de Anyos de las peliculas </dd></dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">RemoteException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00033">33</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00090">90</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -528,8 +647,15 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo ObtenerGenero del controlador, que e encarga de llamar al metodo Generos del CinePlusService y devuelve una lista con todos los generos de las peliculas de la base de datos. </p><dl class="section return"><dt>Devuelve</dt><dd>List&lt;String&gt; - Lista de Generos de las peliculas </dd></dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">RemoteException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00036">36</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00099">99</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -606,8 +732,28 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo RegistrarUsuario del Controlador, que se encarga de llamar al metodo de registrarUsuario del CinePlusService y devuelve un true si se ha registrado correctamente.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">usuario</td><td>String con el nombre de usuario dentro de la plataforma </td></tr>
+    <tr><td class="paramname">email</td><td>String con el email asociado al usuario </td></tr>
+    <tr><td class="paramname">nombre</td><td>String con nombre de la persona fisica </td></tr>
+    <tr><td class="paramname">apellido</td><td>String con el apellido de la persona </td></tr>
+    <tr><td class="paramname">password</td><td>String contrasenya de 6 caract minimo </td></tr>
+    <tr><td class="paramname">pais</td><td>String pais de residencia actual </td></tr>
+    <tr><td class="paramname">admin</td><td>boolean es administrador o no</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>boolean - <code>true</code> si se ha registrado correctamente. </dd></dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">RemoteException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00020">20</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00051">51</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -691,8 +837,28 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo RegistrarUsuario del Controlador, que se encarga de llamar al metodo de registrarUsuario del CinePlusService y devuelve un true si se ha registrado correctamente. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">usuario</td><td>- String </td></tr>
+    <tr><td class="paramname">email</td><td>- String </td></tr>
+    <tr><td class="paramname">nombre</td><td>- String </td></tr>
+    <tr><td class="paramname">apellido</td><td>- String </td></tr>
+    <tr><td class="paramname">password</td><td>- String </td></tr>
+    <tr><td class="paramname">pais</td><td>- String </td></tr>
+    <tr><td class="paramname">saldo</td><td>- float </td></tr>
+    <tr><td class="paramname">admin</td><td>- boolean </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>boolean - <code>true</code> si se ha registrado correctamente. </dd></dl>
+<dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">RemoteException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00025">25</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_controller_8java_source.html#l00069">69</a> del archivo <a class="el" href="_cine_plus_controller_8java_source.html">CinePlusController.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -714,7 +880,7 @@ Gráfico de llamadas para esta función:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacees.html">es</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto.html">deusto</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq.html">spq</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus.html">ProyectoCinePlus</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente.html">cliente</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util.html">util</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad.html">Conectividad</a></li><li class="navelem"><a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_cine_plus_controller.html">CinePlusController</a></li>
-    <li class="footer">Generado el Martes, 15 de Mayo de 2018 10:59:07 para CinePlus por
+    <li class="footer">Generado el Miércoles, 16 de Mayo de 2018 11:11:22 para CinePlus por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

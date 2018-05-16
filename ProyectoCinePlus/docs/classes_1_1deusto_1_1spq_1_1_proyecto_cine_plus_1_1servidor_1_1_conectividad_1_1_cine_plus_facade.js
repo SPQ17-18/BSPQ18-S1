@@ -1,6 +1,6 @@
 var classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade =
 [
-    [ "CinePlusFacade", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade.html#a59050d629cbee5a443250847834270d7", null ],
+    [ "CinePlusFacade", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade.html#ae2df76b0a272ca790901c01d8a3ee7ef", null ],
     [ "actualizarUsuario", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade.html#a8c9f59834d7b413ca185f43df0ef0c17", null ],
     [ "Alquilar", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade.html#adf937a27739de016c6e74d958c1b4e08", null ],
     [ "Anyos", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade.html#a9bd58c61b1b01078ceb0cb1b63ceceab", null ],

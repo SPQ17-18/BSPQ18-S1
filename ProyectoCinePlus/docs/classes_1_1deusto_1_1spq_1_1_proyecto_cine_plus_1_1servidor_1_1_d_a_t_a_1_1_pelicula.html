@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logoCuadrado100.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CinePlus
-   &#160;<span id="projectnumber">3.0.3</span>
+   &#160;<span id="projectnumber">3.0.4</span>
    </div>
    <div id="projectbrief">Aplicacion java de alquiler de peliculas.</div>
   </td>
@@ -99,11 +99,15 @@ $(document).ready(function(){initNavTree('classes_1_1deusto_1_1spq_1_1_proyecto_
 Diagrama de herencias de es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula</div>
 <div class="dyncontent">
 <div class="center"><img src="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelicula__inherit__graph.png" border="0" usemap="#es_8deusto_8spq_8_proyecto_cine_plus_8servidor_8_d_a_t_a_8_pelicula_inherit__map" alt="Inheritance graph"/></div>
+<map name="es_8deusto_8spq_8_proyecto_cine_plus_8servidor_8_d_a_t_a_8_pelicula_inherit__map" id="es_8deusto_8spq_8_proyecto_cine_plus_8servidor_8_d_a_t_a_8_pelicula_inherit__map">
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
 <div class="dynheader">
 Diagrama de colaboración para es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula:</div>
 <div class="dyncontent">
 <div class="center"><img src="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelicula__coll__graph.png" border="0" usemap="#es_8deusto_8spq_8_proyecto_cine_plus_8servidor_8_d_a_t_a_8_pelicula_coll__map" alt="Collaboration graph"/></div>
+<map name="es_8deusto_8spq_8_proyecto_cine_plus_8servidor_8_d_a_t_a_8_pelicula_coll__map" id="es_8deusto_8spq_8_proyecto_cine_plus_8servidor_8_d_a_t_a_8_pelicula_coll__map">
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -152,8 +156,9 @@ Métodos públicos</h2></td></tr>
 <tr class="separator:a36281bdb1cf47a74d290d08ff35efca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock">
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00012">12</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<div class="textblock"><p>Esta es la clase <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelicula.html">Pelicula</a>. Aqui se define como es el objeto pelicula con sus atributos. </p><dl class="section author"><dt>Autor</dt><dd>Fercol </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00024">24</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a id="a3709bd14a95dbed6ab2eaef260f2f60b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3709bd14a95dbed6ab2eaef260f2f60b">&#9670;&nbsp;</a></span>Pelicula() <span class="overload">[1/3]</span></h2>
@@ -169,8 +174,9 @@ Métodos públicos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Contructor <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelicula.html">Pelicula</a> vacio </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00030">30</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00043">43</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 
 </div>
 </div>
@@ -241,8 +247,23 @@ Métodos públicos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelicula.html">Pelicula</a> con parametros</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id_pelicula</td><td>int con identificador unico </td></tr>
+    <tr><td class="paramname">nombre</td><td>String con el nombre de la pelicula </td></tr>
+    <tr><td class="paramname">duracion</td><td>int con la duracion en minutos de la pelicula </td></tr>
+    <tr><td class="paramname">descripcion</td><td>String con breve descripcion de menos de 150 palabras </td></tr>
+    <tr><td class="paramname">anyo</td><td>int con el anyo de pelicula </td></tr>
+    <tr><td class="paramname">categoria</td><td>String con la categoria de la pelicula </td></tr>
+    <tr><td class="paramname">precio</td><td>float con el precio de la pelicula en euros </td></tr>
+    <tr><td class="paramname">usuariosList</td><td>List&lt;Usuario&gt; lista de usuarios que poseen la pelicula (este campo no se usa - introduce null por favor) </td></tr>
+    <tr><td class="paramname">portada</td><td>String nombre de la imagen de portada </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00034">34</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00060">60</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 
 </div>
 </div>
@@ -307,8 +328,22 @@ Métodos públicos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelicula.html">Pelicula</a> con parametros pero sin lista de alquilados</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id_pelicula</td><td>int con identificador unico </td></tr>
+    <tr><td class="paramname">nombre</td><td>String con el nombre de la pelicula </td></tr>
+    <tr><td class="paramname">duracion</td><td>int con la duracion en minutos de la pelicula </td></tr>
+    <tr><td class="paramname">descripcion</td><td>String con breve descripcion de menos de 150 palabras </td></tr>
+    <tr><td class="paramname">anyo</td><td>int con el anyo de pelicula </td></tr>
+    <tr><td class="paramname">categoria</td><td>String con la categoria de la pelicula </td></tr>
+    <tr><td class="paramname">precio</td><td>float con el precio de la pelicula en euros </td></tr>
+    <tr><td class="paramname">portada</td><td>String nombre de la imagen de portada </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00047">47</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00086">86</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 
 </div>
 </div>
@@ -328,8 +363,14 @@ Métodos públicos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo que copia una pelicula </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">peli</td><td><a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelicula.html">Pelicula</a> a copiar </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00132">132</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00217">217</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 
 </div>
 </div>
@@ -347,8 +388,9 @@ Métodos públicos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo getAnyo </p><dl class="section return"><dt>Devuelve</dt><dd>anyo int </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00092">92</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00159">159</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas a esta función:</div>
 <div class="dyncontent">
@@ -375,8 +417,9 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo getCategoria </p><dl class="section return"><dt>Devuelve</dt><dd>categoria String </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00100">100</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00173">173</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas a esta función:</div>
 <div class="dyncontent">
@@ -403,8 +446,9 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo getDescripcion </p><dl class="section return"><dt>Devuelve</dt><dd>descripcion String </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00084">84</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00145">145</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas a esta función:</div>
 <div class="dyncontent">
@@ -431,8 +475,9 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo getDuracion </p><dl class="section return"><dt>Devuelve</dt><dd>duracion int </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00076">76</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00131">131</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas a esta función:</div>
 <div class="dyncontent">
@@ -459,8 +504,9 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo getId_pelicula </p><dl class="section return"><dt>Devuelve</dt><dd>id_pelicula int </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00060">60</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00103">103</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas a esta función:</div>
 <div class="dyncontent">
@@ -486,8 +532,9 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo getNombre </p><dl class="section return"><dt>Devuelve</dt><dd>nombre String </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00068">68</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00117">117</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas a esta función:</div>
 <div class="dyncontent">
@@ -517,8 +564,9 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo getPortada </p><dl class="section return"><dt>Devuelve</dt><dd>- String </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00124">124</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00203">203</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas a esta función:</div>
 <div class="dyncontent">
@@ -545,8 +593,9 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo getPrecio </p><dl class="section return"><dt>Devuelve</dt><dd>precio float </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00108">108</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00187">187</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas a esta función:</div>
 <div class="dyncontent">
@@ -574,8 +623,14 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo setAnyo </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">anyo</td><td>int </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00096">96</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00166">166</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 
 </div>
 </div>
@@ -594,8 +649,14 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo setCategoria </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">categoria</td><td>String </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00104">104</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00180">180</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 
 </div>
 </div>
@@ -614,8 +675,14 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo setDescripcion </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descripcion</td><td>String </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00088">88</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00152">152</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 
 </div>
 </div>
@@ -634,8 +701,14 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo setDuracion </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">duracion</td><td>int </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00080">80</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00138">138</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 
 </div>
 </div>
@@ -654,8 +727,14 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo setId_pelicula </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id_pelicula</td><td>int </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00064">64</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00110">110</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 
 </div>
 </div>
@@ -674,8 +753,14 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo setNombre </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nombre</td><td>String </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00072">72</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00124">124</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 
 </div>
 </div>
@@ -694,8 +779,14 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo setPortada </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">portada</td><td>String </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00128">128</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00210">210</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 
 </div>
 </div>
@@ -714,8 +805,14 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo setPrecio </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">precio</td><td>- float </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00112">112</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00194">194</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 
 </div>
 </div>
@@ -733,8 +830,9 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo ToString </p><dl class="section return"><dt>Devuelve</dt><dd>String con todos los campos del objeto </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00146">146</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_pelicula_8java_source.html#l00234">234</a> del archivo <a class="el" href="_pelicula_8java_source.html">Pelicula.java</a>.</p>
 
 </div>
 </div>
@@ -747,7 +845,7 @@ Gráfico de llamadas a esta función:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacees.html">es</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto.html">deusto</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq.html">spq</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus.html">ProyectoCinePlus</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor.html">servidor</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a.html">DATA</a></li><li class="navelem"><a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelicula.html">Pelicula</a></li>
-    <li class="footer">Generado el Martes, 15 de Mayo de 2018 10:59:12 para CinePlus por
+    <li class="footer">Generado el Miércoles, 16 de Mayo de 2018 11:11:27 para CinePlus por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

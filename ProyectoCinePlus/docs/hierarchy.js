@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_cine_plus_controller.html", null ],
     [ "es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusManagerServer", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_manager_server.html", null ],
+    [ "es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusServer", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html", null ],
     [ "es.deusto.spq.ProyectoCinePlus.servidor.DAO.IPeliculaDAO", "interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_i_pelicula_d_a_o.html", [
       [ "es.deusto.spq.ProyectoCinePlus.servidor.DAO.PeliculaDAO", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_pelicula_d_a_o.html", null ]
     ] ],
@@ -22,8 +23,7 @@ var hierarchy =
     ] ],
     [ "Remote", null, [
       [ "es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus", "interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html", [
-        [ "es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusFacade", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade.html", null ],
-        [ "es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusServer", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html", null ]
+        [ "es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusFacade", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade.html", null ]
       ] ]
     ] ],
     [ "Serializable", null, [
@@ -32,7 +32,6 @@ var hierarchy =
       [ "es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html", null ]
     ] ],
     [ "UnicastRemoteObject", null, [
-      [ "es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusFacade", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade.html", null ],
-      [ "es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusServer", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html", null ]
+      [ "es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusFacade", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade.html", null ]
     ] ]
 ];

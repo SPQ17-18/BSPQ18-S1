@@ -1,4 +1,4 @@
 <map id="Representación gráfica de la clase" name="Representación gráfica de la clase">
-<area shape="rect" id="node1" href="$interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_i_usuario_d_a_o.html" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.IUsuarioDAO" alt="" coords="5,5,212,47"/>
-<area shape="rect" id="node2" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.UsuarioDAO" alt="" coords="260,5,464,47"/>
+<area shape="rect" id="node1" href="$interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_i_pelicula_d_a_o.html" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.IPeliculaDAO" alt="" coords="5,5,215,47"/>
+<area shape="rect" id="node2" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_pelicula_d_a_o.html" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.PeliculaDAO" alt="" coords="263,5,469,47"/>
 </map>

@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logoCuadrado100.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CinePlus
-   &#160;<span id="projectnumber">3.0.3</span>
+   &#160;<span id="projectnumber">3.0.4</span>
    </div>
    <div id="projectbrief">Aplicacion java de alquiler de peliculas.</div>
   </td>
@@ -100,11 +100,15 @@ $(document).ready(function(){initNavTree('classes_1_1deusto_1_1spq_1_1_proyecto_
 Diagrama de herencias de es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaSaldo</div>
 <div class="dyncontent">
 <div class="center"><img src="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_saldo__inherit__graph.png" border="0" usemap="#es_8deusto_8spq_8_proyecto_cine_plus_8cliente_8util_8_g_u_i_8_ventana_saldo_inherit__map" alt="Inheritance graph"/></div>
+<map name="es_8deusto_8spq_8_proyecto_cine_plus_8cliente_8util_8_g_u_i_8_ventana_saldo_inherit__map" id="es_8deusto_8spq_8_proyecto_cine_plus_8cliente_8util_8_g_u_i_8_ventana_saldo_inherit__map">
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
 <div class="dynheader">
 Diagrama de colaboración para es.deusto.spq.ProyectoCinePlus.cliente.util.GUI.VentanaSaldo:</div>
 <div class="dyncontent">
 <div class="center"><img src="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_saldo__coll__graph.png" border="0" usemap="#es_8deusto_8spq_8_proyecto_cine_plus_8cliente_8util_8_g_u_i_8_ventana_saldo_coll__map" alt="Collaboration graph"/></div>
+<map name="es_8deusto_8spq_8_proyecto_cine_plus_8cliente_8util_8_g_u_i_8_ventana_saldo_coll__map" id="es_8deusto_8spq_8_proyecto_cine_plus_8cliente_8util_8_g_u_i_8_ventana_saldo_coll__map">
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -124,8 +128,10 @@ Atributos protegidos</h2></td></tr>
 <tr class="separator:ae71a4444366b73e5b9a0db6b2d52804d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock">
-<p class="definition">Definición en la línea <a class="el" href="_ventana_saldo_8java_source.html#l00035">35</a> del archivo <a class="el" href="_ventana_saldo_8java_source.html">VentanaSaldo.java</a>.</p>
+<div class="textblock"><p>Ventana Saldo. Es la ventana de Saldo, la cual permite anyadir saldo a un usuario. </p><dl class="section author"><dt>Autor</dt><dd>Fercol </dd></dl>
+<dl class="section since"><dt>Desde</dt><dd>2.0.0 </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_ventana_saldo_8java_source.html#l00043">43</a> del archivo <a class="el" href="_ventana_saldo_8java_source.html">VentanaSaldo.java</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a id="a6de2ec78102b57e32f333a4cf83aec2b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6de2ec78102b57e32f333a4cf83aec2b">&#9670;&nbsp;</a></span>VentanaSaldo()</h2>
@@ -158,9 +164,16 @@ Atributos protegidos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create the frame. </p>
+<p>Constructor de la ventana Saldo. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>CinePlusController </td></tr>
+    <tr><td class="paramname">resourceBundle</td><td>ResourceBundle </td></tr>
+    <tr><td class="paramname">userLogeado</td><td>Usuario </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_ventana_saldo_8java_source.html#l00081">81</a> del archivo <a class="el" href="_ventana_saldo_8java_source.html">VentanaSaldo.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ventana_saldo_8java_source.html#l00091">91</a> del archivo <a class="el" href="_ventana_saldo_8java_source.html">VentanaSaldo.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -202,8 +215,9 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo que comprueba los datos de los campos esten llenos. En caso de error, lo mostrara en una ventana de error. </p><dl class="section return"><dt>Devuelve</dt><dd>comprobar boolean </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_ventana_saldo_8java_source.html#l00251">251</a> del archivo <a class="el" href="_ventana_saldo_8java_source.html">VentanaSaldo.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ventana_saldo_8java_source.html#l00272">272</a> del archivo <a class="el" href="_ventana_saldo_8java_source.html">VentanaSaldo.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas a esta función:</div>
 <div class="dyncontent">
@@ -229,8 +243,9 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo get del controller </p><dl class="section return"><dt>Devuelve</dt><dd>controller CinePlusController </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_ventana_saldo_8java_source.html#l00243">243</a> del archivo <a class="el" href="_ventana_saldo_8java_source.html">VentanaSaldo.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ventana_saldo_8java_source.html#l00255">255</a> del archivo <a class="el" href="_ventana_saldo_8java_source.html">VentanaSaldo.java</a>.</p>
 
 </div>
 </div>
@@ -249,8 +264,14 @@ Gráfico de llamadas a esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Metodo set del controller </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>CinePlusController </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_ventana_saldo_8java_source.html#l00247">247</a> del archivo <a class="el" href="_ventana_saldo_8java_source.html">VentanaSaldo.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ventana_saldo_8java_source.html#l00263">263</a> del archivo <a class="el" href="_ventana_saldo_8java_source.html">VentanaSaldo.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas a esta función:</div>
 <div class="dyncontent">
@@ -283,7 +304,7 @@ Gráfico de llamadas a esta función:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ventana_saldo_8java_source.html#l00057">57</a> del archivo <a class="el" href="_ventana_saldo_8java_source.html">VentanaSaldo.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ventana_saldo_8java_source.html#l00065">65</a> del archivo <a class="el" href="_ventana_saldo_8java_source.html">VentanaSaldo.java</a>.</p>
 
 </div>
 </div>
@@ -296,7 +317,7 @@ Gráfico de llamadas a esta función:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacees.html">es</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto.html">deusto</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq.html">spq</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus.html">ProyectoCinePlus</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente.html">cliente</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util.html">util</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i.html">GUI</a></li><li class="navelem"><a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_saldo.html">VentanaSaldo</a></li>
-    <li class="footer">Generado el Martes, 15 de Mayo de 2018 10:59:09 para CinePlus por
+    <li class="footer">Generado el Miércoles, 16 de Mayo de 2018 11:11:24 para CinePlus por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>
