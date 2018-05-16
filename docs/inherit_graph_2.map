@@ -1,0 +1,10 @@
+<map id="Representación gráfica de la clase" name="Representación gráfica de la clase">
+<area shape="rect" id="node2" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_login.html" title="es.deusto.spq.ProyectoCine\lPlus.cliente.util.GUI.VentanaLogin" alt="" coords="143,5,363,47"/>
+<area shape="rect" id="node3" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_pelicula.html" title="es.deusto.spq.ProyectoCine\lPlus.cliente.util.GUI.VentanaPelicula" alt="" coords="136,71,371,112"/>
+<area shape="rect" id="node4" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_pelicula_datos.html" title="es.deusto.spq.ProyectoCine\lPlus.cliente.util.GUI.VentanaPeliculaDatos" alt="" coords="119,136,388,177"/>
+<area shape="rect" id="node5" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_perfil_peliculas.html" title="es.deusto.spq.ProyectoCine\lPlus.cliente.util.GUI.VentanaPerfil\lPeliculas" alt="" coords="144,202,363,258"/>
+<area shape="rect" id="node6" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_principal.html" title="es.deusto.spq.ProyectoCine\lPlus.cliente.util.GUI.VentanaPrincipal" alt="" coords="134,283,373,324"/>
+<area shape="rect" id="node7" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_registro.html" title="es.deusto.spq.ProyectoCine\lPlus.cliente.util.GUI.VentanaRegistro" alt="" coords="135,348,372,389"/>
+<area shape="rect" id="node8" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_saldo.html" title="es.deusto.spq.ProyectoCine\lPlus.cliente.util.GUI.VentanaSaldo" alt="" coords="142,413,365,455"/>
+<area shape="rect" id="node9" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_usuario.html" title="es.deusto.spq.ProyectoCine\lPlus.cliente.util.GUI.VentanaUsuario" alt="" coords="137,479,370,520"/>
+</map>

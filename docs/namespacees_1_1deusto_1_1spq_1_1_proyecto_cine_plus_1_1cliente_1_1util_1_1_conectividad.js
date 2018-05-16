@@ -1,0 +1,5 @@
+var namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad =
+[
+    [ "CinePlusController", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_cine_plus_controller.html", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_cine_plus_controller" ],
+    [ "RMIServiceLocator", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_r_m_i_service_locator.html", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_r_m_i_service_locator" ]
+];

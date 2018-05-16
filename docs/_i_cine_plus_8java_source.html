@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CinePlus: Fichero Fuente src/main/java/es/deusto/spq/ProyectoCinePlus/servidor/Conectividad/ICinePlus.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logoCuadrado100.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CinePlus
+   &#160;<span id="projectnumber">3.0.5</span>
+   </div>
+   <div id="projectbrief">Aplicacion java de alquiler de peliculas.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_i_cine_plus_8java_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ICinePlus.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_i_cine_plus_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>es.deusto.spq.ProyectoCinePlus.servidor.Conectividad;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.rmi.Remote;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> java.rmi.RemoteException;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> java.util.List;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">import</span> <a class="code" href="namespacees.html">es</a>.<a class="code" href="namespacees_1_1deusto.html">deusto</a>.<a class="code" href="namespacees_1_1deusto_1_1spq.html">spq</a>.<a class="code" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus.html">ProyectoCinePlus</a>.<a class="code" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor.html">servidor</a>.<a class="code" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a.html">DATA</a>.<a class="code" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelicula.html">Pelicula</a>;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> <a class="code" href="namespacees.html">es</a>.<a class="code" href="namespacees_1_1deusto.html">deusto</a>.<a class="code" href="namespacees_1_1deusto_1_1spq.html">spq</a>.<a class="code" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus.html">ProyectoCinePlus</a>.<a class="code" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor.html">servidor</a>.<a class="code" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a.html">DATA</a>.<a class="code" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelis_perfil.html">PelisPerfil</a>;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> <a class="code" href="namespacees.html">es</a>.<a class="code" href="namespacees_1_1deusto.html">deusto</a>.<a class="code" href="namespacees_1_1deusto_1_1spq.html">spq</a>.<a class="code" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus.html">ProyectoCinePlus</a>.<a class="code" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor.html">servidor</a>.<a class="code" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a.html">DATA</a>.<a class="code" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html">Usuario</a>;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html">   22</a></span>&#160;<span class="keyword">public</span> <span class="keyword">interface </span><a class="code" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html">ICinePlus</a> <span class="keyword">extends</span> Remote {</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a8f7d30ecc2cd704f03dc0db5a8469f24">registrarUsuario</a>(String usuario, String email, String nombre, String apellido, String password,</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            String pais, <span class="keywordtype">boolean</span> admin) <span class="keywordflow">throws</span> RemoteException;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a8f7d30ecc2cd704f03dc0db5a8469f24">registrarUsuario</a>(String usuario, String email, String nombre, String apellido, String password,</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            String pais, <span class="keywordtype">float</span> saldo, <span class="keywordtype">boolean</span> admin) <span class="keywordflow">throws</span> RemoteException;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#ac47810e5775588e6b7f2bcf9e26e8250">usuarioRegistrado</a>(String usuario, String password) <span class="keywordflow">throws</span> RemoteException;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">public</span> List&lt;Pelicula&gt; <a class="code" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#abbc7e02a3ec630ddf740107b72a1becb">Busqueda</a>(String nombre, String anyo, String genero) <span class="keywordflow">throws</span> RemoteException;</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">public</span> List&lt;Pelicula&gt; <a class="code" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a8bf04c41b3b5922d734517e823e0e89e">getPeliUsuario</a>(String email) <span class="keywordflow">throws</span> RemoteException;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">public</span> <a class="code" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html">Usuario</a> <a class="code" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a11f38c81bbf008e730fa83a125486513">devuelveUsuario</a>(String email) <span class="keywordflow">throws</span> RemoteException;</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#ab963b111401e420c3738332f98fffc48">actualizarUsuario</a>(<a class="code" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html">Usuario</a> user) <span class="keywordflow">throws</span> RemoteException;</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a88b5c653cba7953c8045fb75fe32fa56">Alquilar</a>(<a class="code" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelis_perfil.html">PelisPerfil</a> <a class="code" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelis_perfil.html">PelisPerfil</a>) <span class="keywordflow">throws</span> RemoteException;</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keyword">public</span> List&lt;String&gt; <a class="code" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a61e210f79b25c54f085757d101662f7a">Anyos</a>() <span class="keywordflow">throws</span> RemoteException;</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keyword">public</span> List&lt;String&gt; <a class="code" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a3f0e2b509df8ddba1e4aaee79b6f3439">Generos</a>() <span class="keywordflow">throws</span> RemoteException;</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#aa77c1a1d4bfb2da0a851eee81c8c24d5">eliminarUsuario</a>(<a class="code" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html">Usuario</a> user) <span class="keywordflow">throws</span> RemoteException;</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a23743615b795d53ca7277d2f864d0527">checkUsuario</a>(<a class="code" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html">Usuario</a> user) <span class="keywordflow">throws</span> RemoteException;</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div><div class="ttc" id="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus_html_a61e210f79b25c54f085757d101662f7a"><div class="ttname"><a href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a61e210f79b25c54f085757d101662f7a">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus.Anyos</a></div><div class="ttdeci">List&lt; String &gt; Anyos()</div></div>
+<div class="ttc" id="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_html"><div class="ttname"><a href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a.html">es.deusto.spq.ProyectoCinePlus.servidor.DATA</a></div><div class="ttdoc">Clase Pelicula. May 17, 2018. </div></div>
+<div class="ttc" id="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus_html"><div class="ttname"><a href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_cine_plus_8java_source.html#l00022">ICinePlus.java:22</a></div></div>
+<div class="ttc" id="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus_html_a8f7d30ecc2cd704f03dc0db5a8469f24"><div class="ttname"><a href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a8f7d30ecc2cd704f03dc0db5a8469f24">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus.registrarUsuario</a></div><div class="ttdeci">boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password, String pais, boolean admin)</div></div>
+<div class="ttc" id="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_html"><div class="ttname"><a href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus.html">es.deusto.spq.ProyectoCinePlus</a></div></div>
+<div class="ttc" id="namespacees_1_1deusto_1_1spq_html"><div class="ttname"><a href="namespacees_1_1deusto_1_1spq.html">es.deusto.spq</a></div></div>
+<div class="ttc" id="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_html"><div class="ttname"><a href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor.html">es.deusto.spq.ProyectoCinePlus.servidor</a></div></div>
+<div class="ttc" id="namespacees_1_1deusto_html"><div class="ttname"><a href="namespacees_1_1deusto.html">es.deusto</a></div></div>
+<div class="ttc" id="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario_html"><div class="ttname"><a href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html">es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario</a></div><div class="ttdef"><b>Definition:</b> <a href="_usuario_8java_source.html#l00026">Usuario.java:26</a></div></div>
+<div class="ttc" id="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelicula_html"><div class="ttname"><a href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelicula.html">es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula</a></div><div class="ttdef"><b>Definition:</b> <a href="_pelicula_8java_source.html#l00024">Pelicula.java:24</a></div></div>
+<div class="ttc" id="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus_html_ac47810e5775588e6b7f2bcf9e26e8250"><div class="ttname"><a href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#ac47810e5775588e6b7f2bcf9e26e8250">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus.usuarioRegistrado</a></div><div class="ttdeci">boolean usuarioRegistrado(String usuario, String password)</div></div>
+<div class="ttc" id="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus_html_aa77c1a1d4bfb2da0a851eee81c8c24d5"><div class="ttname"><a href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#aa77c1a1d4bfb2da0a851eee81c8c24d5">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus.eliminarUsuario</a></div><div class="ttdeci">void eliminarUsuario(Usuario user)</div></div>
+<div class="ttc" id="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus_html_a88b5c653cba7953c8045fb75fe32fa56"><div class="ttname"><a href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a88b5c653cba7953c8045fb75fe32fa56">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus.Alquilar</a></div><div class="ttdeci">boolean Alquilar(PelisPerfil PelisPerfil)</div></div>
+<div class="ttc" id="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus_html_a23743615b795d53ca7277d2f864d0527"><div class="ttname"><a href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a23743615b795d53ca7277d2f864d0527">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus.checkUsuario</a></div><div class="ttdeci">boolean checkUsuario(Usuario user)</div></div>
+<div class="ttc" id="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus_html_ab963b111401e420c3738332f98fffc48"><div class="ttname"><a href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#ab963b111401e420c3738332f98fffc48">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus.actualizarUsuario</a></div><div class="ttdeci">void actualizarUsuario(Usuario user)</div></div>
+<div class="ttc" id="namespacees_html"><div class="ttname"><a href="namespacees.html">es</a></div></div>
+<div class="ttc" id="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelis_perfil_html"><div class="ttname"><a href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelis_perfil.html">es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil</a></div><div class="ttdef"><b>Definition:</b> <a href="_pelis_perfil_8java_source.html#l00026">PelisPerfil.java:26</a></div></div>
+<div class="ttc" id="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus_html_abbc7e02a3ec630ddf740107b72a1becb"><div class="ttname"><a href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#abbc7e02a3ec630ddf740107b72a1becb">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus.Busqueda</a></div><div class="ttdeci">List&lt; Pelicula &gt; Busqueda(String nombre, String anyo, String genero)</div></div>
+<div class="ttc" id="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus_html_a3f0e2b509df8ddba1e4aaee79b6f3439"><div class="ttname"><a href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a3f0e2b509df8ddba1e4aaee79b6f3439">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus.Generos</a></div><div class="ttdeci">List&lt; String &gt; Generos()</div></div>
+<div class="ttc" id="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus_html_a11f38c81bbf008e730fa83a125486513"><div class="ttname"><a href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a11f38c81bbf008e730fa83a125486513">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus.devuelveUsuario</a></div><div class="ttdeci">Usuario devuelveUsuario(String email)</div></div>
+<div class="ttc" id="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus_html_a8bf04c41b3b5922d734517e823e0e89e"><div class="ttname"><a href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a8bf04c41b3b5922d734517e823e0e89e">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus.getPeliUsuario</a></div><div class="ttdeci">List&lt; Pelicula &gt; getPeliUsuario(String email)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a class="el" href="dir_f9b1e2a59d62d001356ff527358589e3.html">es</a></li><li class="navelem"><a class="el" href="dir_218602b84a76f1dba535b3f8d119ec0a.html">deusto</a></li><li class="navelem"><a class="el" href="dir_7df73947654fe6d5c668d5365112078e.html">spq</a></li><li class="navelem"><a class="el" href="dir_c586483cb472a10d19ef432ea3c5bf09.html">ProyectoCinePlus</a></li><li class="navelem"><a class="el" href="dir_7dde40da08860a0cd203044259bd9c50.html">servidor</a></li><li class="navelem"><a class="el" href="dir_2d2d08d42d8986fc013ae6a9308101f8.html">Conectividad</a></li><li class="navelem"><a class="el" href="_i_cine_plus_8java.html">ICinePlus.java</a></li>
+    <li class="footer">Generado el Miércoles, 16 de Mayo de 2018 11:44:48 para CinePlus por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

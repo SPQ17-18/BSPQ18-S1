@@ -1,0 +1,4 @@
+<map id="es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController.getPeliUsuario" name="es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController.getPeliUsuario">
+<area shape="rect" id="node2" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_r_m_i_service_locator.html#adc086cb463ae8b8151cb4e2f6f99a9ae" title="es.deusto.spq.ProyectoCine\lPlus.cliente.util.Conectividad.\lRMIServiceLocator.getCinePlusService" alt="" coords="271,5,517,61"/>
+<area shape="rect" id="node3" href="$interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a8bf04c41b3b5922d734517e823e0e89e" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.ICine\lPlus.getPeliUsuario" alt="" coords="291,85,497,141"/>
+</map>

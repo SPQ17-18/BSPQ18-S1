@@ -1,0 +1,4 @@
+<map id="es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController.ObtenerAnyo" name="es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController.ObtenerAnyo">
+<area shape="rect" id="node2" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_r_m_i_service_locator.html#adc086cb463ae8b8151cb4e2f6f99a9ae" title="es.deusto.spq.ProyectoCine\lPlus.cliente.util.Conectividad.\lRMIServiceLocator.getCinePlusService" alt="" coords="263,5,509,61"/>
+<area shape="rect" id="node3" href="$interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a61e210f79b25c54f085757d101662f7a" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.ICine\lPlus.Anyos" alt="" coords="283,85,489,141"/>
+</map>
