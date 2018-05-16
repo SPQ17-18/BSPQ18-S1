@@ -88,7 +88,7 @@ public interface ICinePlus extends Remote {
 	 * 
 	 * Metodo utilizado para obtener una lista de peliculas
 	 * 
-	 * @param nombre
+	 * @param nombre 
 	 * @param anyo
 	 * @param genero
 	 * 
@@ -178,6 +178,7 @@ public interface ICinePlus extends Remote {
 	 * @return <code>List<String></code> lista con generos
 	 * @throws RemoteException
 	 */
+	
 
 	public List<String> Generos() throws RemoteException;
 

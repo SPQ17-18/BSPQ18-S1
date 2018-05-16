@@ -36,8 +36,12 @@ public class CinePlusControllerTest {
 	
 	
 	private static CinePlusController cineplus;
+	private static PeliculaDAO peliculaDAO;
+	private static UsuarioDAO usuarioDAO;
 	
-	
+	private Usuario user;
+	private Usuario user2;
+	private Pelicula pelicula1;
 	
 	private static String cwd = CinePlusControllerTest.class.getProtectionDomain().getCodeSource().getLocation().getFile();
 	private static Thread rmiRegistryThread = null;
@@ -120,18 +124,13 @@ public class CinePlusControllerTest {
 			ie.printStackTrace();
 		}
 	
+		usuarioDAO = new UsuarioDAO();
 		
 		PeliculaDAO peliculaDAO = new PeliculaDAO();
-		 UsuarioDAO usuarioDAO = new UsuarioDAO();
-		
-		Usuario user = new Usuario ("Javi", "javi@gmail.com", "Javi", "Fernandez","P@ssw0rd", "España", true);
-		Pelicula pelicula1 = new Pelicula (1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 14,null,"14");
-		
-		
-		usuarioDAO.storeUsuario(user);
+		Pelicula pelicula1 = new Pelicula(1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 14, null, "14");
+	
 		peliculaDAO.storePelicula(pelicula1);
-		
-		
+			
 	}
 	
 	
@@ -161,13 +160,29 @@ public class CinePlusControllerTest {
 		} 
 		
 		
-		
+			
 		 
 	}
 	
 	@Before
 	public void setUpClass() {
 		
+		user = new Usuario("Javi", "javi@gmail.com", "Javi", "Fernandez", "P@ssw0rd", "España", true);
+		user2 = new Usuario("Javi2", "javi2@gmail.com", "Javi2", "Fernandez", "P@ssw0rd", "España", true);
+
+
+		 if(usuarioDAO.checkUser(user) == false) {
+			 usuarioDAO.storeUsuario(user);
+			 logger.info("almacenando "+user.getEmail());
+			
+		 }
+		 
+		 if(usuarioDAO.checkUser(user2) == false) {
+			 usuarioDAO.storeUsuario(user2);
+			 logger.info("almacenando "+user2.getEmail());
+			
+		 }
+
 		
 	}
 
@@ -179,7 +194,7 @@ public class CinePlusControllerTest {
 	@Ignore
 	public void Test2_RegistrarUsuario2Test() throws RemoteException {
 		
-		cineplus.eliminarUsuario(new Usuario("Javi","javi@gmail.com","Javi","Fernandez","P@ssw0rd", "España", true));
+		cineplus.eliminarUsuario(user);
 		
 		assertTrue(cineplus.RegistrarUsuario("Javi","javi@gmail.com","Javi","Fernandez","P@ssw0rd", "España", true));
 	}
@@ -214,9 +229,10 @@ public class CinePlusControllerTest {
 	}
 	
 	
-	@Test
+	@Ignore
 	public void Test8_eliminarUsuarioTest() throws RemoteException {
 		 cineplus.eliminarUsuario(new Usuario("Javi","javi@gmail.com","Javi","Fernandez","P@ssw0rd", "España", true));
+		 assertEquals(false,cineplus.LoginUsuario("javi@gmail.com", "P@ssw0rd"));
 	}
 	
 	@Test
@@ -227,7 +243,8 @@ public class CinePlusControllerTest {
 	}
 	
 	
-	@AfterClass static public void tearDown() {
+	@AfterClass
+	public static void tearDown() {
 		try {
 			cineplus.eliminarUsuario(new Usuario("Mengano", "nuevoEmailgiroGuion@gmail.com", "Mengano", "HijodeMenganez", "pass", "Myanmar",false));
 			cineplus.eliminarUsuario(new Usuario ("Javi", "javi@gmail.com", "Javi", "Fernandez","P@ssw0rd", "España", true));

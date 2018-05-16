@@ -15,8 +15,11 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.PrimaryKey;
 
 /**
+ * <h3>Nivel --- DATA</h3>
+ * 
  * Esta es la clase Pelicula. Aqui se define como es el objeto pelicula con sus atributos. 
  * @author Fercol
+ * 
  *
  */
 @PersistenceCapable (detachable = "true")

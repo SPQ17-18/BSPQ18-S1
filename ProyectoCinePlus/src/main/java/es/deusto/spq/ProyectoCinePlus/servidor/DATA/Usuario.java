@@ -1,5 +1,6 @@
 /** @package es.deusto.spq.ProyectoCinePlus.servidor.DATA
-    @brief Clase Usuario. May 15, 2018
+    @brief Clase Usuario. May 17, 2018
+    @since 1.0.0
 
     Esta es la clase de usuario, con los respectivos parametros de datanucleus para crear las tablas de la base de datos. 
     Con esta clase definimos el objeto de Usuario.
@@ -17,6 +18,8 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 /**
+ * <h3>Nivel --- DATA</h3>
+ * 
  * Esta es la clase Usuario. Aqui se define como es el objeto usuario con sus atributos. 
  * @author Fercol
  *

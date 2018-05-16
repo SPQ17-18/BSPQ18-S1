@@ -34,7 +34,7 @@ public class CinePlusServer {
 	
 	/**
 	 * Constructor de la clase CinePlusServer. 
-	 * En este caso precargamos varias peliculas en la base de datos y añadimos 2 usuarios. 
+	 * En este caso precargamos varias peliculas en la base de datos y aï¿½adimos 2 usuarios. 
 	 * @throws RemoteException
 	 */
 	public CinePlusServer () throws RemoteException{
@@ -101,7 +101,7 @@ public class CinePlusServer {
 	}
 	
 	/**
-	 * Metodo que se encarga de llamar al metodo de usuarioRegistrado de usuarioDAO para mirar si un usuario con una contraseña existe en la base de datos.
+	 * Metodo que se encarga de llamar al metodo de usuarioRegistrado de usuarioDAO para mirar si un usuario con una contrasenya existe en la base de datos.
 	 */
 	public synchronized boolean usuarioRegistrado (String usuario, String password) throws RemoteException {
         return usuarioDAO.loginUser(usuario, password);
@@ -180,7 +180,7 @@ public class CinePlusServer {
 	}
 
 	/**
-	 * Metodo que se encarga de llamar al metodo Anyos de peliculaDAO y devuelve una lista con los años de las pelicualas.
+	 * Metodo que se encarga de llamar al metodo Anyos de peliculaDAO y devuelve una lista con los aï¿½os de las pelicualas.
 	 */
 	public List<String> Anyos() throws RemoteException {
 		return peliculaDAO.Anyos();

@@ -35,7 +35,9 @@ import javax.swing.JPasswordField;
 import javax.imageio.ImageIO;
 
 /**
- * Ventana de Regitro. Se trata de la ventana de registro en la que se pueden registrar usuarios.
+ * Ventana de Regitro. Se trata de la ventana de registro en la que se pueden
+ * registrar usuarios.
+ * 
  * @author Fercol
  * @since 1.0.0
  *
