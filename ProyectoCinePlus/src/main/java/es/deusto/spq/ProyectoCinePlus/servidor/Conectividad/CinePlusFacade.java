@@ -36,6 +36,16 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 
 	/**
 	 * Metodo que se encarga de llamar a registrarUsuario de CinePlusServer parasandole los parametros y devuelve un true si se ha podido registrar.
+	 * @param usuario String con el nombre de usuario dentro de la plataforma
+	 * @param email String con el email asociado al usuario
+	 * @param nombre String con nombre de la persona fisica
+	 * @param apellido String con el apellido de la persona
+	 * @param password String contrasenya de 6 caract minimo
+	 * @param pais String pais de residencia actual
+	 * @param admin boolean es administrador o no
+	 * 
+	 * @return boolean - <code>true</code> si se ha registrado correctamente.
+	 * @throws RemoteException
 	 */
 	public boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password, String pais, boolean admin)  throws RemoteException {
 		return cpser.registrarUsuario(usuario, email, nombre, apellido, password, pais, admin);
@@ -43,13 +53,23 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo de registrarUsuario de CinePlusServer con parametros (anyadiendo el saldo), y devuelve true si se ha podido registrar.
+	 * @param usuario - String
+	 * @param email - String
+	 * @param nombre - String
+	 * @param apellido - String
+	 * @param password - String
+	 * @param pais - String
+	 * @param saldo - float
+	 * @param admin - boolean
+	 * @return boolean - <code>true</code> si se ha registrado correctamente.
+	 * @throws RemoteException
 	 */
 	public boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password, String pais, float saldo, boolean admin)  throws RemoteException {
 		return cpser.registrarUsuario(usuario, email, nombre, apellido, password, pais, saldo, admin);
 	}
 
 	/**
-	 * Metodo que se encarga de llamar al metodo de usuarioRegistrado de CinePlusServer para mirar si un usuario con una contraseña existe en la base de datos.
+	 * Metodo que se encarga de llamar al metodo de usuarioRegistrado de CinePlusServer para mirar si un usuario con una contrasenya existe en la base de datos.
 	 */
 	public boolean usuarioRegistrado(String usuario, String password) throws RemoteException {
 		return cpser.usuarioRegistrado(usuario, password);
@@ -70,7 +90,7 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	}
 	
 	/**
-	 * Metodo que se encarga de llamar al metodo Anyos de CinePlusServer y devuelve una lista con los años de las pelicualas.
+	 * Metodo que se encarga de llamar al metodo Anyos de CinePlusServer y devuelve una lista con los aï¿½os de las pelicualas.
 	 */
 	public List<String> Anyos() throws RemoteException {
 		return cpser.Anyos();
