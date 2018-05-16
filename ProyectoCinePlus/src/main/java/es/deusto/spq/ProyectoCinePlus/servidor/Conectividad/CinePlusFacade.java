@@ -61,6 +61,7 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	 * @param pais - String
 	 * @param saldo - float
 	 * @param admin - boolean
+	 * 
 	 * @return boolean - <code>true</code> si se ha registrado correctamente.
 	 * @throws RemoteException
 	 */
