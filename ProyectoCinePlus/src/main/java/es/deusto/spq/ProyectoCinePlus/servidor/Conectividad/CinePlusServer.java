@@ -109,6 +109,10 @@ public class CinePlusServer {
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo Alquilar de pelisperfilDAO pasandole un objeto PelisPerfil y nos devuelve un true si se ha podido realizar.
+	 *
+	 * @param PelisPerfil 
+	 * @return boolean <code>true</code> si ha alquilado una pelicula correctamente.
+	 * @throws RemoteException
 	 */
 	public synchronized boolean Alquilar(PelisPerfil PelisPerfil) throws RemoteException {
        return pelisperfilDAO.storePelisPerfil(PelisPerfil);
@@ -116,6 +120,10 @@ public class CinePlusServer {
 	
 	/**
 	 * Metodo que se encarga de  crear una lista de peliculas de un usuario identificado con el email.
+	 *
+	 * @param email String con el email del usuario
+	 * @return List<Pelicula> - Lista de peliculas del usuario
+	 * @throws RemoteException
 	 */
 	public synchronized List<Pelicula> getPeliUsuario(String email) throws RemoteException {
 		List<PelisPerfil> codigosaux=pelisperfilDAO.getPeliUsuario(email);
@@ -144,6 +152,13 @@ public class CinePlusServer {
 	
 	/**
 	 * Metodo que se encarga de crear una lista de peliculas pasandole el nombre, anyo y genero.
+	 * 
+	 * @param nombre - String
+	 * @param anyo - String
+	 * @param genero - String
+	 * 
+	 * @return List<Pelicula> - Lista con la película buscada
+	 * @throws RemoteException
 	 */
 	public synchronized List<Pelicula> Busqueda(String nombre, String anyo, String genero) {
 		logger.info("NOMBRE="+nombre+" anyo="+anyo+" genero="+genero);
@@ -167,6 +182,10 @@ public class CinePlusServer {
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo devuelveUsuario de usuarioDAO, pasandole un email de usuario y devuelve el usuario completo.
+	 *
+	 * @param email - String
+	 * @return Usuario - Devuelve un usuario
+	 * @throws RemoteException
 	 */
 	public Usuario devuelveUsuario(String email) throws RemoteException {
 		return usuarioDAO.getUsuario(email);
@@ -174,6 +193,9 @@ public class CinePlusServer {
 
 	/**
 	 * Metodo que se encarga de llamar al metodo actualizarUsuario de usuarioDAO, pasandole un objeto usuario y se encarga de actualizarlo.
+	 *
+	 * @param user objeto <code>Usuario</code> a actualizar
+	 * @throws RemoteException
 	 */
 	public void actualizarUsuario(Usuario user) throws RemoteException {
 		usuarioDAO.updateUsuario(user);
