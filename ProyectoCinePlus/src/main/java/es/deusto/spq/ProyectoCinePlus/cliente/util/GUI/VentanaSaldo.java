@@ -37,7 +37,7 @@ import javax.swing.DefaultComboBoxModel;
 /**
  * Ventana Saldo. Es la ventana de Saldo, la cual permite anyadir saldo a un usuario.
  * @author Fercol
- * @since 3.0.0
+ * @since 2.0.0
  *
  */
 public class VentanaSaldo extends JFrame {
