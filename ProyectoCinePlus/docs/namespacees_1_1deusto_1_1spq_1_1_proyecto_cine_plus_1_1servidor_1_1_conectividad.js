@@ -1,7 +1,0 @@
-var namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad =
-[
-    [ "CinePlusFacade", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade.html", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade" ],
-    [ "CinePlusManagerServer", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_manager_server.html", null ],
-    [ "CinePlusServer", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server" ],
-    [ "ICinePlus", "interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html", "interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus" ]
-];

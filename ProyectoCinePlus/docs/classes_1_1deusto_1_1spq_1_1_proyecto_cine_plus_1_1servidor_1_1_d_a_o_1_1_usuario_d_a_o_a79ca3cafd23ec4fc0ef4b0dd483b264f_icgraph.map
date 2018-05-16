@@ -1,6 +1,0 @@
-<map id="es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO.storeObject" name="es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO.storeObject">
-<area shape="rect" id="node2" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#aa94061d6084f1ce373c37584772b4323" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.UsuarioDAO.store\lUsuario" alt="" coords="291,45,528,101"/>
-<area shape="rect" id="node3" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html#a33c9f7f3047f4fa3b7a6a606bdc23e8c" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.Cine\lPlusServer.CinePlusServer" alt="" coords="576,5,779,61"/>
-<area shape="rect" id="node4" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html#aaa4364c140931eaf7ae83694d8e4c027" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.Cine\lPlusServer.registrarUsuario" alt="" coords="576,85,779,141"/>
-<area shape="rect" id="node5" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade.html#a54c7a7fb21a80f751cd81e8f47951fa2" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.Cine\lPlusFacade.registrarUsuario" alt="" coords="827,85,1029,141"/>
-</map>

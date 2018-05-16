@@ -1,4 +1,0 @@
-var classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_pelicula =
-[
-    [ "VentanaPelicula", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_g_u_i_1_1_ventana_pelicula.html#a8ae13cb6a5ba93d687710c7b00e38d04", null ]
-];

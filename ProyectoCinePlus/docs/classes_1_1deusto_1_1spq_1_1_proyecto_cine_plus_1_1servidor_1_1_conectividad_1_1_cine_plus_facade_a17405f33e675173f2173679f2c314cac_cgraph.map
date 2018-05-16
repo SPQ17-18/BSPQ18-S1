@@ -1,5 +1,0 @@
-<map id="es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusFacade.getPeliUsuario" name="es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusFacade.getPeliUsuario">
-<area shape="rect" id="node2" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html#ac23d971e2ca53488ae307a6537001e79" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.Cine\lPlusServer.getPeliUsuario" alt="" coords="256,45,459,101"/>
-<area shape="rect" id="node3" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_pelis_perfil_d_a_o.html#a2b3d33372f46ad3a27bcea02c654e7c4" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.PelisPerfilDAO.get\lPeliUsuario" alt="" coords="507,5,747,61"/>
-<area shape="rect" id="node4" href="$classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_pelicula_d_a_o.html#a631daa3e35af85bc83e78aee1a602675" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.PeliculaDAO.get\lPeliculas" alt="" coords="513,85,741,141"/>
-</map>

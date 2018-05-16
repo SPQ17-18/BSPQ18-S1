@@ -1,6 +1,0 @@
-var classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_r_m_i_service_locator =
-[
-    [ "RMIServiceLocator", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_r_m_i_service_locator.html#aafacbdff09209708bc23f78ca529d295", null ],
-    [ "getCinePlusService", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_r_m_i_service_locator.html#adc086cb463ae8b8151cb4e2f6f99a9ae", null ],
-    [ "setService", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1cliente_1_1util_1_1_conectividad_1_1_r_m_i_service_locator.html#a8699699ba50aa6da9736f971149f1105", null ]
-];
