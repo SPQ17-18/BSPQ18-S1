@@ -13,9 +13,8 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
  * 
  * @author Fercol
  * @package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad
- * @version 3.0.3
  * @author Fercol
- * @since May 15, 2018
+ * @since 1.0.0
  * 
  *        Clase de CinePLusController. Aqui se encuentran los metodos del cliente que llaman al servidor. 
  * 

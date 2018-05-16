@@ -1,9 +1,9 @@
 /** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
-    @brief Ventana de inicio de sesión. May 15, 2018
+    @brief Ventana de inicio de sesion. May 17, 2018
 
-    Esta es la ventana que te da acceso a la funcionalidad completa de la aplicación. 
-    Para eso, tienes que estar registrado en la aplicación y disponer de un usuario y una contraseña valida.
-    Introduciendo un email valido y una contraseña valida te permite entrar a tu perfil personal.
+    Esta es la ventana que te da acceso a la funcionalidad completa de la aplicacion. 
+    Para eso, tienes que estar registrado en la aplicacion y disponer de un usuario y una contrasenya valida.
+    Introduciendo un email valido y una contrasenya valida te permite entrar a tu perfil personal.
 */
 
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
@@ -36,8 +36,10 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 import javax.swing.JPasswordField;
 
 /**
- * Ventana Login. Se trata de la ventana de login, la cual permite acceder a la aplicación.
+ * Ventana Login. Se trata de la ventana de login, la cual permite acceder a la aplicacion.
+ * 
  * @author Fercol
+ * @since 1.0.0
  *
  */
 public class VentanaLogin extends JFrame {
@@ -219,7 +221,7 @@ public class VentanaLogin extends JFrame {
 	}
 
 	/**
-	 * Método que limpia los campos de las ventana login.
+	 * Metodo que limpia los campos de las ventana login.
 	 */
 	private void limpiarCampos() {
 		textFieldUsuario.setText("");
@@ -227,7 +229,7 @@ public class VentanaLogin extends JFrame {
 	}
 
 	/**
-	 * Método get que devuelve el controlador.
+	 * Metodo get que devuelve el controlador.
 	 * @return controller
 	 */
 	public CinePlusController getController() {
@@ -235,7 +237,7 @@ public class VentanaLogin extends JFrame {
 	}
 
 	/**
-	 * Método set que cambia el controlador. 
+	 * Metodo set que cambia el controlador. 
 	 * @param controller
 	 */
 	public void setController(CinePlusController controller) {

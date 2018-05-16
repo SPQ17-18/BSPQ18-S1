@@ -1,9 +1,9 @@
 /** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
-    @brief Ventana de registro de usuario. May 15, 2018
+    @brief Ventana de registro de usuario. May 17, 2018
 
     Esta es la ventana que te permite crear nuevas cuentas de usuario. 
     Para eso, tienes que introducir los datos cumpliendo los criterios y dar al boton de registrar.
-	Una vez que te registres podrás iniciar sesión en tu nueva cuenta de CinePlus.
+	Una vez que te registres podras iniciar sesion en tu nueva cuenta de CinePlus.
 */
 
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
@@ -37,6 +37,7 @@ import javax.imageio.ImageIO;
 /**
  * Ventana de Regitro. Se trata de la ventana de registro en la que se pueden registrar usuarios.
  * @author Fercol
+ * @since 1.0.0
  *
  */
 public class VentanaRegistro extends JFrame {
@@ -95,8 +96,8 @@ public class VentanaRegistro extends JFrame {
 	
 	/**
 	 * Constructor de la ventana Registro. 
-	 * @param controller - CinePlusController
-	 * @param resourceBundle - ResourceBundle 
+	 * @param controller CinePlusController
+	 * @param resourceBundle ResourceBundle 
 	 */
 	public VentanaRegistro(CinePlusController controller,ResourceBundle resourceBundle) {
 		logger.info("VentanaRegistro");
@@ -308,7 +309,7 @@ public class VentanaRegistro extends JFrame {
 	}
  
 	/**
-	 * Función que comprueba que todos los datos se han introducido en el formulario. 
+	 * Funcion que comprueba que todos los datos se han introducido en el formulario. 
 	 * Comprueba que no haya campos en blanco, y elimina los espacios del comienzo y del final. 
 	 * En caso de fallo, muestra una ventana de error informando del problema.
 	 * @return comprobar - boolean
@@ -357,7 +358,7 @@ public class VentanaRegistro extends JFrame {
 	}
 	
 	/**
-	 * Método que comprueba si se trata de un email valido. 
+	 * Metodo que comprueba si se trata de un email valido. 
 	 * Devuelve TRUE si el email dispone de una "@" y termina por ".com".
 	 * Devuelve FALSE si el email no cumple con las condiciones anteriores. 
 	 * @return resul - boolean
@@ -373,9 +374,9 @@ public class VentanaRegistro extends JFrame {
 	}
 	
 	/**
-	 * Método que comprueba su la contraseña cumple con las condiciones establecidas. 
-	 * Devuelve TRUE si la contraseña cumple las condiciones de ser más de 6 caracteres.
-	 * Devuelve FALSE si es más corta.
+	 * Metodo que comprueba su la contrasenya cumple con las condiciones establecidas. 
+	 * Devuelve TRUE si la contrasenya cumple las condiciones de ser mas de 6 caracteres.
+	 * Devuelve FALSE si es mas corta.
 	 * @return resul - boolean 
 	 */
 	public boolean validarPass() {
@@ -389,7 +390,7 @@ public class VentanaRegistro extends JFrame {
 	}
 	
 	/**
-	 * Método que limpia los campos de las ventana registro.
+	 * Metodo que limpia los campos de las ventana registro.
 	 */
 	private void limpiarCampos() {
 		textFielduser.setText("");

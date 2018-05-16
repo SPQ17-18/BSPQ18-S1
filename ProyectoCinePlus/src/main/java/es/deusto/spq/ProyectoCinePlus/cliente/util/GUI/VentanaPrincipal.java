@@ -1,5 +1,5 @@
 /** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
-    @brief Ventana de principal. May 15, 2018
+    @brief Ventana de principal. May 17, 2018
 
     Esta es la ventana principal de la aplicacion. 
     Desde aqui puedes empezar a crear cuentas de usuario, iniciar sesion, 
@@ -33,8 +33,9 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Ventana Prinicipal. Se trata de la ventana de inicio del programa, la cual permite acceder a la aplicaci�n.
+ * Ventana Prinicipal. Se trata de la ventana de inicio del programa, la cual permite acceder a la aplicacion.
  * @author Fercol
+ * @since 1.0.0
  *
  */
 public class VentanaPrincipal extends JFrame {
@@ -79,8 +80,8 @@ public class VentanaPrincipal extends JFrame {
 
 	/**
 	 * Contructor de la Ventana Principal. 
-	 * @param rmi - RMIServiceLocator
-	 * @param controller - CinePlusController
+	 * @param rmi RMIServiceLocator
+	 * @param controller CinePlusController
 	 */
 	public VentanaPrincipal(RMIServiceLocator rmi,CinePlusController controller) {
 		

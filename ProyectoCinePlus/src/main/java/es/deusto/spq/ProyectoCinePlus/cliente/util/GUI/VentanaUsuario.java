@@ -42,8 +42,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 /**
- * Ventana de Usuario. Se trata de la ventana de usuario, la cual dispone de varias ociones en un men� y permite buscar peliculas.
+ * Ventana de Usuario. Se trata de la ventana de usuario, la cual dispone de varias ociones en un menu y permite buscar peliculas.
  * @author Fercol
+ * @since 1.0.0
  *
  */
 public class VentanaUsuario extends JFrame {
@@ -124,9 +125,9 @@ public class VentanaUsuario extends JFrame {
 	
 	/**
 	 * Constructor de la clase Ventama de Usuario
-	 * @param controller - CinePlusController
-	 * @param resourceBundle - ResourceBundle
-	 * @param userLogeado - Usuario
+	 * @param controller CinePlusController
+	 * @param resourceBundle ResourceBundle
+	 * @param userLogeado Usuario
 	 */
 	public VentanaUsuario(CinePlusController controller, ResourceBundle resourceBundle, Usuario userLogeado) {
 		logger.info("VentanaUsuario");

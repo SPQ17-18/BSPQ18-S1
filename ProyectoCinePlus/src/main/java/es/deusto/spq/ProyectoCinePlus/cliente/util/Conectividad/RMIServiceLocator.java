@@ -6,9 +6,8 @@ import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus;
  * 
  * @author Fercol
  * @package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad
- * @version 3.0.3
  * @author Fercol
- * @since May 15, 2018
+ * @since 1.0.0
  * 
  *        Clase del RMI SERVICE LOCATOR
  * 
@@ -26,7 +25,7 @@ public class RMIServiceLocator {
 	
 	/**
 	 * Metodo que devuelve el servicio 
-	 * @return ICP - ICinePlus
+	 * @return ICP ICinePlus
 	 */
 	public ICinePlus getCinePlusService() {
 		return ICP;
@@ -34,7 +33,7 @@ public class RMIServiceLocator {
 	
 	/**
 	 * Metodo que busca y pone en marcha el servicio
-	 * @param args - String[]
+	 * @param args String[] de 3 argumentos ip / puerto : nombre
 	 */
 	public void setService(String[] args) {
 		try {

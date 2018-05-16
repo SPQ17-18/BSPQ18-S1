@@ -1,13 +1,12 @@
 /** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
-    @brief Ventana de saldo. May 15, 2018
+    @brief Ventana de saldo. May 17, 2018
 
-    Esta es la ventana qte permite añadir saldo a la aplicación. 
-    Para eso, tendras que añadir, el numero de tarjeta, el nombre de usuario y el código de seguridad de la tarjeta y selecionar el importe que deseas recargar. 
+    Esta es la ventana qte permite anyadir saldo a la aplicacion. 
+    Para eso, tendras que anyadir, el numero de tarjeta, el nombre de usuario y el codigo de seguridad de la tarjeta y selecionar el importe que deseas recargar. 
 */
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -24,7 +23,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
@@ -33,14 +31,13 @@ import org.apache.log4j.Logger;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
-import javax.swing.JList;
-import javax.swing.JSlider;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
  
 /**
- * Ventana Saldo. Es la ventana de Saldo, la cual permite añadir saldo a un usuario.
+ * Ventana Saldo. Es la ventana de Saldo, la cual permite anyadir saldo a un usuario.
  * @author Fercol
+ * @since 3.0.0
  *
  */
 public class VentanaSaldo extends JFrame {
@@ -87,9 +84,9 @@ public class VentanaSaldo extends JFrame {
 	
 	/**
 	 * Constructor de la ventana Saldo. 
-	 * @param controller - CinePlusController
-	 * @param resourceBundle - ResourceBundle
-	 * @param userLogeado - Usuario
+	 * @param controller CinePlusController
+	 * @param resourceBundle ResourceBundle
+	 * @param userLogeado Usuario
 	 */
 	public VentanaSaldo(CinePlusController controller, final ResourceBundle resourceBundle, Usuario userLogeado) {
 		logger.info("VentanaSaldo");
@@ -252,28 +249,28 @@ public class VentanaSaldo extends JFrame {
 	}
 	
 	/**
-	 * Método get del controller
-	 * @return controller - CinePlusController
+	 * Metodo get del controller
+	 * @return controller CinePlusController
 	 */
 	public CinePlusController getController() {
 		return controller;
 	}
 
 	/**
-	 * Método set del controller
-	 * @param controller - CinePlusController
+	 * Metodo set del controller
+	 * @param controller CinePlusController
 	 */
 	public void setController(CinePlusController controller) {
 		this.controller = controller;
 	}
 	
 	/**
-	 * Método que comprueba los datos de los campos esten llenos. 
-	 * En caso de error, lo mostrará en una ventana de error. 
-	 * @return comprobar - boolean
+	 * Metodo que comprueba los datos de los campos esten llenos. 
+	 * En caso de error, lo mostrara en una ventana de error. 
+	 * @return comprobar boolean
 	 */
 	public boolean comprobarcampos() {
-		logger.info("Función comprobar campos");
+		logger.info("Funciï¿½n comprobar campos");
 		boolean comprobar = true;
 		String error ="";
 		if(textFieldNombre.getText().trim().equals("")) {
@@ -301,7 +298,7 @@ public class VentanaSaldo extends JFrame {
 	}
 	
 	/**
-	 * Método que limpia los campos de la ventana.
+	 * Metodo que limpia los campos de la ventana.
 	 */
 	private void limpiarCampos() {
 		textFieldNombre.setText("");
