@@ -1,5 +1,6 @@
 /** @package es.deusto.spq.ProyectoCinePlus.servidor.DATA
-    @brief Clase Pelicula. May 15, 2018
+    @brief Clase Pelicula. May 17, 2018
+    @since 1.0.0
 
     Esta es la clase de pelicula, con los respectivos parametros de datanucleus para crear las tablas de la base de datos. 
     Con esta clase definimos el objeto de Pelicula.
@@ -14,7 +15,7 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.PrimaryKey;
 
 /**
- * Esta es la clase Pelicula. Aquí se define como es el objeto pelicula con sus atributos. 
+ * Esta es la clase Pelicula. Aqui se define como es el objeto pelicula con sus atributos. 
  * @author Fercol
  *
  */
@@ -44,15 +45,17 @@ public class Pelicula implements Serializable{
 	}
 	/**
 	 * Constructor Pelicula con parametros
-	 * @param id_pelicula - int
-	 * @param nombre - String
-	 * @param duracion - int
-	 * @param descripcion - String
-	 * @param anyo - int
-	 * @param categoria  - String
-	 * @param precio - float
-	 * @param usuariosList - List<Usuario>
-	 * @param portada - String
+	 * 
+	 * @param id_pelicula int con identificador unico
+	 * @param nombre String con el nombre de la pelicula
+	 * @param duracion int con la duracion en minutos de la pelicula
+	 * @param descripcion String con breve descripcion de menos de 150 palabras
+	 * @param anyo int con el anyo de pelicula
+	 * @param categoria String con la categoria de la pelicula
+	 * @param precio float con el precio de la pelicula en euros
+	 * @param usuariosList List<Usuario> lista de usuarios que poseen la pelicula
+	 * 									(este campo no se usa - introduce null por favor)
+	 * @param portada String nombre de la imagen de portada
 	 */
 	public Pelicula(int id_pelicula, String nombre, int duracion, String descripcion, int anyo, String categoria,
 			 float precio, List<Usuario> usuariosList ,String portada) {
@@ -67,16 +70,18 @@ public class Pelicula implements Serializable{
 		//this.usuariosList = usuariosList;
 		this.portada = portada;
 	}
+	
 	/**
-	 * Constructor Pelicula con parametros
-	 * @param id_pelicula - int
-	 * @param nombre - String
-	 * @param duracion - int
-	 * @param descripcion - String
-	 * @param anyo - int
-	 * @param categoria  - String
-	 * @param precio - float
-	 * @param portada - String
+	 * Constructor Pelicula con parametros pero sin lista de alquilados
+	 * 
+	 * @param id_pelicula int con identificador unico
+	 * @param nombre String con el nombre de la pelicula
+	 * @param duracion int con la duracion en minutos de la pelicula
+	 * @param descripcion String con breve descripcion de menos de 150 palabras
+	 * @param anyo int con el anyo de pelicula
+	 * @param categoria String con la categoria de la pelicula
+	 * @param precio float con el precio de la pelicula en euros
+	 * @param portada String nombre de la imagen de portada
 	 */
 	public Pelicula(int id_pelicula, String nombre, int duracion, String descripcion, int anyo, String categoria,
 			 float precio ,String portada) {
@@ -92,128 +97,122 @@ public class Pelicula implements Serializable{
 	}
 
 	/**
-	 * Método getId_pelicula
-	 * @return id_pelicula - int
+	 * Metodo getId_pelicula
+	 * @return id_pelicula int
 	 */
 	public int getId_pelicula() {
 		return id_pelicula;
 	}
 	/**
-	 * Método setId_pelicula
-	 * @param id_pelicula - int
+	 * Metodo setId_pelicula
+	 * @param id_pelicula int
 	 */
 	public void setId_pelicula(int id_pelicula) {
 		this.id_pelicula = id_pelicula;
 	}
 	/**
-	 * Método getNombre
-	 * @return nombre - String
+	 * Metodo getNombre
+	 * @return nombre String
 	 */
 	public String getNombre() {
 		return nombre;
 	}
 	/**
-	 * Método setNombre
-	 * @param nombre - String
+	 * Metodo setNombre
+	 * @param nombre String
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 	/**
-	 * Método getDuracion
-	 * @return duracion - int
+	 * Metodo getDuracion
+	 * @return duracion int
 	 */
 	public int getDuracion() {
 		return duracion;
 	}
 	/**
-	 * Método setDuracion
-	 * @param duracion - int
+	 * Metodo setDuracion
+	 * @param duracion int
 	 */
 	public void setDuracion(int duracion) {
 		this.duracion = duracion;
 	}
 	/**
-	 * Método getDescripcion
-	 * @return descripcion - String
+	 * Metodo getDescripcion
+	 * @return descripcion String
 	 */
 	public String getDescripcion() {
 		return descripcion;
 	}
 	/**
-	 * Método setDescripcion
-	 * @param descripcion - String
+	 * Metodo setDescripcion
+	 * @param descripcion String
 	 */
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
 	/**
-	 * Método getAnyo
-	 * @return anyo - int
+	 * Metodo getAnyo
+	 * @return anyo int
 	 */
 	public int getAnyo() {
 		return anyo;
 	}
 	/**
-	 * Método setAnyo
-	 * @param anyo - int
+	 * Metodo setAnyo
+	 * @param anyo int
 	 */
 	public void setAnyo(int anyo) {
 		this.anyo = anyo;
 	}
 	/**
-	 * Método getCategoria
-	 * @return categoria - String
+	 * Metodo getCategoria
+	 * @return categoria String
 	 */
 	public String getCategoria() {
 		return categoria;
 	}
 	/**
-	 * Método setCategoria
-	 * @param categoria - String
+	 * Metodo setCategoria
+	 * @param categoria String
 	 */
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
 	/**
-	 * Método getPrecio
-	 * @return precio - float
+	 * Metodo getPrecio
+	 * @return precio float
 	 */
 	public float getPrecio() {
 		return precio;
 	}
 	/**
-	 * Método setPrecio
+	 * Metodo setPrecio
 	 * @param precio - float
 	 */
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
 
-//	public List<Usuario> getUsuariosList() {
-//		return usuariosList;
-//	}
-//
-//	public void setUsuariosList(List<Usuario> usuariosList) {
-//		this.usuariosList = usuariosList;
-//	}
+
 	/**
-	 * Método getPortada
+	 * Metodo getPortada
 	 * @return - String
 	 */
 	public String getPortada() {
 		return portada;
 	}
 	/**
-	 * Método setPortada
-	 * @param portada - String
+	 * Metodo setPortada
+	 * @param portada String
 	 */
 	public void setPortada(String portada) {
 		this.portada = portada;
 	}
 	/**
-	 * Método que copia una pelicula
-	 * @param peli - Pelicula
+	 * Metodo que copia una pelicula
+	 * @param peli Pelicula a copiar
 	 */
 	public void copiarPelicula(Pelicula peli) {
 		
@@ -228,8 +227,8 @@ public class Pelicula implements Serializable{
 		
 	}
 	/**
-	 * Método ToString
-	 * @return String
+	 * Metodo ToString
+	 * @return String con todos los campos del objeto
 	 */
 	@Override
 	public String toString() {

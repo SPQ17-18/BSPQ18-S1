@@ -34,14 +34,18 @@ public class CinePlusController {
 	}
 	
 	/**
-	 * Metodo RegistrarUsuario del Controlador, que se encarga de llamar al metodo de registrarUsuario del CinePlusService y devuelve un true si se ha registrado correctamente. 
-	 * @param usuario - String
-	 * @param email - String
-	 * @param nombre - String
-	 * @param apellido - String
-	 * @param password - String
-	 * @param pais - String
-	 * @param admin - boolean
+	 * Metodo RegistrarUsuario del Controlador, que se encarga de llamar al metodo
+	 * de registrarUsuario del CinePlusService y devuelve un true si se ha
+	 * registrado correctamente.
+	 * 
+	 * @param usuario String con el nombre de usuario dentro de la plataforma
+	 * @param email String con el email asociado al usuario
+	 * @param nombre String con nombre de la persona fisica
+	 * @param apellido String con el apellido de la persona
+	 * @param password String contrasenya de 6 caract minimo
+	 * @param pais String pais de residencia actual
+	 * @param admin boolean es administrador o no
+	 * 
 	 * @return boolean - <code>true</code> si se ha registrado correctamente.
 	 * @throws RemoteException
 	 */
@@ -98,9 +102,12 @@ public class CinePlusController {
 	}
 	
 	/**
-	 * Metodo Alquilar del controlador, que se encarga de llamar al metodo Alquilar de CinePlusService y devuelve un true su se ha podido alquilar una pelicula.
-	 * @param PelisPerfil - PelisPerfil 
-	 * @return boolean - <code>true</code> si ha alquilado una pelicula correctamente.
+	 * Metodo Alquilar del controlador, que se encarga de llamar al metodo Alquilar
+	 * de CinePlusService e indica si se ha podido alquilar o no
+	 * 
+	 * @param PelisPerfil 
+	 * @return boolean <code>true</code> si ha alquilado una pelicula
+	 *         correctamente.
 	 * @throws RemoteException
 	 */
 	public boolean Alquilar(PelisPerfil PelisPerfil) throws RemoteException {
@@ -108,10 +115,13 @@ public class CinePlusController {
 	}
 	
 	/**
-	 * Metodo Busqueda del controlador, que recibe el nombre el anyo y el genero y se encarga de llamar al metodo Busqueda del CinePlusService.
-	 * @param nombre - String
-	 * @param anyo - String
-	 * @param genero - String
+	 * Metodo Busqueda del controlador, que recibe el nombre el anyo y el genero y
+	 * se encarga de llamar al metodo Busqueda del CinePlusService.
+	 * 
+	 * @param nombre String con el nombre de la pelicula
+	 * @param anyo String con el anyo de la pelicula
+	 * @param genero String con el genero de la pelicula
+	 * 
 	 * @return List<Pelicula> - Lista de peliculas buscadas
 	 * @throws RemoteException
 	 */
@@ -120,8 +130,10 @@ public class CinePlusController {
 	}
 	
 	/**
-	 * Metodo getPeliUsuario del controlador, que dado un usuario se encarga de llamar al metodo getPeliUsuario del CinePlusService.
-	 * @param email - String
+	 * Metodo getPeliUsuario del controlador, que dado un email
+	 * llama al metodo getPeliUsuario del CinePlusService.
+	 * 
+	 * @param email String con el email del usuario
 	 * @return List<Pelicula> - Lista de peliculas del usuario
 	 * @throws RemoteException
 	 */
@@ -130,7 +142,9 @@ public class CinePlusController {
 	}
 	
 	/**
-	 * Metodo DevolverUsuario del controlador, que se encarga de llamar al metodo de devuelveUsuario (pasandole un email) del CinePlusService. 
+	 * Metodo DevolverUsuario del controlador, que se encarga de llamar al metodo de
+	 * devuelveUsuario (pasandole un email) del CinePlusService.
+	 * 
 	 * @param email - String
 	 * @return Usuario - Devuelve un usuario
 	 * @throws RemoteException
@@ -140,8 +154,11 @@ public class CinePlusController {
 	}
 	
 	/**
-	 * Metodo actualizarUsuario del controlador, que se encarga de llamar al metodo de actualizarUsuario del CinePlusService. 
-	 * @param user - Usuario
+	 * Metodo actualizarUsuario del controlador, que  llama al metodo
+	 * de actualizarUsuario del CinePlusService.
+	 * Actualiza todos los campos de este aunque sean iguales
+	 * 
+	 * @param user objeto <code>Usuario</code> a actualizar
 	 * @throws RemoteException
 	 */
 	public void actualizarUsuario(Usuario user)throws RemoteException {
@@ -149,8 +166,10 @@ public class CinePlusController {
 	}
 	
 	/**
-	 * Metodo eliminarUsuario del controlador, que se encarga de llamar al metodo de eliminarUsuario del CinePlusService y elimina un usuario de la base de datos.
-	 * @param user - Usuario
+	 * Metodo eliminarUsuario del controlador, que se encarga de llamar al metodo de
+	 * eliminarUsuario del CinePlusService y elimina un usuario de la base de datos.
+	 * 
+	 * @param user Objeto <code>Usuario</code> a eliminar
 	 * @throws RemoteException
 	 */
 	public void eliminarUsuario(Usuario user)throws RemoteException {
@@ -158,8 +177,10 @@ public class CinePlusController {
 	}
 	
 	/**
-	 * Metodo Main de la aplicacion cliente. Aqui se inicia la aplicacion y se llama a la interfaz grafica. 
-	 * @param args - String[]
+	 * Metodo Main de la aplicacion cliente. Aqui se inicia la aplicacion y se llama
+	 * a la interfaz grafica.
+	 * 
+	 * @param args String[3]
 	 */
 	public static void main(String[] args) {
 			if (args.length != 3) {

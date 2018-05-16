@@ -17,7 +17,7 @@ import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
 /**
- * Esta es la clase Usuario. Aquí se define como es el objeto usuario con sus atributos. 
+ * Esta es la clase Usuario. Aqui se define como es el objeto usuario con sus atributos. 
  * @author Fercol
  *
  */
@@ -50,14 +50,15 @@ public class Usuario implements Serializable{
 	
 	/**
 	 * Constructor con parametros de Usuario. 
-	 * @param usuario - String
-	 * @param email - String
-	 * @param nombre - String
-	 * @param apellido - String
-	 * @param password - String
-	 * @param pais - String
-	 * @param admin - boolean
-	 * @param peliculasList - List<Pelicula>
+	 * 
+	 * @param usuario String con nombre del usuario
+	 * @param email String con el email del usuario
+	 * @param nombre String con nombre de la persona fisica
+	 * @param apellido String con apellido de la persona fisica
+	 * @param password String con contrasenya de mas de 6 caracteres
+	 * @param pais String con el pais actual de residencia
+	 * @param admin boolean <code>true</code> si es admin
+	 * @param peliculasList List<Pelicula> lista de peliculas alquiladas
 	 */
 	public Usuario(String usuario, String email, String nombre, String apellido, String password, String pais,
 			boolean admin, List<Pelicula> peliculasList) {
@@ -74,16 +75,17 @@ public class Usuario implements Serializable{
 	}
 	
 	/**
-	 * Constructor con parametros de Usuario.
-	 * @param usuario - String
-	 * @param email - String
-	 * @param nombre - String
-	 * @param apellido - String
-	 * @param password - String
-	 * @param pais - String
-	 * @param admin - boolean
-	 * @param saldo - float
-	 * @param peliculasList - List<Pelicula>
+	 * Constructor con parametros de Usuario y un saldo base.
+	 * 
+	 * @param usuario String con nombre del usuario
+	 * @param email String con el email del usuario
+	 * @param nombre String con nombre de la persona fisica
+	 * @param apellido String con apellido de la persona fisica
+	 * @param password String con contrasenya de mas de 6 caracteres
+	 * @param pais String con el pais actual de residencia
+	 * @param admin boolean <code>true</code> si es admin
+	 * @param saldo float con el saldo base
+	 * @param peliculasList List<Pelicula> lista de peliculas alquiladas
 	 */
 	public Usuario(String usuario, String email, String nombre, String apellido, String password, String pais,
 			boolean admin, float saldo, List<Pelicula> peliculasList) {
@@ -100,14 +102,15 @@ public class Usuario implements Serializable{
 	}
 	
 	/**
-	 * Constructor con parametros de Usuario.
-	 * @param usuario - String
-	 * @param email - String
-	 * @param nombre - String
-	 * @param apellido - String
-	 * @param password - String
-	 * @param pais - String
-	 * @param admin - boolean
+	 * Constructor con parametros de Usuario sin saldo ni lista de peliculas.
+	 * 
+	 * @param usuario String con nombre del usuario
+	 * @param email String con el email del usuario
+	 * @param nombre String con nombre de la persona fisica
+	 * @param apellido String con apellido de la persona fisica
+	 * @param password String con contrasenya de mas de 6 caracteres
+	 * @param pais String con el pais actual de residencia
+	 * @param admin boolean <code>true</code> si es admin
 	 */
 	public Usuario(String usuario, String email, String nombre, String apellido, String password, String pais,
 			boolean admin) {
@@ -123,126 +126,126 @@ public class Usuario implements Serializable{
 	}
 
 	/**
-	 * Método getUsuario
-	 * @return usuario - String
+	 * Metodo getUsuario
+	 * @return usuario String
 	 */
 	public String getUsuario() {
 		return usuario;
 	}
 	/**
-	 * Método setUsuario
-	 * @param usuario - String
+	 * Metodo setUsuario
+	 * @param usuario String
 	 */
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}
 	/**
-	 * Método getEmail
-	 * @return email - String
+	 * Metodo getEmail
+	 * @return email String
 	 */
 	public String getEmail() {
 		return email;
 	}
 	/**
-	 * Método setEmail
+	 * Metodo setEmail
 	 * @param email - String
 	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
 	/**
-	 * Método getNombre
-	 * @return nombre - String
+	 * Metodo getNombre
+	 * @return nombre String
 	 */
 	public String getNombre() {
 		return nombre;
 	}
 	/**
-	 * Método setNombres
-	 * @param nombre - String
+	 * Metodo setNombres
+	 * @param nombre String
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 	/**
-	 * Método getApellidos
-	 * @return apellido - String
+	 * Metodo getApellidos
+	 * @return apellido String
 	 */
 	public String getApellido() {
 		return apellido;
 	}
 	/**
-	 * Método setApellido
-	 * @param apellido - String
+	 * Metodo setApellido
+	 * @param apellido String
 	 */
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
 	/**
-	 * Método getPassword
-	 * @return password - password
+	 * Metodo getPassword
+	 * @return password password
 	 */
 	public String getPassword() {
 		return password;
 	}
 	/**
-	 * Método setPassword
-	 * @param password - password
+	 * Metodo setPassword
+	 * @param password password
 	 */
 	public void setPassword(String password) {
 		this.password = password;
 	}
 	/**
-	 * Método getPais
-	 * @return pais - String
+	 * Metodo getPais
+	 * @return pais String
 	 */
 	public String getPais() {
 		return pais;
 	}
 	/**
-	 * Método getPais
-	 * @param pais - String
+	 * Metodo getPais
+	 * @param pais String
 	 */ 
 	public void setPais(String pais) {
 		this.pais = pais;
 	}
 	/**
-	 * Método getPeliculasList
-	 * @return peliculasList - List<Pelicula>
+	 * Metodo getPeliculasList
+	 * @return peliculasList List<Pelicula>
 	 */
 	public List<Pelicula> getPeliculasList() {
 		return peliculasList;
 	}
 	/**
-	 * Método setPeliculasList
-	 * @param peliculasList - List<Pelicula>
+	 * Metodo setPeliculasList
+	 * @param peliculasList List<Pelicula>
 	 */
 	public void setPeliculasList(List<Pelicula> peliculasList) {
 		this.peliculasList = peliculasList;
 	}
 	/**
-	 * Método isAdmin
-	 * @return admin - boolean
+	 * Metodo isAdmin
+	 * @return admin boolean
 	 */
 	public boolean isAdmin() {
 		return admin;
 	}
 	/**
-	 * Método setAdmin
+	 * Metodo setAdmin
 	 * @param admin - boolean
 	 */
 	public void setAdmin(boolean admin) {
 		this.admin = admin;
 	}
 	/**
-	 * Método getSaldo
+	 * Metodo getSaldo
 	 * @return saldo - float
 	 */
 	public float getSaldo() {
 		return saldo;
 	}
 	/**
-	 * Método setSaldo
+	 * Metodo setSaldo
 	 * @param saldo - float
 	 */
 	public void setSaldo(float saldo) {
@@ -250,7 +253,7 @@ public class Usuario implements Serializable{
 	}
 	
 	/**
-	 * Método que copia un usuario
+	 * Metodo que copia un usuario
 	 * @param user - Usuario
 	 */
 	public void copiarUsuario(Usuario user) {
@@ -270,8 +273,8 @@ public class Usuario implements Serializable{
 	}
 	
 	/**
-	 * Método ToString
-	 * @return String
+	 * Metodo ToString
+	 * @return String con todos los campos de la clase
 	 */
 	@Override
 	public String toString() {

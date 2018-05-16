@@ -15,8 +15,8 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
  * @version 3.0.3
  * @since May 17, 2018
  * 
- *        Interfaz remota del Servidor CinePlusServer Esta es implementada por
- *        CinePlusFacade para realizar la conexion remota
+ * Interfaz remota del Servidor CinePlusServer Esta es implementada por
+ * CinePlusFacade para realizar la conexion remota
  *
  */
 public interface ICinePlus extends Remote {
@@ -86,7 +86,7 @@ public interface ICinePlus extends Remote {
 	 * 
 	 * @since 2.0
 	 * 
-	 *        Metodo utilizado para obtener una lista de peliculas
+	 * Metodo utilizado para obtener una lista de peliculas
 	 * 
 	 * @param nombre
 	 * @param anyo
@@ -104,7 +104,7 @@ public interface ICinePlus extends Remote {
 	 * 
 	 * @since 2.0
 	 * 
-	 *        Metodo utilizado para buscar las pelis que tiene un usuario
+	 * Metodo utilizado para buscar las pelis que tiene un usuario
 	 * 
 	 * @param email
 	 * 
@@ -144,7 +144,7 @@ public interface ICinePlus extends Remote {
 	 * 
 	 * @since 2.1
 	 * 
-	 *        Metodo utilizado para alquilar una pelicula seleccionada
+	 * Metodo utilizado para alquilar una pelicula seleccionada
 	 * 
 	 * 
 	 * @param PelisPerfil
@@ -160,7 +160,7 @@ public interface ICinePlus extends Remote {
 	 * 
 	 * @since 2.0
 	 * 
-	 *        Metodo que devuelve una lista con los anyos disponibles
+	 * Metodo que devuelve una lista con los anyos disponibles
 	 * 
 	 * @return <code>List<String></code> lista con anyos
 	 * @throws RemoteException
@@ -173,7 +173,7 @@ public interface ICinePlus extends Remote {
 	 * 
 	 * @since 2.0
 	 * 
-	 *        Metodo que devuelve una lista con los generos disponibles
+	 * Metodo que devuelve una lista con los generos disponibles
 	 * 
 	 * @return <code>List<String></code> lista con generos
 	 * @throws RemoteException
@@ -186,7 +186,7 @@ public interface ICinePlus extends Remote {
 	 * 
 	 * @since 2.0
 	 * 
-	 *        Metodo que elimina un usuario especificado en la base de datos
+	 * Metodo que elimina un usuario especificado en la base de datos
 	 * 
 	 * @param user
 	 * @throws RemoteException
@@ -199,7 +199,7 @@ public interface ICinePlus extends Remote {
 	 * 
 	 * @since 2.0
 	 * 
-	 *        Metodo que comprueba si un usuario se encuentra en la base de datos
+	 * Metodo que comprueba si un usuario se encuentra en la base de datos
 	 * 
 	 * @param user
 	 * @return <code>true</code> si el usuario existe
