@@ -40,7 +40,7 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	 * @param email String con el email asociado al usuario
 	 * @param nombre String con nombre de la persona fisica
 	 * @param apellido String con el apellido de la persona
-	 * @param password String contrasenya de 6 caract minimo
+	 * @param password String contrasenya de 6 caracteres minimo
 	 * @param pais String pais de residencia actual
 	 * @param admin boolean es administrador o no
 	 * 
