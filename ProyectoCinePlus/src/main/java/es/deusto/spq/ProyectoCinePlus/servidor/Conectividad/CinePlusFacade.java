@@ -71,6 +71,10 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 
 	/**
 	 * Metodo que se encarga de llamar al metodo de usuarioRegistrado de CinePlusServer para mirar si un usuario con una contrasenya existe en la base de datos.
+	 * @param usuario - String
+	 * @param password - String
+	 * 
+	 * @return boolean - <code>true</code> si ha iniciado sesion correctamente.
 	 */
 	public boolean usuarioRegistrado(String usuario, String password) throws RemoteException {
 		return cpser.usuarioRegistrado(usuario, password);
@@ -78,6 +82,12 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo de Busqueda de CinePlusServer  pasandole el nombre, anyo y genero y devuelve una lista de peliculas.
+	 * @param nombre - String
+	 * @param anyo - String
+	 * @param genero - String
+	 * 
+	 * @return List<Pelicula> - Lista con la película buscada
+	 * @throws RemoteException
 	 */
 	public List<Pelicula> Busqueda(String nombre, String anyo,String genero) throws RemoteException {
 		return cpser.Busqueda(nombre, anyo,genero);
@@ -85,6 +95,10 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo de getPeliUsuario de CinePlusServer , que devuelve la lista de peliculas de un usuario identificado con el email.
+	 * 
+	 * @param email String con el email del usuario
+	 * @return List<Pelicula> - Lista de peliculas del usuario
+	 * @throws RemoteException
 	 */
 	public List<Pelicula> getPeliUsuario(String email) throws RemoteException {
 		return cpser.getPeliUsuario(email);
@@ -92,6 +106,7 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo Anyos de CinePlusServer y devuelve una lista con los a�os de las pelicualas.
+	 * @throws RemoteException
 	 */
 	public List<String> Anyos() throws RemoteException {
 		return cpser.Anyos();
