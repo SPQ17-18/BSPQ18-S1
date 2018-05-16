@@ -14,19 +14,45 @@ import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 
+/**
+*
+* @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
+* @version 1.0.0
+* @since May 17, 2018
+* @author Fercol
+* 
+* Clase PeliculaDAO que implemneta la intefaz IPeliculaDAO para realizar las consultas a la base de datos
+* de los objetos de Pelicula.
+*
+*/
 public class PeliculaDAO implements IPeliculaDAO{
 
 	private PersistenceManagerFactory pmf;
 	static Logger logger = Logger.getLogger(PeliculaDAO.class.getName());
 
+	/**
+	 * Constructor de la clase PeliculaDAO.
+	 */
 	public PeliculaDAO(){
 		pmf = JDOHelper.getPersistenceManagerFactory("datanucleus.properties");
 	}
 	
+	/**
+	 * Metodo que realiza una consulta a la base de datos para aniadir una pelicula y 
+	 * devuelve un true si la pelicula se ha podido almacenar.
+	 * 
+	 * @param Pelicula - Pelicula
+	 */
 	public void storePelicula(Pelicula Pelicula) {
 		this.storeObject(Pelicula);
 	}
 	
+	/**
+	 * Metodo que realiza una consulta a la base de datos para almacenar un objeto, 
+	 * y devuelve un true si se ha podido almacenar. 
+	 *  
+	 * @param Pelicula - Pelicula
+	 */
 	public void storeObject(Pelicula Pelicula) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();
@@ -49,7 +75,16 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    }
 	}
 	
-
+	/**
+	 * Metodo que realiza una consulta a la base de datos con los parametros nombre, anyo y genero
+	 * para comprobar si existe una pelicula en la base de datos que cumple con estas condiciones.
+	 * En caso de que exista, devolvera un true. 
+	 * 
+	 * @param nombre - String
+	 * @param anyo - String
+	 * @param genero - String
+	 * @return <code>true</code> si exsite la pelicula que cumple con las condiciones.
+	 */
 	@SuppressWarnings("unchecked")
 	public List<Pelicula> getPeliculas(String nombre,String anyo,String genero){
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -79,7 +114,11 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    return Peliculas;
 	}	
 	
-	
+	/**
+	 * Metodo que realiza una consulta a la base de datos y devuelve una lista con los anyos de las pelicula de la base de datos en formato String.
+	 * 
+	 * @return List<String>
+	 */
 	@SuppressWarnings("unchecked")
 	public List<String> Anyos(){
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -108,6 +147,11 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    return Anyos;
 	}	
 	
+	/**
+	 * Metodo que realiza una consulta a la base de datos y devuelve una lista con los generos de las peliculas de la Base de datos en formato String.
+	 * 
+	 * @return List<String>
+	 */
 	@SuppressWarnings("unchecked")
 	public List<String> Generos(){
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -136,9 +180,10 @@ public class PeliculaDAO implements IPeliculaDAO{
 	    return Generos;
 	}	
 	
-	
-	
-	
+	/**
+	 * Metodo que realiza una consulta a la base de datos y actualiza una pelicula que se le pasa por parametro. 
+	 * @param Pelicula - Pelicula
+	 */
 	public void updatePelicula(Pelicula Pelicula) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();
