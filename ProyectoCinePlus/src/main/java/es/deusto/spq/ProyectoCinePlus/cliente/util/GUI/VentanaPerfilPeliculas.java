@@ -40,7 +40,7 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
  * tiene el usuario.
  * 
  * @author Fercol
- * @since 1.0.0
+ * @since 2.0.0
  *
  */
 public class VentanaPerfilPeliculas extends JFrame {

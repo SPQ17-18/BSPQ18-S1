@@ -43,6 +43,7 @@ import javax.swing.JSeparator;
 /**
  * Ventana de pelicula. Muestra los datos de las peliculas. 
  * @author Fercol
+ * @since 2.0.0
  *
  */
 public class VentanaPelicula extends JFrame {
