@@ -9,15 +9,27 @@ import java.rmi.RemoteException;
 
 import org.apache.log4j.Logger;
 
-
+/**
+ * 
+ * @author Fercol
+ * @package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
+ * @version 3.0.1
+ * @since May 17, 2018
+ * 
+ * Clase CinePlusManagerServer, donde se inicia el servidor de la aplicacion.
+ *
+ */
 public class CinePlusManagerServer  {
 	static Logger logger = Logger.getLogger(CinePlusManagerServer.class.getName());
 	
+	/**
+	 * Metodo main del servidor. Recibe por parametros los argumentos para establecer la conexión. Se queda esperando hasta que se lee un caracter.
+	 * @param args - nombre, puerto, ip
+	 */
 	public static void main(String[] args) {
 		if (args.length != 3) {
 			System.exit(0);
 		}
-	
 
 		if (System.getSecurityManager() == null) {
 			System.setSecurityManager(new SecurityManager());

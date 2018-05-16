@@ -13,8 +13,18 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
-
+/**
+ * 
+ * @author Fercol
+ * @package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
+ * @version 3.0.1
+ * @since May 17, 2018
+ * 
+ * Clase CinePlusServer.
+ *
+ */
 public class CinePlusServer {
+	
 	private UsuarioDAO usuarioDAO;
 	private PeliculaDAO peliculaDAO;
 	private PelisPerfilDAO pelisperfilDAO;
@@ -22,7 +32,11 @@ public class CinePlusServer {
 	private static final long serialVersionUID = 1L;
 	public static String pathn=(System.getProperty("user.dir")+ "\\src\\main\\resources\\images\\films\\");
 	
-	
+	/**
+	 * Constructor de la clase CinePlusServer. 
+	 * En este caso precargamos varias peliculas en la base de datos y añadimos 2 usuarios. 
+	 * @throws RemoteException
+	 */
 	public CinePlusServer () throws RemoteException{
 		super();
 		
@@ -65,28 +79,44 @@ public class CinePlusServer {
 		usuarioDAO.storeUsuario(mikel);
 		usuarioDAO.storeUsuario(spq);
 		
-
 	}
 	
+	/**
+	 * Metodo que se encarga de llamar a registrarUsuario de usuarioDAO parasandole los parametros y devuelve un true si se ha podido registrar.
+	 */
 	public synchronized boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password,
 	String pais, boolean admin) throws RemoteException {
 		Usuario user = new Usuario (usuario, email, nombre, apellido, password, pais, admin);
 		return usuarioDAO.storeUsuario(user);
 	}
-
+	
+	/**
+	 * Metodo que se encarga de llamar al metodo de registrarUsuario de usuarioDAO con parametros (anyadiendo el saldo), y devuelve true si se ha podido registrar.
+	 */
 	public synchronized boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password,
 			String pais, float saldo, boolean admin) throws RemoteException {
 				Usuario user = new Usuario (usuario, email, nombre, apellido, password, pais, admin);
 				user.setSaldo(saldo);
 				return usuarioDAO.storeUsuario(user);
-			}
+	}
 	
+	/**
+	 * Metodo que se encarga de llamar al metodo de usuarioRegistrado de usuarioDAO para mirar si un usuario con una contraseña existe en la base de datos.
+	 */
 	public synchronized boolean usuarioRegistrado (String usuario, String password) throws RemoteException {
         return usuarioDAO.loginUser(usuario, password);
 	}
+	
+	/**
+	 * Metodo que se encarga de llamar al metodo Alquilar de pelisperfilDAO pasandole un objeto PelisPerfil y nos devuelve un true si se ha podido realizar.
+	 */
 	public synchronized boolean Alquilar(PelisPerfil PelisPerfil) throws RemoteException {
        return pelisperfilDAO.storePelisPerfil(PelisPerfil);
 	}
+	
+	/**
+	 * Metodo que se encarga de  crear una lista de peliculas de un usuario identificado con el email.
+	 */
 	public synchronized List<Pelicula> getPeliUsuario(String email) throws RemoteException {
 		List<PelisPerfil> codigosaux=pelisperfilDAO.getPeliUsuario(email);
 		List<String> codigos=new ArrayList<String>();
@@ -111,6 +141,10 @@ public class CinePlusServer {
 		}
 		return aux;
 	}
+	
+	/**
+	 * Metodo que se encarga de crear una lista de peliculas pasandole el nombre, anyo y genero.
+	 */
 	public synchronized List<Pelicula> Busqueda(String nombre, String anyo, String genero) {
 		logger.info("NOMBRE="+nombre+" anyo="+anyo+" genero="+genero);
 
@@ -131,30 +165,44 @@ public class CinePlusServer {
 		return aux;
 	}
 	
-	
+	/**
+	 * Metodo que se encarga de llamar al metodo devuelveUsuario de usuarioDAO, pasandole un email de usuario y devuelve el usuario completo.
+	 */
 	public Usuario devuelveUsuario(String email) throws RemoteException {
 		return usuarioDAO.getUsuario(email);
 	}
 
-	
+	/**
+	 * Metodo que se encarga de llamar al metodo actualizarUsuario de usuarioDAO, pasandole un objeto usuario y se encarga de actualizarlo.
+	 */
 	public void actualizarUsuario(Usuario user) throws RemoteException {
 		usuarioDAO.updateUsuario(user);
 	}
 
-	
+	/**
+	 * Metodo que se encarga de llamar al metodo Anyos de peliculaDAO y devuelve una lista con los años de las pelicualas.
+	 */
 	public List<String> Anyos() throws RemoteException {
 		return peliculaDAO.Anyos();
 	}
 
-	
+	/**
+	 * Metodo que se encarga de llamar al metodo Generos de peliculaDAO y devuelve una lista con los generos de las peliculas. 
+	 */
 	public List<String> Generos() throws RemoteException {
 		return peliculaDAO.Generos();
 	}
 	
+	/**
+	 * Metodo que se encarga de llamar al metodo actualizarUsuario de usuarioDAO pasandole un objeto usuario y se encarga de eliminarlo.
+	 */
 	public void eliminarUsuario(Usuario user) throws RemoteException {
 		usuarioDAO.deleteUsuario(user);
 	}
 	
+	/**
+	 * Metodo que se encarga de llamar al metodo checkUsuario de usuarioDAO, para comprobar si existe el usuario.
+	 */
 	public boolean checkUsuario(Usuario user) throws RemoteException {
 		return usuarioDAO.checkUser(user);
 	}
