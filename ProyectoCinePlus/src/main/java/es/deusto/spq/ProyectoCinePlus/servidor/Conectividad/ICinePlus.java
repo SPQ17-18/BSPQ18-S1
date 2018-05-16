@@ -10,7 +10,7 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 /**
  * 
- * @author Aritz
+ * @author Aritzmetal
  * @package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
  * @version 3.0.3
  * @since May 17, 2018
