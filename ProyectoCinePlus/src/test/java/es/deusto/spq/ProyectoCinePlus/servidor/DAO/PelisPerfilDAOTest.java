@@ -32,7 +32,7 @@ public class PelisPerfilDAOTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		javi= "javi@gmail.com";
+		javi= "javitxu@gmail.com";
 		pelisperfil1 = new PelisPerfil(javi,1);
 		pelisperfil2 = new PelisPerfil("mikel@gmail.com",3);
 		pelisperfil3 = new PelisPerfil(javi,5);
