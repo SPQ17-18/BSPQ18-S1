@@ -37,6 +37,7 @@ public class PelisPerfilDAOTest {
 		pelisperfil3 = new PelisPerfil(javi,5);
 		
 		pelisPerfilDAO = new PelisPerfilDAO();
+		pelisPerfilDAO.storePelisPerfil(pelisperfil3);
 	}
 
 	@Before
@@ -56,7 +57,7 @@ public class PelisPerfilDAOTest {
 	}
 
 	@Test
-	@Required(max = 30, average = 5)
+	@Required(totalTime = 3000)
 	public void getPeliUsuarioTest() {
 		assertTrue(pelisPerfilDAO.getPeliUsuario(javi).size()>0);
 	}
