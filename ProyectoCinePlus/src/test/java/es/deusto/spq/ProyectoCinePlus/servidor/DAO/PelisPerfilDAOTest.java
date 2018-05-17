@@ -64,7 +64,7 @@ public class PelisPerfilDAOTest {
 	}
 
 	@Test
-	@Required(totalTime = 3000)
+	@Required(totalTime = 300)
 	public void getPeliUsuarioTest() {
 		assertTrue(pelisPerfilDAO.getPeliUsuario(javi).size()>0);
 	}
