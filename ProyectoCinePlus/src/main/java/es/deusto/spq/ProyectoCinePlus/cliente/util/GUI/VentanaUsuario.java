@@ -366,29 +366,33 @@ public class VentanaUsuario extends JFrame {
 			    	panel_26.removeAll();
 			    	panel_26.revalidate();
 			    	panel_26.repaint();
-			        for (int i = 0; i < projectNames.length; i++) {	
-			            buttons[i] = new JButton(projectNames[i]);
-			            Image img = ImageIO.read(new File(VentanaPrincipal.pathn+"films\\"+prueba.get(i).getPortada()+".jpg"));
-			            buttons[i].setIcon(new ImageIcon(img));
-			            buttons[i].addActionListener(new ActionListener() {
-			    			public void actionPerformed(ActionEvent e) {
-			    				logger.info("Boton pelicula: ");
-			    				
-			    			    for (int i = 0; i < prueba.size(); i++) {
-			    			    	 if(projectNames[i].equals("Pelicula: " +prueba.get(i).getNombre())){
-			    			    		 VentanaPelicula ventanaPeli = new VentanaPelicula(controller,resourceBundle,userLogeado, prueba.get(i));
-						    				ventanaPeli.setVisible(true);
-						    				dispose();
-			    			    		 
-			    			    	 }
-			    			    }		
-			    				
-			    			}
-			    		}); 
-			            panel_26.add(buttons[i]);
-			        }
-			    }catch(Exception e) {}
-			    
+			    	for (int i = 0; i < projectNames.length; i++) {
+						buttons[i] = new JButton(projectNames[i]);
+						Image imgCartel = ImageIO
+								.read(new File(VentanaPrincipal.pathn + "films\\" + prueba.get(i).getPortada() + ".jpg"));
+						buttons[i].setIcon(new ImageIcon(imgCartel));
+						buttons[i].addActionListener(new ActionListener() {
+							public void actionPerformed(ActionEvent e) {
+								Object source = e.getSource();
+								JButton btn = (JButton) source;
+								for (int j = 0; j < projectNames.length; j++) {
+									if (btn.getText().equals(projectNames[j])) {
+										VentanaPeliculaDatos ventanaPeli = new VentanaPeliculaDatos(controller, resourceBundle,
+												userLogeado, prueba.get(j));
+										ventanaPeli.setVisible(true);
+										dispose();
+										break;
+									}
+
+									
+								}
+							}
+						});
+						panel_26.add(buttons[i]);
+					}
+		 
+				} catch (Exception e) {
+				}
 				logger.info("Busqueda completada");
 			}
 		});
