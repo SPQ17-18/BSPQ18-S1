@@ -26,13 +26,6 @@ public interface IPeliculaDAO {
 	 */
 	public void storePelicula(Pelicula Pelicula);
 	
-	/**
-	 * Metodo que realiza una consulta a la base de datos para almacenar un objeto, 
-	 * y devuelve un true si se ha podido almacenar. 
-	 *  
-	 * @param Pelicula - Pelicula
-	 */
-	public void storeObject(Pelicula Pelicula);
 	
 	/**
 	 * Metodo que realiza una consulta a la base de datos con los parametros nombre, anyo y genero

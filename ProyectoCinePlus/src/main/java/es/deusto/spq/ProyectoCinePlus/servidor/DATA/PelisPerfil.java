@@ -69,13 +69,5 @@ public class PelisPerfil implements Serializable{
 		return id_pelicula;
 	}
 
-	/**
-	 * Metodo setId_pelicula
-	 * @param id_pelicula int con el identificador de la pelicula
-	 */
-	public void setId_pelicula(int id_pelicula) {
-		this.id_pelicula = id_pelicula;
-	}
-
 
 }

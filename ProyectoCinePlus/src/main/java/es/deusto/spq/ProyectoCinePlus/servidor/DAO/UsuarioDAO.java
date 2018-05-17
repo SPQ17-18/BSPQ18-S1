@@ -68,7 +68,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 	 * @param usuario
 	 * @return <code>true</code> si se ha anyadido el usuario correctamente
 	 */
-	public boolean storeObject(Usuario usuario) {
+	private boolean storeObject(Usuario usuario) {
 		boolean resul =false;
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();

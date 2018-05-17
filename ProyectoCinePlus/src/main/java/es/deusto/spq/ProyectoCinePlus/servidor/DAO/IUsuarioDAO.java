@@ -28,14 +28,6 @@ public interface IUsuarioDAO {
 	 */
 	public boolean storeUsuario(Usuario usuario);
 	
-	/**
-	 * Metodo que realiza una consulta a la base de datos para almacenar un objeto, 
-	 * y devuelve un true si se ha podido almacenar. 
-	 * 
-	 * @param usuario
-	 * @return <code>true</code> si se ha anyadido el usuario correctamente
-	 */
-	public boolean storeObject(Usuario usuario);
 	
 	/**
 	 * Metodo que realiza una consulta a la base de datos con los parametros email y contrasenya

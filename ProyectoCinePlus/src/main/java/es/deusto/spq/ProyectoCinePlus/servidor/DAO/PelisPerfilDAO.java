@@ -1,6 +1,7 @@
 package es.deusto.spq.ProyectoCinePlus.servidor.DAO;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import javax.jdo.Extent;
@@ -13,6 +14,7 @@ import javax.jdo.Transaction;
 import org.apache.log4j.Logger;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 /**
  * 
@@ -56,12 +58,67 @@ public class PelisPerfilDAO {
 		}
 	}
 	
+	
+	
+	private void deleteObject(PelisPerfil PelisPerfil) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+	    Transaction tx = pm.currentTransaction();
+	    try {
+	       tx.begin();
+	       logger.info("   * Deleting an object: " + PelisPerfil);
+	       
+	       pm.deletePersistent(PelisPerfil);
+	       tx.commit();
+	       logger.info("   * Pelicula a email: " + PelisPerfil.getEmail() + " eliminada con exito");
+	    } catch (Exception ex) {
+	    	logger.info("La pelicula " + PelisPerfil.getId_pelicula()+ " no existe");
+	    } finally {
+	    	if (tx != null && tx.isActive()) {
+	    		tx.rollback();
+	    	}
+				
+    		pm.close();
+	    }
+
+	}
+	
+	/**
+	 * Metodo que se encarga de eliminar una pelicula del perfil de un usuario
+	 * 
+	 * @param pelisPerfil PelisPerfil
+	 */
+	
+	public void deletePelisPerfil(PelisPerfil pelisPerfil) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+
+		try {
+			tx.begin();
+			Query<PelisPerfil> query = pm.newQuery(PelisPerfil.class, "email =='" + pelisPerfil.getEmail() + "'");
+			Collection<?> result = (Collection<?>) query.execute();
+			PelisPerfil pelisP = (PelisPerfil) result.iterator().next();
+			query.close(result);
+			pm.deletePersistent(pelisP);
+			tx.commit();
+		} catch (Exception ex) {
+			logger.error( "Error cleaning a film: " + ex.getMessage());
+		
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
+	}
+	
 	/**
 	 * Metodo que inserta en la base de datos un objeto PelisPerfil.
 	 * 
 	 * @param PelisPerfil - PelisPerfil
 	 */
-	public void storeObject(PelisPerfil PelisPerfil) {
+	private void storeObject(PelisPerfil PelisPerfil) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();
 	    try {
@@ -120,7 +177,7 @@ public class PelisPerfilDAO {
 	/**
 	 * Metodo que comprueba en la base de datos si existe un PelisPerfil igual al que se le pasa.
 	 * 
-	 * @param PelisPerfil - PelisPerfil
+	 * @param PelisPerfil  PelisPerfil
 	 * @return <code>true</code> si encuentra un objeto PelisPerfil identico
 	 */
 	public boolean checkPelis(PelisPerfil PelisPerfil) {

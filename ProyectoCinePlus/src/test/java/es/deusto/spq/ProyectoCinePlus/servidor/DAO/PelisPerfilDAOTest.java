@@ -59,7 +59,7 @@ public class PelisPerfilDAOTest {
 
 	@Test
 	public void StoreObjetcttest() {
-		pelisPerfilDAO.storeObject(pelisperfil2);
+		pelisPerfilDAO.storePelisPerfil(pelisperfil2);
 		assertTrue(pelisPerfilDAO.checkPelis(pelisperfil2));
 	}
 

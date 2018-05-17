@@ -53,7 +53,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	 *  
 	 * @param Pelicula - Pelicula
 	 */
-	public void storeObject(Pelicula Pelicula) {
+	private void storeObject(Pelicula Pelicula) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 	    Transaction tx = pm.currentTransaction();
 	   

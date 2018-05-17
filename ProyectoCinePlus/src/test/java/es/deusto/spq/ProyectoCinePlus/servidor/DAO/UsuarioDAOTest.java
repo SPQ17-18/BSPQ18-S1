@@ -122,7 +122,7 @@ public class UsuarioDAOTest {
 	 * @throws Exception
 	 */
 	
-	@Ignore
+	@Test
 	public void test_3deleteUsuarioTest() throws Exception{
 		logger.info("Test 3 para hacer un update de usuario");
 		logger.info("Eliminando usuario");
@@ -239,7 +239,7 @@ public class UsuarioDAOTest {
 			
 		 }
 		 
-	}////
+	}
 	
 	
 }
