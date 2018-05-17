@@ -39,7 +39,7 @@ public class UsuarioTest {
 		assertEquals("Mikel", mikel.getNombre());
 		assertEquals("Fernandez", mikel.getApellido());
 		assertEquals("P@ssw0rd", mikel.getPassword());
-		assertEquals("EEuskadi", mikel.getPais());
+		assertEquals("Euskadi", mikel.getPais());
 		assertEquals(false, mikel.isAdmin());
 	}
 	

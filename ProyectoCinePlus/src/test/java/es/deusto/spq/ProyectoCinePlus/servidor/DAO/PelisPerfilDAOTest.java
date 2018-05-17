@@ -16,6 +16,7 @@ import org.junit.Rule;
 import org.junit.Test;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
+import junit.framework.JUnit4TestAdapter;
 
 public class PelisPerfilDAOTest {
 	
@@ -27,8 +28,14 @@ public class PelisPerfilDAOTest {
 	
 	static Logger logger = Logger.getLogger(PelisPerfilDAOTest.class.getName());
 	
-	@Rule public ContiPerfRule rule = new ContiPerfRule();
-
+//	@Rule public ContiPerfRule rule = new ContiPerfRule();
+//
+//	
+//	public static junit.framework.Test suite() {
+//		 return new JUnit4TestAdapter(PelisPerfilDAOTest.class);
+//	}
+	
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		javi= "javitxu@gmail.com";

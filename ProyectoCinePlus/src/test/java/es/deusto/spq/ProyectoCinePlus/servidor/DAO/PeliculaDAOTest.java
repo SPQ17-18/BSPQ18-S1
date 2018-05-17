@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+import org.databene.contiperf.PerfTest;
+import org.databene.contiperf.Required;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -72,7 +74,14 @@ public class PeliculaDAOTest {
 	
 	}
 	
+	
+	/**
+	 * Test para comprobar que realiza busquedas de peliculas en tiempo optimo
+	 * @throws Exception
+	 */
 	@Test
+	@PerfTest(invocations = 120, threads = 5)
+	@Required(max = 3, average = 2)
 	public void getPeliculaTest() throws Exception{
 		logger.info("getPeliculaTest()");
 		peliculaDAO.storePelicula( new Pelicula(7, "Star Trek 2", 142, "La ira de khan", 1994, "ciencia ficcion", 14, listUsuarios,"14"));

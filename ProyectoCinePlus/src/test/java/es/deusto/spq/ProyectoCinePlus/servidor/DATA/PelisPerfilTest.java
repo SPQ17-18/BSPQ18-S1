@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import java.util.logging.Logger;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class PelisPerfilTest {
@@ -21,13 +22,13 @@ public class PelisPerfilTest {
 		pelisperfil2 = new PelisPerfil("mikel@gmail.com",3);
 	}
 
-	@Test
+	@Ignore
 	public void comprobarDatosTest() {
 		assertEquals("mikel@gmail.com",pelisperfil2.getEmail());
 		assertEquals(3,pelisperfil2.getId_pelicula());
 	}
 	
-	@Test
+	@Ignore
 	public void setEmailTest() {
 		pelisperfil1.setEmail("aritz@gmail.com");
 		assertEquals("aritz@gmail.com", pelisperfil1.getEmail());

@@ -20,6 +20,8 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
+import junit.framework.JUnit4TestAdapter;
+
 
 public class UsuarioDAOTest {
 
@@ -35,8 +37,12 @@ public class UsuarioDAOTest {
 	private Usuario javi;
 	private Usuario xabi;
 	
-	@Rule public ContiPerfRule rule = new ContiPerfRule();
-	
+//	@Rule public ContiPerfRule rule = new ContiPerfRule();
+//	
+//	
+//	public static junit.framework.Test suite() {
+//		 return new JUnit4TestAdapter(UsuarioDAOTest.class);
+//	}
 	/**
 	 * Inicializamos los objetos que se van a crear una sola vez en todo el test
 	 * 
@@ -135,7 +141,7 @@ public class UsuarioDAOTest {
 	 */
 	
 	@Test
-	@Required(totalTime = 5000)
+	@Required(totalTime = 5)
 	public void test_4loginUserTestFAIL() throws Exception{
 		boolean resul;
 		logger.info("Test 4 Logeando incorrectamente el usuario " + "Xabi@gmail.com");
@@ -165,7 +171,7 @@ public class UsuarioDAOTest {
 	 */
 	@Test
 	@PerfTest(invocations = 100, threads = 10)
-	@Required(max = 5, average = 4)
+	@Required(max = 5, average = 3)
 	public void test_6checkUserTestOK() throws Exception{
 		boolean resul;
 		logger.info("Test 6 para realizar un login correcto");
@@ -179,7 +185,7 @@ public class UsuarioDAOTest {
 	 * @throws Exception
 	 */
 	@Test
-	@Required(max = 30, average = 5)
+	@Required(max = 4, average = 3)
 	public void test_7checkUserTestFAIL() throws Exception{
 		boolean resul;
 		logger.info("Test 7 para intentar obtener usuario pero da fallo");
