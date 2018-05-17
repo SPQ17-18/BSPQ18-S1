@@ -60,28 +60,6 @@ public class PelisPerfilDAO {
 	
 	
 	
-	private void deleteObject(PelisPerfil PelisPerfil) {
-		PersistenceManager pm = pmf.getPersistenceManager();
-	    Transaction tx = pm.currentTransaction();
-	    try {
-	       tx.begin();
-	       logger.info("   * Deleting an object: " + PelisPerfil);
-	       
-	       pm.deletePersistent(PelisPerfil);
-	       tx.commit();
-	       logger.info("   * Pelicula a email: " + PelisPerfil.getEmail() + " eliminada con exito");
-	    } catch (Exception ex) {
-	    	logger.info("La pelicula " + PelisPerfil.getId_pelicula()+ " no existe");
-	    } finally {
-	    	if (tx != null && tx.isActive()) {
-	    		tx.rollback();
-	    	}
-				
-    		pm.close();
-	    }
-
-	}
-	
 	/**
 	 * Metodo que se encarga de eliminar una pelicula del perfil de un usuario
 	 * 
