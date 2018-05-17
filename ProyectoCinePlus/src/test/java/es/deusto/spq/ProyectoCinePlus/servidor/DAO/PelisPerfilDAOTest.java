@@ -11,6 +11,7 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 
+import org.databene.contiperf.Required;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -56,6 +57,7 @@ public class PelisPerfilDAOTest {
 	}
 
 	@Test
+	@Required(max = 30, average = 5)
 	public void getPeliUsuarioTest() {
 		assertTrue(pelisPerfilDAO.getPeliUsuario(javi).size()>0);
 	}

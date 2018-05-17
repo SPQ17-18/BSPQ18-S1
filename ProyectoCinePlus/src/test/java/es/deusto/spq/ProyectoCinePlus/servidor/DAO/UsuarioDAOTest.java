@@ -98,6 +98,7 @@ public class UsuarioDAOTest {
 	 * Test de login correcto
 	 */
 	@Test
+	@Required(throughput = 20)
 	public void test_2loginUserTestOK() throws Exception{
 		boolean resul;
 		logger.info("Test 2 Logeando el usuario " + "Xabi@gmail.com");
@@ -131,10 +132,11 @@ public class UsuarioDAOTest {
 	 */
 	
 	@Test
+	@Required(totalTime = 5000)
 	public void test_4loginUserTestFAIL() throws Exception{
 		boolean resul;
 		logger.info("Test 4 Logeando incorrectamente el usuario " + "Xabi@gmail.com");
-		 resul = usuarioDAO.loginUser("Xabi@gmail.com","ContrasenyaFalsa123");
+		resul = usuarioDAO.loginUser("Xabi@gmail.com","ContrasenyaFalsa123");
 		assertFalse(resul);
 	}
 	
@@ -145,6 +147,7 @@ public class UsuarioDAOTest {
 	 */
 	
 	@Test
+	@Required(max = 30, average = 5)
 	public void test_5getUsuarioTest() throws Exception{
 
 		logger.info("Test 5 para obtener un usuario de la base de datos");
@@ -163,7 +166,7 @@ public class UsuarioDAOTest {
 	public void test_6checkUserTestOK() throws Exception{
 		boolean resul;
 		logger.info("Test 6 para realizar un login correcto");
-		 resul = usuarioDAO.checkUser(spq);
+		resul = usuarioDAO.checkUser(spq);
 		assertTrue(resul);
 	}
 	
@@ -173,6 +176,7 @@ public class UsuarioDAOTest {
 	 * @throws Exception
 	 */
 	@Test
+	@Required(max = 30, average = 5)
 	public void test_7checkUserTestFAIL() throws Exception{
 		boolean resul;
 		logger.info("Test 7 para intentar obtener usuario pero da fallo");
