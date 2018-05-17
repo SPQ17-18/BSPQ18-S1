@@ -48,12 +48,12 @@ public class UsuarioDAOTest {
 	@Before
 	public void setUp() throws Exception {
 		 spq = new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false);		
-		 prueba1 = new Usuario ("MikelSPQ", "prueba1@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "España", false);
+		 prueba1 = new Usuario ("MikelSPQ", "prueba1@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "Euskadi", false);
 		 
-		 mikel = new Usuario ("MikelSPQ", "Mikel@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "España", false);
-		 xabi = new Usuario ("XabiSPQ", "Xabi@gmail.com", "Xabi", "Sarrionandia", "P@ssw0rd", "España", false);
-		 aritz = new Usuario ("AritzSPQ", "aritz@gmail.com", "Aritz", "Rasines", "P@ssw0rd", "España", false);
-		javi = new Usuario ("JaviSPQ", "javi@gmail.com", "Javi", "Fernandez", "P@ssw0rd", "España", true);
+		 mikel = new Usuario ("MikelSPQ", "Mikel@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "Euskadi", false);
+		 xabi = new Usuario ("XabiSPQ", "Xabi@gmail.com", "Xabi", "Sarrionandia", "P@ssw0rd", "Euskadi", false);
+		 aritz = new Usuario ("AritzSPQ", "aritz@gmail.com", "Aritz", "Rasines", "P@ssw0rd", "Euskadi", false);
+		javi = new Usuario ("JaviSPQ", "javi@gmail.com", "Javi", "Fernandez", "P@ssw0rd", "Euskadi", true);
 		 
 			
 		 if(usuarioDAO.checkUser(mikel) == false) {
@@ -180,7 +180,7 @@ public class UsuarioDAOTest {
 	public void test_7checkUserTestFAIL() throws Exception{
 		boolean resul;
 		logger.info("Test 7 para intentar obtener usuario pero da fallo");
-		resul = usuarioDAO.checkUser(new Usuario("MikelSPQ2", "prueba12@gmail.com", "Mikel2", "Fernandez2", "P@ssw0rd", "España", false));
+		resul = usuarioDAO.checkUser(new Usuario("MikelSPQ2", "prueba12@gmail.com", "Mikel2", "Fernandez2", "P@ssw0rd", "Euskadi", false));
 		assertFalse(resul);
 	}
 	

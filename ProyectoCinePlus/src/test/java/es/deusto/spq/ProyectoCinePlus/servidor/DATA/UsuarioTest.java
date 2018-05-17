@@ -24,8 +24,8 @@ public class UsuarioTest {
 
 	@BeforeClass
 	public static void setUp() throws Exception {
-		mikel = new Usuario ("MikelSPQ", "Mikel@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "Espa�a", false);
-		xabi = new Usuario ("XabiSPQ", "Xabi@gmail.com", "Xabi", "Sarrionandia", "P@ssw0rd", "Espa�a", false);
+		mikel = new Usuario ("MikelSPQ", "Mikel@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "Euskadi", false);
+		xabi = new Usuario ("XabiSPQ", "Xabi@gmail.com", "Xabi", "Sarrionandia", "P@ssw0rd", "Euskadi", false);
 		xabi.setSaldo(50);
 		aritz = new Usuario (" ", " ", " ", " ", " ", "España", false);
 		javi = new Usuario (" ", " ", " ", " ", " ", "España", false);
@@ -39,7 +39,7 @@ public class UsuarioTest {
 		assertEquals("Mikel", mikel.getNombre());
 		assertEquals("Fernandez", mikel.getApellido());
 		assertEquals("P@ssw0rd", mikel.getPassword());
-		assertEquals("España", mikel.getPais());
+		assertEquals("EEuskadi", mikel.getPais());
 		assertEquals(false, mikel.isAdmin());
 	}
 	
@@ -50,7 +50,7 @@ public class UsuarioTest {
 		assertEquals("Xabi", xabi.getNombre());
 		assertEquals("Sarrionandia", xabi.getApellido());
 		assertEquals("P@ssw0rd", xabi.getPassword());
-		assertEquals("España", xabi.getPais());
+		assertEquals("Euskadi", xabi.getPais());
 		assertFalse( xabi.isAdmin());
 	}
 
@@ -64,7 +64,7 @@ public class UsuarioTest {
 		assertEquals("Xabi", aritz.getNombre());
 		assertEquals("Sarrionandia", aritz.getApellido());
 		assertEquals("P@ssw0rd", aritz.getPassword());
-		assertEquals("España", aritz.getPais());
+		assertEquals("Euskadi", aritz.getPais());
 		assertFalse( aritz.isAdmin());
 	}
 
