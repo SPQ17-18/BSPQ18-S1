@@ -7,10 +7,12 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.databene.contiperf.Required;
+import org.databene.contiperf.junit.ContiPerfRule;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
@@ -24,6 +26,8 @@ public class PelisPerfilDAOTest {
 	private static String javi;
 	
 	static Logger logger = Logger.getLogger(PelisPerfilDAOTest.class.getName());
+	
+	@Rule public ContiPerfRule rule = new ContiPerfRule();
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
