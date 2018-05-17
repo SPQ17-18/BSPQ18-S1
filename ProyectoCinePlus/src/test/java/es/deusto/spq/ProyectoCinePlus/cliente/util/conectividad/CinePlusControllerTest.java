@@ -146,6 +146,7 @@ public class CinePlusControllerTest {
 		
 		String name = "//127.0.0.1:1099/CinePlusServer";
 		logger.info("BeforeTest - Setting the client ready for calling TestServer name: " + name);
+		
 		String args[] = new String[3];
 		args[0] = "127.0.0.1";
 		args[1] = "1099";
@@ -229,7 +230,7 @@ public class CinePlusControllerTest {
 	}
 	
 	
-	@Ignore
+	@Test
 	public void Test8_eliminarUsuarioTest() throws RemoteException {
 		 cineplus.eliminarUsuario(new Usuario("Javi","javi@gmail.com","Javi","Fernandez","P@ssw0rd", "España", true));
 		 assertEquals(false,cineplus.LoginUsuario("javi@gmail.com", "P@ssw0rd"));

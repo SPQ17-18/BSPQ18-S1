@@ -98,7 +98,7 @@ public class UsuarioDAOTest {
 	 * Test de login correcto
 	 */
 	@Test
-	@Required(throughput = 20)
+	@Required(throughput = 4)
 	public void test_2loginUserTestOK() throws Exception{
 		boolean resul;
 		logger.info("Test 2 Logeando el usuario " + "Xabi@gmail.com");
@@ -230,17 +230,6 @@ public class UsuarioDAOTest {
 			
 		 }
 		 
-	}
-	
-	
-	@AfterClass
-	public static void deleteAll() throws Exception {
-		
-		usuarioDAO.deleteUsuario(new Usuario ("MikelSPQ", "Mikel@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "España", false));
-		usuarioDAO.deleteUsuario( new Usuario ("MikelSPQ", "Mikel@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "España", false));
-		usuarioDAO.deleteUsuario(new Usuario ("AritzSPQ", "aritz@gmail.com", "Aritz", "Rasines", "P@ssw0rd", "España", false));
-		usuarioDAO.deleteUsuario(new Usuario ("JaviSPQ", "javi@gmail.com", "Javi", "Fernandez", "P@ssw0rd", "España", true));
-		usuarioDAO.deleteUsuario(new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false));
 	}
 	
 	
