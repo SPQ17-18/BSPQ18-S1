@@ -24,7 +24,7 @@ public interface IUsuarioDAO {
 	 * devuelve un true si el usuario se ha podido almacenar.
 	 * 
 	 * @param usuario 
-	 * @return <code>true</code> si se ha añadido el usuario correctamente
+	 * @return <code>true</code> si se ha anyadido el usuario correctamente
 	 */
 	public boolean storeUsuario(Usuario usuario);
 	
@@ -33,18 +33,18 @@ public interface IUsuarioDAO {
 	 * y devuelve un true si se ha podido almacenar. 
 	 * 
 	 * @param usuario
-	 * @return <code>true</code> si se ha añadido el usuario correctamente
+	 * @return <code>true</code> si se ha anyadido el usuario correctamente
 	 */
 	public boolean storeObject(Usuario usuario);
 	
 	/**
-	 * Metodo que realiza una consulta a la base de datos con los parametros email y contraseña
+	 * Metodo que realiza una consulta a la base de datos con los parametros email y contrasenya
 	 * para comprobar si existe un usuario en la base de datos que cumple con estas condiciones.
 	 * En caso de que exista, devolvera un true. 
 	 * 
 	 * @param email - String
 	 * @param password - String
-	 * @return <code>true</code> si el usuario y la contraseña coinciden con las de la Base de datos
+	 * @return <code>true</code> si el usuario y la anyadido coinciden con las de la Base de datos
 	 */
 	public boolean loginUser(String email, String password);
 	

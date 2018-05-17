@@ -23,7 +23,7 @@ public class CinePlusManagerServer  {
 	static Logger logger = Logger.getLogger(CinePlusManagerServer.class.getName());
 	
 	/**
-	 * Metodo main del servidor. Recibe por parametros los argumentos para establecer la conexión. Se queda esperando hasta que se lee un caracter.
+	 * Metodo main del servidor. Recibe por parametros los argumentos para establecer la conexion. Se queda esperando hasta que se lee un caracter.
 	 * @param args - nombre, puerto, ip
 	 */
 	public static void main(String[] args) {
