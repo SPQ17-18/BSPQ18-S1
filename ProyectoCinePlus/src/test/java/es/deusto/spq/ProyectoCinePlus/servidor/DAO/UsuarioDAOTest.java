@@ -8,12 +8,14 @@ import java.util.logging.Logger;
 
 import org.databene.contiperf.PerfTest;
 import org.databene.contiperf.Required;
+import org.databene.contiperf.junit.ContiPerfRule;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Ignore;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
@@ -33,6 +35,7 @@ public class UsuarioDAOTest {
 	private Usuario javi;
 	private Usuario xabi;
 	
+	@Rule public ContiPerfRule rule = new ContiPerfRule();
 	
 	/**
 	 * Inicializamos los objetos que se van a crear una sola vez en todo el test
