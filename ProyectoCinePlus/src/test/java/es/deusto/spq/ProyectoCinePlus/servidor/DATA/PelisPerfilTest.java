@@ -13,13 +13,12 @@ public class PelisPerfilTest {
 	
 	private static PelisPerfil pelisperfil1;
 	private static PelisPerfil pelisperfil2;
-	private static String aritz;
+
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		pelisperfil1 = new PelisPerfil("javi@gmail.com",1);
 		pelisperfil2 = new PelisPerfil("mikel@gmail.com",3);
-		aritz="aritz@gmail.com";
 	}
 
 	@Test
@@ -31,7 +30,7 @@ public class PelisPerfilTest {
 	@Test
 	public void setEmailTest() {
 		pelisperfil1.setEmail("aritz@gmail.com");
-		assertEquals(aritz, pelisperfil1.getEmail());
+		assertEquals("aritz@gmail.com", pelisperfil1.getEmail());
 	}
 
 }
