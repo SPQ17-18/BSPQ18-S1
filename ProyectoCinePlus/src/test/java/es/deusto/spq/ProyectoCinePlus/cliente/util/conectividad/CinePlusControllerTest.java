@@ -25,8 +25,10 @@ import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusFacade;
 import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusServer;
 import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.PeliculaDAO;
+import es.deusto.spq.ProyectoCinePlus.servidor.DAO.PelisPerfilDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
+import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 import junit.framework.JUnit4TestAdapter;
 
@@ -36,12 +38,20 @@ public class CinePlusControllerTest {
 	
 	
 	private static CinePlusController cineplus;
+	
 	private static PeliculaDAO peliculaDAO;
 	private static UsuarioDAO usuarioDAO;
+	private static PelisPerfilDAO pelisPerfilDAO;
 	
 	private Usuario user;
 	private Usuario user2;
+	private Usuario user3;
+	
 	private Pelicula pelicula1;
+	
+	private PelisPerfil alquiler1;
+	private PelisPerfil alquiler2;
+	private PelisPerfil alquiler3;
 	
 	private static String cwd = CinePlusControllerTest.class.getProtectionDomain().getCodeSource().getLocation().getFile();
 	private static Thread rmiRegistryThread = null;
@@ -125,8 +135,9 @@ public class CinePlusControllerTest {
 		}
 	
 		usuarioDAO = new UsuarioDAO();
+		peliculaDAO = new PeliculaDAO();
+		pelisPerfilDAO = new PelisPerfilDAO();
 		
-		PeliculaDAO peliculaDAO = new PeliculaDAO();
 		Pelicula pelicula1 = new Pelicula(1, "Cadena perpetua", 142, "vida de prisioneros", 1994, "Drama", 14, null, "14");
 	
 		peliculaDAO.storePelicula(pelicula1);
@@ -170,7 +181,11 @@ public class CinePlusControllerTest {
 		
 		user = new Usuario("Javi", "javi@gmail.com", "Javi", "Fernandez", "P@ssw0rd", "España", true);
 		user2 = new Usuario("Javi2", "javi2@gmail.com", "Javi2", "Fernandez", "P@ssw0rd", "España", true);
+		user3 = new Usuario("Mengano", "nuevoEmailgiroGuion@gmail.com", "Mengano", "HijodeMenganez", "pass", "Myanmar",false);
 
+		alquiler1 = new PelisPerfil("javi2@gmail.com", 1);
+		alquiler2 = new PelisPerfil("javi2@gmail.com", 3);
+		alquiler3 = new PelisPerfil("javi2@gmail.com", 5);
 
 		 if(usuarioDAO.checkUser(user) == false) {
 			 usuarioDAO.storeUsuario(user);
@@ -183,7 +198,19 @@ public class CinePlusControllerTest {
 			 logger.info("almacenando "+user2.getEmail());
 			
 		 }
+		 
 
+		 if(pelisPerfilDAO.checkPelis(alquiler1) == false) {
+			 pelisPerfilDAO.storePelisPerfil(alquiler1);
+			 logger.info("almacenando "+user2.getEmail());
+			
+		 }
+		 
+		 if(pelisPerfilDAO.checkPelis(alquiler2) == false) {
+			 pelisPerfilDAO.storePelisPerfil(alquiler2);
+			 logger.info("almacenando "+user2.getEmail());
+			
+		 }
 		
 	}
 
@@ -232,8 +259,10 @@ public class CinePlusControllerTest {
 	
 	@Test
 	public void Test8_eliminarUsuarioTest() throws RemoteException {
-		 cineplus.eliminarUsuario(new Usuario("Javi","javi@gmail.com","Javi","Fernandez","P@ssw0rd", "España", true));
+		 cineplus.eliminarUsuario(user);
+		 cineplus.eliminarUsuario(user2);
 		 assertEquals(false,cineplus.LoginUsuario("javi@gmail.com", "P@ssw0rd"));
+		 assertEquals(false,cineplus.LoginUsuario("javi2@gmail.com", "P@ssw0rd"));
 	}
 	
 	@Test
@@ -243,17 +272,58 @@ public class CinePlusControllerTest {
 	
 	}
 	
+	@Test
+	public void test10_AlquilerSatisfactorioT () throws RemoteException {
+		assertTrue(cineplus.getPeliUsuario("javi2@gmail.com").size() ==2);
+		cineplus.Alquilar(alquiler3);
+		assertTrue(cineplus.getPeliUsuario("javi2@gmail.com").size() ==3);
+		
+	}
+	
+	
+	@After
+	public void deleteAll() {
+		 if(usuarioDAO.checkUser(user) == true) {
+			 usuarioDAO.deleteUsuario(user);
+			 logger.info("eliminando user "+user.getEmail());
+			
+		 }
+		 
+		 if(usuarioDAO.checkUser(user2) == true) {
+			 usuarioDAO.deleteUsuario(user2);
+			 logger.info("eliminando user "+user2.getEmail());
+			
+		 }
+		 
+		 if(usuarioDAO.checkUser(user3) == true) {
+			 usuarioDAO.deleteUsuario(user3);
+			 logger.info("eliminando user "+user3.getEmail());
+			
+		 }
+		 
+		 
+
+		 if(pelisPerfilDAO.checkPelis(alquiler1) == true) {
+			 pelisPerfilDAO.deletePelisPerfil(alquiler1);
+			 logger.info("eliminado alquiler"+alquiler1.getEmail());
+			
+		 }
+		 
+		 if(pelisPerfilDAO.checkPelis(alquiler2) == true) {
+			 pelisPerfilDAO.deletePelisPerfil(alquiler2);
+			 logger.info("eliminado alquiler"+alquiler2.getEmail());
+			
+		 }
+		 
+		 if(pelisPerfilDAO.checkPelis(alquiler3) == true) {
+			 pelisPerfilDAO.deletePelisPerfil(alquiler3);
+			 logger.info("eliminado alquiler"+alquiler3.getEmail());
+			
+		 }
+	}
 	
 	@AfterClass
 	public static void tearDown() {
-		try {
-			cineplus.eliminarUsuario(new Usuario("Mengano", "nuevoEmailgiroGuion@gmail.com", "Mengano", "HijodeMenganez", "pass", "Myanmar",false));
-			cineplus.eliminarUsuario(new Usuario ("Javi", "javi@gmail.com", "Javi", "Fernandez","P@ssw0rd", "España", true));
-		
-		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
 		try	{
 			rmiServerThread.join();
