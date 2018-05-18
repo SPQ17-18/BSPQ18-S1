@@ -1,3 +1,8 @@
+/** @package ees.deusto.spq.ProyectoCinePlus.servidor.DATA;
+*   @brief Test UsuarioDAOTest. May 18, 2018
+*
+*   Este es el test que comprueba los metodos de PelisPerfilTest.
+*/
 package es.deusto.spq.ProyectoCinePlus.servidor.DATA;
 
 import static org.junit.Assert.*;

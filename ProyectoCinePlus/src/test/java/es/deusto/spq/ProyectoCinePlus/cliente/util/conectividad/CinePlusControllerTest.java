@@ -1,3 +1,8 @@
+/** @package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad
+*    @brief Clase de test CinePLusControllerTest. May 17, 2018
+*
+*    Este es el test del controller del cliente donde se comprueban que los metodos hacen la llamada al servidor.
+*/
 package es.deusto.spq.ProyectoCinePlus.cliente.util.conectividad;
 
 import static org.junit.Assert.*;
@@ -32,7 +37,14 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 import junit.framework.JUnit4TestAdapter;
 
-
+/**
+* @author mikelgol7
+* @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
+* @brief Test UsuarioTest. May 18, 2018
+* @since 2.0.0
+* 
+* Este es el test que comprueba los metodos de los objetos CinePlusController.
+*/
 public class CinePlusControllerTest {
 
 	
@@ -214,6 +226,10 @@ public class CinePlusControllerTest {
 		
 	}
 
+	/**
+	 * Test que comprueba si existe el usuario javi@gmail.com (No deberia de existir)
+	 * @throws RemoteException
+	 */
 	@Test
 	public void Test1_RegistrarUsuario1Test() throws RemoteException {
 		assertFalse(cineplus.RegistrarUsuario("Javi","javi@gmail.com","Javi","Fernandez","P@ssw0rd", "EspaÃ±a", true));
@@ -227,7 +243,10 @@ public class CinePlusControllerTest {
 		assertTrue(cineplus.RegistrarUsuario("Javi","javi@gmail.com","Javi","Fernandez","P@ssw0rd", "EspaÃ±a", true));
 	}
 	
-	
+	/**
+	 * Test que comprueba si el usuario javi@gmail.com con contraseña P@ssw0rd esta en la BD
+	 * @throws RemoteException
+	 */
 	@Test
 	@PerfTest(duration = 40, invocations = 100, threads = 10)
     @Required(max = 50, average = 20)
@@ -236,27 +255,46 @@ public class CinePlusControllerTest {
 		assertTrue(cineplus.LoginUsuario("javi@gmail.com","P@ssw0rd"));
 	}
 	
+	/**
+	 * Test que comprueba que existen más de 0 años de peliculas diferentes en la BD
+	 * @throws RemoteException
+	 */
 	@Test
 	public void Test4_ObtenerAnyoTest() throws RemoteException {
 		assertTrue(cineplus.ObtenerAnyo().size() > 0);
 	}
 	
+	/**
+	 * Test que comprueba que en la BD hay más generos de peliculas que 0.
+	 * @throws RemoteException
+	 */
 	@Test
 	public void Test5_ObtenerGeneroTest() throws RemoteException {
 		assertTrue(cineplus.ObtenerGenero().size() >0);
 	}
 	
+	/**
+	 * Metodo que comprueba si existe una pelicula determinada
+	 * @throws RemoteException
+	 */
 	@Test
 	public void Test6_BusquedaTest() throws RemoteException {
 		assertTrue(cineplus.Busqueda("Cadena perpetua", "1994", "Drama").size() > 0);
 	}
 	
+	/**
+	 * Metodo que comprieba si existe un usuario en la bd
+	 * @throws RemoteException
+	 */
 	@Test
 	public void Test7_DevolverUsuarioTest() throws RemoteException {
 		assertEquals(cineplus.DevolverUsuario("javi@gmail.com").getNombre(), "Javi");
 	}
 	
-	
+	/**
+	 * Metodo que comprueba si elimina usuarios de la bd
+	 * @throws RemoteException
+	 */
 	@Test
 	public void Test8_eliminarUsuarioTest() throws RemoteException {
 		 cineplus.eliminarUsuario(user);
@@ -265,13 +303,20 @@ public class CinePlusControllerTest {
 		 assertEquals(false,cineplus.LoginUsuario("javi2@gmail.com", "P@ssw0rd"));
 	}
 	
+	/**
+	 * Metodo que comprueba que registras usuarios en la bd
+	 * @throws RemoteException
+	 */
 	@Test
 	public void Test9_registrarUsuarioConSaldoTest() throws RemoteException {
 		cineplus.RegistrarUsuario("Mengano", "nuevoEmailgiroGuion@gmail.com", "Mengano", "HijodeMenganez", "pass", "Myanmar", 10000,false);
 		assertEquals(String.valueOf(cineplus.DevolverUsuario("nuevoEmailgiroGuion@gmail.com").getSaldo()),"10000.0");
-	
 	}
 	
+	/**
+	 * Metodo que comprueba si se ha alquilado peliculas
+	 * @throws RemoteException
+	 */
 	@Test
 	public void test10_AlquilerSatisfactorioT () throws RemoteException {
 		assertTrue(cineplus.getPeliUsuario("javi2@gmail.com").size() ==2);

@@ -1,3 +1,8 @@
+/** @package ees.deusto.spq.ProyectoCinePlus.servidor.DAO;
+*   @brief Test UsuarioDAOTest. May 18, 2018
+*
+*   Este es el test que comprueba los metodos de PeliculaDAO.
+*/
 package es.deusto.spq.ProyectoCinePlus.servidor.DAO;
 
 import static org.junit.Assert.*;
@@ -20,23 +25,32 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 import junit.framework.JUnit4TestAdapter;
 
-
+/**
+* @author mikelgol7
+* @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
+* @brief Test UsuarioDAOTest. May 18, 2018
+* @since 3.0.0
+* 
+* Este es el test que comprueba los metodos de PeliculaDAO.
+*/
 public class PeliculaDAOTest {
 	
 
 	@Rule public ContiPerfRule rule = new ContiPerfRule();
 
+	private static PeliculaDAO peliculaDAO;
+	private static List<Usuario> listUsuarios;
+		
+	static Logger logger = Logger.getLogger(PeliculaDAOTest.class.getName());
 	
 	public static junit.framework.Test suite() {
 		 return new JUnit4TestAdapter(PelisPerfilDAOTest.class);
 	}
 	
-	
-	private static PeliculaDAO peliculaDAO;
-	private static List<Usuario> listUsuarios;
-		
-	static Logger logger = Logger.getLogger(PeliculaDAOTest.class.getName());
     
+	/**
+	 * Inicializo peliculas y las almaceno.
+	 */
 	@BeforeClass
 	public static void setUpClass() {
 		
@@ -61,6 +75,10 @@ public class PeliculaDAOTest {
 
 	}
 	
+	/**
+	 * Test para comprobar que añado peliculas
+	 * @throws Exception
+	 */
 	@Test
 	public void testStorePelicula() throws Exception {
 		logger.info("testStorePelicula()");
@@ -112,6 +130,10 @@ public class PeliculaDAOTest {
 		 
 	}
 	
+	/**
+	 * Metodo que comprueba si se actualiza un usuario.
+	 * @throws Exception
+	 */
 	@Test
 	public void updateUsuarioTest() throws Exception{
 		logger.info("updateUsuarioTest()");

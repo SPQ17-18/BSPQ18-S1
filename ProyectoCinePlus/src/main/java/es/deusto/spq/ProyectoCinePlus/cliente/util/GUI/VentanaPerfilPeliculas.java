@@ -1,7 +1,7 @@
 /** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
-    @brief Ventana Perfil de peliculas. May 17, 2018
-
-    Esta es la ventana donde se muestran las peliculas que tiene el usuario que ha hecho login. 
+*   @brief Ventana Perfil de peliculas. May 17, 2018
+*
+*   Esta es la ventana donde se muestran las peliculas que tiene el usuario que ha hecho login. 
 */
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 

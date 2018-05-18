@@ -1,9 +1,9 @@
 /** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
-    @brief Ventana de principal. May 17, 2018
-
-    Esta es la ventana principal de la aplicacion. 
-    Desde aqui puedes empezar a crear cuentas de usuario, iniciar sesion, 
-    ver los creditos de la aplicacion o cerrar el programa. 
+*   @brief Ventana de principal. May 17, 2018
+*
+*   Esta es la ventana principal de la aplicacion. 
+*   Desde aqui puedes empezar a crear cuentas de usuario, iniciar sesion, 
+*   ver los creditos de la aplicacion o cerrar el programa. 
 */
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 

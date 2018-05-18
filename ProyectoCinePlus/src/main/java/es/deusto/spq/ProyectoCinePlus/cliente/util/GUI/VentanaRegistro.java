@@ -1,9 +1,9 @@
 /** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
-    @brief Ventana de registro de usuario. May 17, 2018
-
-    Esta es la ventana que te permite crear nuevas cuentas de usuario. 
-    Para eso, tienes que introducir los datos cumpliendo los criterios y dar al boton de registrar.
-	Una vez que te registres podras iniciar sesion en tu nueva cuenta de CinePlus.
+*   @brief Ventana de registro de usuario. May 17, 2018
+*
+*   Esta es la ventana que te permite crear nuevas cuentas de usuario. 
+*   Para eso, tienes que introducir los datos cumpliendo los criterios y dar al boton de registrar.
+*	Una vez que te registres podras iniciar sesion en tu nueva cuenta de CinePlus.
 */
 
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;

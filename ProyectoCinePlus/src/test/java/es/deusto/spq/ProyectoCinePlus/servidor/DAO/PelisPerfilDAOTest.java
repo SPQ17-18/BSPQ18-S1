@@ -1,3 +1,8 @@
+/** @package ees.deusto.spq.ProyectoCinePlus.servidor.DAO;
+*   @brief Test PelisPerfilDAOTest. May 18, 2018
+*
+*   Este es el test que comprueba los metodos de PelisPerfilDAO
+*/
 package es.deusto.spq.ProyectoCinePlus.servidor.DAO;
 
 import static org.junit.Assert.*;
@@ -18,7 +23,14 @@ import org.junit.Test;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
 import junit.framework.JUnit4TestAdapter;
-
+/**
+* @author mikelgol7
+* @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
+* @brief Test PelisPerfilDAOTest. May 18, 2018
+* @since 3.0.0
+* 
+* Este es el test que comprueba los metodos de PelisPerfilDAO.
+*/
 public class PelisPerfilDAOTest {
 	
 	private static PelisPerfilDAO pelisPerfilDAO;
@@ -43,6 +55,10 @@ public class PelisPerfilDAOTest {
 
 	}
 
+	/**
+	 * Creo objetos pelisperfil y los subo a la base de datos si no existen.
+	 * @throws Exception
+	 */
 	@Before
 	public void setUp() throws Exception{
 		pelisperfil1 = new PelisPerfil("javitxu@gmail.com",1);
@@ -62,6 +78,9 @@ public class PelisPerfilDAOTest {
 	}
 
 
+	/**
+	 * Test que comprueba si se almacena el objeto pelisperfil
+	 */
 	@Test
 	public void StorePelisPerfiltest(){
 		assertTrue(pelisPerfilDAO.storePelisPerfil(pelisperfil3));
@@ -91,6 +110,9 @@ public class PelisPerfilDAOTest {
 		assertFalse(pelisPerfilDAO.checkPelis(pelisperfil2));
 	}
 
+	/**
+	 * Comprobamos que obtiene las pelis del usuario que le pasamos. (previamente le hemos precargado pelis)
+	 */
 	@Test
 	@PerfTest(invocations = 200)
 	@Required(max = 92,percentile95 = 60)

@@ -1,3 +1,8 @@
+/** @package ees.deusto.spq.ProyectoCinePlus.servidor.DATA;
+*   @brief Test PeliculaTest. May 18, 2018
+*
+*   Este es el test que comprueba los metodos de Pelicula.
+*/
 package es.deusto.spq.ProyectoCinePlus.servidor.DATA;
 
 import static org.junit.Assert.*;
@@ -17,10 +22,10 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
 /**
 * @author mikelgol7
 * @package es.deusto.spq.ProyectoCinePlus.servidor.DATA
-* @brief Test UsuarioTest. May 18, 2018
+* @brief Test PeliculaTest. May 18, 2018
 * @since 2.0.0
 * 
-* Este es el test que comprueba los datos de las peliculas.
+* Este es el test que comprueba los datos de las Pelicula.
 */
 public class PeliculaTest {
 

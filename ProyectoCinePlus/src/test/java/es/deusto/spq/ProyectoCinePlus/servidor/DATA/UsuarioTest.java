@@ -1,3 +1,8 @@
+/** @package ees.deusto.spq.ProyectoCinePlus.servidor.DATA;
+*   @brief Test UsuarioTest. May 18, 2018
+*
+*   Este es el test que comprueba los metodos de Usuario.
+*/
 package es.deusto.spq.ProyectoCinePlus.servidor.DATA;
 
 import static org.junit.Assert.*;
@@ -16,7 +21,7 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAOTest;
 * @brief Test UsuarioTest. May 17, 2018
 * @since 2.0.0
 * 
-* Este es el test que comprueba los datos del los usuarios.
+* Este es el test que comprueba los datos del Usuario.
 */
 public class UsuarioTest {
 

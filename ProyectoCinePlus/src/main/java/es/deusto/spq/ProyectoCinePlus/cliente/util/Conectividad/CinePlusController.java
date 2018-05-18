@@ -1,3 +1,8 @@
+/** @package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad
+*    @brief Clase de CinePLusController. May 17, 2018
+*
+*    Este es el controller del cliente donde se encuentran los metodos que apuntan al servidor y donde esta el main.
+*/
 package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad;
 
 import java.rmi.RemoteException;

@@ -1,5 +1,17 @@
+/** @package ees.deusto.spq.ProyectoCinePlus.servidor.DAO;
+*   @brief Test UsuarioDAOTest. May 18, 2018
+*
+*   Este es el test que comprueba los metodos de UsuarioDAO
+*/
 package es.deusto.spq.ProyectoCinePlus.servidor.DAO;
-
+/**
+* @author mikelgol7
+* @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
+* @brief Test UsuarioDAOTest. May 18, 2018
+* @since 3.0.0
+* 
+* Este es el test que comprueba los metodos de UsuarioDAO.
+*/
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
@@ -51,6 +63,10 @@ public class UsuarioDAOTest {
 	
 	}
 	
+	/**
+	 * Creo usuarios, compruebo si existen, y los almaceno en caso d eno existir.
+	 * @throws Exception
+	 */
 	@Before
 	public void setUp() throws Exception {
 		 spq = new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false);		
@@ -59,7 +75,7 @@ public class UsuarioDAOTest {
 		 mikel = new Usuario ("MikelSPQ", "Mikel@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "Euskadi", false);
 		 xabi = new Usuario ("XabiSPQ", "Xabi@gmail.com", "Xabi", "Sarrionandia", "P@ssw0rd", "Euskadi", false);
 		 aritz = new Usuario ("AritzSPQ", "aritz@gmail.com", "Aritz", "Rasines", "P@ssw0rd", "Euskadi", false);
-		javi = new Usuario ("JaviSPQ", "javi@gmail.com", "Javi", "Fernandez", "P@ssw0rd", "Euskadi", true);
+		 javi = new Usuario ("JaviSPQ", "javi@gmail.com", "Javi", "Fernandez", "P@ssw0rd", "Euskadi", true);
 		 
 			
 		 if(usuarioDAO.checkUser(mikel) == false) {

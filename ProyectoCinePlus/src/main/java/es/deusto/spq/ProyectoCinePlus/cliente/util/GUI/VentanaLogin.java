@@ -1,9 +1,9 @@
 /** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
-    @brief Ventana de inicio de sesion. May 17, 2018
-
-    Esta es la ventana que te da acceso a la funcionalidad completa de la aplicacion. 
-    Para eso, tienes que estar registrado en la aplicacion y disponer de un usuario y una contrasenya valida.
-    Introduciendo un email valido y una contrasenya valida te permite entrar a tu perfil personal.
+*   @brief Ventana de inicio de sesion. May 17, 2018
+*
+*   Esta es la ventana que te da acceso a la funcionalidad completa de la aplicacion. 
+*   Para eso, tienes que estar registrado en la aplicacion y disponer de un usuario y una contrasenya valida.
+*   Introduciendo un email valido y una contrasenya valida te permite entrar a tu perfil personal.
 */
 
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;

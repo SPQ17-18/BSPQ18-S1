@@ -1,8 +1,8 @@
 /** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
-    @brief Ventana de saldo. May 17, 2018
-
-    Esta es la ventana qte permite anyadir saldo a la aplicacion. 
-    Para eso, tendras que anyadir, el numero de tarjeta, el nombre de usuario y el codigo de seguridad de la tarjeta y selecionar el importe que deseas recargar. 
+*   @brief Ventana de saldo. May 17, 2018
+*
+*   Esta es la ventana qte permite anyadir saldo a la aplicacion. 
+*   Para eso, tendras que anyadir, el numero de tarjeta, el nombre de usuario y el codigo de seguridad de la tarjeta y selecionar el importe que deseas recargar. 
 */
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 

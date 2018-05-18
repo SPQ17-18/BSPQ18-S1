@@ -1,9 +1,9 @@
 /** @package  es.deusto.spq.ProyectoCinePlus.servidor.DAO
-    @brief DAO de las PelisPerfil. May 17, 2018
-
-    Se trata del DAO que almacena las peliculas de cada usuario en la BD.
-    Este sera el tercer nivel del servidor
-    
+*   @brief DAO de las PelisPerfil. May 17, 2018
+*
+*   Se trata del DAO que almacena las peliculas de cada usuario en la BD.
+*   Este sera el tercer nivel del servidor
+*   
 */
 
 package es.deusto.spq.ProyectoCinePlus.servidor.DAO;

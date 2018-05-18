@@ -1,3 +1,8 @@
+/** @package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad
+*    @brief  RMI service locator. May 17, 2018
+*
+*    Este es el rmi service locator del cliente.
+*/
 package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus;

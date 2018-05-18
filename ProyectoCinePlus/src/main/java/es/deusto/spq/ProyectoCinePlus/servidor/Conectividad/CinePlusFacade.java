@@ -1,8 +1,8 @@
 /** @package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
-    @brief Fachada del servidor. May 17, 2018
-
-    Se trata de una barrera para evitar mostrar la funcionalidad de los metodos a conexiones externas. 
-    Este sera el primer nivel del servidor.
+*   @brief Fachada del servidor. May 17, 2018
+*
+*   Se trata de una barrera para evitar mostrar la funcionalidad de los metodos a conexiones externas. 
+*   Este sera el primer nivel del servidor.
 */
 
 package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad;
