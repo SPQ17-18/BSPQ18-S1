@@ -12,7 +12,7 @@ import org.junit.Test;
 * @author mikelgol7
 * @package es.deusto.spq.ProyectoCinePlus.servidor.DATA
 * @brief Test UsuarioTest. May 18, 2018
-* @since 2.0.0
+* @since 3.0.0
 * 
 * Este es el test que comprueba que se han introducido los de las peliculas.
 */
@@ -29,7 +29,7 @@ public class PelisPerfilTest {
 		
 	}
 	/**
-	 * Metodo que se encarga de inicializar los emails con cada perfil
+	 * Metodo que se encarga de inicializar el objeto PelisPerfil con emails y con el id_peliculas
 	 * @throws Exception
 	 */
 	@Before
@@ -38,7 +38,7 @@ public class PelisPerfilTest {
 		pelisperfil2 = new PelisPerfil("mikel@gmail.com",3);
 	}
 	/**
-	 * Metodo que se encarga de comprobar  que el email seleccionado es de dicho perfil.
+	 * Metodo que se encarga de comprobar que el email de un pelisperfil es correcto y el id:peliculas.
 	 */
 	@Test
 	public void comprobarDatosTest() {
