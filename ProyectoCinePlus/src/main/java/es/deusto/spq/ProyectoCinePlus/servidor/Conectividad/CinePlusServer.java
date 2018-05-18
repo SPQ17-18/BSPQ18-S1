@@ -83,6 +83,17 @@ public class CinePlusServer {
 	
 	/**
 	 * Metodo que se encarga de llamar a registrarUsuario de usuarioDAO parasandole los parametros y devuelve un true si se ha podido registrar.
+	 * 
+	 * @param usuario String con el nombre de usuario dentro de la plataforma
+	 * @param email String con el email asociado al usuario
+	 * @param nombre String con nombre de la persona fisica
+	 * @param apellido String con el apellido de la persona
+	 * @param password String contrasenya de 6 caracteres minimo
+	 * @param pais String pais de residencia actual
+	 * @param admin boolean es administrador o no
+	 * 
+	 * @return boolean - <code>true</code> si se ha registrado correctamente.
+	 * @throws RemoteException
 	 */
 	public synchronized boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password,
 	String pais, boolean admin) throws RemoteException {
@@ -92,6 +103,18 @@ public class CinePlusServer {
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo de registrarUsuario de usuarioDAO con parametros (anyadiendo el saldo), y devuelve true si se ha podido registrar.
+	 * 
+	 * @param usuario - String
+	 * @param email - String
+	 * @param nombre - String
+	 * @param apellido - String
+	 * @param password - String
+	 * @param pais - String
+	 * @param saldo - float
+	 * @param admin - boolean
+	 * 
+	 * @return boolean - <code>true</code> si se ha registrado correctamente.
+	 * @throws RemoteException
 	 */
 	public synchronized boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password,
 			String pais, float saldo, boolean admin) throws RemoteException {
@@ -102,6 +125,11 @@ public class CinePlusServer {
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo de usuarioRegistrado de usuarioDAO para mirar si un usuario con una contrasenya existe en la base de datos.
+	 * @param usuario - String
+	 * @param password - String
+	 * 
+	 * @return boolean - <code>true</code> si ha iniciado sesion correctamente.
+	 * @throws RemoteException
 	 */
 	public synchronized boolean usuarioRegistrado (String usuario, String password) throws RemoteException {
         return usuarioDAO.loginUser(usuario, password);
@@ -203,6 +231,7 @@ public class CinePlusServer {
 
 	/**
 	 * Metodo que se encarga de llamar al metodo Anyos de peliculaDAO y devuelve una lista con los a�os de las pelicualas.
+	 * @throws RemoteException
 	 */
 	public List<String> Anyos() throws RemoteException {
 		return peliculaDAO.Anyos();
@@ -210,6 +239,7 @@ public class CinePlusServer {
 
 	/**
 	 * Metodo que se encarga de llamar al metodo Generos de peliculaDAO y devuelve una lista con los generos de las peliculas. 
+	 * @throws RemoteException
 	 */
 	public List<String> Generos() throws RemoteException {
 		return peliculaDAO.Generos();
@@ -217,6 +247,9 @@ public class CinePlusServer {
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo actualizarUsuario de usuarioDAO pasandole un objeto usuario y se encarga de eliminarlo.
+	 *
+	 * @param user Objeto <code>Usuario</code> a eliminar
+	 * @throws RemoteException
 	 */
 	public void eliminarUsuario(Usuario user) throws RemoteException {
 		usuarioDAO.deleteUsuario(user);
@@ -224,6 +257,9 @@ public class CinePlusServer {
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo checkUsuario de usuarioDAO, para comprobar si existe el usuario.
+	 *
+	 * @param user Objeto <code>Usuario</code> a checkear
+	 * @throws RemoteException
 	 */
 	public boolean checkUsuario(Usuario user) throws RemoteException {
 		return usuarioDAO.checkUser(user);

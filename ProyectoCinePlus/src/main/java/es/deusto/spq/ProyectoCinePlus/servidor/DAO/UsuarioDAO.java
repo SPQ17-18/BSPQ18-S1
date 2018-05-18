@@ -266,7 +266,11 @@ public class UsuarioDAO implements IUsuarioDAO{
 		}
 		return resul;
 	}
-
+	/**
+	 * Metodo que recbe un usuario y lo checkea que exista 
+	 * 
+	 * @param usuario - Usuario
+	 */
 
 	public boolean checkUser(Usuario usuario) {
 		boolean resul = false;

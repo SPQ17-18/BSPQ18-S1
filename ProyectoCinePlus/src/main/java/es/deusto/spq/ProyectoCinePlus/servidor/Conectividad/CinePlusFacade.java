@@ -126,6 +126,7 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo Generos de CinePlusServer y devuelve una lista con los generos de las peliculas. 
+	 * @throws RemoteException
 	 */
 	public List<String> Generos() throws RemoteException {
 		return cpser.Generos();
