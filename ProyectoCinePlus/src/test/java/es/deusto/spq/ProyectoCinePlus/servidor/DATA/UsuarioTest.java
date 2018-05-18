@@ -12,6 +12,12 @@ import org.junit.Test;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAOTest;
 
+/** @package es.deusto.spq.ProyectoCinePlus.servidor.DATA
+* @brief Test UsuarioTest. May 17, 2018
+* @since 2.0.0
+* 
+* Este es el test que comprueba los datos del los usuarios.
+*/
 public class UsuarioTest {
 
 	
@@ -22,16 +28,23 @@ public class UsuarioTest {
 	private static Usuario aritz;
 	private static Usuario javi;
 
+	/**
+	 * Metodo que se encarga de inicializar los usuarios que hemos definidos.
+	 * @throws Exception
+	 */
 	@BeforeClass
 	public static void setUp() throws Exception {
 		mikel = new Usuario ("MikelSPQ", "Mikel@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "Euskadi", false);
 		xabi = new Usuario ("XabiSPQ", "Xabi@gmail.com", "Xabi", "Sarrionandia", "P@ssw0rd", "Euskadi", false);
 		xabi.setSaldo(50);
-		aritz = new Usuario (" ", " ", " ", " ", " ", "España", false);
-		javi = new Usuario (" ", " ", " ", " ", " ", "España", false);
+		aritz = new Usuario (" ", " ", " ", " ", " ", "Euskadi", false);
+		javi = new Usuario (" ", " ", " ", " ", " ", "Euskadi", false);
 				
 	}
 
+	/**
+	 * Metodo que se encarga de comprobar los campos del usuario.
+	 */
 	@Test
 	public void comprobarcamposMikeltest() {
 		assertEquals("MikelSPQ", mikel.getUsuario());
@@ -43,6 +56,9 @@ public class UsuarioTest {
 		assertEquals(false, mikel.isAdmin());
 	}
 	
+	/**
+	 * Metodo que se encarga de comprobar los campos del usuario.
+	 */
 	@Test
 	public void comprobarcamposXabitest() {
 		assertEquals("XabiSPQ", xabi.getUsuario());
@@ -54,6 +70,9 @@ public class UsuarioTest {
 		assertFalse( xabi.isAdmin());
 	}
 
+	/**
+	 * Metodo que se encarga de comprobar que se ha copiado bien el usuario.
+	 */
 	@Test
 	public void copiarUsuarioTest() {
 		aritz.copiarUsuario(xabi);
@@ -68,6 +87,9 @@ public class UsuarioTest {
 		assertFalse( aritz.isAdmin());
 	}
 
+	/**
+	 * Metodo que se encarga de comprobar que el usuario es administrador.
+	 */
 	@Test
 	public void comprobarUsuarioAdminTest() {
 		javi.copiarUsuario(xabi);

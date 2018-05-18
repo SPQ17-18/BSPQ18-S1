@@ -1,9 +1,9 @@
 /** @package es.deusto.spq.ProyectoCinePlus.servidor.DATA
-    @brief Clase Pelicula. May 17, 2018
-    @since 1.0.0
-
-    Esta es la clase de pelicula, con los respectivos parametros de datanucleus para crear las tablas de la base de datos. 
-    Con esta clase definimos el objeto de Pelicula.
+*    @brief Clase Pelicula. May 17, 2018
+*    @since 1.0.0
+*
+*    Esta es la clase de pelicula, con los respectivos parametros de datanucleus para crear las tablas de la base de datos. 
+*    Con esta clase definimos el objeto de Pelicula.
 */
 package es.deusto.spq.ProyectoCinePlus.servidor.DATA;
 
