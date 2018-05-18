@@ -14,7 +14,14 @@ import org.junit.Test;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.PeliculaDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
-
+/**
+* @author mikelgol7
+* @package es.deusto.spq.ProyectoCinePlus.servidor.DATA
+* @brief Test UsuarioTest. May 18, 2018
+* @since 2.0.0
+* 
+* Este es el test que comprueba los datos de las peliculas.
+*/
 public class PeliculaTest {
 
 	
@@ -24,6 +31,10 @@ public class PeliculaTest {
 	private static Pelicula pelicula2;
 	private static Usuario spq;
 	
+	/**
+	 * Metodo que se encarga de inicializar las peliculas que hemos definidos.
+	 * @throws Exception
+	 */
 	@BeforeClass
 	public static void setUp() throws Exception {
 		List<Usuario> listUsuarios=new ArrayList<>();
@@ -35,7 +46,9 @@ public class PeliculaTest {
 		pelicula2 = new Pelicula (2, "Alternativa", 140, "vida de prisioneros 2", 1995, "Suspense", 15,listUsuarios,"15");
 	}
 
-
+	/**
+	 * Metodo que se encarga de comprobar los campos de la pelicula 1.
+	 */
 	@Test
 	public void comprobarcamposPelicula1test() {
 		assertEquals("Cadena perpetua", pelicula1.getNombre());
@@ -45,7 +58,9 @@ public class PeliculaTest {
 		assertEquals("Drama", pelicula1.getCategoria());
 		assertEquals("14.0", String.valueOf(pelicula1.getPrecio()));
 	}
-	
+	/**
+	 * Metodo que se encarga de comprobar los campos de la pelicula 2.
+	 */
 	@Test
 	public void comprobarcamposPelicula2test() {
 		assertEquals("Alternativa", pelicula2.getNombre());
@@ -55,7 +70,9 @@ public class PeliculaTest {
 		assertEquals("Suspense", pelicula2.getCategoria());
 		assertEquals("15.0", String.valueOf(pelicula2.getPrecio()));
 	}
-
+	/**
+	 * Metodo que se encarga de comprobar que se ha copiado bien la pelicula.
+	 */
 	@Test
 	public void copiarPeliculaTest() {
 		pelicula1.copiarPelicula(pelicula2);
