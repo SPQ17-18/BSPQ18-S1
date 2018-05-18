@@ -60,36 +60,6 @@ public class PelisPerfilDAO {
 	
 	
 	
-	/**
-	 * Metodo que se encarga de eliminar una pelicula del perfil de un usuario
-	 * 
-	 * @param pelisPerfil PelisPerfil
-	 */
-	
-	public void deletePelisPerfil(PelisPerfil pelisPerfil) {
-		PersistenceManager pm = pmf.getPersistenceManager();
-		Transaction tx = pm.currentTransaction();
-
-		try {
-			tx.begin();
-			Query<PelisPerfil> query = pm.newQuery(PelisPerfil.class, "email =='" + pelisPerfil.getEmail() + "'");
-			Collection<?> result = (Collection<?>) query.execute();
-			PelisPerfil pelisP = (PelisPerfil) result.iterator().next();
-			query.close(result);
-			pm.deletePersistent(pelisP);
-			tx.commit();
-		} catch (Exception ex) {
-			logger.error( "Error cleaning a film: " + ex.getMessage());
-		
-		} finally {
-			if (tx != null && tx.isActive()) {
-				tx.rollback();
-			}
-			if (pm != null && !pm.isClosed()) {
-				pm.close();
-			}
-		}
-	}
 	
 	/**
 	 * Metodo que inserta en la base de datos un objeto PelisPerfil.
@@ -184,6 +154,38 @@ public class PelisPerfilDAO {
 			pm.close();
 		}
 		return resul;
+	}
+	
+	
+	/**
+	 * Metodo que se encarga de eliminar una pelicula del perfil de un usuario
+	 * 
+	 * @param pelisPerfil PelisPerfil
+	 */
+	
+	public void deletePelisPerfil(PelisPerfil pelisPerfil) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+
+		try {
+			tx.begin();
+			Query<PelisPerfil> query = pm.newQuery(PelisPerfil.class, "email =='" + pelisPerfil.getEmail() + "'");
+			Collection<?> result = (Collection<?>) query.execute();
+			PelisPerfil pelisP = (PelisPerfil) result.iterator().next();
+			query.close(result);
+			pm.deletePersistent(pelisP);
+			tx.commit();
+		} catch (Exception ex) {
+			logger.error( "Error cleaning a film: " + ex.getMessage());
+		
+		} finally {
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+			if (pm != null && !pm.isClosed()) {
+				pm.close();
+			}
+		}
 	}
 	
 

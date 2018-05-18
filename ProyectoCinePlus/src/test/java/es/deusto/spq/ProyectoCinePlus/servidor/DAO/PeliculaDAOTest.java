@@ -8,10 +8,12 @@ import java.util.logging.Logger;
 
 import org.databene.contiperf.PerfTest;
 import org.databene.contiperf.Required;
+import org.databene.contiperf.junit.ContiPerfRule;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
@@ -19,6 +21,9 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 
 public class PeliculaDAOTest {
+	
+	@Rule public ContiPerfRule i = new ContiPerfRule();
+
 
 	
 	private static PeliculaDAO peliculaDAO;

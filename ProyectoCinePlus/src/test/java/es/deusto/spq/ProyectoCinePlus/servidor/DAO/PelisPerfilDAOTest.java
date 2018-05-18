@@ -68,18 +68,25 @@ public class PelisPerfilDAOTest {
 
 	@Test
 	public void StoreObjetcttest(){
-		pelisPerfilDAO.storePelisPerfil(pelisperfil2);
-		assertTrue(pelisPerfilDAO.checkPelis(pelisperfil2));
+		pelisPerfilDAO.storePelisPerfil(pelisperfil3);
+		assertTrue(pelisPerfilDAO.checkPelis(pelisperfil3));
 	}
+	
+	/**
+	 * Test que comprueba que se hayan eliminado todas las pelis de la bd satisfactoriamente
+	 */
 	
 	@Test
 	public void deleteObjectTest(){
 		pelisPerfilDAO.deletePelisPerfil(pelisperfil1);
+		pelisPerfilDAO.deletePelisPerfil(pelisperfil2);
+		
 		assertFalse(pelisPerfilDAO.checkPelis(pelisperfil1));
+		assertFalse(pelisPerfilDAO.checkPelis(pelisperfil2));
 	}
 
 	@Test
-	@Required(totalTime = 300)
+	@Required(totalTime = 3)
 	public void getPeliUsuarioTest(){
 		assertTrue(pelisPerfilDAO.getPeliUsuario("javitxu@gmail.com").size()>0);
 	}
