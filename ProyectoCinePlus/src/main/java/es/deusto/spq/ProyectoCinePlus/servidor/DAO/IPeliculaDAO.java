@@ -1,3 +1,10 @@
+/** @package  es.deusto.spq.ProyectoCinePlus.servidor.DAO
+    @brief Interfaz de PeliculasDAO. May 17, 2018
+
+    Se trata de la interfaz que ofrece los servicios de DAO de las peliculas
+    
+*/
+
 package es.deusto.spq.ProyectoCinePlus.servidor.DAO;
 
 import java.util.List;
@@ -5,13 +12,13 @@ import java.util.List;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 
 /**
- *
+ * @author Fercol
  * @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
  * @version 1.0.0
  * @since May 17, 2018
- * @author Fercol
  * 
- * Interfaz remota de PeliculaDAO. Esta implementada por
+ * 
+ * Interfaz remota de PeliculaDAO. Esta es implementada por
  * la clase PeliculaDAO para realizar las consultas a la base de datos
  * de los objetos de Pelicula.
  *

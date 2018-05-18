@@ -1,3 +1,10 @@
+/** @package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
+    @brief Fachada del servidor. May 17, 2018
+
+    Se trata de una barrera para evitar mostrar la funcionalidad de los metodos a conexiones externas. 
+    Este sera el primer nivel del servidor.
+*/
+
 package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad;
 
 import java.rmi.RemoteException;
@@ -16,7 +23,7 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
  * @version 3.0.1
  * @since May 17, 2018
  * 
- * Clase CinePlusFacade que implementa os metodos de ICinePlus y se encarga de realizar las llamadas a los diferentes metodos del servidor.
+ * Clase CinePlusFacade que implementa los metodos de ICinePlus y se encarga de realizar las llamadas a los diferentes metodos del servidor.
  *
  */
 public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{

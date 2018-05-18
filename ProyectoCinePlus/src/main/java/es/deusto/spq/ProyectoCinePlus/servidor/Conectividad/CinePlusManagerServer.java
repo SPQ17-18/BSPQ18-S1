@@ -1,3 +1,10 @@
+/** @package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
+    @brief Manager Del Servidor. May 17, 2018
+
+    Se trata de la clase que se encarga de la gestion, es decir,el lanzamiento del servidor.
+    Le pasaremos los argumentos de IP puerto y nombre
+*/
+
 package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad;
 
 import java.io.BufferedReader;
@@ -11,7 +18,7 @@ import org.apache.log4j.Logger;
 
 /**
  * 
- * @author Fercol
+ * @author Aritzmetal
  * @package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
  * @version 3.0.1
  * @since May 17, 2018

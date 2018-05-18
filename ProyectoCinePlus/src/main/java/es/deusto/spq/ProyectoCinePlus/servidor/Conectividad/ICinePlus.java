@@ -1,3 +1,11 @@
+/** @package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
+    @brief Interfaz del Servidor. May 17, 2018
+
+    Se trata de la interfaz a la que llaman los clientes remotos para obtener los servicios
+    que ofrece el servidor de la aplicacion. 
+    
+*/
+
 package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad;
 
 import java.rmi.Remote;

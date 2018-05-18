@@ -1,3 +1,11 @@
+/** @package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
+    @brief Servidor CinePlusServer. May 17, 2018
+
+    Se trata del servidor que ofrece las funcionalidades de nuestra aplicacion. Este llama a los 
+    metodos de los DAOs para realizar todas las transacciones solicitadas.
+    Este sera el segundo nivel del servidor.
+*/
+
 package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad;
 
 import java.rmi.RemoteException;

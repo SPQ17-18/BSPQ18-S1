@@ -1,3 +1,10 @@
+/** @package  es.deusto.spq.ProyectoCinePlus.servidor.DAO
+    @brief Interfaz de PeliculasDAO. May 17, 2018
+
+    Se trata del DAO que almacena las peliculas en la BD.
+    Este sera el tercer nivel del servidor
+    
+*/
 package es.deusto.spq.ProyectoCinePlus.servidor.DAO;
 
 import java.util.ArrayList;

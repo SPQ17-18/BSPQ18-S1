@@ -37,16 +37,13 @@ public class UsuarioDAOTest {
 	private Usuario javi;
 	private Usuario xabi;
 	
-//	@Rule public ContiPerfRule rule = new ContiPerfRule();
-//	
-//	
-//	public static junit.framework.Test suite() {
-//		 return new JUnit4TestAdapter(UsuarioDAOTest.class);
-//	}
-	/**
-	 * Inicializamos los objetos que se van a crear una sola vez en todo el test
-	 * 
-	 */
+	@Rule public ContiPerfRule rule = new ContiPerfRule();
+	
+	
+	public static junit.framework.Test suite() {
+		 return new JUnit4TestAdapter(UsuarioDAOTest.class);
+	}
+	
 	@BeforeClass
 	public static void setUpClass() {
 		usuarioDAO = new UsuarioDAO();	
@@ -156,7 +153,7 @@ public class UsuarioDAOTest {
 	 */
 	
 	@Test
-	@Required(max = 30, average = 5)
+	@Required(max = 30, average = 15)
 	public void test_5getUsuarioTest() throws Exception{
 
 		logger.info("Test 5 para obtener un usuario de la base de datos");
@@ -171,7 +168,7 @@ public class UsuarioDAOTest {
 	 */
 	@Test
 	@PerfTest(invocations = 100, threads = 10)
-	@Required(max = 5, average = 3)
+	@Required(max = 6, average = 5)
 	public void test_6checkUserTestOK() throws Exception{
 		boolean resul;
 		logger.info("Test 6 para realizar un login correcto");
@@ -185,7 +182,7 @@ public class UsuarioDAOTest {
 	 * @throws Exception
 	 */
 	@Test
-	@Required(max = 4, average = 3)
+	@Required(max = 10, average = 7)
 	public void test_7checkUserTestFAIL() throws Exception{
 		boolean resul;
 		logger.info("Test 7 para intentar obtener usuario pero da fallo");

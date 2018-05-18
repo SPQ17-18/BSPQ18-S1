@@ -65,6 +65,10 @@ public class PelisPerfilDAOTest {
 	public void StorePelisPerfiltest(){
 		assertTrue(pelisPerfilDAO.storePelisPerfil(pelisperfil3));
 	}
+	
+	/**
+	 * Test para comprobar la insercion correcta de un objeto
+	 */
 
 	@Test
 	public void StoreObjetcttest(){
