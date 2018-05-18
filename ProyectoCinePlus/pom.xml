@@ -127,12 +127,14 @@
 						<format>xml</format>
 						<format>html</format>
 					</formats>
-   			<!--############## ignora getters y setters ##############-->
+   			<!--############## ignora getters y setters , interfaces y objeto server ##############-->
 					<instrumentation>
 						<ignoreTrivial>true</ignoreTrivial>
 						<excludes>
 							<exclude>**/cliente/*.class</exclude>
 							<exclude>**/util/GUI/**/*.class</exclude>
+							<exclude>**/servidor/DAO/**/I*.class</exclude>
+							<exclude>**/servidor/Conectividad/**/CinePlusManagerServer.class</exclude>
 						</excludes>
 					</instrumentation> 
 					

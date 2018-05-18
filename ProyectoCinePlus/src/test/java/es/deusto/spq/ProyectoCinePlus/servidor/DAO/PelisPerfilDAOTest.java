@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+import org.databene.contiperf.PerfTest;
 import org.databene.contiperf.Required;
 import org.databene.contiperf.junit.ContiPerfRule;
 import org.junit.After;
@@ -28,12 +29,12 @@ public class PelisPerfilDAOTest {
 	
 	static Logger logger = Logger.getLogger(PelisPerfilDAOTest.class.getName());
 	
-//	@Rule public ContiPerfRule rule = new ContiPerfRule();
-//
-//	
-//	public static junit.framework.Test suite() {
-//		 return new JUnit4TestAdapter(PelisPerfilDAOTest.class);
-//	}
+	@Rule public ContiPerfRule rule = new ContiPerfRule();
+
+	
+	public static junit.framework.Test suite() {
+		 return new JUnit4TestAdapter(PelisPerfilDAOTest.class);
+	}
 	
 	
 	@BeforeClass
@@ -81,6 +82,7 @@ public class PelisPerfilDAOTest {
 	 */
 	
 	@Test
+	@Required(totalTime = 180)
 	public void deleteObjectTest(){
 		pelisPerfilDAO.deletePelisPerfil(pelisperfil1);
 		pelisPerfilDAO.deletePelisPerfil(pelisperfil2);
@@ -90,9 +92,10 @@ public class PelisPerfilDAOTest {
 	}
 
 	@Test
-	@Required(totalTime = 3)
+	@PerfTest(invocations = 200)
+	@Required(max = 92,percentile95 = 60)
 	public void getPeliUsuarioTest(){
-		assertTrue(pelisPerfilDAO.getPeliUsuario("javitxu@gmail.com").size()>0);
+		assertTrue(pelisPerfilDAO.getPeliUsuario("javitxu@gmail.com").size()>=0);
 	}
 	
 	@After

@@ -138,7 +138,7 @@ public class UsuarioDAOTest {
 	 */
 	
 	@Test
-	@Required(totalTime = 5)
+	@Required(totalTime = 10)
 	public void test_4loginUserTestFAIL() throws Exception{
 		boolean resul;
 		logger.info("Test 4 Logeando incorrectamente el usuario " + "Xabi@gmail.com");
@@ -153,7 +153,7 @@ public class UsuarioDAOTest {
 	 */
 	
 	@Test
-	@Required(max = 30, average = 15)
+	@Required(max = 20, percentile90 =13)
 	public void test_5getUsuarioTest() throws Exception{
 
 		logger.info("Test 5 para obtener un usuario de la base de datos");
@@ -168,7 +168,7 @@ public class UsuarioDAOTest {
 	 */
 	@Test
 	@PerfTest(invocations = 100, threads = 10)
-	@Required(max = 6, average = 5)
+	@Required(max = 170, average = 135)
 	public void test_6checkUserTestOK() throws Exception{
 		boolean resul;
 		logger.info("Test 6 para realizar un login correcto");
@@ -182,7 +182,8 @@ public class UsuarioDAOTest {
 	 * @throws Exception
 	 */
 	@Test
-	@Required(max = 10, average = 7)
+	@PerfTest(invocations = 300, threads = 3)
+	@Required(max = 120, average = 70)
 	public void test_7checkUserTestFAIL() throws Exception{
 		boolean resul;
 		logger.info("Test 7 para intentar obtener usuario pero da fallo");

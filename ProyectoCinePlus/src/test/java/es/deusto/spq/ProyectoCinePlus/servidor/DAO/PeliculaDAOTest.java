@@ -18,13 +18,19 @@ import org.junit.Test;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
+import junit.framework.JUnit4TestAdapter;
 
 
 public class PeliculaDAOTest {
 	
-	@Rule public ContiPerfRule i = new ContiPerfRule();
 
+	@Rule public ContiPerfRule rule = new ContiPerfRule();
 
+	
+	public static junit.framework.Test suite() {
+		 return new JUnit4TestAdapter(PelisPerfilDAOTest.class);
+	}
+	
 	
 	private static PeliculaDAO peliculaDAO;
 	private static List<Usuario> listUsuarios;
@@ -86,7 +92,7 @@ public class PeliculaDAOTest {
 	 */
 	@Test
 	@PerfTest(invocations = 120, threads = 5)
-	@Required(max = 3, average = 2)
+	@Required(max = 6, average = 5)
 	public void getPeliculaTest() throws Exception{
 		logger.info("getPeliculaTest()");
 		peliculaDAO.storePelicula( new Pelicula(7, "Star Trek 2", 142, "La ira de khan", 1994, "ciencia ficcion", 14, listUsuarios,"14"));
