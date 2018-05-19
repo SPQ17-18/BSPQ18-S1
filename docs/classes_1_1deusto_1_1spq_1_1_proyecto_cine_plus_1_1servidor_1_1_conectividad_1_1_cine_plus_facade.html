@@ -143,7 +143,7 @@ Métodos públicos</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock">
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00014">14</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00022">22</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a id="ae2df76b0a272ca790901c01d8a3ee7ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae2df76b0a272ca790901c01d8a3ee7ef">&#9670;&nbsp;</a></span>CinePlusFacade()</h2>
@@ -159,8 +159,14 @@ Métodos públicos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor de la clase <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade.html">CinePlusFacade</a> </p><dl class="exception"><dt>Excepciones</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">RemoteException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00022">22</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00032">32</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 
 </div>
 </div>
@@ -180,11 +186,10 @@ Métodos públicos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<h3>Nivel &mdash; Interfaz Remota</h3>
-<p>Metodo utilizado para actualizar la informacion de un usuario</p>
+<p>Metodo que se encarga de llamar al metodo actualizarUsuario de <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html">CinePlusServer</a>, pasandole un objeto usuario y se encarga de actualizarlo.</p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">user</td><td></td></tr>
+    <tr><td class="paramname">user</td><td>objeto <code>Usuario</code> a actualizar </td></tr>
   </table>
   </dd>
 </dl>
@@ -197,7 +202,7 @@ Métodos públicos</h2></td></tr>
 
 <p>Implementa <a class="el" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#ab963b111401e420c3738332f98fffc48">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus</a>.</p>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00059">59</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00154">154</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -225,16 +230,14 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<h3>Nivel &mdash; Interfaz Remota</h3>
-<dl class="section since"><dt>Desde</dt><dd>2.1</dd></dl>
-<p>Metodo utilizado para alquilar una pelicula seleccionada</p>
+<p>Metodo que se encarga de llamar al metodo Alquilar de <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html">CinePlusServer</a> pasandole un objeto PelisPerfil y nos devuelve un true si se ha podido realizar.</p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">PelisPerfil</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Devuelve</dt><dd><code>true</code> si se ha alquilado correctamente </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>boolean <code>true</code> si ha alquilado una pelicula correctamente. </dd></dl>
 <dl class="exception"><dt>Excepciones</dt><dd>
   <table class="exception">
     <tr><td class="paramname">RemoteException</td><td></td></tr>
@@ -244,18 +247,17 @@ Gráfico de llamadas para esta función:</div>
 
 <p>Implementa <a class="el" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a88b5c653cba7953c8045fb75fe32fa56">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus</a>.</p>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00048">48</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00123">123</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
 <div class="center"><img src="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_adf937a27739de016c6e74d958c1b4e08_cgraph.png" border="0" usemap="#classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_adf937a27739de016c6e74d958c1b4e08_cgraph" alt=""/></div>
 <map name="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_adf937a27739de016c6e74d958c1b4e08_cgraph" id="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_adf937a27739de016c6e74d958c1b4e08_cgraph">
-<area shape="rect" id="node2" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html#a6a9b6454442b3ac69cde0405ff0cd08d" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.Cine\lPlusServer.Alquilar" alt="" coords="256,28,459,84"/>
-<area shape="rect" id="node3" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_pelis_perfil_d_a_o.html#a5ff821613ec4da4c55104fb5c632b17b" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.PelisPerfilDAO.store\lPelisPerfil" alt="" coords="507,28,757,84"/>
-<area shape="rect" id="node4" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_pelis_perfil_d_a_o.html#a84dd83be1362292ad0c26ed4b6467280" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.PelisPerfilDAO.checkPelis" alt="" coords="805,109,1092,150"/>
-<area shape="rect" id="node5" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelis_perfil.html#a4d9053bfaf6fb47a31e12cf67c77aeba" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DATA.PelisPerfil.getEmail" alt="" coords="1140,36,1391,77"/>
-<area shape="rect" id="node7" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_pelis_perfil_d_a_o.html#a0f9611f1982e7fb0a31664ca47949455" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.PelisPerfilDAO.store\lObject" alt="" coords="823,28,1074,84"/>
-<area shape="rect" id="node6" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelis_perfil.html#a9b4b2bce12b34c0899793d3be9d6ec52" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DATA.PelisPerfil.get\lId_pelicula" alt="" coords="1156,102,1375,158"/>
+<area shape="rect" id="node2" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html#a6a9b6454442b3ac69cde0405ff0cd08d" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.Cine\lPlusServer.Alquilar" alt="" coords="256,27,459,83"/>
+<area shape="rect" id="node3" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_pelis_perfil_d_a_o.html#a5ff821613ec4da4c55104fb5c632b17b" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.PelisPerfilDAO.store\lPelisPerfil" alt="" coords="507,27,757,83"/>
+<area shape="rect" id="node4" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_pelis_perfil_d_a_o.html#a84dd83be1362292ad0c26ed4b6467280" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.PelisPerfilDAO.checkPelis" alt="" coords="805,64,1092,105"/>
+<area shape="rect" id="node5" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelis_perfil.html#a4d9053bfaf6fb47a31e12cf67c77aeba" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DATA.PelisPerfil.getEmail" alt="" coords="1140,5,1391,47"/>
+<area shape="rect" id="node6" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_pelis_perfil.html#a9b4b2bce12b34c0899793d3be9d6ec52" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DATA.PelisPerfil.get\lId_pelicula" alt="" coords="1156,71,1375,127"/>
 </map>
 </div>
 
@@ -275,11 +277,7 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<h3>Nivel &mdash; Interfaz Remota</h3>
-<dl class="section since"><dt>Desde</dt><dd>2.0</dd></dl>
-<p>Metodo que devuelve una lista con los anyos disponibles</p>
-<dl class="section return"><dt>Devuelve</dt><dd><code>List&lt;String&gt;</code> lista con anyos </dd></dl>
-<dl class="exception"><dt>Excepciones</dt><dd>
+<p>Metodo que se encarga de llamar al metodo Anyos de <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html">CinePlusServer</a> y devuelve una lista con los a�os de las pelicualas. </p><dl class="exception"><dt>Excepciones</dt><dd>
   <table class="exception">
     <tr><td class="paramname">RemoteException</td><td></td></tr>
   </table>
@@ -288,7 +286,7 @@ Gráfico de llamadas para esta función:</div>
 
 <p>Implementa <a class="el" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a61e210f79b25c54f085757d101662f7a">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus</a>.</p>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00044">44</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00112">112</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -332,18 +330,15 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<h3>Nivel &mdash; Interfaz Remota</h3>
-<dl class="section since"><dt>Desde</dt><dd>2.0</dd></dl>
-<p>Metodo utilizado para obtener una lista de peliculas</p>
-<dl class="params"><dt>Parámetros</dt><dd>
+<p>Metodo que se encarga de llamar al metodo de Busqueda de <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html">CinePlusServer</a> pasandole el nombre, anyo y genero y devuelve una lista de peliculas. </p><dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nombre</td><td></td></tr>
-    <tr><td class="paramname">anyo</td><td></td></tr>
-    <tr><td class="paramname">genero</td><td></td></tr>
+    <tr><td class="paramname">nombre</td><td>- String </td></tr>
+    <tr><td class="paramname">anyo</td><td>- String </td></tr>
+    <tr><td class="paramname">genero</td><td>- String</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Devuelve</dt><dd><code> List&lt;Pelicula&gt; </code> con las peliculas con parametros indicados </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>List&lt;Pelicula&gt; - Lista con la película buscada </dd></dl>
 <dl class="exception"><dt>Excepciones</dt><dd>
   <table class="exception">
     <tr><td class="paramname">RemoteException</td><td></td></tr>
@@ -353,7 +348,7 @@ Gráfico de llamadas para esta función:</div>
 
 <p>Implementa <a class="el" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#abbc7e02a3ec630ddf740107b72a1becb">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus</a>.</p>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00038">38</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00093">93</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -381,16 +376,13 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<h3>Nivel &mdash; Interfaz Remota</h3>
-<dl class="section since"><dt>Desde</dt><dd>2.0</dd></dl>
-<p>Metodo que comprueba si un usuario se encuentra en la base de datos</p>
+<p>Metodo que se encarga de llamar al metodo checkUsuario de <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html">CinePlusServer</a>, para comprobar si existe el usuario.</p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">user</td><td></td></tr>
+    <tr><td class="paramname">user</td><td>Objeto <code>Usuario</code> a checkear </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Devuelve</dt><dd><code>true</code> si el usuario existe </dd></dl>
 <dl class="exception"><dt>Excepciones</dt><dd>
   <table class="exception">
     <tr><td class="paramname">RemoteException</td><td></td></tr>
@@ -400,7 +392,7 @@ Gráfico de llamadas para esta función:</div>
 
 <p>Implementa <a class="el" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a23743615b795d53ca7277d2f864d0527">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus</a>.</p>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00068">68</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00176">176</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -424,20 +416,19 @@ Gráfico de llamadas para esta función:</div>
           <td class="memname"><a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html">Usuario</a> es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.CinePlusFacade.devuelveUsuario </td>
           <td>(</td>
           <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>email</em></td><td>)</td>
+          <td class="paramname"><em>usuario</em></td><td>)</td>
           <td> throws RemoteException</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<h3>Nivel &mdash; Interfaz Remota</h3>
-<p>Metodo utilizado para devolver un usuario pasandole un email</p>
+<p>Metodo que se encarga de llamar al metodo devuelveUsuario de <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html">CinePlusServer</a>, pasandole un email de usuario y devuelve el usuario completo.</p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">email</td><td></td></tr>
+    <tr><td class="paramname">email</td><td>- String </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Devuelve</dt><dd><code> Usuario </code> correspondiente </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Usuario - Devuelve un usuario </dd></dl>
 <dl class="exception"><dt>Excepciones</dt><dd>
   <table class="exception">
     <tr><td class="paramname">RemoteException</td><td></td></tr>
@@ -447,7 +438,7 @@ Gráfico de llamadas para esta función:</div>
 
 <p>Implementa <a class="el" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a11f38c81bbf008e730fa83a125486513">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus</a>.</p>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00055">55</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00143">143</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -476,12 +467,10 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<h3>Nivel &mdash; Interfaz Remota</h3>
-<dl class="section since"><dt>Desde</dt><dd>2.0</dd></dl>
-<p>Metodo que elimina un usuario especificado en la base de datos</p>
+<p>Metodo que se encarga de llamar al metodo actualizarUsuario de <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html">CinePlusServer</a> pasandole un objeto usuario y se encarga de eliminarlo.</p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">user</td><td></td></tr>
+    <tr><td class="paramname">user</td><td>Objeto <code>Usuario</code> a eliminar </td></tr>
   </table>
   </dd>
 </dl>
@@ -494,14 +483,15 @@ Gráfico de llamadas para esta función:</div>
 
 <p>Implementa <a class="el" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#aa77c1a1d4bfb2da0a851eee81c8c24d5">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus</a>.</p>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00063">63</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00165">165</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
 <div class="center"><img src="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_a92a1bb4a040b2f542215594726feeb2e_cgraph.png" border="0" usemap="#classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_a92a1bb4a040b2f542215594726feeb2e_cgraph" alt=""/></div>
 <map name="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_a92a1bb4a040b2f542215594726feeb2e_cgraph" id="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_a92a1bb4a040b2f542215594726feeb2e_cgraph">
-<area shape="rect" id="node2" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html#a56a74332a335b7bf76c983cc536868d6" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.Cine\lPlusServer.actualizarUsuario" alt="" coords="256,5,459,61"/>
-<area shape="rect" id="node3" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#a3eb24dec018d8f60f6dcb599ba7bc4fc" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.UsuarioDAO.update\lUsuario" alt="" coords="507,5,753,61"/>
+<area shape="rect" id="node2" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html#a654fc31cd8c84260108e530513fa8af6" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.Cine\lPlusServer.eliminarUsuario" alt="" coords="256,5,459,61"/>
+<area shape="rect" id="node3" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#a6c4e469dac1a414ab555e7d24731b4d6" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.UsuarioDAO.delete\lUsuario" alt="" coords="507,5,749,61"/>
+<area shape="rect" id="node4" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a271ba2a05295723709b5045b92009ef8" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DATA.Usuario.getEmail" alt="" coords="797,13,1035,54"/>
 </map>
 </div>
 
@@ -521,11 +511,7 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<h3>Nivel &mdash; Interfaz Remota</h3>
-<dl class="section since"><dt>Desde</dt><dd>2.0</dd></dl>
-<p>Metodo que devuelve una lista con los generos disponibles</p>
-<dl class="section return"><dt>Devuelve</dt><dd><code>List&lt;String&gt;</code> lista con generos </dd></dl>
-<dl class="exception"><dt>Excepciones</dt><dd>
+<p>Metodo que se encarga de llamar al metodo Generos de <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html">CinePlusServer</a> y devuelve una lista con los generos de las peliculas. </p><dl class="exception"><dt>Excepciones</dt><dd>
   <table class="exception">
     <tr><td class="paramname">RemoteException</td><td></td></tr>
   </table>
@@ -534,7 +520,7 @@ Gráfico de llamadas para esta función:</div>
 
 <p>Implementa <a class="el" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a3f0e2b509df8ddba1e4aaee79b6f3439">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus</a>.</p>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00051">51</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00131">131</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -562,16 +548,14 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<h3>Nivel &mdash; Interfaz Remota</h3>
-<dl class="section since"><dt>Desde</dt><dd>2.0</dd></dl>
-<p>Metodo utilizado para buscar las pelis que tiene un usuario</p>
+<p>Metodo que se encarga de llamar al metodo de getPeliUsuario de <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html">CinePlusServer</a> , que devuelve la lista de peliculas de un usuario identificado con el email.</p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">email</td><td></td></tr>
+    <tr><td class="paramname">email</td><td>String con el email del usuario </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Devuelve</dt><dd><code> List&lt;Pelicula&gt; </code> con las peliculas del usuario </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>List&lt;Pelicula&gt; - Lista de peliculas del usuario </dd></dl>
 <dl class="exception"><dt>Excepciones</dt><dd>
   <table class="exception">
     <tr><td class="paramname">RemoteException</td><td></td></tr>
@@ -581,7 +565,7 @@ Gráfico de llamadas para esta función:</div>
 
 <p>Implementa <a class="el" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a8bf04c41b3b5922d734517e823e0e89e">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus</a>.</p>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00041">41</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00104">104</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -650,21 +634,19 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<h3>Nivel &mdash; Interfaz Remota</h3>
-<p>Metodo que realiza el registro de un usuario y devuelve el resultado del proceso de insercion</p>
-<dl class="params"><dt>Parámetros</dt><dd>
+<p>Metodo que se encarga de llamar a registrarUsuario de <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html">CinePlusServer</a> parasandole los parametros y devuelve un true si se ha podido registrar. </p><dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">usuario</td><td></td></tr>
-    <tr><td class="paramname">email</td><td></td></tr>
-    <tr><td class="paramname">nombre</td><td></td></tr>
-    <tr><td class="paramname">apellido</td><td></td></tr>
-    <tr><td class="paramname">password</td><td></td></tr>
-    <tr><td class="paramname">pais</td><td></td></tr>
-    <tr><td class="paramname">admin</td><td></td></tr>
+    <tr><td class="paramname">usuario</td><td>String con el nombre de usuario dentro de la plataforma </td></tr>
+    <tr><td class="paramname">email</td><td>String con el email asociado al usuario </td></tr>
+    <tr><td class="paramname">nombre</td><td>String con nombre de la persona fisica </td></tr>
+    <tr><td class="paramname">apellido</td><td>String con el apellido de la persona </td></tr>
+    <tr><td class="paramname">password</td><td>String contrasenya de 6 caracteres minimo </td></tr>
+    <tr><td class="paramname">pais</td><td>String pais de residencia actual </td></tr>
+    <tr><td class="paramname">admin</td><td>boolean es administrador o no</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Devuelve</dt><dd><code>true</code> si se ha registrado correctamente</dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>boolean - <code>true</code> si se ha registrado correctamente. </dd></dl>
 <dl class="exception"><dt>Excepciones</dt><dd>
   <table class="exception">
     <tr><td class="paramname">RemoteException</td><td></td></tr>
@@ -674,18 +656,17 @@ Gráfico de llamadas para esta función:</div>
 
 <p>Implementa <a class="el" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#a8f7d30ecc2cd704f03dc0db5a8469f24">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus</a>.</p>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00027">27</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00050">50</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
 <div class="center"><img src="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_a54c7a7fb21a80f751cd81e8f47951fa2_cgraph.png" border="0" usemap="#classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_a54c7a7fb21a80f751cd81e8f47951fa2_cgraph" alt=""/></div>
 <map name="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_a54c7a7fb21a80f751cd81e8f47951fa2_cgraph" id="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_a54c7a7fb21a80f751cd81e8f47951fa2_cgraph">
-<area shape="rect" id="node2" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html#aaa4364c140931eaf7ae83694d8e4c027" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.Cine\lPlusServer.registrarUsuario" alt="" coords="256,90,459,146"/>
-<area shape="rect" id="node3" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#aa94061d6084f1ce373c37584772b4323" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.UsuarioDAO.store\lUsuario" alt="" coords="507,90,744,146"/>
+<area shape="rect" id="node2" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html#aaa4364c140931eaf7ae83694d8e4c027" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.Cine\lPlusServer.registrarUsuario" alt="" coords="256,57,459,113"/>
+<area shape="rect" id="node3" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#aa94061d6084f1ce373c37584772b4323" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.UsuarioDAO.store\lUsuario" alt="" coords="507,57,744,113"/>
 <area shape="rect" id="node4" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#a6edd3a337424a102df00f54946c0bcd8" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.UsuarioDAO.checkUser" alt="" coords="792,5,1063,47"/>
 <area shape="rect" id="node5" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a271ba2a05295723709b5045b92009ef8" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DATA.Usuario.getEmail" alt="" coords="1111,35,1348,76"/>
-<area shape="rect" id="node6" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#a79ca3cafd23ec4fc0ef4b0dd483b264f" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.UsuarioDAO.store\lObject" alt="" coords="809,122,1046,178"/>
-<area shape="rect" id="node7" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a5ba9e7df1cc690272d9dfe350b6e1d9d" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DATA.Usuario.toString" alt="" coords="812,203,1043,244"/>
+<area shape="rect" id="node6" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a5ba9e7df1cc690272d9dfe350b6e1d9d" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DATA.Usuario.toString" alt="" coords="812,123,1043,164"/>
 </map>
 </div>
 
@@ -752,22 +733,20 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<h3>Nivel &mdash; Interfaz Remota</h3>
-<p>Metodo que realiza el registro de usuario y devuelve el resultado del proceso y ademas se inicia con un</p><dl class="params"><dt>Parámetros</dt><dd>
+<p>Metodo que se encarga de llamar al metodo de registrarUsuario de <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html">CinePlusServer</a> con parametros (anyadiendo el saldo), y devuelve true si se ha podido registrar. </p><dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">saldo</td><td></td></tr>
-    <tr><td class="paramname">usuario</td><td></td></tr>
-    <tr><td class="paramname">email</td><td></td></tr>
-    <tr><td class="paramname">nombre</td><td></td></tr>
-    <tr><td class="paramname">apellido</td><td></td></tr>
-    <tr><td class="paramname">password</td><td></td></tr>
-    <tr><td class="paramname">pais</td><td></td></tr>
-    <tr><td class="paramname">saldo</td><td></td></tr>
-    <tr><td class="paramname">admin</td><td></td></tr>
+    <tr><td class="paramname">usuario</td><td>- String </td></tr>
+    <tr><td class="paramname">email</td><td>- String </td></tr>
+    <tr><td class="paramname">nombre</td><td>- String </td></tr>
+    <tr><td class="paramname">apellido</td><td>- String </td></tr>
+    <tr><td class="paramname">password</td><td>- String </td></tr>
+    <tr><td class="paramname">pais</td><td>- String </td></tr>
+    <tr><td class="paramname">saldo</td><td>- float </td></tr>
+    <tr><td class="paramname">admin</td><td>- boolean</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Devuelve</dt><dd><code>true</code> si se ha registrado correctamente</dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>boolean - <code>true</code> si se ha registrado correctamente. </dd></dl>
 <dl class="exception"><dt>Excepciones</dt><dd>
   <table class="exception">
     <tr><td class="paramname">RemoteException</td><td></td></tr>
@@ -777,18 +756,17 @@ Gráfico de llamadas para esta función:</div>
 
 <p>Implementa <a class="el" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#ab733456aa47216fc3a519de0f67bc882">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus</a>.</p>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00031">31</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00068">68</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
 <div class="center"><img src="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_a018f078082a1ad3997bead9b6b38438c_cgraph.png" border="0" usemap="#classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_a018f078082a1ad3997bead9b6b38438c_cgraph" alt=""/></div>
 <map name="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_a018f078082a1ad3997bead9b6b38438c_cgraph" id="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade_a018f078082a1ad3997bead9b6b38438c_cgraph">
-<area shape="rect" id="node2" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html#aaa4364c140931eaf7ae83694d8e4c027" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.Cine\lPlusServer.registrarUsuario" alt="" coords="256,90,459,146"/>
-<area shape="rect" id="node3" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#aa94061d6084f1ce373c37584772b4323" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.UsuarioDAO.store\lUsuario" alt="" coords="507,90,744,146"/>
+<area shape="rect" id="node2" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html#aaa4364c140931eaf7ae83694d8e4c027" title="es.deusto.spq.ProyectoCine\lPlus.servidor.Conectividad.Cine\lPlusServer.registrarUsuario" alt="" coords="256,57,459,113"/>
+<area shape="rect" id="node3" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#aa94061d6084f1ce373c37584772b4323" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.UsuarioDAO.store\lUsuario" alt="" coords="507,57,744,113"/>
 <area shape="rect" id="node4" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#a6edd3a337424a102df00f54946c0bcd8" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.UsuarioDAO.checkUser" alt="" coords="792,5,1063,47"/>
 <area shape="rect" id="node5" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a271ba2a05295723709b5045b92009ef8" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DATA.Usuario.getEmail" alt="" coords="1111,35,1348,76"/>
-<area shape="rect" id="node6" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#a79ca3cafd23ec4fc0ef4b0dd483b264f" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DAO.UsuarioDAO.store\lObject" alt="" coords="809,122,1046,178"/>
-<area shape="rect" id="node7" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a5ba9e7df1cc690272d9dfe350b6e1d9d" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DATA.Usuario.toString" alt="" coords="812,203,1043,244"/>
+<area shape="rect" id="node6" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_t_a_1_1_usuario.html#a5ba9e7df1cc690272d9dfe350b6e1d9d" title="es.deusto.spq.ProyectoCine\lPlus.servidor.DATA.Usuario.toString" alt="" coords="812,123,1043,164"/>
 </map>
 </div>
 
@@ -819,16 +797,14 @@ Gráfico de llamadas para esta función:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<h3>Nivel &mdash; Interfaz Remota</h3>
-<p>Metodo utilizado para comprobar la existencia de un usuario</p>
-<dl class="params"><dt>Parámetros</dt><dd>
+<p>Metodo que se encarga de llamar al metodo de usuarioRegistrado de <a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_server.html">CinePlusServer</a> para mirar si un usuario con una contrasenya existe en la base de datos. </p><dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">usuario</td><td></td></tr>
-    <tr><td class="paramname">password</td><td></td></tr>
+    <tr><td class="paramname">usuario</td><td>- String </td></tr>
+    <tr><td class="paramname">password</td><td>- String</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Devuelve</dt><dd><code>true</code> si se ha encontrado el usuario </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>boolean - <code>true</code> si ha iniciado sesion correctamente. </dd></dl>
 <dl class="exception"><dt>Excepciones</dt><dd>
   <table class="exception">
     <tr><td class="paramname">RemoteException</td><td></td></tr>
@@ -838,7 +814,7 @@ Gráfico de llamadas para esta función:</div>
 
 <p>Implementa <a class="el" href="interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_i_cine_plus.html#ac47810e5775588e6b7f2bcf9e26e8250">es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus</a>.</p>
 
-<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00035">35</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_cine_plus_facade_8java_source.html#l00080">80</a> del archivo <a class="el" href="_cine_plus_facade_8java_source.html">CinePlusFacade.java</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas para esta función:</div>
 <div class="dyncontent">
@@ -860,7 +836,7 @@ Gráfico de llamadas para esta función:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacees.html">es</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto.html">deusto</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq.html">spq</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus.html">ProyectoCinePlus</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor.html">servidor</a></li><li class="navelem"><a class="el" href="namespacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad.html">Conectividad</a></li><li class="navelem"><a class="el" href="classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_conectividad_1_1_cine_plus_facade.html">CinePlusFacade</a></li>
-    <li class="footer">Generado el Miércoles, 16 de Mayo de 2018 11:44:51 para CinePlus por
+    <li class="footer">Generado el Sábado, 19 de Mayo de 2018 09:30:49 para CinePlus por
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

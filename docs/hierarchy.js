@@ -6,6 +6,7 @@ var hierarchy =
     [ "es.deusto.spq.ProyectoCinePlus.servidor.DAO.IPeliculaDAO", "interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_i_pelicula_d_a_o.html", [
       [ "es.deusto.spq.ProyectoCinePlus.servidor.DAO.PeliculaDAO", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_pelicula_d_a_o.html", null ]
     ] ],
+    [ "es.deusto.spq.ProyectoCinePlus.servidor.DAO.IPelisPerfilDAO", "interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_i_pelis_perfil_d_a_o.html", null ],
     [ "es.deusto.spq.ProyectoCinePlus.servidor.DAO.IUsuarioDAO", "interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_i_usuario_d_a_o.html", [
       [ "es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html", null ]
     ] ],

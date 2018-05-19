@@ -8,7 +8,6 @@ var classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_us
     [ "getUsuarios", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#ae4f773cf6162dd135de4ace5020b9c91", null ],
     [ "getUsuarios", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#aeb7d40f51e11f50ced59164562f42b37", null ],
     [ "loginUser", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#ac2ea3e9d061a267cbc079741c3a2631b", null ],
-    [ "storeObject", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#a79ca3cafd23ec4fc0ef4b0dd483b264f", null ],
     [ "storeUsuario", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#aa94061d6084f1ce373c37584772b4323", null ],
     [ "updateUsuario", "classes_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_usuario_d_a_o.html#a3eb24dec018d8f60f6dcb599ba7bc4fc", null ]
 ];

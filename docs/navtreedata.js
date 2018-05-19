@@ -46,7 +46,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_cine_plus_controller_8java.html",
-"namespacees.html"
+"interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_i_usuario_d_a_o.html#acdd56f9f9051f78d89a66ba087ccd27b"
 ];
 
 var SYNCONMSG = 'click en deshabilitar sincronización';

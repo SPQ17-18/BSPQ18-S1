@@ -3,6 +3,9 @@ var dir_eab546f30cdd3e793356bebd292fea56 =
     [ "IPeliculaDAO.java", "_i_pelicula_d_a_o_8java.html", [
       [ "IPeliculaDAO", "interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_i_pelicula_d_a_o.html", "interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_i_pelicula_d_a_o" ]
     ] ],
+    [ "IPelisPerfilDAO.java", "_i_pelis_perfil_d_a_o_8java.html", [
+      [ "IPelisPerfilDAO", "interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_i_pelis_perfil_d_a_o.html", "interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_i_pelis_perfil_d_a_o" ]
+    ] ],
     [ "IUsuarioDAO.java", "_i_usuario_d_a_o_8java.html", [
       [ "IUsuarioDAO", "interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_i_usuario_d_a_o.html", "interfacees_1_1deusto_1_1spq_1_1_proyecto_cine_plus_1_1servidor_1_1_d_a_o_1_1_i_usuario_d_a_o" ]
     ] ],
