@@ -1,7 +1,7 @@
 /** @package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad
-*    @brief Clase de CinePLusController. May 17, 2018
+*   @brief Conectividad de la parte cliente. May 17, 2018
 *
-*    Este es el controller del cliente donde se encuentran los metodos que apuntan al servidor y donde esta el main.
+*   Este es el paquete de cnectividad del cliente. En este paquete podemos encontrarnos los accesos a los metodos y la conexión RMI.
 */
 package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad;
 

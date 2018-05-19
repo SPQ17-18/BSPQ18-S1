@@ -1,8 +1,3 @@
-/** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
-*   @brief Ventana Pelicula de Datos. May 17, 2018
-*
-*    Esta es la ventana de los datos de las peliculas. Aqui aparece la informacion relevante de la ficha y te permite seleccionar la pelicula. 
-*/
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;

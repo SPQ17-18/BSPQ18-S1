@@ -1,9 +1,3 @@
-/** @package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI
-*   @brief Ventana del usuario. May 15, 2018
-*
-*   Esta es la ventana que muestra los datos mas relevantes del usuario y te muestra el men� pricipal. 
-*   Ademas existe un buscador con filtros para poder encontrar las peliculas mas facilmente. 
-*/
 package es.deusto.spq.ProyectoCinePlus.cliente.util.GUI;
 
 import java.awt.BorderLayout;

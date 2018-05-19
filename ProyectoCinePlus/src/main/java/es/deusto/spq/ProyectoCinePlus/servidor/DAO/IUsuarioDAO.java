@@ -1,10 +1,3 @@
-/** @package  es.deusto.spq.ProyectoCinePlus.servidor.DAO
-*   @brief Interfaz de PeliculasDAO. May 17, 2018
-*
-*   Se trata de la interfaz que ofrece los servicios de DAO de los usuarios
-*   
-*/
-
 package es.deusto.spq.ProyectoCinePlus.servidor.DAO;
 
 import java.rmi.RemoteException;

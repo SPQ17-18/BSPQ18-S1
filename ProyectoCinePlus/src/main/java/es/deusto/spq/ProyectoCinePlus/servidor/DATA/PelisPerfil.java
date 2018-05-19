@@ -1,10 +1,3 @@
-/** @package es.deusto.spq.ProyectoCinePlus.servidor.DATA
-*    @brief Clase PelisPerfil. May 17, 2018
-*    @since 3.0.0
-*
-*    Esta es la clase de PelisPerfil, con los respectivos parametros de datanucleus para crear las tablas de la base de datos. 
-*    Con esta clase definimos la tabla de los usuarios con sus peliculas.
-*/
 package es.deusto.spq.ProyectoCinePlus.servidor.DATA;
 
 import java.io.Serializable;
