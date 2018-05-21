@@ -45,19 +45,18 @@ public class Pelicula implements Serializable{
 	public Pelicula() {
 		
 	}
+	
 	/**
 	 * Constructor Pelicula con parametros
-	 * 
-	 * @param id_pelicula int con identificador unico
-	 * @param nombre String con el nombre de la pelicula
-	 * @param duracion int con la duracion en minutos de la pelicula
-	 * @param descripcion String con breve descripcion de menos de 150 palabras
-	 * @param anyo int con el anyo de pelicula
-	 * @param categoria String con la categoria de la pelicula
-	 * @param precio float con el precio de la pelicula en euros
-	 * @param usuariosList List<Usuario> lista de usuarios que poseen la pelicula
-	 * 									(este campo no se usa - introduce null por favor)
-	 * @param portada String nombre de la imagen de portada
+	 * @param id_pelicula id de pelicua
+	 * @param nombre nombre
+	 * @param duracion duracion
+	 * @param descripcion descricion
+	 * @param anyo anio
+	 * @param categoria categoria
+	 * @param precio precio
+	 * @param usuariosList lista de usuarios
+	 * @param portada portada
 	 */
 	public Pelicula(int id_pelicula, String nombre, int duracion, String descripcion, int anyo, String categoria,
 			 float precio, List<Usuario> usuariosList ,String portada) {
@@ -73,17 +72,17 @@ public class Pelicula implements Serializable{
 		this.portada = portada;
 	}
 	
+
 	/**
 	 * Constructor Pelicula con parametros pero sin lista de alquilados
-	 * 
-	 * @param id_pelicula int con identificador unico
-	 * @param nombre String con el nombre de la pelicula
-	 * @param duracion int con la duracion en minutos de la pelicula
-	 * @param descripcion String con breve descripcion de menos de 150 palabras
-	 * @param anyo int con el anyo de pelicula
-	 * @param categoria String con la categoria de la pelicula
-	 * @param precio float con el precio de la pelicula en euros
-	 * @param portada String nombre de la imagen de portada
+	 * @param id_pelicula id de pelicula
+	 * @param nombre nombre
+	 * @param duracion duracion
+	 * @param descripcion descripcion
+	 * @param anyo anyo
+	 * @param categoria categoria
+	 * @param precio precio
+	 * @param portada portada
 	 */
 	public Pelicula(int id_pelicula, String nombre, int duracion, String descripcion, int anyo, String categoria,
 			 float precio ,String portada) {
@@ -100,91 +99,91 @@ public class Pelicula implements Serializable{
 
 	/**
 	 * Metodo getId_pelicula
-	 * @return id_pelicula int
+	 * @return id_pelicula id de peli
 	 */
 	public int getId_pelicula() {
 		return id_pelicula;
 	}
 	/**
 	 * Metodo setId_pelicula
-	 * @param id_pelicula int
+	 * @param id_pelicula id de peli
 	 */
 	public void setId_pelicula(int id_pelicula) {
 		this.id_pelicula = id_pelicula;
 	}
 	/**
 	 * Metodo getNombre
-	 * @return nombre String
+	 * @return nombre - String
 	 */
 	public String getNombre() {
 		return nombre;
 	}
 	/**
 	 * Metodo setNombre
-	 * @param nombre String
+	 * @param nombre - String
 	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 	/**
 	 * Metodo getDuracion
-	 * @return duracion int
+	 * @return duracion - int
 	 */
 	public int getDuracion() {
 		return duracion;
 	}
 	/**
 	 * Metodo setDuracion
-	 * @param duracion int
+	 * @param duracion - int
 	 */
 	public void setDuracion(int duracion) {
 		this.duracion = duracion;
 	}
 	/**
 	 * Metodo getDescripcion
-	 * @return descripcion String
+	 * @return descripcion - String
 	 */
 	public String getDescripcion() {
 		return descripcion;
 	}
 	/**
 	 * Metodo setDescripcion
-	 * @param descripcion String
+	 * @param descripcion - String
 	 */
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
 	/**
 	 * Metodo getAnyo
-	 * @return anyo int
+	 * @return anyo - int
 	 */
 	public int getAnyo() {
 		return anyo;
 	}
 	/**
 	 * Metodo setAnyo
-	 * @param anyo int
+	 * @param anyo - int
 	 */
 	public void setAnyo(int anyo) {
 		this.anyo = anyo;
 	}
 	/**
 	 * Metodo getCategoria
-	 * @return categoria String
+	 * @return categoria - String
 	 */
 	public String getCategoria() {
 		return categoria;
 	}
 	/**
 	 * Metodo setCategoria
-	 * @param categoria String
+	 * @param categoria - String
 	 */
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
 	/**
 	 * Metodo getPrecio
-	 * @return precio float
+	 * @return precio - float
 	 */
 	public float getPrecio() {
 		return precio;
@@ -207,14 +206,14 @@ public class Pelicula implements Serializable{
 	}
 	/**
 	 * Metodo setPortada
-	 * @param portada String
+	 * @param portada - String
 	 */
 	public void setPortada(String portada) {
 		this.portada = portada;
 	}
 	/**
 	 * Metodo que copia una pelicula
-	 * @param peli Pelicula a copiar
+	 * @param peli pelicula
 	 */
 	public void copiarPelicula(Pelicula peli) {
 		
