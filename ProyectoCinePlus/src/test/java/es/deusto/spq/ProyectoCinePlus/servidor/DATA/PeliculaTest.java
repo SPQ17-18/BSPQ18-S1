@@ -21,8 +21,6 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DAO.PeliculaDAO;
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAO;
 /**
 * @author mikelgol7
-* @package es.deusto.spq.ProyectoCinePlus.servidor.DATA
-* @brief Test PeliculaTest. May 18, 2018
 * @since 2.0.0
 * 
 * Este es el test que comprueba los datos de las Pelicula.
@@ -38,7 +36,7 @@ public class PeliculaTest {
 	
 	/**
 	 * Metodo que se encarga de inicializar las peliculas que hemos definidos.
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	@BeforeClass
 	public static void setUp() throws Exception {

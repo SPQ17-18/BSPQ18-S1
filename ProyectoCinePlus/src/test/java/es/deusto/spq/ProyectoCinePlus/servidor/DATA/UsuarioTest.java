@@ -17,8 +17,7 @@ import org.junit.Test;
 
 import es.deusto.spq.ProyectoCinePlus.servidor.DAO.UsuarioDAOTest;
 
-/** @package es.deusto.spq.ProyectoCinePlus.servidor.DATA
-* @brief Test UsuarioTest. May 17, 2018
+/** 
 * @since 2.0.0
 * 
 * Este es el test que comprueba los datos del Usuario.
@@ -35,7 +34,7 @@ public class UsuarioTest {
 
 	/**
 	 * Metodo que se encarga de inicializar los usuarios que hemos definidos.
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	@BeforeClass
 	public static void setUp() throws Exception {

@@ -27,7 +27,6 @@ import junit.framework.JUnit4TestAdapter;
 
 /**
 * @author mikelgol7
-* @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
 * @brief Test UsuarioDAOTest. May 18, 2018
 * @since 3.0.0
 * 
@@ -77,7 +76,7 @@ public class PeliculaDAOTest {
 	
 	/**
 	 * Test para comprobar que añado peliculas
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	@Test
 	public void testStorePelicula() throws Exception {

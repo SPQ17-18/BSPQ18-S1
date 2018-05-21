@@ -25,7 +25,6 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
 import junit.framework.JUnit4TestAdapter;
 /**
 * @author mikelgol7
-* @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
 * @brief Test PelisPerfilDAOTest. May 18, 2018
 * @since 3.0.0
 * 
@@ -57,7 +56,7 @@ public class PelisPerfilDAOTest {
 
 	/**
 	 * Creo objetos pelisperfil y los subo a la base de datos si no existen.
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	@Before
 	public void setUp() throws Exception{

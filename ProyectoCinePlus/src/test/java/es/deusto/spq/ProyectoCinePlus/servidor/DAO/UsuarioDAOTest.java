@@ -6,8 +6,6 @@
 package es.deusto.spq.ProyectoCinePlus.servidor.DAO;
 /**
 * @author mikelgol7
-* @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
-* @brief Test UsuarioDAOTest. May 18, 2018
 * @since 3.0.0
 * 
 * Este es el test que comprueba los metodos de UsuarioDAO.
@@ -102,7 +100,7 @@ public class UsuarioDAOTest {
 	
 	/**
 	 * Test de almacenamiento de un usuario
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	
 	@Test
@@ -132,7 +130,7 @@ public class UsuarioDAOTest {
 	/**
 	 * Test de eliminacion de un usuario
 	 * 
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	
 	@Test
@@ -150,7 +148,7 @@ public class UsuarioDAOTest {
 	/**
 	 * Test que realiza un login de usuario fallido
 	 * 
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	
 	@Test
@@ -165,7 +163,7 @@ public class UsuarioDAOTest {
 	/**
 	 * Test que devuelve un usuario previamente almacenado
 	 * 
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	
 	@Test
@@ -195,7 +193,7 @@ public class UsuarioDAOTest {
 	/**
 	 *  Test que comprueba que no existe usuario
 	 *  
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	@Test
 	@PerfTest(invocations = 300, threads = 3)
@@ -209,7 +207,7 @@ public class UsuarioDAOTest {
 	
 	/**
 	 * Test que comprueba que se obtienen usuarios (mas que 0)
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	@Test
 	public void test_8getUsuariosTest() throws Exception{
