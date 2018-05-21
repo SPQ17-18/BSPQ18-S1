@@ -199,30 +199,14 @@ public class CinePlusControllerTest {
 		alquiler2 = new PelisPerfil("javi2@gmail.com", 3);
 		alquiler3 = new PelisPerfil("javi2@gmail.com", 5);
 
-		 if(usuarioDAO.checkUser(user) == false) {
 			 usuarioDAO.storeUsuario(user);
-			 logger.info("almacenando "+user.getEmail());
-			
-		 }
-		 
-		 if(usuarioDAO.checkUser(user2) == false) {
-			 usuarioDAO.storeUsuario(user2);
-			 logger.info("almacenando "+user2.getEmail());
-			
-		 }
-		 
 
-		 if(pelisPerfilDAO.checkPelis(alquiler1) == false) {
+			 usuarioDAO.storeUsuario(user2);
+			
 			 pelisPerfilDAO.storePelisPerfil(alquiler1);
-			 logger.info("almacenando "+user2.getEmail());
-			
-		 }
-		 
-		 if(pelisPerfilDAO.checkPelis(alquiler2) == false) {
+		
 			 pelisPerfilDAO.storePelisPerfil(alquiler2);
-			 logger.info("almacenando "+user2.getEmail());
-			
-		 }
+	
 		
 	}
 
@@ -328,43 +312,19 @@ public class CinePlusControllerTest {
 	
 	@After
 	public void deleteAll() {
-		 if(usuarioDAO.checkUser(user) == true) {
+		 
 			 usuarioDAO.deleteUsuario(user);
-			 logger.info("eliminando user "+user.getEmail());
-			
-		 }
-		 
-		 if(usuarioDAO.checkUser(user2) == true) {
-			 usuarioDAO.deleteUsuario(user2);
-			 logger.info("eliminando user "+user2.getEmail());
-			
-		 }
-		 
-		 if(usuarioDAO.checkUser(user3) == true) {
-			 usuarioDAO.deleteUsuario(user3);
-			 logger.info("eliminando user "+user3.getEmail());
-			
-		 }
-		 
-		 
 
-		 if(pelisPerfilDAO.checkPelis(alquiler1) == true) {
+			 usuarioDAO.deleteUsuario(user2);
+
+			 usuarioDAO.deleteUsuario(user3);
+
 			 pelisPerfilDAO.deletePelisPerfil(alquiler1);
-			 logger.info("eliminado alquiler"+alquiler1.getEmail());
-			
-		 }
-		 
-		 if(pelisPerfilDAO.checkPelis(alquiler2) == true) {
+
 			 pelisPerfilDAO.deletePelisPerfil(alquiler2);
-			 logger.info("eliminado alquiler"+alquiler2.getEmail());
-			
-		 }
-		 
-		 if(pelisPerfilDAO.checkPelis(alquiler3) == true) {
+
 			 pelisPerfilDAO.deletePelisPerfil(alquiler3);
-			 logger.info("eliminado alquiler"+alquiler3.getEmail());
-			
-		 }
+		
 	}
 	
 	@AfterClass

@@ -132,8 +132,9 @@ public class PeliculaDAOTest {
 	 * Metodo que comprueba si se actualiza un usuario.
 	 * @throws Exception lanza excepcion
 	 */
+	
 	@Test
-	public void updateUsuarioTest() throws Exception{
+	public void updatePeliculaTest() throws Exception{
 		logger.info("updateUsuarioTest()");
 		peliculaDAO.storePelicula(new Pelicula(8, "Star Wars", 125, "Una nueva esperanza", 1970, "ciencia ficcion", 6, listUsuarios,"6"));
 		

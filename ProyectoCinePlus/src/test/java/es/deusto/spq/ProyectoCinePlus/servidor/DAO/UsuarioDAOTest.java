@@ -40,8 +40,7 @@ public class UsuarioDAOTest {
 	static Logger logger = Logger.getLogger(UsuarioDAOTest.class.getName());
 	
 	
-	private Usuario prueba1;
-	private Usuario spq;
+
 	private Usuario mikel;
 	private Usuario aritz;
 	private Usuario javi;
@@ -67,52 +66,25 @@ public class UsuarioDAOTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		 spq = new Usuario("spq", "spq@gmail.com", "spq", "spq", "spq", "spq", false);		
-		 prueba1 = new Usuario ("MikelSPQ", "prueba1@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "Euskadi", false);
+
 		 
 		 mikel = new Usuario ("MikelSPQ", "Mikel@gmail.com", "Mikel", "Fernandez", "P@ssw0rd", "Euskadi", false);
 		 xabi = new Usuario ("XabiSPQ", "Xabi@gmail.com", "Xabi", "Sarrionandia", "P@ssw0rd", "Euskadi", false);
 		 aritz = new Usuario ("AritzSPQ", "aritz@gmail.com", "Aritz", "Rasines", "P@ssw0rd", "Euskadi", false);
 		 javi = new Usuario ("JaviSPQ", "javi@gmail.com", "Javi", "Fernandez", "P@ssw0rd", "Euskadi", true);
 		 
-			
-		 if(usuarioDAO.checkUser(mikel) == false) {
+
 			 usuarioDAO.storeUsuario(mikel);
-			 logger.info("almacenando "+mikel.getEmail());
-			
-		 }
-		 if(usuarioDAO.checkUser(xabi) == false) {
+
 			 usuarioDAO.storeUsuario(xabi);
-			 logger.info("almacenando "+xabi.getEmail());
-			
-		 }
-		 if(usuarioDAO.checkUser(aritz) == false) {
+
 			 usuarioDAO.storeUsuario(aritz);
-			 logger.info("almacenando "+aritz.getEmail());
-			
-		 }
-		 if(usuarioDAO.checkUser(javi) == false) {
+
 			 usuarioDAO.storeUsuario(javi);
-			 logger.info("almacenando "+javi.getEmail());
-			
-		 }
+
 	}
 	
-	/**
-	 * Test de almacenamiento de un usuario
-	 * @throws Exception lanza excepcion
-	 */
-	
-	@Test
-	public void test_1testStoreUsuario() throws Exception{
-		logger.info("Test 1 para introducir nuevo usuario");		
-		usuarioDAO.storeUsuario(prueba1);
-		Usuario prueba2 = usuarioDAO.getUsuario("prueba1@gmail.com");
-		assertEquals("MikelSPQ",prueba2.getUsuario());
-		assertEquals("Mikel",prueba2.getNombre());
-		assertEquals("Fernandez",prueba2.getApellido());
-		
-	}
+
 	
 	/**
 	 * Test de login correcto
@@ -127,23 +99,6 @@ public class UsuarioDAOTest {
 	}
 	
 	
-	/**
-	 * Test de eliminacion de un usuario
-	 * 
-	 * @throws Exception lanza excepcion
-	 */
-	
-	@Test
-	public void test_3deleteUsuarioTest() throws Exception{
-		logger.info("Test 3 para hacer un update de usuario");
-		logger.info("Eliminando usuario");
-		usuarioDAO.deleteUsuario(javi);		
-		Usuario prueba3 = usuarioDAO.getUsuario("javi@gmail.com");
-		logger.info(prueba3.toString());
-		assertEquals(null,prueba3.getEmail());
-		
-
-	}
 	
 	/**
 	 * Test que realiza un login de usuario fallido
@@ -186,7 +141,7 @@ public class UsuarioDAOTest {
 	public void test_6checkUserTestOK() throws Exception{
 		boolean resul;
 		logger.info("Test 6 para realizar un login correcto");
-		resul = usuarioDAO.checkUser(spq);
+		resul = usuarioDAO.checkUser(xabi);
 		assertTrue(resul);
 	}
 	
@@ -223,36 +178,21 @@ public class UsuarioDAOTest {
 	@After
 	public void deleteAfter() throws Exception {
 		
-		
-		//Usuario que supuestamente hemos eliminado
-		 if(usuarioDAO.checkUser(prueba1) == true) {
-			 usuarioDAO.deleteUsuario(prueba1);
-			 logger.info("almacenando "+prueba1.getEmail());
-			
-		 }
+	
 		 
 		 //resto de usuarios
-		 if(usuarioDAO.checkUser(mikel) == true) {
+	
 			 usuarioDAO.deleteUsuario(mikel);
-			 logger.info("almacenando "+mikel.getEmail());
-			
-		 }
-		 if(usuarioDAO.checkUser(xabi) == true) {
+	
+	
 			 usuarioDAO.deleteUsuario(xabi);
-			 logger.info("almacenando "+xabi.getEmail());
-			
-		 }
-		 if(usuarioDAO.checkUser(aritz) == true) {
+	
+		
 			 usuarioDAO.deleteUsuario(aritz);
-			 logger.info("almacenando "+aritz.getEmail());
-			
-		 }
-		 if(usuarioDAO.checkUser(javi) == true) {
+
+
 			 usuarioDAO.deleteUsuario(javi);
-			 logger.info("almacenando "+javi.getEmail());
-			
-		 }
-		 
+
 	}
 	
 	

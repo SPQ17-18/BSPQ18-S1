@@ -35,7 +35,6 @@ public class PelisPerfilDAOTest {
 	
 	private  PelisPerfil pelisperfil1;
 	private  PelisPerfil pelisperfil2;
-	private  PelisPerfil pelisperfil3;
 	
 	static Logger logger = Logger.getLogger(PelisPerfilDAOTest.class.getName());
 	
@@ -61,51 +60,12 @@ public class PelisPerfilDAOTest {
 	public void setUp() throws Exception{
 		pelisperfil1 = new PelisPerfil("javitxu@gmail.com",1);
 		pelisperfil2 = new PelisPerfil("mikel@gmail.com",3);
-		pelisperfil3 = new PelisPerfil("javitxu@gmail.com",5);
 		
-		 if(pelisPerfilDAO.checkPelis(pelisperfil1) == false){
 			 pelisPerfilDAO.storePelisPerfil(pelisperfil1);
-			 logger.info("almacenando "+pelisperfil1.getId_pelicula());
-			
-		 }
-		 if(pelisPerfilDAO.checkPelis(pelisperfil2) == false){
 			 pelisPerfilDAO.storePelisPerfil(pelisperfil2);
-			 logger.info("almacenando "+pelisperfil2.getId_pelicula());
 			
-		 }
-	}
-
-
-	/**
-	 * Test que comprueba si se almacena el objeto pelisperfil
-	 */
-	@Test
-	public void StorePelisPerfiltest(){
-		assertTrue(pelisPerfilDAO.storePelisPerfil(pelisperfil3));
-	}
-	
-	/**
-	 * Test para comprobar la insercion correcta de un objeto
-	 */
-
-	@Test
-	public void StoreObjetcttest(){
-		pelisPerfilDAO.storePelisPerfil(pelisperfil3);
-		assertTrue(pelisPerfilDAO.checkPelis(pelisperfil3));
-	}
-	
-	/**
-	 * Test que comprueba que se hayan eliminado todas las pelis de la bd satisfactoriamente
-	 */
-	
-	@Test
-	@Required(totalTime = 180)
-	public void deleteObjectTest(){
-		pelisPerfilDAO.deletePelisPerfil(pelisperfil1);
-		pelisPerfilDAO.deletePelisPerfil(pelisperfil2);
-		
-		assertFalse(pelisPerfilDAO.checkPelis(pelisperfil1));
-		assertFalse(pelisPerfilDAO.checkPelis(pelisperfil2));
+			
+		 
 	}
 
 	/**
@@ -113,28 +73,18 @@ public class PelisPerfilDAOTest {
 	 */
 	@Test
 	@PerfTest(invocations = 200)
-	@Required(max = 92,percentile95 = 60)
+	@Required(max = 110,percentile95 = 15)
 	public void getPeliUsuarioTest(){
 		assertTrue(pelisPerfilDAO.getPeliUsuario("javitxu@gmail.com").size()>=0);
 	}
 	
 	@After
 	public void deleteUsers() throws Exception{
-		 if(pelisPerfilDAO.checkPelis(pelisperfil1) == true){
+		 
 			 pelisPerfilDAO.deletePelisPerfil(pelisperfil1);
-			 logger.info("almacenando "+pelisperfil1.getId_pelicula());
-			
-		 }
-		 if(pelisPerfilDAO.checkPelis(pelisperfil2) == true){
 			 pelisPerfilDAO.deletePelisPerfil(pelisperfil2);
-			 logger.info("almacenando "+pelisperfil2.getId_pelicula());
-			
-		 }
-		 if(pelisPerfilDAO.checkPelis(pelisperfil3) == true){
-			 pelisPerfilDAO.deletePelisPerfil(pelisperfil3);
-			 logger.info("almacenando "+pelisperfil3.getId_pelicula());
-			
-		 }
+
+
 		  
 	}
 	
