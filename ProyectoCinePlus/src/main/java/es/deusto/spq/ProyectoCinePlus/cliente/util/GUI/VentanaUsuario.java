@@ -377,7 +377,6 @@ public class VentanaUsuario extends JFrame {
 										dispose();
 										break;
 									}
-
 									
 								}
 							}

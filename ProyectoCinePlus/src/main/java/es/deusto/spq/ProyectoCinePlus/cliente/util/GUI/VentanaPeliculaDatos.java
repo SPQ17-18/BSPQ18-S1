@@ -237,7 +237,7 @@ public class VentanaPeliculaDatos extends JFrame {
 		
 		panel_24 = new JPanel();
 		panel_10.add(panel_24, BorderLayout.EAST);
-		
+		 
 		btnVerpelicula = new JButton(resourceBundle.getString("watch_tv_msg"));
 		btnVerpelicula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

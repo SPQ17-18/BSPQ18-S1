@@ -29,7 +29,7 @@ import org.apache.log4j.Logger;
 import es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad.CinePlusController;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
-
+ 
 /**
  * Ventana Perfil Peliculas - Ventana en la que se muestran las peliculas que
  * tiene el usuario.
