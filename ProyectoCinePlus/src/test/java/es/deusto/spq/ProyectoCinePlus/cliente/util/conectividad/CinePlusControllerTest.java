@@ -246,7 +246,7 @@ public class CinePlusControllerTest {
 	}
 	
 	/**
-	 * Test que comprueba si el usuario javi@gmail.com con contraseña P@ssw0rd esta en la BD
+	 * Test que comprueba si el usuario javi@gmail.com con contrasenia P@ssw0rd esta en la BD
 	 * @throws RemoteException
 	 */
 	@Test
@@ -258,7 +258,7 @@ public class CinePlusControllerTest {
 	}
 	
 	/**
-	 * Test que comprueba que existen más de 0 años de peliculas diferentes en la BD
+	 * Test que comprueba que existen mas de 0 anyos de peliculas diferentes en la BD
 	 * @throws RemoteException
 	 */
 	@Test
@@ -267,7 +267,7 @@ public class CinePlusControllerTest {
 	}
 	
 	/**
-	 * Test que comprueba que en la BD hay más generos de peliculas que 0.
+	 * Test que comprueba que en la BD hay mas generos de peliculas que 0.
 	 * @throws RemoteException
 	 */
 	@Test

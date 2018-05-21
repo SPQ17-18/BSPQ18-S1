@@ -1,7 +1,7 @@
 /** @package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad
 *   @brief Conectividad de la parte cliente. May 17, 2018
 *
-*   Este es el paquete de cnectividad del cliente. En este paquete podemos encontrarnos los accesos a los metodos y la conexión RMI.
+*   Este es el paquete de cnectividad del cliente. En este paquete podemos encontrarnos los accesos a los metodos y la conexion RMI.
 */
 package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad;
 

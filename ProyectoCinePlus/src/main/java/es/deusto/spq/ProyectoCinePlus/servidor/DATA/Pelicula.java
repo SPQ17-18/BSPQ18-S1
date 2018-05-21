@@ -2,7 +2,7 @@
 *   @brief Clases de datos. May 17, 2018
 *   @since 1.0.0
 *
-*   En este paquete se encuentran los objetos de la aplicación con los parametros de datanucleus para crear las tablas de la base de datos. 
+*   En este paquete se encuentran los objetos de la aplicacion con los parametros de datanucleus para crear las tablas de la base de datos. 
 */
 package es.deusto.spq.ProyectoCinePlus.servidor.DATA;
 
