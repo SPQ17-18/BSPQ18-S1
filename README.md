@@ -36,8 +36,7 @@ Repository for Team BSPQ18-S1
        
 ## 🔰 SPRINTS:
 
-###### ✅ SPRINT 1:
-        
+###### ✅ [SPRINT 1:](https://github.com/SPQ17-18/BSPQ18-S1/releases/tag/FinSprint1)
                       
        - Tareas a realizar:
               ⭕ Sistema de registro de usuario.
@@ -46,7 +45,7 @@ Repository for Team BSPQ18-S1
               ⭕ Resource Bundle.
               ⭕ Documentación Sprint1.
         
-###### ✅ SPRINT 2:
+###### ✅ [SPRINT 2:](https://github.com/SPQ17-18/BSPQ18-S1/releases/tag/FinSprint2)
        
         - Tareas a realizar:
               ⭕ Sistema Buscar películas.
@@ -57,7 +56,7 @@ Repository for Team BSPQ18-S1
               ⭕ VisualVM.
               ⭕ Documentación Sprint2.
        
-###### ✅ SPRINT 3:
+###### ✅ [SPRINT 3:](https://github.com/SPQ17-18/BSPQ18-S1/releases/tag/FinSprint3)
 
        - Tareas a realizar:
               ⭕ Corrección de bugs.
@@ -67,4 +66,8 @@ Repository for Team BSPQ18-S1
               ⭕ Doxygen.
               ⭕ Jenkins.
               ⭕ Documentación Sprint3.
+              
+## 🔰 [DOCUMENTACIÓN:](https://spq17-18.github.io/BSPQ18-S1/)
+
+             https://spq17-18.github.io/BSPQ18-S1/
               
