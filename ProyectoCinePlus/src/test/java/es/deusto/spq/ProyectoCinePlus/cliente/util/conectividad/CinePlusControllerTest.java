@@ -248,7 +248,7 @@ public class CinePlusControllerTest {
 	 * @throws RemoteException
 	 */
 	@Test
-	@PerfTest(duration = 40, invocations = 100, threads = 10)
+	@PerfTest(duration = 20) //TODO
     @Required(max = 50, average = 20)
 	public void Test3_LoginUsuarioTest() throws RemoteException {
 		logger.info("Realizando el login para: "+ "javi@gmail.com" + " " + "P@ssw0rd");
