@@ -23,7 +23,6 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 /**
  * 
  * @author Fercol
- * @package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
  * @version 3.0.1
  * @since May 17, 2018
  * 
@@ -42,7 +41,7 @@ public class CinePlusServer {
 	/**
 	 * Constructor de la clase CinePlusServer. 
 	 * En este caso precargamos varias peliculas en la base de datos y a�adimos 2 usuarios. 
-	 * @throws RemoteException
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public CinePlusServer () throws RemoteException{
 		super();
@@ -99,8 +98,8 @@ public class CinePlusServer {
 	 * @param pais String pais de residencia actual
 	 * @param admin boolean es administrador o no
 	 * 
-	 * @return boolean - <code>true</code> si se ha registrado correctamente.
-	 * @throws RemoteException
+	 * @return true si se ha registrado correctamente.
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public synchronized boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password,
 	String pais, boolean admin) throws RemoteException {
@@ -120,8 +119,8 @@ public class CinePlusServer {
 	 * @param saldo - float
 	 * @param admin - boolean
 	 * 
-	 * @return boolean - <code>true</code> si se ha registrado correctamente.
-	 * @throws RemoteException
+	 * @return true si se ha registrado correctamente.
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public synchronized boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password,
 			String pais, float saldo, boolean admin) throws RemoteException {
@@ -135,8 +134,8 @@ public class CinePlusServer {
 	 * @param usuario - String
 	 * @param password - String
 	 * 
-	 * @return boolean - <code>true</code> si ha iniciado sesion correctamente.
-	 * @throws RemoteException
+	 * @return true si ha iniciado sesion correctamente.
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public synchronized boolean usuarioRegistrado (String usuario, String password) throws RemoteException {
         return usuarioDAO.loginUser(usuario, password);
@@ -145,9 +144,9 @@ public class CinePlusServer {
 	/**
 	 * Metodo que se encarga de llamar al metodo Alquilar de pelisperfilDAO pasandole un objeto PelisPerfil y nos devuelve un true si se ha podido realizar.
 	 *
-	 * @param PelisPerfil 
-	 * @return boolean <code>true</code> si ha alquilado una pelicula correctamente.
-	 * @throws RemoteException
+	 * @param PelisPerfil pelis por usuario
+	 * @return true si ha alquilado una pelicula correctamente.
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public synchronized boolean Alquilar(PelisPerfil PelisPerfil) throws RemoteException {
        return pelisperfilDAO.storePelisPerfil(PelisPerfil);
@@ -157,9 +156,9 @@ public class CinePlusServer {
 	 * Metodo que se encarga de  crear una lista de peliculas de un usuario identificado con el email.
 	 *
 	 * @param email String con el email del usuario
-	 * @return List<Pelicula> - Lista de peliculas del usuario
-	 * @throws RemoteException
-	 */
+	 * @return Lista de peliculas del usuario
+	 * @throws RemoteException expulsa una excepcion
+	 */ 
 	public synchronized List<Pelicula> getPeliUsuario(String email) throws RemoteException {
 		List<PelisPerfil> codigosaux=pelisperfilDAO.getPeliUsuario(email);
 		List<String> codigos=new ArrayList<String>();
@@ -187,13 +186,10 @@ public class CinePlusServer {
 	
 	/**
 	 * Metodo que se encarga de crear una lista de peliculas pasandole el nombre, anyo y genero.
-	 * 
-	 * @param nombre - String
-	 * @param anyo - String
-	 * @param genero - String
-	 * 
-	 * @return List<Pelicula> - Lista con la película buscada
-	 * @throws RemoteException
+	 * @param nombre - string
+	 * @param anyo - string
+	 * @param genero - string
+	 * @return lista con peliculas
 	 */
 	public synchronized List<Pelicula> Busqueda(String nombre, String anyo, String genero) {
 		logger.info("NOMBRE="+nombre+" anyo="+anyo+" genero="+genero);
@@ -220,7 +216,7 @@ public class CinePlusServer {
 	 *
 	 * @param email - String
 	 * @return Usuario - Devuelve un usuario
-	 * @throws RemoteException
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public Usuario devuelveUsuario(String email) throws RemoteException {
 		return usuarioDAO.getUsuario(email);
@@ -229,8 +225,8 @@ public class CinePlusServer {
 	/**
 	 * Metodo que se encarga de llamar al metodo actualizarUsuario de usuarioDAO, pasandole un objeto usuario y se encarga de actualizarlo.
 	 *
-	 * @param user objeto <code>Usuario</code> a actualizar
-	 * @throws RemoteException
+	 * @param user <code>Usuario</code> a actualizar
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public void actualizarUsuario(Usuario user) throws RemoteException {
 		usuarioDAO.updateUsuario(user);
@@ -238,15 +234,18 @@ public class CinePlusServer {
 
 	/**
 	 * Metodo que se encarga de llamar al metodo Anyos de peliculaDAO y devuelve una lista con los a�os de las pelicualas.
-	 * @throws RemoteException
+	 * @throws RemoteException expulsa una excepcion
+	 * @return lista de anios
 	 */
 	public List<String> Anyos() throws RemoteException {
 		return peliculaDAO.Anyos();
 	}
 
+
 	/**
 	 * Metodo que se encarga de llamar al metodo Generos de peliculaDAO y devuelve una lista con los generos de las peliculas. 
-	 * @throws RemoteException
+	 * @return lista de generos
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public List<String> Generos() throws RemoteException {
 		return peliculaDAO.Generos();
@@ -255,8 +254,8 @@ public class CinePlusServer {
 	/**
 	 * Metodo que se encarga de llamar al metodo actualizarUsuario de usuarioDAO pasandole un objeto usuario y se encarga de eliminarlo.
 	 *
-	 * @param user Objeto <code>Usuario</code> a eliminar
-	 * @throws RemoteException
+	 * @param user <code>Usuario</code> a eliminar
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public void eliminarUsuario(Usuario user) throws RemoteException {
 		usuarioDAO.deleteUsuario(user);
@@ -265,8 +264,9 @@ public class CinePlusServer {
 	/**
 	 * Metodo que se encarga de llamar al metodo checkUsuario de usuarioDAO, para comprobar si existe el usuario.
 	 *
-	 * @param user Objeto <code>Usuario</code> a checkear
-	 * @throws RemoteException
+	 * @param user <code>Usuario</code> a checkear
+	 * @return true si existe
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public boolean checkUsuario(Usuario user) throws RemoteException {
 		return usuarioDAO.checkUser(user);

@@ -19,7 +19,6 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 /**
  * 
  * @author Fercol
- * @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
  * @version 3.0.1
  * @since May 17, 2018
  * 
@@ -43,7 +42,7 @@ public class PelisPerfilDAO {
 	 * de no existir lo almacena devolviendo un true. 
 	 * 
 	 * @param PelisPerfil - PelisPerfil
-	 * @return <code>true</code> si almacena correctamente el objeto PelisPerfil
+	 * @return  true si almacena correctamente el objeto PelisPerfil
 	 */
 	public boolean storePelisPerfil(PelisPerfil PelisPerfil) {
 
@@ -92,7 +91,7 @@ public class PelisPerfilDAO {
 	 * Metodo que consulta a la base de datos por un email, y te devuelve una lista con las peliculas con ese email.
 	 * 
 	 * @param email - String
-	 * @return Peliculas - List<PelisPerfil>
+	 * @return Peliculas - pelis
 	 */
 	@SuppressWarnings("unchecked")
 	public List<PelisPerfil> getPeliUsuario(String email){
@@ -126,7 +125,7 @@ public class PelisPerfilDAO {
 	 * Metodo que comprueba en la base de datos si existe un PelisPerfil igual al que se le pasa.
 	 * 
 	 * @param PelisPerfil  PelisPerfil
-	 * @return <code>true</code> si encuentra un objeto PelisPerfil identico
+	 * @return true si encuentra un objeto PelisPerfil identico
 	 */
 	public boolean checkPelis(PelisPerfil PelisPerfil) {
 		boolean resul = false;
@@ -162,7 +161,6 @@ public class PelisPerfilDAO {
 	 * 
 	 * @param pelisPerfil PelisPerfil
 	 */
-	
 	public void deletePelisPerfil(PelisPerfil pelisPerfil) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx = pm.currentTransaction();

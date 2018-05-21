@@ -12,7 +12,6 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 /**
  * 
  * @author Fercol
- * @package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
  * @version 3.0.1
  * @since May 17, 2018
  * 
@@ -27,7 +26,7 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	
 	/**
 	 * Constructor de la clase CinePlusFacade
-	 * @throws RemoteException
+	 * @throws RemoteException lanza excepcion
 	 */
 	public CinePlusFacade() throws RemoteException {
 		super();
@@ -44,8 +43,8 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	 * @param pais String pais de residencia actual
 	 * @param admin boolean es administrador o no
 	 * 
-	 * @return boolean - <code>true</code> si se ha registrado correctamente.
-	 * @throws RemoteException
+	 * @return <code>true</code> si se ha registrado correctamente.
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password, String pais, boolean admin)  throws RemoteException {
 		return cpser.registrarUsuario(usuario, email, nombre, apellido, password, pais, admin);
@@ -62,8 +61,8 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	 * @param saldo - float
 	 * @param admin - boolean
 	 * 
-	 * @return boolean - <code>true</code> si se ha registrado correctamente.
-	 * @throws RemoteException
+	 * @return  <code>true</code> si se ha registrado correctamente.
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public boolean registrarUsuario(String usuario, String email, String nombre, String apellido, String password, String pais, float saldo, boolean admin)  throws RemoteException {
 		return cpser.registrarUsuario(usuario, email, nombre, apellido, password, pais, saldo, admin);
@@ -74,8 +73,8 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	 * @param usuario - String
 	 * @param password - String
 	 * 
-	 * @return boolean - <code>true</code> si ha iniciado sesion correctamente.
-	 * @throws RemoteException
+	 * @return <code>true</code> si ha iniciado sesion correctamente.
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public boolean usuarioRegistrado(String usuario, String password) throws RemoteException {
 		return cpser.usuarioRegistrado(usuario, password);
@@ -87,8 +86,8 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	 * @param anyo - String
 	 * @param genero - String
 	 * 
-	 * @return List<Pelicula> - Lista con la película buscada
-	 * @throws RemoteException
+	 * @return Lista con la película buscada
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public List<Pelicula> Busqueda(String nombre, String anyo,String genero) throws RemoteException {
 		return cpser.Busqueda(nombre, anyo,genero);
@@ -98,8 +97,8 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	 * Metodo que se encarga de llamar al metodo de getPeliUsuario de CinePlusServer , que devuelve la lista de peliculas de un usuario identificado con el email.
 	 * 
 	 * @param email String con el email del usuario
-	 * @return List<Pelicula> - Lista de peliculas del usuario
-	 * @throws RemoteException
+	 * @return Lista de peliculas del usuario
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public List<Pelicula> getPeliUsuario(String email) throws RemoteException {
 		return cpser.getPeliUsuario(email);
@@ -107,7 +106,7 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo Anyos de CinePlusServer y devuelve una lista con los a�os de las pelicualas.
-	 * @throws RemoteException
+	 * @throws RemoteException lanza excepcion
 	 */
 	public List<String> Anyos() throws RemoteException {
 		return cpser.Anyos();
@@ -116,9 +115,9 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	/**
 	 * Metodo que se encarga de llamar al metodo Alquilar de CinePlusServer pasandole un objeto PelisPerfil y nos devuelve un true si se ha podido realizar.
 	 * 
-	 * @param PelisPerfil 
+	 * @param PelisPerfil pelis perfil
 	 * @return boolean <code>true</code> si ha alquilado una pelicula correctamente.
-	 * @throws RemoteException
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public boolean Alquilar(PelisPerfil PelisPerfil) throws RemoteException {
 		return cpser.Alquilar(PelisPerfil);
@@ -126,7 +125,7 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo Generos de CinePlusServer y devuelve una lista con los generos de las peliculas. 
-	 * @throws RemoteException
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	public List<String> Generos() throws RemoteException {
 		return cpser.Generos();
@@ -135,9 +134,9 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	/**
 	 * Metodo que se encarga de llamar al metodo devuelveUsuario de CinePlusServer, pasandole un email de usuario y devuelve el usuario completo.
 	 *
-	 * @param email - String
+	 * @param usuario - String
 	 * @return Usuario - Devuelve un usuario
-	 * @throws RemoteException
+	 * @throws RemoteException expulsa una excepcion
 	 */
 	@Override
 	public Usuario devuelveUsuario(String usuario) throws RemoteException {
@@ -146,20 +145,15 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	
 	/**
 	 * Metodo que se encarga de llamar al metodo actualizarUsuario de CinePlusServer, pasandole un objeto usuario y se encarga de actualizarlo.
-	 *
-	 * @param user objeto <code>Usuario</code> a actualizar
-	 * @throws RemoteException
 	 */
 	@Override
 	public void actualizarUsuario(Usuario user) throws RemoteException {
 		cpser.actualizarUsuario(user);
 	}
 	
+
 	/**
 	 * Metodo que se encarga de llamar al metodo actualizarUsuario de CinePlusServer pasandole un objeto usuario y se encarga de eliminarlo.
-	 *
-	 * @param user Objeto <code>Usuario</code> a eliminar
-	 * @throws RemoteException
 	 */
 	@Override
 	public void eliminarUsuario(Usuario user) throws RemoteException {
@@ -170,7 +164,7 @@ public class CinePlusFacade extends UnicastRemoteObject implements ICinePlus{
 	 * Metodo que se encarga de llamar al metodo checkUsuario de CinePlusServer, para comprobar si existe el usuario.
 	 *
 	 * @param user Objeto <code>Usuario</code> a checkear
-	 * @throws RemoteException
+	 * @throws RemoteException lanza excepcion
 	 */
 	@Override
 	public boolean checkUsuario(Usuario user) throws RemoteException {

@@ -12,7 +12,6 @@ import org.apache.log4j.Logger;
 /**
  * 
  * @author Aritzmetal
- * @package es.deusto.spq.ProyectoCinePlus.servidor.Conectividad
  * @version 3.0.1
  * @since May 17, 2018
  * 

@@ -3,9 +3,6 @@ package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad;
 import es.deusto.spq.ProyectoCinePlus.servidor.Conectividad.ICinePlus;
 
 /**
- * 
- * @author Fercol
- * @package es.deusto.spq.ProyectoCinePlus.cliente.util.Conectividad
  * @author Fercol
  * @since 1.0.0
  * 

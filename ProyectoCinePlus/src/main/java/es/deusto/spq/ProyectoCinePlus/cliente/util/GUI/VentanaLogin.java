@@ -230,7 +230,7 @@ public class VentanaLogin extends JFrame {
 
 	/**
 	 * Metodo set que cambia el controlador. 
-	 * @param controller
+	 * @param controller controlador
 	 */
 	public void setController(CinePlusController controller) {
 		this.controller = controller;

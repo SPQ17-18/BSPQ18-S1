@@ -13,7 +13,6 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 
 /**
  * @author Fercol
- * @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
  * @version 1.0.0
  * @since May 17, 2018
  * 

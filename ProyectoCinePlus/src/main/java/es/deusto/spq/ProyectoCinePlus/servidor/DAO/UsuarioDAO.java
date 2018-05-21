@@ -18,7 +18,6 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 
 /**
 *
-* @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
 * @version 1.0.0
 * @since May 17, 2018
 * @author Fercol
@@ -46,8 +45,8 @@ public class UsuarioDAO implements IUsuarioDAO{
 	 * Metodo que realiza una consulta a la base de datos para aniadir un usuario y 
 	 * devuelve un true si el usuario se ha podido almacenar.
 	 * 
-	 * @param usuario 
-	 * @return <code>true</code> si se ha anyadido el usuario correctamente
+	 * @param usuario - String
+	 * @return true si se ha anyadido el usuario correctamente
 	 */
 	public boolean storeUsuario(Usuario usuario) {
 		boolean resul = false;
@@ -65,8 +64,8 @@ public class UsuarioDAO implements IUsuarioDAO{
 	 * Metodo que realiza una consulta a la base de datos para almacenar un objeto, 
 	 * y devuelve un true si se ha podido almacenar. 
 	 * 
-	 * @param usuario
-	 * @return <code>true</code> si se ha anyadido el usuario correctamente
+	 * @param usuario - STring
+	 * @return true si se ha anyadido el usuario correctamente
 	 */
 	private boolean storeObject(Usuario usuario) {
 		boolean resul =false;
@@ -90,11 +89,11 @@ public class UsuarioDAO implements IUsuarioDAO{
 	    return resul;
 	}
 	
+
 	/**
 	 * Metodo que realiza una consulta a la base de datos y obtiene todos los usuarios de la base de 
 	 * datos devolvindolos en una lista. 
-	 * 
-	 * @return List<Usuario> - Lista con usuarios que cumplen la condicion.
+	 * @return Lista con usuarios que cumplen la condicion.
 	 */
 	public List<Usuario> getUsuarios() {
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -133,7 +132,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 	 * Metodo que realiza una consulta a la base de datos y obtiene el objeto usuario que coincida con el 
 	 * email que se le pasa. 
 	 * 
-	 * @param email - String
+	 * @param condition - String
 	 * @return Usuario 
 	 */
 	public List<Usuario> getUsuarios(String condition) {
@@ -168,11 +167,11 @@ public class UsuarioDAO implements IUsuarioDAO{
 	    return Usuarios;
 	}
 	
+
 	/**
 	 * Metodo que realiza una cnsulta a la base de datos y devuelve una lista con los usuarios en una lista.
 	 * 
-	 * @param condition - Parametro por el que buscar.
-	 * @return List<Usuario> - Lista con usuarios que cumplen la condicion.
+	 * @param email - Parametro por el que buscar.
 	 */
 	public Usuario getUsuario(String email){
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -238,7 +237,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 	 * 
 	 * @param email - String
 	 * @param password - String
-	 * @return <code>true</code> si el usuario y la contrasenya coinciden con las de la Base de datos
+	 * @return true si el usuario y la contrasenya coinciden con las de la Base de datos
 	 */
 	public boolean loginUser(String email, String password) {
 		boolean resul = false;
@@ -266,12 +265,12 @@ public class UsuarioDAO implements IUsuarioDAO{
 		}
 		return resul;
 	}
+
 	/**
 	 * Metodo que recbe un usuario y lo checkea que exista 
-	 * 
-	 * @param usuario - Usuario
+	 * @param usuario - usuario
+	 * @return true si existe
 	 */
-
 	public boolean checkUser(Usuario usuario) {
 		boolean resul = false;
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -303,7 +302,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 	 * Metodo que realiza una consulta a la base de datos y obtiene todos los usuarios de la base de 
 	 * datos devolvindolos en una lista. 
 	 * 
-	 * @return List<Usuario> - Lista con usuarios que cumplen la condicion.
+	 * @return Lista con usuarios que cumplen la condicion.
 	 */
 	public List<UsuarioDAO> getClientes() {
 		return null;
@@ -312,7 +311,7 @@ public class UsuarioDAO implements IUsuarioDAO{
 	/**
 	 * Metodo que recibe un objeto usuario y lo elimina de la base de datos. 
 	 * 
-	 * @param usuario - Usuario
+	 * @param usuario Usuario
 	 */
 	public void deleteUsuario(Usuario usuario) {
 		PersistenceManager pm = pmf.getPersistenceManager();

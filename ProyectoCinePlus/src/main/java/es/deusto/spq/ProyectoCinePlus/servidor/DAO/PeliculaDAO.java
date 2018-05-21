@@ -16,7 +16,6 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Pelicula;
 
 /**
 *
-* @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
 * @version 1.0.0
 * @since May 17, 2018
 * @author Fercol
@@ -117,7 +116,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	/**
 	 * Metodo que realiza una consulta a la base de datos y devuelve una lista con los anyos de las pelicula de la base de datos en formato String.
 	 * 
-	 * @return List<String>
+	 * @return lista de anios
 	 */
 	@SuppressWarnings("unchecked")
 	public List<String> Anyos(){
@@ -150,7 +149,7 @@ public class PeliculaDAO implements IPeliculaDAO{
 	/**
 	 * Metodo que realiza una consulta a la base de datos y devuelve una lista con los generos de las peliculas de la Base de datos en formato String.
 	 * 
-	 * @return List<String>
+	 * @return lista de generos
 	 */
 	@SuppressWarnings("unchecked")
 	public List<String> Generos(){

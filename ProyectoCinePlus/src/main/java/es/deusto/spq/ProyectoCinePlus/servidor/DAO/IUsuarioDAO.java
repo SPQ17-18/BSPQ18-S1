@@ -8,7 +8,6 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.Usuario;
 /**
  * 
  * @author Fercol
- * @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
  * @version 1.0.0
  * @since May 17, 2018
  * 
@@ -23,7 +22,7 @@ public interface IUsuarioDAO {
 	 * Metodo que realiza una consulta a la base de datos para aniadir un usuario y 
 	 * devuelve un true si el usuario se ha podido almacenar.
 	 * 
-	 * @param usuario 
+	 * @param usuario usuario
 	 * @return <code>true</code> si se ha anyadido el usuario correctamente
 	 */
 	public boolean storeUsuario(Usuario usuario);
@@ -44,7 +43,7 @@ public interface IUsuarioDAO {
 	 * Metodo que realiza una consulta a la base de datos y obtiene todos los usuarios de la base de 
 	 * datos devolvindolos en una lista. 
 	 * 
-	 * @return List<Usuario> - Lista con usuarios que cumplen la condicion.
+	 * @return Lista con usuarios que cumplen la condicion.
 	 */
 	public List<Usuario> getUsuarios();
 	
@@ -52,7 +51,7 @@ public interface IUsuarioDAO {
 	 * Metodo que realiza una cnsulta a la base de datos y devuelve una lista con los usuarios en una lista.
 	 * 
 	 * @param condition - Parametro por el que buscar.
-	 * @return List<Usuario> - Lista con usuarios que cumplen la condicion.
+	 * @return Lista con usuarios que cumplen la condicion.
 	 */
 	public List<Usuario> getUsuarios(String condition);
 	
