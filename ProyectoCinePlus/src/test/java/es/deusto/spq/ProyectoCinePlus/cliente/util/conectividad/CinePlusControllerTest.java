@@ -15,12 +15,14 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.databene.contiperf.PerfTest;
 import org.databene.contiperf.Required;
+import org.databene.contiperf.junit.ContiPerfRule;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Ignore;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
@@ -47,7 +49,7 @@ import junit.framework.JUnit4TestAdapter;
 */
 public class CinePlusControllerTest {
 
-	
+	@Rule public ContiPerfRule rule = new ContiPerfRule();
 	
 	private static CinePlusController cineplus;
 	
@@ -140,7 +142,7 @@ public class CinePlusControllerTest {
 		rmiServerThread = new Thread(new RMIServerRunnable());
 		rmiServerThread.start();
 		try {
-			logger.info("sleeping 8000ms");
+			logger.info("sleeping 4000ms");
 			Thread.sleep(4000);
 		} catch (InterruptedException ie) {
 			ie.printStackTrace();

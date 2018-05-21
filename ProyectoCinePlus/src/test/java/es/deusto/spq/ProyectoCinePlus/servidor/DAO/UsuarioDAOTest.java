@@ -184,7 +184,7 @@ public class UsuarioDAOTest {
 	 */
 	@Test
 	@PerfTest(invocations = 100, threads = 10)
-	@Required(max = 170, average = 135)
+	@Required(max = 270, average = 135)
 	public void test_6checkUserTestOK() throws Exception{
 		boolean resul;
 		logger.info("Test 6 para realizar un login correcto");
@@ -199,7 +199,7 @@ public class UsuarioDAOTest {
 	 */
 	@Test
 	@PerfTest(invocations = 300, threads = 3)
-	@Required(max = 120, average = 70)
+	@Required(max = 270, average = 70)
 	public void test_7checkUserTestFAIL() throws Exception{
 		boolean resul;
 		logger.info("Test 7 para intentar obtener usuario pero da fallo");
