@@ -25,7 +25,6 @@ import es.deusto.spq.ProyectoCinePlus.servidor.DATA.PelisPerfil;
 import junit.framework.JUnit4TestAdapter;
 /**
 * @author mikelgol7
-* @brief Test PelisPerfilDAOTest. May 18, 2018
 * @since 3.0.0
 * 
 * Este es el test que comprueba los metodos de PelisPerfilDAO.

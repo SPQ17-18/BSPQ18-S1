@@ -41,8 +41,6 @@ import junit.framework.JUnit4TestAdapter;
 
 /**
 * @author mikelgol7
-* @package es.deusto.spq.ProyectoCinePlus.servidor.DAO
-* @brief Test UsuarioTest. May 18, 2018
 * @since 2.0.0
 * 
 * Este es el test que comprueba los metodos de los objetos CinePlusController.
@@ -230,7 +228,7 @@ public class CinePlusControllerTest {
 
 	/**
 	 * Test que comprueba si existe el usuario javi@gmail.com (No deberia de existir)
-	 * @throws RemoteException
+	 * @throws RemoteException lanza excepcion
 	 */
 	@Test
 	public void Test1_RegistrarUsuario1Test() throws RemoteException {
@@ -247,7 +245,7 @@ public class CinePlusControllerTest {
 	
 	/**
 	 * Test que comprueba si el usuario javi@gmail.com con contrasenia P@ssw0rd esta en la BD
-	 * @throws RemoteException
+	 * @throws RemoteException lanza excepcion
 	 */
 	@Test
 	@PerfTest(duration = 20) //TODO
@@ -259,7 +257,7 @@ public class CinePlusControllerTest {
 	
 	/**
 	 * Test que comprueba que existen mas de 0 anyos de peliculas diferentes en la BD
-	 * @throws RemoteException
+	 * @throws RemoteException lanza excepcion
 	 */
 	@Test
 	public void Test4_ObtenerAnyoTest() throws RemoteException {
@@ -268,7 +266,7 @@ public class CinePlusControllerTest {
 	
 	/**
 	 * Test que comprueba que en la BD hay mas generos de peliculas que 0.
-	 * @throws RemoteException
+	 * @throws RemoteException lanza excepcion
 	 */
 	@Test
 	public void Test5_ObtenerGeneroTest() throws RemoteException {
@@ -277,7 +275,7 @@ public class CinePlusControllerTest {
 	
 	/**
 	 * Metodo que comprueba si existe una pelicula determinada
-	 * @throws RemoteException
+	 * @throws RemoteException lanza excepcion
 	 */
 	@Test
 	public void Test6_BusquedaTest() throws RemoteException {
@@ -286,7 +284,7 @@ public class CinePlusControllerTest {
 	
 	/**
 	 * Metodo que comprieba si existe un usuario en la bd
-	 * @throws RemoteException
+	 * @throws RemoteException lanza excepcion
 	 */
 	@Test
 	public void Test7_DevolverUsuarioTest() throws RemoteException {
@@ -295,7 +293,7 @@ public class CinePlusControllerTest {
 	
 	/**
 	 * Metodo que comprueba si elimina usuarios de la bd
-	 * @throws RemoteException
+	 * @throws RemoteException lanza excepcion
 	 */
 	@Test
 	public void Test8_eliminarUsuarioTest() throws RemoteException {
@@ -307,7 +305,7 @@ public class CinePlusControllerTest {
 	
 	/**
 	 * Metodo que comprueba que registras usuarios en la bd
-	 * @throws RemoteException
+	 * @throws RemoteException lanza excepcion
 	 */
 	@Test
 	public void Test9_registrarUsuarioConSaldoTest() throws RemoteException {
@@ -317,7 +315,7 @@ public class CinePlusControllerTest {
 	
 	/**
 	 * Metodo que comprueba si se ha alquilado peliculas
-	 * @throws RemoteException
+	 * @throws RemoteException lanza excepcion
 	 */
 	@Test
 	public void test10_AlquilerSatisfactorioT () throws RemoteException {

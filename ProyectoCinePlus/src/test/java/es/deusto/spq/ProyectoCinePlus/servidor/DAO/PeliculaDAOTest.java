@@ -27,7 +27,6 @@ import junit.framework.JUnit4TestAdapter;
 
 /**
 * @author mikelgol7
-* @brief Test UsuarioDAOTest. May 18, 2018
 * @since 3.0.0
 * 
 * Este es el test que comprueba los metodos de PeliculaDAO.
@@ -75,7 +74,7 @@ public class PeliculaDAOTest {
 	}
 	
 	/**
-	 * Test para comprobar que añado peliculas
+	 * Test para comprobar que aniado peliculas
 	 * @throws Exception lanza excepcion
 	 */
 	@Test
@@ -105,7 +104,7 @@ public class PeliculaDAOTest {
 	
 	/**
 	 * Test para comprobar que realiza busquedas de peliculas en tiempo optimo
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	@Test
 	@PerfTest(invocations = 120, threads = 5)
@@ -131,7 +130,7 @@ public class PeliculaDAOTest {
 	
 	/**
 	 * Metodo que comprueba si se actualiza un usuario.
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	@Test
 	public void updateUsuarioTest() throws Exception{

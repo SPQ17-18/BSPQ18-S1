@@ -63,7 +63,7 @@ public class UsuarioDAOTest {
 	
 	/**
 	 * Creo usuarios, compruebo si existen, y los almaceno en caso d eno existir.
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	@Before
 	public void setUp() throws Exception {

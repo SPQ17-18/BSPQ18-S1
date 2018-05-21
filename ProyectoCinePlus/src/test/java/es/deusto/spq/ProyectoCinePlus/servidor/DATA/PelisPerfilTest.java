@@ -15,8 +15,6 @@ import org.junit.Ignore;
 import org.junit.Test;
 /**
 * @author mikelgol7
-* @package es.deusto.spq.ProyectoCinePlus.servidor.DATA
-* @brief Test UsuarioTest. May 18, 2018
 * @since 3.0.0
 * 
 * Este es el test que comprueba que se han introducido los de las peliculas.
@@ -35,7 +33,7 @@ public class PelisPerfilTest {
 	}
 	/**
 	 * Metodo que se encarga de inicializar el objeto PelisPerfil con emails y con el id_peliculas
-	 * @throws Exception
+	 * @throws Exception lanza excepcion
 	 */
 	@Before
 	public void setUpBefore() throws Exception{
