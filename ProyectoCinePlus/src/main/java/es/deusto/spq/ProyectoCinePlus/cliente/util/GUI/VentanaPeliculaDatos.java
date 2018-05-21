@@ -120,7 +120,7 @@ public class VentanaPeliculaDatos extends JFrame {
 	 */
 	public VentanaPeliculaDatos(CinePlusController controller, ResourceBundle resourceBundle, Usuario userLogeado, Pelicula peliSelect ) {
 		
-		logger.info("VentanaPelicula");
+		logger.info("VentanaPeliculaDatos");
 		this.controller = controller;
 		this.resourceBundle = resourceBundle;
 		this.user = userLogeado;
@@ -273,7 +273,7 @@ public class VentanaPeliculaDatos extends JFrame {
 		panel_28.add(btnAtras);
 		btnAtras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				logger.info("Boton Atras (Ventana Pelicula)");
+				logger.info("Boton Atras (Ventana Pelicula Datos)");
 				VentanaUsuario ventanaUsuario = new VentanaUsuario(controller, resourceBundle, userLogeado);
 				ventanaUsuario.setVisible(true);
 				dispose();

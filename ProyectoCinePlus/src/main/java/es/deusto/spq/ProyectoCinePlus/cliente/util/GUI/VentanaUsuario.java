@@ -371,7 +371,7 @@ public class VentanaUsuario extends JFrame {
 								JButton btn = (JButton) source;
 								for (int j = 0; j < projectNames.length; j++) {
 									if (btn.getText().equals(projectNames[j])) {
-										VentanaPeliculaDatos ventanaPeli = new VentanaPeliculaDatos(controller, resourceBundle,
+										VentanaPelicula ventanaPeli = new VentanaPelicula(controller, resourceBundle,
 												userLogeado, prueba.get(j));
 										ventanaPeli.setVisible(true);
 										dispose();
