@@ -67,7 +67,7 @@ Repository for Team BSPQ18-S1
               ⭕ Jenkins.
               ⭕ Documentación Sprint3.
               
-## 🔰 [Documentación:](https://spq17-18.github.io/BSPQ18-S1/)
+## 🔰 [DOCUMENTACIÓN:](https://spq17-18.github.io/BSPQ18-S1/)
 
              https://spq17-18.github.io/BSPQ18-S1/
               
