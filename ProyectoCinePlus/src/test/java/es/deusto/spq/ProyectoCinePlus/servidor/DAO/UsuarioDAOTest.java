@@ -210,6 +210,8 @@ public class UsuarioDAOTest {
 	 * @throws Exception lanza excepcion
 	 */
 	@Test
+	@PerfTest(duration = 5000)
+	@Required(max = 1550, average = 1500)
 	public void test_8getUsuariosTest() throws Exception{
 		List<Usuario> listUsuarios = new ArrayList<>();
 		logger.info("Test 8 para comprobar que obtiene usuarios");
