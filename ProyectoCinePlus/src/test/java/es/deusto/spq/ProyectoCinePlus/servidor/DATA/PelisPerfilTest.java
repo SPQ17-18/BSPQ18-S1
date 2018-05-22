@@ -27,10 +27,6 @@ public class PelisPerfilTest {
 	private PelisPerfil pelisperfil2;
 
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-		
-	}
 	/**
 	 * Metodo que se encarga de inicializar el objeto PelisPerfil con emails y con el id_peliculas
 	 * @throws Exception lanza excepcion

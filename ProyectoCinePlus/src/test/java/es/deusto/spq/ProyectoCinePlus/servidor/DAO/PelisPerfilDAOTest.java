@@ -61,8 +61,8 @@ public class PelisPerfilDAOTest {
 		pelisperfil1 = new PelisPerfil("javitxu@gmail.com",1);
 		pelisperfil2 = new PelisPerfil("mikel@gmail.com",3);
 		
-			 pelisPerfilDAO.storePelisPerfil(pelisperfil1);
-			 pelisPerfilDAO.storePelisPerfil(pelisperfil2);
+		pelisPerfilDAO.storePelisPerfil(pelisperfil1);
+		pelisPerfilDAO.storePelisPerfil(pelisperfil2);
 			
 			
 		 

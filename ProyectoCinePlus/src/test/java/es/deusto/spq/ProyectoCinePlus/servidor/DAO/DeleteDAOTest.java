@@ -83,7 +83,7 @@ public class DeleteDAOTest {
 	 */
 	
 	@Test
-	@Required(totalTime = 180)
+	@Required(totalTime = 300)
 	public void deleteObjectTest(){
 		pelisPerfilDAO.deletePelisPerfil(pelisperfil1);
 		pelisPerfilDAO.deletePelisPerfil(pelisperfil2);
@@ -91,6 +91,7 @@ public class DeleteDAOTest {
 		
 		assertFalse(pelisPerfilDAO.checkPelis(pelisperfil1));
 		assertFalse(pelisPerfilDAO.checkPelis(pelisperfil2));
+		assertFalse(pelisPerfilDAO.checkPelis(pelisperfil3));
 	}
 
 

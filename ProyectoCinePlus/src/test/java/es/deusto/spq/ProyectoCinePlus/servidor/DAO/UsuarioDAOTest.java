@@ -45,6 +45,7 @@ public class UsuarioDAOTest {
 	private Usuario aritz;
 	private Usuario javi;
 	private Usuario xabi;
+	private Usuario usfalso;
 	
 	@Rule public ContiPerfRule rule = new ContiPerfRule();
 	
@@ -72,7 +73,7 @@ public class UsuarioDAOTest {
 		 xabi = new Usuario ("XabiSPQ", "Xabi@gmail.com", "Xabi", "Sarrionandia", "P@ssw0rd", "Euskadi", false);
 		 aritz = new Usuario ("AritzSPQ", "aritz@gmail.com", "Aritz", "Rasines", "P@ssw0rd", "Euskadi", false);
 		 javi = new Usuario ("JaviSPQ", "javi@gmail.com", "Javi", "Fernandez", "P@ssw0rd", "Euskadi", true);
-		 
+		 usfalso = new Usuario("MikelSPQ2", "prueba12@gmail.com", "Mikel2", "Fernandez2", "P@ssw0rd", "Euskadi", false);
 
 			 usuarioDAO.storeUsuario(mikel);
 
@@ -92,10 +93,8 @@ public class UsuarioDAOTest {
 	@Test
 	@Required(throughput = 4)
 	public void test_2loginUserTestOK() throws Exception{
-		boolean resul;
 		logger.info("Test 2 Logeando el usuario " + "Xabi@gmail.com");
-		resul = usuarioDAO.loginUser("Xabi@gmail.com","P@ssw0rd");
-		assertTrue(resul);
+		assertTrue(usuarioDAO.loginUser("Xabi@gmail.com","P@ssw0rd"));
 	}
 	
 	
@@ -108,11 +107,9 @@ public class UsuarioDAOTest {
 	
 	@Test
 	@Required(totalTime = 10)
-	public void test_4loginUserTestFAIL() throws Exception{
-		boolean resul;
+	public void test_4loginUserTestFAIL() throws Exception{	
 		logger.info("Test 4 Logeando incorrectamente el usuario " + "Xabi@gmail.com");
-		resul = usuarioDAO.loginUser("Xabi@gmail.com","ContrasenyaFalsa123");
-		assertFalse(resul);
+		assertFalse(usuarioDAO.loginUser("Xabi@gmail.com","ContrasenyaFalsa123"));
 	}
 	
 	/**
@@ -126,8 +123,7 @@ public class UsuarioDAOTest {
 	public void test_5getUsuarioTest() throws Exception{
 
 		logger.info("Test 5 para obtener un usuario de la base de datos");
-		Usuario prueba2 = usuarioDAO.getUsuario("aritz@gmail.com");
-		assertEquals("aritz@gmail.com", prueba2.getEmail());
+		assertEquals("aritz@gmail.com", usuarioDAO.getUsuario("aritz@gmail.com").getEmail());
 		
 	}
 
@@ -139,10 +135,8 @@ public class UsuarioDAOTest {
 	@PerfTest(invocations = 100, threads = 10)
 	@Required(max = 270, average = 135)
 	public void test_6checkUserTestOK() throws Exception{
-		boolean resul;
 		logger.info("Test 6 para realizar un login correcto");
-		resul = usuarioDAO.checkUser(xabi);
-		assertTrue(resul);
+		assertTrue(usuarioDAO.checkUser(xabi));
 	}
 	
 	/**
@@ -154,10 +148,8 @@ public class UsuarioDAOTest {
 	@PerfTest(invocations = 300, threads = 3)
 	@Required(max = 270, average = 70)
 	public void test_7checkUserTestFAIL() throws Exception{
-		boolean resul;
 		logger.info("Test 7 para intentar obtener usuario pero da fallo");
-		resul = usuarioDAO.checkUser(new Usuario("MikelSPQ2", "prueba12@gmail.com", "Mikel2", "Fernandez2", "P@ssw0rd", "Euskadi", false));
-		assertFalse(resul);
+		assertFalse(usuarioDAO.checkUser(usfalso));
 	}
 	
 	/**
@@ -165,7 +157,7 @@ public class UsuarioDAOTest {
 	 * @throws Exception lanza excepcion
 	 */
 	@Test
-	@PerfTest(duration = 5000)
+	@PerfTest(duration = 500)
 	@Required(max = 1550, average = 1500)
 	public void test_8getUsuariosTest() throws Exception{
 		List<Usuario> listUsuarios = new ArrayList<>();
@@ -182,15 +174,9 @@ public class UsuarioDAOTest {
 		 
 		 //resto de usuarios
 	
-			 usuarioDAO.deleteUsuario(mikel);
-	
-	
-			 usuarioDAO.deleteUsuario(xabi);
-	
-		
+			 usuarioDAO.deleteUsuario(mikel);	
+			 usuarioDAO.deleteUsuario(xabi);		
 			 usuarioDAO.deleteUsuario(aritz);
-
-
 			 usuarioDAO.deleteUsuario(javi);
 
 	}

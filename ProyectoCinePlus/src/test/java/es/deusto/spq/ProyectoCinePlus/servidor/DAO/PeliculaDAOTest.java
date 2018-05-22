@@ -42,7 +42,7 @@ public class PeliculaDAOTest {
 	static Logger logger = Logger.getLogger(PeliculaDAOTest.class.getName());
 	
 	public static junit.framework.Test suite() {
-		 return new JUnit4TestAdapter(PelisPerfilDAOTest.class);
+		 return new JUnit4TestAdapter(PeliculaDAOTest.class);
 	}
 	
     
@@ -66,12 +66,6 @@ public class PeliculaDAOTest {
 		peliculaDAO.storePelicula(spq);
 	}
 	
-	@Before
-	public void setUp() throws Exception {
-		
-	
-
-	}
 	
 	/**
 	 * Test para comprobar que aniado peliculas
@@ -108,7 +102,7 @@ public class PeliculaDAOTest {
 	 */
 	@Test
 	@PerfTest(invocations = 120, threads = 5)
-	@Required(max = 6, average = 5)
+	@Required(max = 288, average = 120)
 	public void getPeliculaTest() throws Exception{
 		logger.info("getPeliculaTest()");
 		peliculaDAO.storePelicula( new Pelicula(7, "Star Trek 2", 142, "La ira de khan", 1994, "ciencia ficcion", 14, listUsuarios,"14"));

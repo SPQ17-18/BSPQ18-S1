@@ -158,7 +158,8 @@ public class CinePlusControllerTest {
 	
 	
 	
-	@Before public void setUpClient() {
+	@Before 
+	public void setUpClient() {
 		try {
 			
 		System.getProperty("java.security.policy", "target\\test-classes\\security\\java.policy");
@@ -184,12 +185,6 @@ public class CinePlusControllerTest {
 		} 
 		
 		
-			
-		 
-	}
-	
-	@Before
-	public void setUpClass() {
 		
 		user = new Usuario("Javi", "javi@gmail.com", "Javi", "Fernandez", "P@ssw0rd", "España", true);
 		user2 = new Usuario("Javi2", "javi2@gmail.com", "Javi2", "Fernandez", "P@ssw0rd", "España", true);
@@ -206,9 +201,9 @@ public class CinePlusControllerTest {
 			 pelisPerfilDAO.storePelisPerfil(alquiler1);
 		
 			 pelisPerfilDAO.storePelisPerfil(alquiler2);
-	
-		
+		 
 	}
+	
 
 	/**
 	 * Test que comprueba si existe el usuario javi@gmail.com (No deberia de existir)
@@ -223,7 +218,7 @@ public class CinePlusControllerTest {
 	public void Test2_RegistrarUsuario2Test() throws RemoteException {
 		
 		cineplus.eliminarUsuario(user);
-		
+
 		assertTrue(cineplus.RegistrarUsuario("Javi","javi@gmail.com","Javi","Fernandez","P@ssw0rd", "España", true));
 	}
 	
