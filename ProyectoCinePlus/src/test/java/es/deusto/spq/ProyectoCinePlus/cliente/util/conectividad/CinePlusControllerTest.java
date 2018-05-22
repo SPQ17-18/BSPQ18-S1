@@ -59,8 +59,6 @@ public class CinePlusControllerTest {
 	private Usuario user2;
 	private Usuario user3;
 	
-	private Pelicula pelicula1;
-	
 	private PelisPerfil alquiler1;
 	private PelisPerfil alquiler2;
 	private PelisPerfil alquiler3;
