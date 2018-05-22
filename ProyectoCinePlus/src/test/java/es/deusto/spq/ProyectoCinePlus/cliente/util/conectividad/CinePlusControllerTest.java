@@ -49,7 +49,7 @@ public class CinePlusControllerTest {
 
 	@Rule public ContiPerfRule rule = new ContiPerfRule();
 	
-	private static CinePlusController cineplus;
+	private CinePlusController cineplus;
 	
 	private static PeliculaDAO peliculaDAO;
 	private static UsuarioDAO usuarioDAO;
