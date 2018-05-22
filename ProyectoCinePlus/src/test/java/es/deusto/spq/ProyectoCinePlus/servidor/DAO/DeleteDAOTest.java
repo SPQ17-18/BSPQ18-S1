@@ -33,13 +33,13 @@ public class DeleteDAOTest {
 	private Usuario javi;
 	private Usuario xabi;
 	
-	static Logger logger = Logger.getLogger(PelisPerfilDAOTest.class.getName());
+	static Logger logger = Logger.getLogger(DeleteDAOTest.class.getName());
 	
 	@Rule public ContiPerfRule rule = new ContiPerfRule();
 
 	
 	public static junit.framework.Test suite() {
-		 return new JUnit4TestAdapter(PelisPerfilDAOTest.class);
+		 return new JUnit4TestAdapter(DeleteDAOTest.class);
 	}
 	
 	

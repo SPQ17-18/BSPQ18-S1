@@ -35,13 +35,13 @@ public class StoreDAOTest {
 		private Usuario xabi;
 		private Usuario usaux;
 		
-		static Logger logger = Logger.getLogger(PelisPerfilDAOTest.class.getName());
+		static Logger logger = Logger.getLogger(StoreDAOTest.class.getName());
 		
 		@Rule public ContiPerfRule rule = new ContiPerfRule();
 
 		
 		public static junit.framework.Test suite() {
-			 return new JUnit4TestAdapter(PelisPerfilDAOTest.class);
+			 return new JUnit4TestAdapter(StoreDAOTest.class);
 		}
 		
 		
@@ -91,7 +91,7 @@ public class StoreDAOTest {
 		@Test
 		public void test_1testStoreUsuario() throws Exception{
 			logger.info("Test 1 para introducir nuevo usuario");
-			usuarioDAO.storeUsuario(xabi);
+			 usuarioDAO.storeUsuario(xabi);
 			 usuarioDAO.storeUsuario(aritz);
 			 usuarioDAO.storeUsuario(mikel);			 
 			 usuarioDAO.storeUsuario(javi);
